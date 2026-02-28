@@ -3,13 +3,13 @@
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Courses", href: "/courses" },
-  { label: "Schedules", href: "/class-schedules" },
-  { label: "Teachers", href: "/teachers" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Courses", href: "/pages/courses" },
+  { label: "Schedules", href: "/pages/class-schedules" },
+  { label: "Teachers", href: "/pages/teachers" },
+  { label: "Gallery", href: "/pages/gallery" },
+  { label: "Blog", href: "/pages/blog" },
+  { label: "About", href: "/pages/about" },
+  { label: "Contact", href: "/pages/contact" },
 ];
 
 const legal = [
