@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 const scheduleItems = [
   { label: "2026 Spring PSAT & SAT", href: "/pages/class-schedules/spring-psat-sat" },
   { label: "2026 Spring Weekend Schedule", href: "/pages/class-schedules/spring-weekend-schedule" },
-  { label: "2026 Fall Weekday Schedule", href: "/pages/class-schedules/fall-weekday-schedule" },
+  { label: "2026 Spring Weekday Schedule", href: "/pages/class-schedules/spring-weekday-schedule" },
 ];
 
 const navLinks = [
