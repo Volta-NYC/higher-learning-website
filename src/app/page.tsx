@@ -577,10 +577,10 @@ export default function Home() {
 
             {/* CTAs */}
             <div style={{ marginTop: "2.5rem", display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link href="/contact" className="btn-primary-hl">
+              <Link href="/pages/contact" className="btn-primary-hl">
                 Enroll Now →
               </Link>
-              <Link href="/courses" className="btn-outline-hl">
+              <Link href="/pages/courses" className="btn-outline-hl">
                 View Courses
               </Link>
             </div>
@@ -820,7 +820,7 @@ function CourseCard({ course, delay }: { course: typeof courses[0]; delay: numbe
         ))}
       </ul>
       <div style={{ marginTop: "1.5rem" }}>
-        <Link href="/courses" style={{
+        <Link href="/pages/courses" style={{
           fontSize: "0.78rem",
           fontWeight: 600,
           color: course.accent,

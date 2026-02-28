@@ -649,8 +649,8 @@ export default function TeachersPage() {
               Our teachers are the heart of Higher Learning. Contact us to enroll your student and find the right fit.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/contact" className="hl-cta-btn-primary">Contact Us to Enroll →</Link>
-              <Link href="/courses" className="hl-cta-btn-secondary">View Our Courses</Link>
+              <Link href="/pages/contact" className="hl-cta-btn-primary">Contact Us to Enroll →</Link>
+              <Link href="/pages/courses" className="hl-cta-btn-secondary">View Our Courses</Link>
             </div>
             <p style={{ marginTop: "2rem", fontSize: "0.78rem", color: "rgba(255,255,255,0.25)" }}>
               84 Bowery, 3FL · New York, NY 10013 · 212-941-0695

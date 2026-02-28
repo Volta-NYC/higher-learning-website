@@ -304,7 +304,7 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
 
         {/* CTA */}
         <Link
-          href="/contact"
+          href="/pages/contact"
           style={{
             display: "block",
             marginTop: "1.5rem",
@@ -716,10 +716,10 @@ export default function CoursesPage() {
               Contact us to discuss which program is right for your student, review current schedules, and get registered.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/contact" className="hl-cta-btn-primary">
+              <Link href="/pages/contact" className="hl-cta-btn-primary">
                 Contact Us to Enroll →
               </Link>
-              <Link href="/class-schedules" className="hl-cta-btn-secondary">
+              <Link href="/pages/class-schedules" className="hl-cta-btn-secondary">
                 View 2026 Schedules
               </Link>
             </div>
