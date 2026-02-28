@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 const scheduleItems = [
-  { label: "2026 Spring PSAT & SAT", href: "/class-schedules/spring-psat-sat" },
-  { label: "2026 Spring Weekend Schedule", href: "/class-schedules/spring-weekend" },
-  { label: "2026 Fall Weekday Schedule", href: "/class-schedules/fall-weekday" },
+  { label: "2026 Spring PSAT & SAT", href: "/pages/class-schedules/spring-psat-sat" },
+  { label: "2026 Spring Weekend Schedule", href: "/pages/class-schedules/spring-weekend-schedule" },
+  { label: "2026 Fall Weekday Schedule", href: "/pages/class-schedules/fall-weekday-schedule" },
 ];
 
 const navLinks = [
@@ -450,7 +450,7 @@ export default function Navbar() {
 
             <div className="hl-gold-line" />
 
-            <Link href="/contact" className="hl-cta">
+            <Link href="/pages/contact" className="hl-cta">
               Enroll Now
             </Link>
           </div>
