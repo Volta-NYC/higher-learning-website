@@ -16,8 +16,6 @@ const legal = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms and Conditions", href: "/terms-and-conditions" },
   { label: "Refund Policy / Class Rules", href: "/refund-policy-class-rules" },
-  { label: "Contact Us", href: "/contact" },
-  { label: "About Us", href: "/about" },
 ];
 
 const socials = [
