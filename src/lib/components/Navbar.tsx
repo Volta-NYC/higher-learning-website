@@ -13,7 +13,7 @@ const navLinks = [
   { label: "Courses", href: "/pages/courses" },
   { label: "Schedules", href: "/pages/class-schedules", dropdown: scheduleItems },
   { label: "Teachers", href: "/pages/teachers" },
-  // { label: "Gallery", href: "/pages/gallery" },
+  { label: "Gallery", href: "/pages/gallery" },
   { label: "Blog", href: "/pages/blog" },
   { label: "About", href: "/pages/about" },
   { label: "Contact", href: "/pages/contact" },

@@ -717,7 +717,7 @@ export default function Home() {
             <Link href="/contact" className="btn-primary-hl" style={{ animation: "goldPulse 2.5s ease infinite" }}>
               Schedule a Consultation
             </Link>
-            <Link href="/class-schedules" className="btn-outline-hl">
+            <Link href="/pages/class-schedules" className="btn-outline-hl">
               View 2026 Schedules
             </Link>
           </div>
