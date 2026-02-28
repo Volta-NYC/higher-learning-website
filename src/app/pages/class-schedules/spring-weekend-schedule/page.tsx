@@ -631,3 +631,271 @@ export default function SpringWeekendSchedulePage() {
                       );
                     })}
                   </div>
+
+                  {/* No class note */}
+                  <div style={{
+                    marginTop: "1rem",
+                    padding: "0.65rem 0.9rem",
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.06)",
+                    borderRadius: "10px",
+                    fontSize: "0.72rem",
+                    color: "rgba(255,255,255,0.4)",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
+                    lineHeight: 1.6,
+                  }}>
+                    <span style={{ color: "rgba(200,146,42,0.7)", marginRight: "0.3rem" }}>*</span>
+                    No class Feb 14 & 21 (winter recess) or Apr 4 (spring recess).
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick info card */}
+              <div
+                ref={infoRef.ref}
+                style={{
+                  background: "#fff",
+                  borderRadius: "20px",
+                  border: "1px solid rgba(15,32,68,0.07)",
+                  boxShadow: "0 4px 24px rgba(15,32,68,0.07)",
+                  overflow: "hidden",
+                  opacity: infoRef.inView ? 1 : 0,
+                  transform: infoRef.inView ? "translateY(0)" : "translateY(20px)",
+                  transition: "opacity 0.65s ease 0.1s, transform 0.65s ease 0.1s",
+                }}
+              >
+                <div style={{ padding: "1.1rem 1.35rem", background: "linear-gradient(135deg, rgba(200,146,42,0.07), rgba(232,184,75,0.03))", borderBottom: "1px solid rgba(200,146,42,0.1)" }}>
+                  <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#c8922a", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Location &amp; Contact</div>
+                </div>
+                {[
+                  { icon: "📍", label: "Address",  value: "84 Bowery, 3rd Floor\nNew York, NY 10013" },
+                  { icon: "📞", label: "Phone",    value: "(212) 941-0695" },
+                  { icon: "✉️", label: "Email",    value: "higherlearningny@yahoo.com" },
+                ].map((item) => (
+                  <div key={item.label} style={{
+                    padding: "0.9rem 1.35rem",
+                    borderBottom: "1px solid rgba(15,32,68,0.05)",
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.75rem",
+                  }}>
+                    <span style={{ fontSize: "0.95rem", flexShrink: 0, marginTop: "1px" }}>{item.icon}</span>
+                    <div>
+                      <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,32,68,0.35)", marginBottom: "0.15rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{item.label}</div>
+                      <div style={{ fontSize: "0.83rem", fontWeight: 600, color: "#0f2044", lineHeight: 1.5, fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "pre-line" as const }}>{item.value}</div>
+                    </div>
+                  </div>
+                ))}
+                <div style={{ padding: "1rem 1.35rem" }}>
+                  <a
+                    href="/pages/contact"
+                    className="hl-register-btn"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "0.4rem",
+                      padding: "0.75rem 1.25rem",
+                      background: "linear-gradient(135deg, #0f2044, #162a58)",
+                      color: "#fff",
+                      fontWeight: 700,
+                      fontSize: "0.84rem",
+                      borderRadius: "10px",
+                      textDecoration: "none",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                    }}
+                  >
+                    Enroll / New Admission →
+                  </a>
+                </div>
+              </div>
+
+              {/* Test dates card */}
+              <div
+                ref={testRef.ref}
+                style={{
+                  background: "linear-gradient(135deg, rgba(200,146,42,0.07), rgba(232,184,75,0.03))",
+                  border: "1px solid rgba(200,146,42,0.18)",
+                  borderRadius: "16px",
+                  padding: "1.25rem 1.4rem",
+                  opacity: testRef.inView ? 1 : 0,
+                  transform: testRef.inView ? "translateY(0)" : "translateY(16px)",
+                  transition: "opacity 0.6s ease 0.18s, transform 0.6s ease 0.18s",
+                }}
+              >
+                <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.75rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  📝 NY State Test Dates 2026
+                </div>
+                {[
+                  { subject: "ELA Test",  dates: "Apr 14 – Apr 24, 2026" },
+                  { subject: "Math Test", dates: "Apr 28 – May 8, 2026"  },
+                ].map((t) => (
+                  <div key={t.subject} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.5rem 0", borderBottom: "1px solid rgba(200,146,42,0.1)" }}>
+                    <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.subject}</span>
+                    <span style={{ fontSize: "0.76rem", color: "#c8922a", fontWeight: 600, fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.dates}</span>
+                  </div>
+                ))}
+                <p style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  Our Spring program is carefully aligned to conclude right before ELA and Math testing windows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ────────────────── CHINESE SECTION ────────────────── */}
+        <section style={{ background: "#fff", borderTop: "1px solid rgba(15,32,68,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
+          <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
+            <div style={{ marginBottom: "1.5rem" }}>
+              <div className="hl-eyebrow-dark" style={{ color: "#c8922a" }}>中文資訊</div>
+              <SectionHeading>春季班 · 星期六課程表</SectionHeading>
+              <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.45)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                2026年1月24日 開始 · 共14堂課
+              </p>
+            </div>
+
+            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(15,32,68,0.07)", overflow: "hidden", boxShadow: "0 2px 16px rgba(15,32,68,0.05)" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse" as const }}>
+                <thead>
+                  <tr>
+                    {["科目", "年級", "時間", "堂數"].map((h) => (
+                      <th key={h} style={{
+                        background: "linear-gradient(135deg, #080f24, #0f2044)",
+                        color: "rgba(255,255,255,0.82)",
+                        fontSize: "0.68rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase" as const,
+                        padding: "0.9rem 1.2rem",
+                        textAlign: "left" as const,
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                      }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {SATURDAY_CLASSES.map((row, i) => (
+                    <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "rgba(15,32,68,0.015)" }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
+                        {row.subject}
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", fontWeight: 400, marginTop: "2px" }}>{row.subjectZh}</span>
+                      </td>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                        {row.grade}
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", marginTop: "2px" }}>{row.gradeZh}</span>
+                      </td>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#c8922a", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                        {row.time}
+                      </td>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.82rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                        14堂
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div style={{ marginTop: "1.25rem", display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+              {[
+                "* 提早在2025年12月23日前報名可享$60折扣。",
+                "* 同一家庭兄弟姐妹可享九五折 (5% off)。",
+                "* 紐約州英文考試：2026年4月14日–4月24日 ｜ 數學考試：4月28日–5月8日",
+              ].map((note, i) => (
+                <p key={i} style={{ fontSize: "0.82rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.65, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  {note}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ────────────────── CTA ────────────────── */}
+        <section
+          ref={ctaRef.ref}
+          style={{
+            background: "linear-gradient(135deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+            padding: "4.5rem clamp(1.25rem, 5vw, 3rem)",
+            textAlign: "center",
+            position: "relative",
+            overflow: "hidden",
+            opacity: ctaRef.inView ? 1 : 0,
+            transform: ctaRef.inView ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.7s ease, transform 0.7s ease",
+          }}
+        >
+          <div aria-hidden style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)", backgroundSize: "48px 48px" }} />
+          <div aria-hidden style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "600px", height: "300px", background: "radial-gradient(ellipse at center, rgba(200,146,42,0.08) 0%, transparent 70%)", pointerEvents: "none" }} />
+
+          <div style={{ position: "relative", zIndex: 1, maxWidth: "600px", margin: "0 auto" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "0.55rem", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8b84b", marginBottom: "1rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
+              Enroll for Spring 2026
+              <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
+            </div>
+
+            <h2 style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontSize: "clamp(1.7rem, 3.5vw, 2.4rem)",
+              fontWeight: 800,
+              color: "#fff",
+              margin: "0 0 0.85rem",
+              lineHeight: 1.15,
+            }}>
+              Secure Your Child's Spot Today
+            </h2>
+            <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.78, margin: "0 0 2rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              Classes fill quickly. Register early to lock in the $60 discount — available until December 23, 2025.
+            </p>
+
+            <div style={{ display: "flex", gap: "0.875rem", justifyContent: "center", flexWrap: "wrap" }}>
+              <a
+                href="/contact"
+                className="hl-register-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.9rem 2rem",
+                  background: "linear-gradient(135deg, #c8922a, #e8b84b)",
+                  color: "#0f2044",
+                  fontWeight: 700,
+                  fontSize: "0.9rem",
+                  borderRadius: "12px",
+                  textDecoration: "none",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                }}
+              >
+                New Admission →
+              </a>
+              <a
+                href="tel:+12129410695"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.9rem 1.75rem",
+                  background: "rgba(255,255,255,0.065)",
+                  color: "#fff",
+                  fontWeight: 600,
+                  fontSize: "0.9rem",
+                  borderRadius: "12px",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  textDecoration: "none",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  transition: "background 0.2s",
+                }}
+              >
+                📞 212-941-0695
+              </a>
+            </div>
+            <p style={{ margin: "1.75rem 0 0", fontSize: "0.78rem", color: "rgba(255,255,255,0.28)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              84 Bowery, 3rd Floor · New York, NY 10013 · higherlearningny@yahoo.com
+            </p>
+          </div>
+        </section>
+
+      </main>
+    </>
+  );
+}
