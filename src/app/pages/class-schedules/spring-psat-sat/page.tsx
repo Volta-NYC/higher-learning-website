@@ -359,3 +359,268 @@ export default function PSATSATPage() {
                   </p>
                 </div>
               </div>
+
+              {/* What's included */}
+              <div ref={scheduleRef.ref}>
+                <div style={{ marginBottom: "1.25rem" }}>
+                  <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.4rem" }}>
+                    <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
+                    What's Included
+                  </div>
+                  <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
+                    Program Highlights
+                  </h2>
+                </div>
+                <div className="hl-highlights-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+                  {HIGHLIGHTS.map((h, i) => (
+                    <HighlightCard
+                      key={h.label}
+                      {...h}
+                      delay={i * 80}
+                      inView={scheduleRef.inView}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right — Session calendar + photo */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", position: "sticky", top: "2rem" }}>
+
+              {/* Session dates card */}
+              <div style={{
+                background: "linear-gradient(160deg, #080f24 0%, #0f2044 70%, #162a58 100%)",
+                borderRadius: "20px",
+                border: "1px solid rgba(200,146,42,0.15)",
+                padding: "1.75rem",
+                position: "relative",
+                overflow: "hidden",
+              }}>
+                <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  <div style={{ marginBottom: "1.25rem" }}>
+                    <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8b84b", marginBottom: "0.3rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                      Session Calendar
+                    </div>
+                    <div style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", fontFamily: "'Playfair Display', Georgia, serif" }}>
+                      14 Saturdays · Jan – May 2026
+                    </div>
+                    <div style={{ width: "32px", height: "1.5px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginTop: "0.5rem" }} />
+                  </div>
+
+                  <div
+                    className="hl-sessions-grid"
+                    style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0.5rem" }}
+                  >
+                    {SESSION_DATES.map((s, i) => {
+                      const colors = MONTH_COLORS[s.month];
+                      return (
+                        <div
+                          key={i}
+                          className="hl-session-dot"
+                          style={{
+                            background: colors.bg,
+                            border: `1px solid ${colors.border}`,
+                            borderRadius: "10px",
+                            padding: "0.5rem 0.35rem",
+                            textAlign: "center",
+                            cursor: "default",
+                            transition: "transform 0.2s, box-shadow 0.2s",
+                          }}
+                        >
+                          <div style={{ fontSize: "0.55rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase", color: colors.text, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                            {s.month}
+                          </div>
+                          <div style={{ fontSize: "0.9rem", fontWeight: 800, color: "#fff", lineHeight: 1.1, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                            {s.date.split(" ")[1]}
+                          </div>
+                          <div style={{ fontSize: "0.5rem", color: "rgba(255,255,255,0.3)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Sat</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div style={{ marginTop: "1.25rem", padding: "0.85rem 1rem", background: "rgba(200,146,42,0.1)", border: "1px solid rgba(200,146,42,0.2)", borderRadius: "10px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.35rem" }}>
+                      <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.55)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Time</span>
+                      <span style={{ fontSize: "0.875rem", fontWeight: 700, color: "#e8b84b", fontFamily: "'DM Sans', system-ui, sans-serif" }}>1:00 PM – 4:00 PM</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.35rem" }}>
+                      <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.55)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Duration</span>
+                      <span style={{ fontSize: "0.875rem", fontWeight: 700, color: "#fff", fontFamily: "'DM Sans', system-ui, sans-serif" }}>3 hours/session</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.55)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Location</span>
+                      <span style={{ fontSize: "0.875rem", fontWeight: 700, color: "#fff", fontFamily: "'DM Sans', system-ui, sans-serif" }}>84 Bowery, 3FL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Class photo */}
+              <div style={{
+                borderRadius: "16px",
+                overflow: "hidden",
+                border: "1px solid rgba(15,32,68,0.07)",
+                boxShadow: "0 4px 20px rgba(15,32,68,0.08)",
+                position: "relative",
+              }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://higherlearningnyc.com/wp-content/uploads/2025/07/520972070_709008841898738_1276621005249571654_n-1024x576.jpg"
+                  alt="Higher Learning PSAT & SAT class"
+                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "16/9" }}
+                />
+                <div style={{
+                  position: "absolute",
+                  bottom: 0, left: 0, right: 0,
+                  background: "linear-gradient(to top, rgba(8,15,36,0.85), transparent)",
+                  padding: "1.5rem 1rem 0.85rem",
+                }}>
+                  <p style={{ margin: 0, fontSize: "0.8rem", fontWeight: 700, color: "#fff", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                    Higher Learning · PSAT &amp; SAT Class
+                  </p>
+                  <p style={{ margin: "0.1rem 0 0", fontSize: "0.7rem", color: "rgba(255,255,255,0.55)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                    For 9th Grade – 12th Grade
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Chinese Section ───────────────────────────────────────────────── */}
+        <section style={{ background: "#fff", borderTop: "1px solid rgba(15,32,68,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
+          <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+            <div style={{ marginBottom: "1.5rem" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.4rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
+                中文資訊
+              </div>
+              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
+                SAT大學考試準備班 — 春季班
+              </h2>
+              <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.5)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                星期六上課 · 2026年1月24日 開始
+              </p>
+            </div>
+
+            <div style={{ overflowX: "auto", borderRadius: "14px", border: "1px solid rgba(15,32,68,0.07)", overflow: "hidden" }}>
+              <table className="hl-info-table" style={{ width: "100%", borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th>項目</th>
+                    <th>內容</th>
+                    <th>時間 &amp; 日期</th>
+                    <th>堂數</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="label-cell">年級</td>
+                    <td>九、十、十一、十二年班</td>
+                    <td rowSpan={3}>
+                      1:00pm – 4:00pm（3小時）<br />
+                      <span style={{ fontSize: "0.8rem", color: "rgba(15,32,68,0.6)" }}>
+                        1/24, 31 · 2/07, 28 · 3/07, 14, 21, 28 · 4/11, 18, 25 · 5/02, 09, 16
+                      </span>
+                    </td>
+                    <td rowSpan={3} style={{ fontWeight: 700, color: "#c8922a", textAlign: "center", whiteSpace: "nowrap" }}>14堂課</td>
+                  </tr>
+                  <tr>
+                    <td className="label-cell">科目</td>
+                    <td>ELA 閱讀、寫作 和 數學</td>
+                  </tr>
+                  <tr>
+                    <td className="label-cell">地點</td>
+                    <td>84 Bowery, 3樓, 紐約</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.55)", margin: "1rem 0 0", lineHeight: 1.7, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              提早在12月23號之前報名可以享有優惠。如有問題，請聯絡辦公室。
+            </p>
+          </div>
+        </section>
+
+        {/* ── CTA Banner ────────────────────────────────────────────────────── */}
+        <section
+          ref={ctaRef.ref}
+          style={{
+            background: "linear-gradient(135deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+            padding: "4rem clamp(1.25rem, 5vw, 3rem)",
+            textAlign: "center",
+            position: "relative",
+            overflow: "hidden",
+            opacity: ctaRef.inView ? 1 : 0,
+            transform: ctaRef.inView ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.7s ease, transform 0.7s ease",
+          }}
+        >
+          <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)", backgroundSize: "48px 48px" }} />
+          <div style={{ position: "relative", zIndex: 1, maxWidth: "600px", margin: "0 auto" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8b84b", marginBottom: "1rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
+              Enroll Today
+              <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
+            </div>
+            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 800, color: "#fff", margin: "0 0 0.75rem", lineHeight: 1.2 }}>
+              Ready to Boost Your Score?
+            </h2>
+            <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.75, margin: "0 0 2rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              Spots are limited. Call or visit to register — early enrollment saves you money.
+            </p>
+            <div style={{ display: "flex", gap: "0.875rem", justifyContent: "center", flexWrap: "wrap" }}>
+              <a
+                href="/pages/contact"
+                className="hl-register-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.875rem 2rem",
+                  background: "linear-gradient(135deg, #c8922a, #e8b84b)",
+                  color: "#0f2044",
+                  fontWeight: 700,
+                  fontSize: "0.9rem",
+                  borderRadius: "12px",
+                  textDecoration: "none",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  transition: "filter 0.2s, transform 0.2s",
+                }}
+              >
+                Register Now →
+              </a>
+              <a
+                href="tel:+12129410695"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.875rem 1.75rem",
+                  background: "rgba(255,255,255,0.07)",
+                  color: "#fff",
+                  fontWeight: 600,
+                  fontSize: "0.9rem",
+                  borderRadius: "12px",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  textDecoration: "none",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  transition: "background 0.2s",
+                }}
+              >
+                📞 212-941-0695
+              </a>
+            </div>
+            <p style={{ margin: "1.5rem 0 0", fontSize: "0.8rem", color: "rgba(255,255,255,0.3)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              84 Bowery, 3rd Floor · New York, NY 10013
+            </p>
+          </div>
+        </section>
+
+      </main>
+    </>
+  );
+}
