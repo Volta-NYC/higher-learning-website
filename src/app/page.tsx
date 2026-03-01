@@ -714,7 +714,7 @@ export default function Home() {
             Schedule a free consultation and find the right program for your student. Limited spots available each semester.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact" className="btn-primary-hl" style={{ animation: "goldPulse 2.5s ease infinite" }}>
+            <Link href="/pages/contact" className="btn-primary-hl" style={{ animation: "goldPulse 2.5s ease infinite" }}>
               Schedule a Consultation
             </Link>
             <Link href="/pages/class-schedules" className="btn-outline-hl">
