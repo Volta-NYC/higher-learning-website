@@ -227,6 +227,21 @@ export default function Footer() {
 
         .hl-footer-legal a:hover { color: #e8b84b; }
 
+        .hl-footer-volta {
+          font-size: 0.65rem;
+          color: rgba(255,255,255,0.2);
+          letter-spacing: 0.04em;
+          white-space: nowrap;
+        }
+
+        .hl-footer-volta a {
+          color: rgba(255,255,255,0.2);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+
+        .hl-footer-volta a:hover { color: rgba(255,255,255,0.45); }
+
         @media (max-width: 860px) {
           .hl-footer-main { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem 0; }
           .hl-footer-nav { justify-content: flex-start; }
@@ -277,9 +292,14 @@ export default function Footer() {
 
           {/* Bottom bar */}
           <div className="hl-footer-bottom">
-            <span className="hl-footer-copy">
-              © {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993
-            </span>
+            <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
+              <span className="hl-footer-copy">
+                © {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993
+              </span>
+              <span className="hl-footer-volta">
+                Built by <a href="https://voltanyc.org/" target="_blank" rel="noopener noreferrer">VoltaNYC</a>
+              </span>
+            </div>
             <nav className="hl-footer-legal" aria-label="Legal">
               {legal.map((l) => (
                 <Link key={l.href} href={l.href}>{l.label}</Link>
