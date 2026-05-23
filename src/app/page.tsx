@@ -1,9 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
-
-/* ─── Data ─────────────────────────────────────────────────── */
+import { useEffect, useRef, useState } from "react";
+import {
+  Award,
+  BookOpenCheck,
+  CalendarDays,
+  Check,
+  ChevronRight,
+  GraduationCap,
+  MapPin,
+  PenLine,
+  Phone,
+  Quote,
+  School,
+  Sparkles,
+  Star,
+  Target,
+  TrendingUp,
+  Trophy,
+  Users,
+} from "lucide-react";
 
 const stats = [
   { value: "33", suffix: "+", label: "Years of Excellence" },
@@ -14,64 +31,73 @@ const stats = [
 
 const courses = [
   {
-    tag: "Grades 9–12",
+    tag: "Grades 9-12",
     title: "PSAT & SAT Prep",
     desc: "Master reading comprehension, grammar, and advanced math. Build the test-taking strategies colleges reward.",
     items: ["Reading & Evidence Analysis", "Writing & Language Mechanics", "Algebra, Data & Trigonometry"],
     accent: "#c8922a",
+    icon: PenLine,
   },
   {
-    tag: "Grades 7–8",
+    tag: "Grades 7-8",
     title: "SHSAT Prep",
     desc: "Our flagship program with a proven 75% admission rate to NYC's elite specialized high schools.",
     items: ["Full-length practice exams", "Critical reasoning & logic", "Time management strategies"],
     accent: "#0f2044",
+    icon: Trophy,
   },
   {
-    tag: "Grades 2–7",
+    tag: "Grades 2-7",
     title: "Reading, Writing & Math",
-    desc: "Core academic skills aligned to New York State Common Core standards — building the foundation for long-term success.",
+    desc: "Core academic skills aligned to New York State Common Core standards - building the foundation for long-term success.",
     items: ["Argument analysis & fluency", "Grammar & sentence structure", "Problem-solving & geometry"],
     accent: "#1d6a4a",
+    icon: BookOpenCheck,
   },
   {
-    tag: "Grades 3–7",
+    tag: "Grades 3-7",
     title: "NYS Test Prep",
     desc: "Targeted preparation for New York State exams. Build confidence, reduce test anxiety, and outperform the curve.",
     items: ["ELA & Math exam strategies", "Practice under real conditions", "Progress tracking & feedback"],
     accent: "#7c3d8c",
+    icon: Target,
   },
   {
     tag: "All Grades",
     title: "Writing Class",
-    desc: "From sentence structure to full essays — our writing classes take students through the complete writing process.",
+    desc: "From sentence structure to full essays - our writing classes take students through the complete writing process.",
     items: ["Grammar & punctuation mastery", "Drafting, editing & revising", "Multiple writing forms & styles"],
     accent: "#b84a62",
+    icon: PenLine,
   },
   {
-    tag: "Grades 2–8",
+    tag: "Grades 2-8",
     title: "Summer Program",
     desc: "Full-day and half-day intensive sessions to prevent the summer slide and launch students ahead of their peers.",
     items: ["English & Math intensives", "Full-day or half-day options", "School-year readiness"],
     accent: "#2563a8",
+    icon: CalendarDays,
   },
 ];
 
 const pillars = [
   {
-    icon: "🎓",
+    icon: GraduationCap,
     title: "33 Years of Quality Teaching",
     desc: "Since 1993, we've refined our curriculum and teaching methods to deliver consistent, measurable results for every student.",
+    tone: "from-amber-50 to-white",
   },
   {
-    icon: "📈",
+    icon: TrendingUp,
     title: "Guaranteed Results",
     desc: "75% of our SHSAT prep students gain admission to specialized high schools. Our track record speaks for itself.",
+    tone: "from-blue-50 to-white",
   },
   {
-    icon: "🏫",
+    icon: School,
     title: "Licensed & Experienced Teachers",
     desc: "Our certified educators provide not just academic support, but the moral support students need to thrive under pressure.",
+    tone: "from-emerald-50 to-white",
   },
 ];
 
@@ -79,19 +105,19 @@ const reviews = [
   {
     name: "Jordan Huang",
     rating: 5,
-    text: "Higher Learning is the best — it got me to my dream school. They're very good in SHSAT and helped me build great skills.",
+    text: "Higher Learning is the best - it got me to my dream school. They're very good in SHSAT and helped me build great skills.",
     date: "Jul 2025",
   },
   {
     name: "Jasmine Huang",
     rating: 5,
-    text: "Learning here feels like water — gentle yet powerful. The lessons flow with ease, washing away confusion and leaving behind clarity.",
+    text: "Learning here feels like water - gentle yet powerful. The lessons flow with ease, washing away confusion and leaving behind clarity.",
     date: "Jul 2025",
   },
   {
     name: "UZ",
     rating: 5,
-    text: "I got into Stuyvesant! Very thankful to Mr. Roda — his teaching style and materials were very helpful for me and my classmates.",
+    text: "I got into Stuyvesant! Very thankful to Mr. Roda - his teaching style and materials were very helpful for me and my classmates.",
     date: "Jul 2025",
   },
   {
@@ -109,7 +135,7 @@ const reviews = [
   {
     name: "Madison Lee",
     rating: 5,
-    text: "My experience here was amazing. The teachers taught me so much — and in fun, engaging ways. I recommend this tutoring center.",
+    text: "My experience here was amazing. The teachers taught me so much - and in fun, engaging ways. I recommend this tutoring center.",
     date: "Jul 2024",
   },
 ];
@@ -130,643 +156,105 @@ const students = [
   "Wen Hui Huang","Yuan Yuan Cheng","Yu Sen Dong","Yu Ying Yang","Yuze Chen",
 ];
 
-/* ─── Hooks ─────────────────────────────────────────────────── */
-
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
       { threshold }
     );
     obs.observe(el);
     return () => obs.disconnect();
   }, [threshold]);
+
   return { ref, visible };
 }
 
 function useCountUp(target: number, decimals = 0, active: boolean) {
   const [val, setVal] = useState(0);
+
   useEffect(() => {
     if (!active) return;
     let start = 0;
-    const end = target;
-    const duration = 1800;
+    const duration = 1600;
     const step = 16;
-    const increment = end / (duration / step);
+    const increment = target / (duration / step);
     const timer = setInterval(() => {
-      start = Math.min(start + increment, end);
+      start = Math.min(start + increment, target);
       setVal(start);
-      if (start >= end) clearInterval(timer);
+      if (start >= target) clearInterval(timer);
     }, step);
+
     return () => clearInterval(timer);
   }, [target, active]);
+
   return decimals ? val.toFixed(decimals) : Math.floor(val).toString();
-}
-
-/* ─── Sub-components ─────────────────────────────────────────── */
-
-function Stars({ n }: { n: number }) {
-  return (
-    <span style={{ color: "#c8922a", fontSize: "1rem", letterSpacing: "2px" }}>
-      {"★".repeat(n)}{"☆".repeat(5 - n)}
-    </span>
-  );
 }
 
 function StatCard({ value, suffix, label, active }: { value: string; suffix: string; label: string; active: boolean }) {
   const isDecimal = value.includes(".");
-  const numVal = parseFloat(value);
-  const counted = useCountUp(numVal, isDecimal ? 1 : 0, active);
+  const counted = useCountUp(parseFloat(value), isDecimal ? 1 : 0, active);
   const isYear = label === "Established";
 
   return (
-    <div style={{
-      textAlign: "center",
-      padding: "2rem 1rem",
-      position: "relative",
-    }}>
-      <div style={{
-        fontFamily: "'Playfair Display', serif",
-        fontSize: "clamp(2.4rem, 5vw, 3.6rem)",
-        fontWeight: 700,
-        color: "#c8922a",
-        lineHeight: 1,
-        letterSpacing: "-0.02em",
-      }}>
+    <div className="group relative overflow-hidden border-white/10 px-5 py-7 text-center sm:border-r lg:px-8">
+      <div className="absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-[#e8b84b]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="font-serif text-4xl font-bold leading-none text-[#e8b84b] md:text-5xl">
         {isYear ? value : counted}{suffix}
       </div>
-      <div style={{
-        marginTop: "0.5rem",
-        fontSize: "0.78rem",
-        fontWeight: 600,
-        letterSpacing: "0.12em",
-        textTransform: "uppercase",
-        color: "rgba(255,255,255,0.55)",
-      }}>
+      <div className="mt-3 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white/55">
         {label}
       </div>
     </div>
   );
 }
 
-function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: number }) {
-  const { ref, visible } = useInView();
-  return (
-    <div ref={ref} style={{
-      background: "#fff",
-      borderRadius: 16,
-      padding: "1.75rem",
-      boxShadow: "0 4px 24px rgba(15,32,68,0.08)",
-      border: "1px solid rgba(200,146,42,0.1)",
-      opacity: visible ? 1 : 0,
-      transform: visible ? "translateY(0)" : "translateY(28px)",
-      transition: `opacity 0.55s ease ${delay}ms, transform 0.55s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.75rem",
-    }}>
-      <Stars n={review.rating} />
-      <p style={{ color: "#3a3844", fontSize: "0.9rem", lineHeight: 1.7, fontStyle: "italic", margin: 0 }}>
-        &ldquo;{review.text}&rdquo;
-      </p>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "auto" }}>
-        <span style={{ fontWeight: 600, fontSize: "0.85rem", color: "#0f2044" }}>{review.name}</span>
-        <span style={{ fontSize: "0.72rem", color: "#9e9ca4", letterSpacing: "0.05em" }}>{review.date}</span>
-      </div>
-    </div>
-  );
-}
-
-/* ─── Page ───────────────────────────────────────────────────── */
-
-export default function Home() {
-  const [mounted, setMounted] = useState(false);
-  const statsSection = useInView(0.2);
-  const [reviewPage, setReviewPage] = useState(0);
-  const reviewsPerPage = 3;
-  const totalPages = Math.ceil(reviews.length / reviewsPerPage);
-  const visibleReviews = reviews.slice(reviewPage * reviewsPerPage, (reviewPage + 1) * reviewsPerPage);
-
-  useEffect(() => { setMounted(true); }, []);
-
-  return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-        :root {
-          --navy: #0f2044;
-          --gold: #c8922a;
-          --gold-light: #e8b84b;
-          --cream: #faf8f4;
-        }
-
-        .hl-hero-bg {
-          background: linear-gradient(160deg, #080f24 0%, #0f2044 40%, #162a58 70%, #0f2044 100%);
-          position: relative;
-          overflow: hidden;
-        }
-
-        .hl-hero-bg::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(200,146,42,0.08) 0%, transparent 70%);
-          pointer-events: none;
-        }
-
-        .hl-hero-bg::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 120px;
-          background: linear-gradient(to bottom, transparent, #faf8f4);
-          pointer-events: none;
-        }
-
-        /* Grid lines decoration */
-        .hl-grid-lines {
-          position: absolute;
-          inset: 0;
-          opacity: 0.04;
-          background-image:
-            linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
-          background-size: 60px 60px;
-          pointer-events: none;
-        }
-
-        .fade-up {
-          opacity: 0;
-          transform: translateY(32px);
-          transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1);
-        }
-
-        .fade-up.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .course-card {
-          background: #fff;
-          border-radius: 20px;
-          padding: 2rem;
-          border: 1px solid rgba(15,32,68,0.07);
-          box-shadow: 0 2px 16px rgba(15,32,68,0.06);
-          transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .course-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 3px;
-          background: var(--accent, #c8922a);
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
-        }
-
-        .course-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 16px 48px rgba(15,32,68,0.12);
-        }
-
-        .course-card:hover::before {
-          transform: scaleX(1);
-        }
-
-        .pillar-card {
-          background: #fff;
-          border-radius: 20px;
-          padding: 2.5rem 2rem;
-          text-align: center;
-          border: 1px solid rgba(200,146,42,0.1);
-          box-shadow: 0 2px 16px rgba(15,32,68,0.05);
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .pillar-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 40px rgba(15,32,68,0.1);
-        }
-
-        .student-name {
-          display: inline-block;
-          padding: 0.3rem 0.9rem;
-          background: rgba(15,32,68,0.05);
-          border-radius: 50px;
-          font-size: 0.82rem;
-          font-weight: 500;
-          color: #0f2044;
-          transition: background 0.15s, color 0.15s;
-          white-space: nowrap;
-        }
-
-        .student-name:hover {
-          background: #c8922a;
-          color: #fff;
-        }
-
-        .section-label {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: 0.7rem;
-          font-weight: 600;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          color: #c8922a;
-          margin-bottom: 0.75rem;
-        }
-
-        .section-label::before, .section-label::after {
-          content: '';
-          display: block;
-          width: 20px;
-          height: 1px;
-          background: #c8922a;
-          opacity: 0.6;
-        }
-
-        .review-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: rgba(15,32,68,0.2);
-          cursor: pointer;
-          transition: background 0.2s, transform 0.2s;
-        }
-
-        .review-dot.active {
-          background: #c8922a;
-          transform: scale(1.3);
-        }
-
-        .cta-section {
-          background: linear-gradient(135deg, #0f2044 0%, #162a58 50%, #0a1530 100%);
-          position: relative;
-          overflow: hidden;
-        }
-
-        .cta-section::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          right: -20%;
-          width: 600px;
-          height: 600px;
-          background: radial-gradient(circle, rgba(200,146,42,0.12) 0%, transparent 70%);
-          pointer-events: none;
-        }
-
-        @keyframes heroFadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes scrollMarquee {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-23%); }
-        }
-
-        .marquee-track {
-          display: flex;
-          gap: 1rem;
-          animation: scrollMarquee 30s linear infinite;
-          width: max-content;
-        }
-
-        .marquee-track:hover { animation-play-state: paused; }
-
-        @keyframes goldPulse {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(200,146,42,0.4); }
-          50% { box-shadow: 0 0 0 12px rgba(200,146,42,0); }
-        }
-
-        .btn-primary-hl {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0.85rem 2rem;
-          background: linear-gradient(135deg, #c8922a, #e8b84b);
-          color: #0f2044;
-          font-family: 'DM Sans', sans-serif;
-          font-weight: 700;
-          font-size: 0.82rem;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          border-radius: 50px;
-          text-decoration: none;
-          border: none;
-          cursor: pointer;
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-          box-shadow: 0 4px 20px rgba(200,146,42,0.35);
-        }
-
-        .btn-primary-hl:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 32px rgba(200,146,42,0.5);
-        }
-
-        .btn-outline-hl {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0.85rem 2rem;
-          background: transparent;
-          color: rgba(255,255,255,0.85);
-          font-family: 'DM Sans', sans-serif;
-          font-weight: 600;
-          font-size: 0.82rem;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          border-radius: 50px;
-          text-decoration: none;
-          border: 1.5px solid rgba(255,255,255,0.25);
-          cursor: pointer;
-          transition: border-color 0.2s, color 0.2s, background 0.2s;
-        }
-
-        .btn-outline-hl:hover {
-          border-color: rgba(255,255,255,0.6);
-          color: #fff;
-          background: rgba(255,255,255,0.06);
-        }
-      `}</style>
-
-      {/* ── HERO ───────────────────────────────────────────────── */}
-      <section className="hl-hero-bg" style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "8rem 0 10rem", fontFamily: "'DM Sans', sans-serif" }}>
-        <div className="hl-grid-lines" />
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 clamp(1.25rem, 5vw, 3rem)", position: "relative", zIndex: 1, width: "100%" }}>
-          <div style={{
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? "none" : "translateY(24px)",
-            transition: "opacity 0.8s ease 0.1s, transform 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s",
-          }}>
-            {/* Eyebrow */}
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.5rem" }}>
-              <div style={{ width: 32, height: 2, background: "linear-gradient(to right, #c8922a, #e8b84b)" }} />
-              <span style={{ fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#e8b84b" }}>
-                Established 1993 · New York City
-              </span>
-            </div>
-
-            {/* Main heading */}
-            <h1 style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(3rem, 7vw, 5.5rem)",
-              fontWeight: 700,
-              color: "#fff",
-              lineHeight: 1.08,
-              letterSpacing: "-0.03em",
-              margin: 0,
-              maxWidth: "800px",
-            }}>
-              Where Students
-              <br />
-              <em style={{ color: "#e8b84b", fontStyle: "italic" }}>Rise to Their</em>
-              <br />
-              Full Potential
-            </h1>
-
-            {/* Chinese name */}
-            <div style={{
-              marginTop: "1.25rem",
-              fontSize: "1.1rem",
-              color: "rgba(255,255,255,0.45)",
-              letterSpacing: "0.35em",
-              fontFamily: "'PingFang SC', 'Microsoft YaHei', sans-serif",
-            }}>
-              春苗补习 · Higher Learning
-            </div>
-
-            {/* Description */}
-            <p style={{
-              marginTop: "2rem",
-              maxWidth: 520,
-              color: "rgba(255,255,255,0.65)",
-              fontSize: "1.05rem",
-              lineHeight: 1.75,
-            }}>
-              33 years of academic excellence preparing NYC students for SHSAT, SAT, PSAT, and state exams.
-              Small classes. Certified teachers. Proven results.
-            </p>
-
-            {/* Address + phone */}
-            <div style={{ marginTop: "1.5rem", display: "flex", flexWrap: "wrap", gap: "1.5rem" }}>
-              {[
-                { icon: "📍", text: "84 Bowery, 3FL · New York, NY 10013" },
-                { icon: "📞", text: "212-941-0695" },
-              ].map((item) => (
-                <span key={item.text} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.85rem", color: "rgba(255,255,255,0.5)" }}>
-                  <span>{item.icon}</span> {item.text}
-                </span>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div style={{ marginTop: "2.5rem", display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link href="/pages/contact" className="btn-primary-hl">
-                Enroll Now →
-              </Link>
-              <Link href="/pages/courses" className="btn-outline-hl">
-                View Courses
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── STATS BAR ──────────────────────────────────────────── */}
-      <section ref={statsSection.ref} style={{ background: "#0f2044", padding: "0" }}>
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 clamp(1.25rem, 5vw, 3rem)" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 0,
-          }}>
-            {stats.map((s, i) => (
-              <div key={s.label} style={{
-                borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
-              }}>
-                <StatCard {...s} active={statsSection.visible} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── COURSES ─────────────────────────────────────────────── */}
-      <Section id="courses" bg="#faf8f4" label="Academic Programs" title="Every Student. Every Goal." subtitle="Curriculum built around New York State Common Core standards and NYC's most competitive exams.">
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "1.5rem",
-        }}>
-          {courses.map((course, i) => (
-            <CourseCard key={course.title} course={course} delay={i * 80} />
-          ))}
-        </div>
-      </Section>
-
-      {/* ── WHY US ──────────────────────────────────────────────── */}
-      <Section id="why" bg="#0f2044" label="Why Higher Learning" title="The Difference Is Results." subtitle="We don't just prepare students for tests — we build the academic confidence and habits that last a lifetime." dark>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "1.5rem",
-        }}>
-          {pillars.map((p, i) => (
-            <PillarCard key={p.title} pillar={p} delay={i * 100} />
-          ))}
-        </div>
-      </Section>
-
-      {/* ── SUCCESS WALL ────────────────────────────────────────── */}
-      <Section id="success" bg="#faf8f4" label="Class of 2024 & 2025" title="Specialized High School Admissions" subtitle="Congratulations to our students accepted into NYC's elite specialized high schools. Pick up your gifts and celebrate with us — you've earned it.">
-        {/* Marquee of names */}
-        <div style={{ overflow: "hidden", marginTop: "1rem" }}>
-          <div className="marquee-track">
-            {[...students, ...students].map((name, i) => (
-              <span key={i} className="student-name">{name}</span>
-            ))}
-          </div>
-        </div>
-
-        {/* Highlight numbers */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "3rem", marginTop: "3rem", flexWrap: "wrap" }}>
-          {[
-            { n: "79+", label: "Students Accepted" },
-            { n: "75%", label: "SHSAT Acceptance Rate" },
-            { n: "10+", label: "Schools Including Stuyvesant" },
-          ].map((item) => (
-            <div key={item.label} style={{ textAlign: "center" }}>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.5rem", fontWeight: 700, color: "#c8922a" }}>{item.n}</div>
-              <div style={{ fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#5a5860", marginTop: "0.25rem", fontWeight: 600 }}>{item.label}</div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ── REVIEWS ─────────────────────────────────────────────── */}
-      <Section id="reviews" bg="#fff" label="Google Reviews" title="What Families Are Saying" subtitle="Rated 4.9 stars across 45+ reviews. Our students and parents say it best.">
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "1.25rem",
-        }}>
-          {visibleReviews.map((r, i) => (
-            <ReviewCard key={r.name + reviewPage} review={r} delay={i * 100} />
-          ))}
-        </div>
-
-        {/* Pagination dots */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "0.5rem", marginTop: "2rem" }}>
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <button
-              key={i}
-              className={`review-dot ${i === reviewPage ? "active" : ""}`}
-              onClick={() => setReviewPage(i)}
-              aria-label={`Page ${i + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Google attribution */}
-        <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
-          <a
-            href="https://search.google.com/local/reviews?placeid=ChIJI3T2lZVbwokR11FLjw6rAsw"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ fontSize: "0.8rem", color: "#c8922a", fontWeight: 600, textDecoration: "none", letterSpacing: "0.05em" }}
-          >
-            Read all reviews on Google →
-          </a>
-        </div>
-      </Section>
-
-      {/* ── CTA ─────────────────────────────────────────────────── */}
-      <section className="cta-section" style={{ padding: "6rem 0", fontFamily: "'DM Sans', sans-serif" }}>
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 clamp(1.25rem, 5vw, 3rem)", textAlign: "center", position: "relative", zIndex: 1 }}>
-          <div className="section-label" style={{ justifyContent: "center" }}>Begin Your Journey</div>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(2rem, 4vw, 3.2rem)",
-            fontWeight: 700,
-            color: "#fff",
-            marginTop: "0.5rem",
-            letterSpacing: "-0.02em",
-          }}>
-            Ready to Get Ahead?
-          </h2>
-          <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", maxWidth: 480, margin: "1rem auto 2.5rem", lineHeight: 1.75 }}>
-            Schedule a free consultation and find the right program for your student. Limited spots available each semester.
-          </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/pages/contact" className="btn-primary-hl" style={{ animation: "goldPulse 2.5s ease infinite" }}>
-              Schedule a Consultation
-            </Link>
-            <Link href="/pages/class-schedules" className="btn-outline-hl">
-              View 2026 Schedules
-            </Link>
-          </div>
-          {/* Address repeat */}
-          <p style={{ marginTop: "2.5rem", color: "rgba(255,255,255,0.3)", fontSize: "0.8rem", letterSpacing: "0.08em" }}>
-            84 Bowery, 3FL · New York, NY 10013 · 212-941-0695
-          </p>
-        </div>
-      </section>
-    </>
-  );
-}
-
-/* ─── Section wrapper ────────────────────────────────────────── */
 function Section({
-  id, bg, label, title, subtitle, children, dark,
+  id,
+  label,
+  title,
+  subtitle,
+  children,
+  dark = false,
+  className = "",
 }: {
   id?: string;
-  bg: string;
   label: string;
   title: string;
   subtitle?: string;
   children: React.ReactNode;
   dark?: boolean;
+  className?: string;
 }) {
   const { ref, visible } = useInView();
+
   return (
-    <section id={id} style={{ background: bg, padding: "6rem 0", fontFamily: "'DM Sans', sans-serif" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 clamp(1.25rem, 5vw, 3rem)" }}>
-        <div ref={ref} style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "none" : "translateY(24px)",
-          transition: "opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1)",
-          marginBottom: "3rem",
-        }}>
-          <div className="section-label">{label}</div>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-            fontWeight: 700,
-            color: dark ? "#fff" : "#0f2044",
-            letterSpacing: "-0.02em",
-            margin: "0 0 1rem",
-            maxWidth: 600,
-          }}>
+    <section id={id} className={`py-20 md:py-28 ${className}`}>
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div
+          ref={ref}
+          className={`mb-12 max-w-3xl transition-all duration-700 ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+        >
+          <div className={`mb-4 inline-flex items-center gap-3 text-[0.7rem] font-bold uppercase tracking-[0.22em] ${dark ? "text-[#e8b84b]" : "text-[#b27a16]"}`}>
+            <span className="h-px w-8 bg-current opacity-60" />
+            {label}
+          </div>
+          <h2 className={`font-serif text-4xl font-bold leading-tight tracking-normal md:text-5xl ${dark ? "text-white" : "text-[#0f2044]"}`}>
             {title}
           </h2>
           {subtitle && (
-            <p style={{ color: dark ? "rgba(255,255,255,0.5)" : "#5a5860", maxWidth: 560, lineHeight: 1.75 }}>
+            <p className={`mt-5 max-w-2xl text-base leading-8 md:text-lg ${dark ? "text-white/62" : "text-slate-600"}`}>
               {subtitle}
             </p>
           )}
@@ -777,84 +265,315 @@ function Section({
   );
 }
 
-/* ─── Course Card ────────────────────────────────────────────── */
 function CourseCard({ course, delay }: { course: typeof courses[0]; delay: number }) {
   const { ref, visible } = useInView();
+  const Icon = course.icon;
+
   return (
-    <div ref={ref} className="course-card" style={{
-      "--accent": course.accent,
-      opacity: visible ? 1 : 0,
-      transform: visible ? "none" : "translateY(24px)",
-      transition: `opacity 0.55s ease ${delay}ms, transform 0.55s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
-    } as React.CSSProperties}>
-      <div style={{
-        display: "inline-block",
-        padding: "0.25rem 0.75rem",
-        borderRadius: 50,
-        background: course.accent + "15",
-        color: course.accent,
-        fontSize: "0.7rem",
-        fontWeight: 700,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        marginBottom: "0.75rem",
-      }}>
-        {course.tag}
+    <article
+      ref={ref}
+      className={`group relative flex min-h-[360px] flex-col overflow-hidden rounded-[8px] border border-slate-200 bg-white p-7 shadow-[0_16px_45px_rgba(15,32,68,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(15,32,68,0.16)] ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <div className="absolute inset-x-0 top-0 h-1.5 transition-all duration-500 group-hover:h-2" style={{ backgroundColor: course.accent }} />
+      <div className="mb-6 flex items-start justify-between gap-4">
+        <div className="flex h-12 w-12 items-center justify-center rounded-[8px] border" style={{ backgroundColor: `${course.accent}12`, borderColor: `${course.accent}30`, color: course.accent }}>
+          <Icon size={23} strokeWidth={1.8} />
+        </div>
+        <span className="rounded-full border px-3 py-1 text-[0.66rem] font-bold uppercase tracking-[0.15em]" style={{ backgroundColor: `${course.accent}10`, borderColor: `${course.accent}24`, color: course.accent }}>
+          {course.tag}
+        </span>
       </div>
-      <h3 style={{
-        fontFamily: "'Playfair Display', serif",
-        fontSize: "1.25rem",
-        fontWeight: 700,
-        color: "#0f2044",
-        margin: "0 0 0.75rem",
-      }}>
-        {course.title}
-      </h3>
-      <p style={{ color: "#5a5860", fontSize: "0.88rem", lineHeight: 1.7, margin: "0 0 1.25rem" }}>{course.desc}</p>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+      <h3 className="font-serif text-2xl font-bold tracking-normal text-[#0f2044]">{course.title}</h3>
+      <p className="mt-4 text-sm leading-7 text-slate-600">{course.desc}</p>
+      <ul className="mt-6 flex flex-col gap-3">
         {course.items.map((item) => (
-          <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", fontSize: "0.82rem", color: "#3a3844" }}>
-            <span style={{ color: course.accent, flexShrink: 0, marginTop: "2px" }}>✓</span>
-            {item}
+          <li key={item} className="flex gap-3 text-sm font-medium leading-6 text-slate-700">
+            <Check className="mt-1 h-4 w-4 flex-none" style={{ color: course.accent }} />
+            <span>{item}</span>
           </li>
         ))}
       </ul>
-      <div style={{ marginTop: "1.5rem" }}>
-        <Link href="/pages/courses" style={{
-          fontSize: "0.78rem",
-          fontWeight: 600,
-          color: course.accent,
-          letterSpacing: "0.06em",
-          textDecoration: "none",
-          textTransform: "uppercase",
-        }}>
-          Learn More →
-        </Link>
-      </div>
-    </div>
+      <Link href="/pages/courses" className="mt-auto inline-flex items-center gap-2 pt-7 text-xs font-bold uppercase tracking-[0.16em] transition-colors" style={{ color: course.accent }}>
+        Learn More <ChevronRight size={15} />
+      </Link>
+    </article>
   );
 }
 
-/* ─── Pillar Card ────────────────────────────────────────────── */
 function PillarCard({ pillar, delay }: { pillar: typeof pillars[0]; delay: number }) {
   const { ref, visible } = useInView();
+  const Icon = pillar.icon;
+
   return (
-    <div ref={ref} className="pillar-card" style={{
-      opacity: visible ? 1 : 0,
-      transform: visible ? "none" : "translateY(24px)",
-      transition: `opacity 0.55s ease ${delay}ms, transform 0.55s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
-    }}>
-      <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>{pillar.icon}</div>
-      <h3 style={{
-        fontFamily: "'Playfair Display', serif",
-        fontSize: "1.2rem",
-        fontWeight: 700,
-        color: "#0f2044",
-        margin: "0 0 0.75rem",
-      }}>
-        {pillar.title}
-      </h3>
-      <p style={{ color: "#5a5860", fontSize: "0.88rem", lineHeight: 1.75, margin: 0 }}>{pillar.desc}</p>
-    </div>
+    <article
+      ref={ref}
+      className={`grid gap-6 rounded-[8px] border border-white/10 bg-gradient-to-br ${pillar.tone} p-7 shadow-[0_18px_55px_rgba(0,0,0,0.18)] transition-all duration-500 hover:-translate-y-1 md:grid-cols-[4rem_1fr] md:p-8 ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <div className="flex h-16 w-16 items-center justify-center rounded-[8px] bg-[#0f2044] text-[#e8b84b] shadow-lg shadow-[#0f2044]/20">
+        <Icon size={30} strokeWidth={1.7} />
+      </div>
+      <div>
+        <h3 className="font-serif text-2xl font-bold tracking-normal text-[#0f2044]">{pillar.title}</h3>
+        <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">{pillar.desc}</p>
+      </div>
+    </article>
+  );
+}
+
+function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: number }) {
+  const { ref, visible } = useInView();
+
+  return (
+    <article
+      ref={ref}
+      className={`relative flex min-h-[300px] flex-col rounded-[8px] border border-[#d9c28e]/35 bg-white p-7 shadow-[0_18px_50px_rgba(15,32,68,0.09)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_65px_rgba(15,32,68,0.14)] ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <Quote className="absolute right-6 top-6 h-10 w-10 text-[#f0dfb4]" strokeWidth={1.4} />
+      <div className="mb-6 flex gap-1 text-[#c8922a]" aria-label={`${review.rating} star review`}>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Star key={index} size={17} fill="currentColor" strokeWidth={1.5} />
+        ))}
+      </div>
+      <p className="relative z-10 text-sm leading-7 text-slate-700 md:text-base">&ldquo;{review.text}&rdquo;</p>
+      <div className="mt-auto flex items-end justify-between gap-4 pt-8">
+        <div>
+          <div className="font-bold text-[#0f2044]">{review.name}</div>
+          <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Google Review</div>
+        </div>
+        <div className="text-sm font-semibold text-slate-400">{review.date}</div>
+      </div>
+    </article>
+  );
+}
+
+export default function Home() {
+  const { ref: statsRef, visible: statsVisible } = useInView(0.2);
+  const [reviewPage, setReviewPage] = useState(0);
+  const reviewsPerPage = 3;
+  const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+  const visibleReviews = reviews.slice(reviewPage * reviewsPerPage, (reviewPage + 1) * reviewsPerPage);
+
+  return (
+    <>
+      <style>{`
+        @keyframes scrollMarquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        .marquee-track {
+          width: max-content;
+          animation: scrollMarquee 42s linear infinite;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <section className="relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-[#080f24] pb-24 pt-20 md:pb-28 md:pt-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(232,184,75,0.18),transparent_30%),radial-gradient(circle_at_20%_78%,rgba(80,124,190,0.22),transparent_32%),linear-gradient(145deg,#080f24_0%,#0f2044_46%,#172f65_100%)]" />
+        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.7)_1px,transparent_1px)] [background-size:72px_72px]" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
+
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_26rem] lg:px-12">
+          <div className="max-w-4xl">
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#e8b84b]/25 bg-white/7 px-4 py-2 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#e8b84b] backdrop-blur">
+              <Sparkles size={14} />
+              Established 1993 · New York City
+            </div>
+            <h1 className="max-w-5xl font-serif text-[clamp(3rem,6.8vw,5.35rem)] font-bold leading-[0.98] tracking-normal text-white">
+              Where Students <span className="italic text-[#e8b84b]">Rise</span> to Their Full Potential
+            </h1>
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <div className="zh text-2xl tracking-[0.42em] text-white/52 md:text-3xl">春苗补习</div>
+              <div className="hidden h-px w-16 bg-[#e8b84b]/45 sm:block" />
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/42">Higher Learning</div>
+            </div>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
+              33 years of academic excellence preparing NYC students for SHSAT, SAT, PSAT, and state exams.
+              Small classes. Certified teachers. Proven results.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 text-sm font-medium text-white/58">
+              <span className="inline-flex items-center gap-2"><MapPin size={17} className="text-[#e8b84b]" />84 Bowery, 3FL · New York, NY 10013</span>
+              <span className="inline-flex items-center gap-2"><Phone size={17} className="text-[#e8b84b]" />212-941-0695</span>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#081126] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#081126] hover:shadow-[0_18px_45px_rgba(200,146,42,0.48)]">
+                Enroll Now <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link href="/pages/courses" className="inline-flex h-13 items-center justify-center rounded-full border border-white/28 px-7 text-sm font-bold uppercase tracking-[0.14em] text-white/86 transition duration-300 hover:-translate-y-1 hover:border-white/65 hover:bg-white/8 hover:text-white">
+                View Courses
+              </Link>
+            </div>
+          </div>
+
+          <aside className="relative hidden rounded-[8px] border border-white/12 bg-white/8 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.25)] backdrop-blur-xl lg:block">
+            <div className="rounded-[8px] border border-[#e8b84b]/25 bg-[#081126]/70 p-6">
+              <div className="mb-8 flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Admissions Focus</span>
+                <Award className="text-[#e8b84b]" size={24} />
+              </div>
+              <div className="font-serif text-5xl font-bold leading-none text-white">75%</div>
+              <p className="mt-4 text-sm leading-7 text-white/58">SHSAT acceptance rate into NYC specialized high schools.</p>
+              <div className="mt-8 grid gap-3">
+                {["Stuyvesant", "Brooklyn Tech", "Bronx Science"].map((school) => (
+                  <div key={school} className="flex items-center justify-between rounded-[8px] border border-white/8 bg-white/6 px-4 py-3 text-sm text-white/75">
+                    {school}
+                    <Check size={16} className="text-[#e8b84b]" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section ref={statsRef} className="relative z-20 bg-white px-5 sm:px-8 lg:px-12">
+        <div className="mx-auto -mt-14 max-w-7xl overflow-hidden rounded-[8px] border border-white/10 bg-[#0f2044] shadow-[0_28px_90px_rgba(15,32,68,0.24)]">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {stats.map((s) => (
+              <StatCard key={s.label} {...s} active={statsVisible} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Section
+        id="courses"
+        className="bg-white"
+        label="Academic Programs"
+        title="Every Student. Every Goal."
+        subtitle="Curriculum built around New York State Common Core standards and NYC's most competitive exams."
+      >
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {courses.map((course, i) => (
+            <CourseCard key={course.title} course={course} delay={i * 80} />
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        id="why"
+        className="bg-[#0f2044] bg-[radial-gradient(circle_at_top_right,rgba(232,184,75,0.13),transparent_34%),linear-gradient(135deg,#0f2044,#081126)]"
+        label="Why Higher Learning"
+        title="The Difference Is Results."
+        subtitle="We don't just prepare students for tests - we build the academic confidence and habits that last a lifetime."
+        dark
+      >
+        <div className="grid gap-5 lg:grid-cols-3">
+          {pillars.map((pillar, i) => (
+            <PillarCard key={pillar.title} pillar={pillar} delay={i * 100} />
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        id="success"
+        className="overflow-hidden bg-[#080f24] bg-[radial-gradient(circle_at_20%_20%,rgba(232,184,75,0.16),transparent_26%),linear-gradient(145deg,#080f24,#121b34)]"
+        label="Class of 2024 & 2025"
+        title="Specialized High School Admissions"
+        subtitle="Congratulations to our students accepted into NYC's elite specialized high schools. Pick up your gifts and celebrate with us - you've earned it."
+        dark
+      >
+        <div className="relative -mx-5 overflow-hidden border-y border-white/10 py-6 sm:-mx-8 lg:-mx-12">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#080f24] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#080f24] to-transparent" />
+          <div className="marquee-track flex gap-3">
+            {[...students, ...students].map((name, i) => (
+              <span key={`${name}-${i}`} className="whitespace-nowrap rounded-full border border-[#e8b84b]/20 bg-white/8 px-4 py-2 text-sm font-semibold text-white/75 shadow-sm backdrop-blur transition duration-300 hover:border-[#e8b84b]/60 hover:bg-[#e8b84b] hover:text-[#081126]">
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {[
+            { n: "79+", label: "Students Accepted", icon: Users },
+            { n: "75%", label: "SHSAT Acceptance Rate", icon: TrendingUp },
+            { n: "10+", label: "Schools Including Stuyvesant", icon: School },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.label} className="rounded-[8px] border border-white/10 bg-white/8 p-7 text-center shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur">
+                <Icon className="mx-auto mb-4 text-[#e8b84b]" size={28} />
+                <div className="font-serif text-5xl font-bold leading-none text-[#e8b84b] md:text-6xl">{item.n}</div>
+                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-white/58">{item.label}</div>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
+      <Section
+        id="reviews"
+        className="bg-[#fbf7ed]"
+        label="Google Reviews"
+        title="What Families Are Saying"
+        subtitle="Rated 4.9 stars across 45+ reviews. Our students and parents say it best."
+      >
+        <div className="grid gap-6 lg:grid-cols-3">
+          {visibleReviews.map((review, i) => (
+            <ReviewCard key={review.name + reviewPage} review={review} delay={i * 100} />
+          ))}
+        </div>
+
+        <div className="mt-9 flex justify-center gap-3">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              className={`h-2.5 w-2.5 rounded-full transition duration-300 ${i === reviewPage ? "scale-125 bg-[#c8922a]" : "bg-[#0f2044]/20 hover:bg-[#0f2044]/40"}`}
+              onClick={() => setReviewPage(i)}
+              aria-label={`Page ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href="https://search.google.com/local/reviews?placeid=ChIJI3T2lZVbwokR11FLjw6rAsw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#b27a16] transition hover:text-[#0f2044]"
+          >
+            Read all reviews on Google <ChevronRight size={16} />
+          </a>
+        </div>
+      </Section>
+
+      <section className="relative isolate overflow-hidden bg-[#0f2044] px-5 py-20 text-center sm:px-8 md:py-28 lg:px-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(232,184,75,0.18),transparent_32%),linear-gradient(135deg,#0f2044,#081126)]" />
+        <div className="relative z-10 mx-auto max-w-4xl">
+          <div className="mb-4 inline-flex items-center gap-3 text-[0.7rem] font-bold uppercase tracking-[0.22em] text-[#e8b84b]">
+            <span className="h-px w-8 bg-current opacity-60" />
+            Begin Your Journey
+            <span className="h-px w-8 bg-current opacity-60" />
+          </div>
+          <h2 className="font-serif text-4xl font-bold leading-tight tracking-normal text-white md:text-6xl">Ready to Get Ahead?</h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/62">
+            Schedule a free consultation and find the right program for your student. Limited spots available each semester.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#081126] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#081126]">
+              Schedule a Consultation
+            </Link>
+            <Link href="/pages/class-schedules" className="inline-flex h-13 items-center justify-center rounded-full border border-white/28 px-7 text-sm font-bold uppercase tracking-[0.14em] text-white/86 transition duration-300 hover:-translate-y-1 hover:border-white/65 hover:bg-white/8 hover:text-white">
+              View 2026 Schedules
+            </Link>
+          </div>
+          <p className="mt-10 text-sm font-medium tracking-[0.08em] text-white/38">
+            84 Bowery, 3FL · New York, NY 10013 · 212-941-0695
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
