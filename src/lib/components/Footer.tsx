@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Courses", href: "/pages/courses" },
@@ -22,44 +23,54 @@ const socials = [
   {
     label: "Facebook",
     href: "https://www.facebook.com/profile.php?id=100083688844598",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path d="M20,10.1c0-5.5-4.5-10-10-10S0,4.5,0,10.1c0,5,3.7,9.1,8.4,9.9v-7H5.9v-2.9h2.5V7.9C8.4,5.4,9.9,4,12.2,4c1.1,0,2.2,0.2,2.2,0.2v2.5h-1.3c-1.2,0-1.6,0.8-1.6,1.6v1.9h2.8L13.9,13h-2.3v7C16.3,19.2,20,15.1,20,10.1z" />
-      </svg>
-    ),
+    icon: ExternalLink,
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/higherlearning84/",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <circle cx="10" cy="10" r="3.3" />
-        <path d="M14.2,0H5.8C2.6,0,0,2.6,0,5.8v8.3C0,17.4,2.6,20,5.8,20h8.3c3.2,0,5.8-2.6,5.8-5.8V5.8C20,2.6,17.4,0,14.2,0zM10,15c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.8,15,10,15z M15.8,5C15.4,5,15,4.6,15,4.2s0.4-0.8,0.8-0.8s0.8,0.4,0.8,0.8S16.3,5,15.8,5z" />
-      </svg>
-    ),
+    icon: ExternalLink,
   },
   {
     label: "Yelp",
     href: "https://www.yelp.com/biz/higher-learning-tutoring-center-new-york-3",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path d="M18.8 14.4c0 .4-.3.8-.3.9l-2.1 2.9-.1.1c-.1 0-.5.3-1 .3s-1-.6-1.1-.7l-2.7-4.2c-.3-.3-.3-1 .1-1.5.3-.3.5-.3.9-.3h.3l5 1.5c.3.1 1 .3 1 1zm-6.1-3.3l5-1.4c.2-.1.9-.3 1-.9.2-.5-.1-1-.2-1 0 0 0-.1-.1-.1L16 5.2c0-.1-.3-.5-1-.5s-1 .6-1 .7l-2.8 4.2c-.2.3-.3.8 0 1.2.3.2.6.3 1.1.3h.4zM9.9.2C9.3 0 8.9 0 8.6.1L4.4 1.4c-.1 0-.5.2-.9.6-.4.8.4 1.6.4 1.6l4.4 5.5c.1.1.4.4 1 .4h.3c.7-.2 1-.9 1-1.3V1.6c-.1-.2-.2-1.1-.7-1.4zM8 12.6c.3-.1.7-.3.7-1.1s-.8-1.1-.9-1.2L3.4 8.2c-.1 0-1-.3-1.3-.1-.2.1-.7.5-.7.9l-.3 3.3c0 .2 0 .7.2 1 .1.2.3.4.8.4.3 0 .6-.1.6-.1l5.1-1c.2.1.2 0 .2 0zm1.8.3c-.2-.1-.3-.1-.4-.1-.5 0-1 .3-1 .4l-3.5 3.6c-.1.2-.5.8-.3 1.3.2.4.3.7.8.9l3.5 1h.4c.2 0 .3 0 .4-.1.5-.2.7-.8.7-1.2l.1-4.9c0-.2-.2-.7-.7-.9z" />
-      </svg>
-    ),
+    icon: ExternalLink,
   },
   {
     label: "Email",
     href: "mailto:higherlearningny@yahoo.com",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path d="M10,10.1L0,4.7C0.1,3.2,1.4,2,3,2h14c1.6,0,2.9,1.2,3,2.8L10,10.1z M10,11.8c-0.1,0-0.2,0-0.4-0.1L0,6.4V15c0,1.7,1.3,3,3,3h4.9h4.3H17c1.7,0,3-1.3,3-3V6.4l-9.6,5.2C10.2,11.7,10.1,11.7,10,11.8z" />
-      </svg>
-    ),
+    icon: Mail,
   },
 ];
 
 export default function Footer() {
   return (
+    <footer className="relative overflow-hidden bg-[#080f24] text-white">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#e8b84b]/60 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_0%,rgba(232,184,75,0.12),transparent_26%)]" />
+
+      <div className="relative mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
+        <div className="grid gap-10 md:grid-cols-[1.25fr_0.8fr_0.8fr_0.75fr]">
+          <div>
+            <Link href="/" className="inline-flex flex-col hover:text-white">
+              <span className="font-serif text-2xl font-bold tracking-normal text-white">Higher Learning</span>
+              <span className="zh mt-1 text-xs tracking-[0.28em] text-[#e8b84b]">春苗补习</span>
+            </Link>
+            <p className="mt-5 max-w-sm text-sm leading-7 text-white/52">
+              33 years of academic excellence for NYC students preparing for SHSAT, SAT, PSAT, NYS exams, and core academic growth.
+            </p>
+            <div className="mt-6 grid gap-3 text-sm text-white/58">
+              <a href="tel:2129410695" className="inline-flex items-center gap-3 text-white/58 hover:text-[#e8b84b]">
+                <Phone size={17} className="text-[#e8b84b]" />
+                212-941-0695
+              </a>
+              <a href="mailto:higherlearningny@yahoo.com" className="inline-flex items-center gap-3 text-white/58 hover:text-[#e8b84b]">
+                <Mail size={17} className="text-[#e8b84b]" />
+                higherlearningny@yahoo.com
+              </a>
+              <span className="inline-flex items-start gap-3">
+                <MapPin size={17} className="mt-1 flex-none text-[#e8b84b]" />
+                84 Bowery, 3FL · New York, NY 10013
+              </span>
     <>
       <style>{`
         .hl-footer {
@@ -265,31 +276,26 @@ export default function Footer() {
                 <a href="mailto:higherlearningny@yahoo.com">higherlearningny@yahoo.com</a>
               </div>
             </div>
-
-            {/* Nav */}
-            <nav className="hl-footer-nav" aria-label="Footer navigation">
-              {navLinks.map((link) => (
-                <Link key={link.href} href={link.href}>{link.label}</Link>
-              ))}
-            </nav>
-
-            {/* Socials */}
-            <div className="hl-footer-socials">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className="hl-social-btn"
-                  target={s.href.startsWith("mailto") ? undefined : "_blank"}
-                  rel={s.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                  aria-label={s.label}
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
           </div>
 
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Explore</h2>
+            <nav className="mt-5 grid gap-3" aria-label="Footer navigation">
+              {navLinks.slice(0, 4).map((link) => (
+                <Link key={link.href} href={link.href} className="text-sm font-medium text-white/55 hover:text-[#e8b84b]">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Center</h2>
+            <nav className="mt-5 grid gap-3" aria-label="Footer secondary navigation">
+              {navLinks.slice(4).map((link) => (
+                <Link key={link.href} href={link.href} className="text-sm font-medium text-white/55 hover:text-[#e8b84b]">
+                  {link.label}
+                </Link>
           {/* Bottom bar */}
           <div className="hl-footer-bottom">
             <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
@@ -307,8 +313,39 @@ export default function Footer() {
             </nav>
           </div>
 
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Connect</h2>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {socials.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target={social.href.startsWith("mailto") ? undefined : "_blank"}
+                    rel={social.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                    aria-label={social.label}
+                    className="flex h-11 w-11 items-center justify-center rounded-[8px] border border-white/10 bg-white/6 text-white/58 transition duration-300 hover:-translate-y-1 hover:border-[#e8b84b]/35 hover:bg-[#e8b84b]/12 hover:text-[#e8b84b]"
+                  >
+                    <Icon size={19} />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
         </div>
-      </footer>
-    </>
+
+        <div className="mt-12 flex flex-col gap-5 border-t border-white/8 pt-7 text-sm text-white/36 md:flex-row md:items-center md:justify-between">
+          <span>© {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993</span>
+          <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal">
+            {legal.map((item) => (
+              <Link key={item.href} href={item.href} className="text-white/40 hover:text-[#e8b84b]">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
+    </footer>
   );
 }

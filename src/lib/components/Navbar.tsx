@@ -392,7 +392,7 @@ export default function Navbar() {
 
         /* Responsive */
         @media (max-width: 900px) {
-          .hl-desktop-nav { display: none; }
+          .hl-desktop-nav { display: none !important; }
           .hl-hamburger { display: flex; }
         }
       `}</style>
@@ -505,7 +505,7 @@ export default function Navbar() {
             </Link>
           )
         )}
-        <Link href="/contact" className="hl-mobile-cta" onClick={() => setMobileOpen(false)}>
+        <Link href="/pages/contact" className="hl-mobile-cta" onClick={() => setMobileOpen(false)}>
           Enroll Now
         </Link>
       </div>
