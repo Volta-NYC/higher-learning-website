@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -284,7 +285,7 @@ function FeaturedPost({ post }: { post: Post }) {
 
 function PostCard({ post, index }: { post: Post; index: number }) {
   const { ref, inView } = useInView(0.06);
-  const hasImage = Boolean(post.imageSrc);
+  const imageSrc = post.imageSrc;
 
   return (
     <div
@@ -311,7 +312,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
           className="hl-card-inner"
         >
           {/* Image */}
-          {hasImage && (
+          {imageSrc && (
             <div
               style={{
                 position: "relative",
@@ -321,15 +322,12 @@ function PostCard({ post, index }: { post: Post; index: number }) {
                 flexShrink: 0,
               }}
             >
-              <img
-                src={post.imageSrc}
+              <Image
+                src={imageSrc}
                 alt={post.title}
-                loading="lazy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
                   objectFit: "cover",
                   objectPosition: "center",
                   transition: "transform 0.5s ease",
@@ -340,7 +338,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
           )}
 
           {/* No image placeholder */}
-          {!hasImage && (
+          {!imageSrc && (
             <div
               style={{
                 background: "linear-gradient(145deg, #0f2044 0%, #162a58 100%)",
@@ -723,7 +721,7 @@ export default function BlogPage() {
                 opacity: mounted ? undefined : 0,
               }}
             >
-              Expert guidance on test prep, study strategies, NYC exam schedules, and everything families need to support their students' success.
+              Expert guidance on test prep, study strategies, NYC exam schedules, and everything families need to support their students&apos; success.
             </p>
           </div>
         </section>

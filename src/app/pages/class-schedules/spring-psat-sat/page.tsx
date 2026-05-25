@@ -365,7 +365,7 @@ export default function PSATSATPage() {
                 <div style={{ marginBottom: "1.25rem" }}>
                   <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.4rem" }}>
                     <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
-                    What's Included
+                    What&apos;s Included
                   </div>
                   <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
                     Program Highlights

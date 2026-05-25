@@ -157,27 +157,6 @@ const GRADE_GROUPS = [
 /* ─────────────────────────────────────────────
    Sub-components
 ───────────────────────────────────────────── */
-function Eyebrow({ children, right }: { children: React.ReactNode; right?: boolean }) {
-  return (
-    <div style={{
-      display: "inline-flex",
-      alignItems: "center",
-      gap: "0.55rem",
-      fontSize: "0.62rem",
-      fontWeight: 700,
-      letterSpacing: "0.18em",
-      textTransform: "uppercase" as const,
-      color: "#e8b84b",
-      marginBottom: "0.5rem",
-      fontFamily: "'DM Sans', system-ui, sans-serif",
-    }}>
-      {!right && <span style={{ display: "block", width: "20px", height: "1px", background: "#c8922a", opacity: 0.6 }} />}
-      {children}
-      <span style={{ display: "block", width: "20px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
-    </div>
-  );
-}
-
 function SectionHeading({ children, light }: { children: React.ReactNode; light?: boolean }) {
   return (
     <h2 style={{
@@ -842,7 +821,7 @@ export default function SpringWeekendSchedulePage() {
               margin: "0 0 0.85rem",
               lineHeight: 1.15,
             }}>
-              Secure Your Child's Spot Today
+              Secure Your Child&apos;s Spot Today
             </h2>
             <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.78, margin: "0 0 2rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               Classes fill quickly. Register early to lock in the $60 discount — available until December 23, 2025.

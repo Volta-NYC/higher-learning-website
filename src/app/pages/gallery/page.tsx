@@ -248,7 +248,7 @@ export default function ClassGalleryPage() {
                 lineHeight: 1.8, margin: 0,
                 fontFamily: "'DM Sans', system-ui, sans-serif",
               }}>
-                We proudly honor our students who have achieved outstanding results in the Specialized High School Admissions Test. Their dedication and hard work have earned them places at some of New York's top specialized high schools. Congratulations to all recipients — your success is our greatest pride!
+                We proudly honor our students who have achieved outstanding results in the Specialized High School Admissions Test. Their dedication and hard work have earned them places at some of New York&apos;s top specialized high schools. Congratulations to all recipients — your success is our greatest pride!
               </p>
             </div>
           </div>

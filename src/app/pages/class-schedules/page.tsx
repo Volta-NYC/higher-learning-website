@@ -1,8 +1,6 @@
 // dead and useless file idek why its here
 "use client";
 
-import { useEffect, useState } from "react";
-
 const SCHEDULES = [
   {
     href: "/pages/class-schedules/spring-psat-sat",
@@ -34,9 +32,6 @@ const SCHEDULES = [
 ];
 
 export default function ClassSchedulesPage() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
-
   return (
     <>
       <style>{`
@@ -85,10 +80,10 @@ export default function ClassSchedulesPage() {
         <div style={{ width: "100%", maxWidth: "860px" }}>
 
           {/* Header */}
-          <div
-            className="hl-hub-anim"
-            style={{ textAlign: "center", marginBottom: "3rem", opacity: mounted ? undefined : 0 }}
-          >
+            <div
+              className="hl-hub-anim"
+              style={{ textAlign: "center", marginBottom: "3rem" }}
+            >
             <div style={{
               display: "inline-flex", alignItems: "center", gap: "0.55rem",
               fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em",
@@ -137,7 +132,6 @@ export default function ClassSchedulesPage() {
                 className="hl-hub-card hl-hub-anim"
                 style={{
                   animationDelay: `${0.12 + i * 0.1}s`,
-                  opacity: mounted ? undefined : 0,
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
@@ -214,7 +208,7 @@ export default function ClassSchedulesPage() {
             className="hl-hub-anim"
             style={{
               marginTop: "2.5rem", textAlign: "center",
-              animationDelay: "0.5s", opacity: mounted ? undefined : 0,
+              animationDelay: "0.5s",
             }}
           >
             <p style={{

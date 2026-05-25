@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ─── Hook ─────────────────────────────────────────────────────────────────────
 
@@ -365,18 +366,18 @@ export default function AboutPage() {
               <div style={{ width: "40px", height: "2px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginBottom: "1.5rem" }} />
 
               <p style={{ fontSize: "1rem", color: "rgba(15,32,68,0.7)", lineHeight: 1.85, margin: "0 0 1.25rem" }}>
-                Founded in 1993 and rooted in the heart of Chinatown at 84 Bowery, Higher Learning Tutoring Center has spent over three decades earning the trust of NYC families. What began as a single classroom has grown into one of the neighborhood's most respected academic institutions — without ever losing the personal touch that makes us different.
+                Founded in 1993 and rooted in the heart of Chinatown at 84 Bowery, Higher Learning Tutoring Center has spent over three decades earning the trust of NYC families. What began as a single classroom has grown into one of the neighborhood&apos;s most respected academic institutions — without ever losing the personal touch that makes us different.
               </p>
 
               <p style={{ fontSize: "1rem", color: "rgba(15,32,68,0.7)", lineHeight: 1.85, margin: "0 0 1.75rem" }}>
-                With over 32 years of expertise, we equip students in Grades 2 through 8 with the strategies, skills, and confidence that last a lifetime. Nearly 70% of our SHSAT students earn admission to NYC's specialized high schools each year — a testament to our licensed, experienced teachers who provide both academic instruction and genuine personal support.
+                With over 32 years of expertise, we equip students in Grades 2 through 8 with the strategies, skills, and confidence that last a lifetime. Nearly 70% of our SHSAT students earn admission to NYC&apos;s specialized high schools each year — a testament to our licensed, experienced teachers who provide both academic instruction and genuine personal support.
               </p>
 
               {/* Highlight callout */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: "0.85rem", padding: "1.1rem 1.25rem", background: "linear-gradient(135deg, rgba(200,146,42,0.06), rgba(232,184,75,0.04))", borderRadius: "12px", border: "1px solid rgba(200,146,42,0.18)", marginBottom: "2rem" }}>
                 <span style={{ fontSize: "1.1rem", flexShrink: 0, marginTop: "0.1rem" }}>✦</span>
                 <p style={{ margin: 0, fontSize: "0.875rem", fontWeight: 600, color: "#9a6e20", lineHeight: 1.6, fontStyle: "italic" }}>
-                  "Every teacher at Higher Learning is licensed, experienced, and genuinely invested in each student's success — academically and personally."
+                  &quot;Every teacher at Higher Learning is licensed, experienced, and genuinely invested in each student&apos;s success — academically and personally.&quot;
                 </p>
               </div>
 
@@ -449,9 +450,12 @@ export default function AboutPage() {
               <div style={{ position: "absolute", top: "1.25rem", left: "1.25rem", zIndex: 2, padding: "0.4rem 1rem", background: "rgba(8,15,36,0.75)", backdropFilter: "blur(8px)", borderRadius: "50px", border: "1px solid rgba(200,146,42,0.35)", fontSize: "0.68rem", fontWeight: 700, color: "#e8b84b", letterSpacing: "0.1em", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Est. 1993 · Chinatown, NYC
               </div>
-              <img
+              <Image
                 src="https://higherlearningnyc.com/wp-content/uploads/2025/08/2025-05-14-3-e1755885423707.webp"
                 alt="Higher Learning classroom in Chinatown NYC"
+                width={1200}
+                height={900}
+                priority
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block", minHeight: "560px" }}
               />
             </div>

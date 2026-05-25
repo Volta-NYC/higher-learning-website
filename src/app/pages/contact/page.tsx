@@ -314,7 +314,7 @@ export default function ContactPage() {
                 opacity: mounted ? undefined : 0,
               }}
             >
-              We're here to help! Fill out the form or reach out directly — our team will get back to you as soon as possible.
+              We&apos;re here to help! Fill out the form or reach out directly — our team will get back to you as soon as possible.
             </p>
           </div>
         </section>
@@ -356,7 +356,7 @@ export default function ContactPage() {
                   Send Us a Message
                 </h2>
                 <p style={{ fontSize: "0.875rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.6 }}>
-                  Ask about enrollment, class schedules, or anything else — we'll respond promptly.
+                  Ask about enrollment, class schedules, or anything else — we&apos;ll respond promptly.
                 </p>
               </div>
 

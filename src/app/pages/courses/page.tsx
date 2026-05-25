@@ -625,7 +625,7 @@ export default function CoursesPage() {
               Expert Instruction, Proven Results
             </h2>
             <p style={{ fontSize: "0.95rem", color: "rgba(15,32,68,0.55)", maxWidth: "500px", lineHeight: 1.7, margin: 0 }}>
-              Each program is designed around specific grade levels and exam goals, taught by licensed, experienced teachers who know how NYC's academic landscape works.
+              Each program is designed around specific grade levels and exam goals, taught by licensed, experienced teachers who know how NYC&apos;s academic landscape works.
             </p>
           </div>
 
