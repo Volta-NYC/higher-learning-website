@@ -45,7 +45,7 @@ const posts: Post[] = [
       "When parents search for tutoring near me, they're looking for more than extra lessons. They seek a proven system, caring teachers, and real results — here's what to look for.",
     href: "/pages/blog/tutoring-near-me-a-parents-guide-to-choosing-excellence",
     imageSrc:
-      "/images/higher-learning/ChatGPT-Image-Aug-19-2025-02_09_29-PM.png",
+      "/images/higher-learning/2025-05-14-1-768x432.webp",
   },
   {
     id: "shsat-nyc",
