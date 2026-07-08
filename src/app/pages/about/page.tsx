@@ -451,7 +451,7 @@ export default function AboutPage() {
                 Est. 1993 · Chinatown, NYC
               </div>
               <Image
-                src="https://higherlearningnyc.com/wp-content/uploads/2025/08/2025-05-14-3-e1755885423707.webp"
+                src="/images/higher-learning/2025-05-14-3-e1755885423707.webp"
                 alt="Higher Learning classroom in Chinatown NYC"
                 width={1200}
                 height={900}

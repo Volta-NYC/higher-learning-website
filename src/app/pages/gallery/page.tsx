@@ -208,9 +208,10 @@ export default function ClassGalleryPage() {
               background: "rgba(15,32,68,0.04)",
             }}>
               <Image
-                src="https://higherlearningnyc.com/wp-content/uploads/2025/07/2025-05-14.webp"
+                src="/images/higher-learning/2025-05-14.webp"
                 alt="Students celebrating SHSAT success"
                 fill
+                priority
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 720px) 100vw, 50vw"
               />
@@ -318,7 +319,7 @@ export default function ClassGalleryPage() {
               }}
             >
               <Image
-                src="https://higherlearningnyc.com/wp-content/uploads/2025/07/476125740_590579863741637_4187456394183132726_n-1024x768.jpg"
+                src="/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg"
                 alt="Students in a focused classroom environment"
                 fill
                 style={{ objectFit: "cover" }}

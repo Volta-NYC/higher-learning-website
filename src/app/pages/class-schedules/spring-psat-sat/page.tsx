@@ -467,7 +467,7 @@ export default function PSATSATPage() {
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://higherlearningnyc.com/wp-content/uploads/2025/07/520972070_709008841898738_1276621005249571654_n-1024x576.jpg"
+                  src="/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg"
                   alt="Higher Learning PSAT & SAT class"
                   style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "16/9" }}
                 />

@@ -45,7 +45,7 @@ const posts: Post[] = [
       "When parents search for tutoring near me, they're looking for more than extra lessons. They seek a proven system, caring teachers, and real results — here's what to look for.",
     href: "/pages/blog/tutoring-near-me-a-parents-guide-to-choosing-excellence",
     imageSrc:
-      "https://higherlearningnyc.com/wp-content/uploads/2025/08/ChatGPT-Image-Aug-19-2025-02_09_29-PM.png",
+      "/images/higher-learning/ChatGPT-Image-Aug-19-2025-02_09_29-PM.png",
   },
   {
     id: "shsat-nyc",
@@ -55,7 +55,7 @@ const posts: Post[] = [
       "The SHSAT is now fully digital with 114 items across ELA and Math. Learn exactly what's tested, how scoring works, and how Higher Learning's 75% acceptance rate speaks for itself.",
     href: "/pages/blog/shsat-nyc",
     imageSrc:
-      "https://higherlearningnyc.com/wp-content/uploads/2025/07/0b4d3da40646462f99177b0d7db4697f-768x504.avif",
+      "/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif",
   },
   {
     id: "best-higher-learning-chinatown",
@@ -65,7 +65,7 @@ const posts: Post[] = [
       "Conveniently located at 84 Bowery, we've been at the heart of Chinatown for over 30 years — helping students from Grades 2 through 8 build confidence and academic excellence.",
     href: "/pages/blog/best-higher-learning-in-chinatown-nyc",
     imageSrc:
-      "https://higherlearningnyc.com/wp-content/uploads/2025/07/2025-05-14-1-768x432.webp",
+      "/images/higher-learning/2025-05-14-1-768x432.webp",
   },
   {
     id: "shsat-2025-admission",
@@ -75,7 +75,7 @@ const posts: Post[] = [
       "Aiming for Stuyvesant, Bronx Science, or Brooklyn Tech? Excelling on the SHSAT requires targeted preparation. Here's how we approach it.",
     href: "/pages/blog/shsat-2025-admission",
     imageSrc:
-      "https://higherlearningnyc.com/wp-content/uploads/2025/07/498557831_661835789949377_2234153109830365154_n-e1753449905619-1-e1755876994617.jpg",
+      "/images/higher-learning/498557831_661835789949377_2234153109830365154_n-e1753449905619-1-e1755876994617.jpg",
   },
   {
     id: "fall-weekend-tutoring-schedule",
@@ -85,7 +85,7 @@ const posts: Post[] = [
       "Our Fall 2025 Weekend Program covers ELA, Mathematics, Reading, Writing, and Grammar for Grades 2–8. See times, grade levels, and how to enroll.",
     href: "/pages/blog/2025-fall-weekend-tutoring-schedule-in-nyc-higher-learning",
     imageSrc:
-      "https://higherlearningnyc.com/wp-content/uploads/2025/07/475799580_590582457074711_281516345249048325_n-768x576.jpg",
+      "/images/higher-learning/475799580_590582457074711_281516345249048325_n-768x576.jpg",
   },
   {
     id: "higher-learning-fall-weekend-schedule",
@@ -95,7 +95,7 @@ const posts: Post[] = [
       "Strong academic support in ELA, Mathematics, Reading, and more — our weekend programs are designed around the specific needs of NYC students.",
     href: "/pages/blog/higher-learning-2025-fall-weekend-schedule",
     imageSrc:
-      "https://higherlearningnyc.com/wp-content/uploads/2025/07/476274718_590582123741411_8368425015554476117_n-768x576.jpg",
+      "/images/higher-learning/476274718_590582123741411_8368425015554476117_n-768x576.jpg",
   },
 ];
 

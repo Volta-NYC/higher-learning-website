@@ -31,7 +31,7 @@ const teachers: Teacher[] = [
     subjects: ["English Language Arts", "Mathematics", "SHSAT Prep", "Algebra I Regents"],
     bio: "Mr. Roda has been teaching at Higher Learning since its founding in 1993 — over 33 years of dedicated service. He teaches English Language Arts and Mathematics to 6th and 7th grade students, and provides expert preparation for both the Specialized High School Admissions Test (SHSAT) and the Algebra I Regents Exam for 8th graders. With a deep passion for teaching and an encyclopedic knowledge of the curriculum, Mr. Roda has guided approximately 75% of his SHSAT students to earn admission into NYC's specialized high schools.",
     highlight: "75% of SHSAT students accepted to specialized high schools",
-    imageSrc: "https://higherlearningnyc.com/wp-content/uploads/2025/07/b5c7ba_cb570241e6c348f5b07b35bad3dfe8b8mv2.avif",
+    imageSrc: "/images/higher-learning/b5c7ba_cb570241e6c348f5b07b35bad3dfe8b8mv2.avif",
     imageAlt: "Mr. Roda, Lead Instructor at Higher Learning",
   },
   {
@@ -43,7 +43,7 @@ const teachers: Teacher[] = [
     subjects: ["English Language Arts", "Mathematics"],
     bio: "Mrs. Roda has been teaching at Higher Learning for over 30 years. She specializes in working with young learners — particularly third and fourth graders — in English Language Arts and Mathematics. Known for her optimism, patience, and genuine care for every student, Mrs. Roda fosters a supportive and encouraging classroom environment where children build confidence, develop a love for learning, and achieve measurable academic success.",
     highlight: "Renowned for patience and nurturing young learners",
-    imageSrc: "https://higherlearningnyc.com/wp-content/uploads/2025/07/b5c7ba_78ade1d59ff740ceacb752dd2f2c19c3mv2.avif",
+    imageSrc: "/images/higher-learning/b5c7ba_78ade1d59ff740ceacb752dd2f2c19c3mv2.avif",
     imageAlt: "Mrs. Roda, Elementary Specialist at Higher Learning",
   },
   {
@@ -55,7 +55,7 @@ const teachers: Teacher[] = [
     subjects: ["English Language Arts", "Mathematics"],
     bio: "Mr. Siu has been a dedicated educator at Higher Learning for over 20 years. He specializes in teaching English Language Arts and Mathematics to 5th and 6th grade students. Known for his patience and infectious sense of humor, Mr. Siu creates an engaging and enjoyable learning environment where students genuinely look forward to class. His approachable style makes challenging material feel accessible and even fun.",
     highlight: "Known for making learning engaging and enjoyable",
-    imageSrc: "https://higherlearningnyc.com/wp-content/uploads/2025/07/b5c7ba_87632bfc2e16450aa6ac303f41150bbcmv2.avif",
+    imageSrc: "/images/higher-learning/b5c7ba_87632bfc2e16450aa6ac303f41150bbcmv2.avif",
     imageAlt: "Mr. Siu, Upper Elementary Instructor at Higher Learning",
   },
   {
@@ -67,7 +67,7 @@ const teachers: Teacher[] = [
     subjects: ["English Language Arts", "Mathematics"],
     bio: "Ms. Yang has been teaching at Higher Learning for over 14 years. With extensive experience working with young children, she currently teaches English Language Arts and Mathematics to 2nd grade students. Ms. Yang is a compassionate educator dedicated to helping her students build a strong academic foundation while also nurturing their creativity and natural love for learning. Her classroom is a place where curiosity is celebrated.",
     highlight: "Dedicated to building strong foundations in young learners",
-    imageSrc: "https://higherlearningnyc.com/wp-content/uploads/2025/07/b5c7ba_b51646328bce4ec09ef764c4d2c6a0f5mv2.avif",
+    imageSrc: "/images/higher-learning/b5c7ba_b51646328bce4ec09ef764c4d2c6a0f5mv2.avif",
     imageAlt: "Ms. Yang, Early Childhood Educator at Higher Learning",
   },
 ];
