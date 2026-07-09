@@ -76,7 +76,7 @@ export default function ClassSchedulesPage() {
         .hl-hub-card:hover .hl-hub-arrow { transform: translateX(4px); }
       `}</style>
 
-      <main className="hl-hub">
+      <main className="hl-hub hl-photo-hero hl-photo-hero-schedules">
         <div style={{ width: "100%", maxWidth: "860px" }}>
 
           {/* Header */}
@@ -98,7 +98,7 @@ export default function ClassSchedulesPage() {
               fontFamily: "'Playfair Display', Georgia, serif",
               fontSize: "clamp(2rem, 4vw, 2.8rem)",
               fontWeight: 800,
-              color: "#0f2044",
+              color: "#fff",
               margin: "0 0 0.75rem",
               lineHeight: 1.1,
             }}>
@@ -115,7 +115,7 @@ export default function ClassSchedulesPage() {
             </h1>
             <p style={{
               fontSize: "0.95rem",
-              color: "rgba(15,32,68,0.45)",
+              color: "rgba(255,255,255,0.68)",
               margin: 0,
               fontFamily: "'DM Sans', system-ui, sans-serif",
             }}>

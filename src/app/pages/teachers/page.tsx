@@ -458,6 +458,7 @@ export default function TeachersPage() {
 
         {/* ── Hero ── */}
         <section
+          className="hl-photo-hero hl-photo-hero-teachers"
           style={{
             background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
             padding: "5rem 0 4.5rem",

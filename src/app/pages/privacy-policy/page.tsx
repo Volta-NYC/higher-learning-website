@@ -1,7 +1,7 @@
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-white">
-      <section className="bg-[#080f24] px-5 py-20 text-white sm:px-8 lg:px-12">
+      <section className="hl-photo-hero hl-photo-hero-privacy relative isolate overflow-hidden bg-[#080f24] px-5 py-20 text-white sm:px-8 lg:px-12">
         <div className="mx-auto max-w-4xl">
           <div className="mb-4 inline-flex items-center gap-3 text-[0.7rem] font-bold uppercase tracking-[0.22em] text-[#e8b84b]">
             <span className="h-px w-8 bg-current opacity-60" />

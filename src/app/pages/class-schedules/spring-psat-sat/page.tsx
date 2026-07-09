@@ -165,7 +165,7 @@ export default function PSATSATPage() {
       <main className="hl-sat-page">
 
         {/* ── Hero ──────────────────────────────────────────────────────────── */}
-        <section style={{
+        <section className="hl-photo-hero hl-photo-hero-psat" style={{
           background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
           padding: "5rem 0 4.5rem",
           position: "relative",

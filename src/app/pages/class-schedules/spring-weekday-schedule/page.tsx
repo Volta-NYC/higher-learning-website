@@ -369,7 +369,7 @@ export default function SpringWeekdaySchedulePage() {
       <main className="hlw-page">
 
         {/* ────────────────── HERO ────────────────── */}
-        <section style={{
+        <section className="hl-photo-hero hl-photo-hero-weekday" style={{
           background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
           padding: "5.5rem 0 5rem",
           position: "relative",

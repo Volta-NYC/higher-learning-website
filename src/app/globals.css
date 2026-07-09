@@ -259,6 +259,110 @@ small {
   color: var(--gold);
 }
 
+/* ─── Image-led page heroes ─────────────────────────────────── */
+.hl-photo-hero {
+  isolation: isolate;
+  min-height: clamp(430px, 54vh, 620px);
+}
+
+.hl-photo-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(90deg, rgba(8, 15, 36, 0.92) 0%, rgba(8, 15, 36, 0.72) 42%, rgba(8, 15, 36, 0.38) 100%),
+    linear-gradient(180deg, rgba(8, 15, 36, 0.36) 0%, rgba(8, 15, 36, 0.54) 100%),
+    var(--hl-hero-image);
+  background-size: cover;
+  background-position: var(--hl-hero-position, center);
+  transform: scale(1.015);
+}
+
+.hl-photo-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.78) 52%, transparent 100%);
+}
+
+.hl-photo-hero-home {
+  --hl-hero-image: url("/images/higher-learning/2025-05-14.webp");
+  --hl-hero-position: center 42%;
+}
+
+.hl-photo-hero-courses {
+  --hl-hero-image: url("/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg");
+  --hl-hero-position: center;
+}
+
+.hl-photo-hero-schedules,
+.hl-photo-hero-psat {
+  --hl-hero-image: url("/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg");
+  --hl-hero-position: center 45%;
+}
+
+.hl-photo-hero-weekday {
+  --hl-hero-image: url("/images/higher-learning/475799580_590582457074711_281516345249048325_n-768x576.jpg");
+  --hl-hero-position: center;
+}
+
+.hl-photo-hero-weekend {
+  --hl-hero-image: url("/images/higher-learning/476274718_590582123741411_8368425015554476117_n-768x576.jpg");
+  --hl-hero-position: center;
+}
+
+.hl-photo-hero-teachers,
+.hl-photo-hero-about,
+.hl-photo-hero-contact,
+.hl-photo-hero-privacy {
+  --hl-hero-image: url("/images/higher-learning/2025-05-14-3-e1755885423707.webp");
+  --hl-hero-position: center 28%;
+}
+
+.hl-photo-hero-gallery {
+  --hl-hero-image: url("/images/higher-learning/2025-05-14.webp");
+  --hl-hero-position: center 36%;
+}
+
+.hl-photo-hero-blog {
+  --hl-hero-image: url("/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif");
+  --hl-hero-position: center;
+}
+
+.hl-hub.hl-photo-hero {
+  position: relative;
+  overflow: hidden;
+  background: #080f24;
+}
+
+.hl-hub.hl-photo-hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .hl-photo-hero {
+    min-height: 420px;
+  }
+
+  .hl-photo-hero::before {
+    background-image:
+      linear-gradient(180deg, rgba(8, 15, 36, 0.88) 0%, rgba(8, 15, 36, 0.74) 48%, rgba(8, 15, 36, 0.86) 100%),
+      var(--hl-hero-image);
+  }
+
+  .hl-photo-hero::after {
+    mask-image: none;
+  }
+}
+
 .badge-navy {
   background: rgba(15, 32, 68, 0.08);
   color: var(--navy);
