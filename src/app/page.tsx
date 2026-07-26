@@ -389,10 +389,15 @@ export default function Home() {
         }
         .marquee-track {
           width: max-content;
-          animation: scrollMarquee 42s linear infinite;
+          animation: scrollMarquee 82s linear infinite;
         }
         .marquee-track:hover {
           animation-play-state: paused;
+        }
+        .hl-admissions-marquee {
+          margin-left: calc(50% - 50vw);
+          margin-right: calc(50% - 50vw);
+          width: 100vw;
         }
       `}</style>
 
@@ -511,7 +516,7 @@ export default function Home() {
         subtitle="Congratulations to our students accepted into NYC's elite specialized high schools. Pick up your gifts and celebrate with us - you've earned it."
         dark
       >
-        <div className="relative -mx-5 overflow-hidden border-y border-white/10 py-6 sm:-mx-8 lg:-mx-12">
+        <div className="hl-admissions-marquee relative overflow-hidden border-y border-white/10 py-6">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#080f24] to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#080f24] to-transparent" />
           <div className="marquee-track flex gap-3">
