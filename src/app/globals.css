@@ -318,12 +318,20 @@ small {
   --hl-hero-position: center;
 }
 
-.hl-photo-hero-teachers,
 .hl-photo-hero-about,
-.hl-photo-hero-contact,
 .hl-photo-hero-privacy {
   --hl-hero-image: url("/images/higher-learning/2025-05-14-3-e1755885423707.webp");
   --hl-hero-position: center 28%;
+}
+
+.hl-photo-hero-contact {
+  --hl-hero-image: url("/images/higher-learning/2025-05-14-1-768x432.webp");
+  --hl-hero-position: center;
+}
+
+.hl-photo-hero-teachers {
+  --hl-hero-image: url("/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg");
+  --hl-hero-position: center;
 }
 
 .hl-photo-hero-gallery {
