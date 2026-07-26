@@ -60,7 +60,7 @@ function ContactForm() {
   if (status === "sent") {
     return (
       <div style={{ textAlign: "center", padding: "3rem 1rem" }}>
-        <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>✓</div>
+        <div style={{ fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.14em", color: "#c8922a", marginBottom: "1rem" }}>SENT</div>
         <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.4rem", color: "#0f2044", margin: "0 0 0.75rem" }}>
           Message Sent! <span className="zh">已收到留言</span>
         </h3>

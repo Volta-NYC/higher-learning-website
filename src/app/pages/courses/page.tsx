@@ -297,8 +297,8 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
               gap: "0.4rem",
             }}
           >
-            <span style={{ fontSize: "0.85rem" }}>🎟</span>
-            Siblings receive a 5% discount
+            <span style={{ fontSize: "0.74rem", fontWeight: 800 }}>5%</span>
+            Sibling discount available
           </div>
         )}
 
@@ -640,23 +640,48 @@ export default function CoursesPage() {
             ))}
           </div>
 
-          {/* Note */}
+          {/* Sibling discount callout */}
           <div
             style={{
-              marginTop: "2.5rem",
-              padding: "1rem 1.5rem",
-              borderRadius: "10px",
-              background: "rgba(200,146,42,0.06)",
-              border: "1px solid rgba(200,146,42,0.15)",
+              margin: "3rem auto 0",
+              maxWidth: "780px",
+              padding: "1.75rem clamp(1.4rem, 4vw, 2.5rem)",
+              borderRadius: "16px",
+              background: "linear-gradient(135deg, rgba(200,146,42,0.14), rgba(232,184,75,0.08))",
+              border: "1px solid rgba(200,146,42,0.32)",
+              borderLeft: "5px solid #c8922a",
               display: "flex",
-              alignItems: "center",
-              gap: "0.75rem",
+              alignItems: "flex-start",
+              gap: "1.15rem",
+              boxShadow: "0 18px 50px rgba(15,32,68,0.08)",
             }}
           >
-            <span style={{ fontSize: "1.1rem" }}>🎟</span>
-            <p style={{ margin: 0, fontSize: "0.82rem", color: "rgba(15,32,68,0.65)", lineHeight: 1.6 }}>
-              <strong style={{ color: "#c8922a" }}>Sibling Discount:</strong> Families with more than one enrolled student receive a 5% discount on SHSAT and SAT/PSAT programs.
-            </p>
+            <div
+              style={{
+                width: "54px",
+                height: "54px",
+                borderRadius: "14px",
+                background: "#0f2044",
+                color: "#e8b84b",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1.2rem",
+                fontWeight: 800,
+                flexShrink: 0,
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+              }}
+            >
+              5%
+            </div>
+            <div>
+              <h3 style={{ margin: "0 0 0.35rem", fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.45rem", color: "#0f2044", lineHeight: 1.2 }}>
+                Sibling Discount
+              </h3>
+              <p style={{ margin: 0, fontSize: "0.98rem", color: "rgba(15,32,68,0.68)", lineHeight: 1.7 }}>
+                Families with more than one enrolled student receive a 5% discount on SHSAT and SAT/PSAT programs.
+              </p>
+            </div>
           </div>
         </section>
 

@@ -379,7 +379,7 @@ export default function AboutPage() {
 
               {/* Highlight callout */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: "0.85rem", padding: "1.1rem 1.25rem", background: "linear-gradient(135deg, rgba(200,146,42,0.06), rgba(232,184,75,0.04))", borderRadius: "12px", border: "1px solid rgba(200,146,42,0.18)", marginBottom: "2rem" }}>
-                <span style={{ fontSize: "1.1rem", flexShrink: 0, marginTop: "0.1rem" }}>✦</span>
+                <span style={{ fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", flexShrink: 0, marginTop: "0.2rem" }}>HL</span>
                 <p style={{ margin: 0, fontSize: "0.875rem", fontWeight: 600, color: "#9a6e20", lineHeight: 1.6, fontStyle: "italic" }}>
                   &quot;Every teacher at Higher Learning is licensed, experienced, and genuinely invested in each student&apos;s success — academically and personally.&quot;
                 </p>
@@ -484,12 +484,12 @@ export default function AboutPage() {
 
           <div className="hl-values-grid">
             {[
-              { icon: "🏫", title: "30+ Years in the Community", body: "Since 1993, we've been an anchor institution in Chinatown — trusted by generations of families who grew up here and now return with their own children." },
-              { icon: "📜", title: "Licensed, Experienced Teachers", body: "Every instructor holds a teaching license and brings deep expertise in the NYC curriculum — from 2nd grade foundations to 8th grade Regents prep." },
-              { icon: "🎯", title: "~70% SHSAT Acceptance Rate", body: "Our rigorous preparation has helped nearly 70% of our students each year earn admission to NYC's specialized high schools, including Stuyvesant and Bronx Science." },
-              { icon: "📚", title: "Grades 2–8 Coverage", body: "From building foundational skills in 2nd grade to mastering Algebra I Regents in 8th grade, our curriculum spans the entire middle school journey." },
-              { icon: "🤝", title: "Personal, Caring Support", body: "Our teachers know their students by name, learning style, and goals — providing mentorship that goes far beyond what the classroom alone can offer." },
-              { icon: "📍", title: "Conveniently Located", body: "At 84 Bowery, 3rd Floor, we're accessible from across lower Manhattan, with both weekend and weekday programs available to fit your family's schedule." },
+              { icon: "30", title: "30+ Years in the Community", body: "Since 1993, we've been an anchor institution in Chinatown — trusted by generations of families who grew up here and now return with their own children." },
+              { icon: "LIC", title: "Licensed, Experienced Teachers", body: "Every instructor holds a teaching license and brings deep expertise in the NYC curriculum — from 2nd grade foundations to 8th grade Regents prep." },
+              { icon: "%", title: "~70% SHSAT Acceptance Rate", body: "Our rigorous preparation has helped nearly 70% of our students each year earn admission to NYC's specialized high schools, including Stuyvesant and Bronx Science." },
+              { icon: "G2", title: "Grades 2–8 Coverage", body: "From building foundational skills in 2nd grade to mastering Algebra I Regents in 8th grade, our curriculum spans the entire middle school journey." },
+              { icon: "1:1", title: "Personal, Caring Support", body: "Our teachers know their students by name, learning style, and goals — providing mentorship that goes far beyond what the classroom alone can offer." },
+              { icon: "NYC", title: "Conveniently Located", body: "At 84 Bowery, 3rd Floor, we're accessible from across lower Manhattan, with both weekend and weekday programs available to fit your family's schedule." },
             ].map((v, i) => (
               <ValueCard key={v.title} icon={v.icon} title={v.title} body={v.body} index={i} />
             ))}

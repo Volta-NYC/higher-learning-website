@@ -44,11 +44,11 @@ const MONTH_COLORS: Record<string, { bg: string; border: string; text: string }>
 };
 
 const HIGHLIGHTS = [
-  { icon: "📖", label: "Focus Areas", value: "SAT Reading & Writing, Math" },
-  { icon: "👥", label: "Class Size",  value: "Small group setting" },
-  { icon: "📊", label: "Testing",     value: "Diagnostic + monthly practice tests" },
-  { icon: "💬", label: "Support",     value: "Personalized feedback every session" },
-  { icon: "🎓", label: "Instructor",  value: "Experienced, dedicated tutor" },
+  { icon: "ELA", label: "Focus Areas", value: "SAT Reading & Writing, Math" },
+  { icon: "GRP", label: "Class Size",  value: "Small group setting" },
+  { icon: "TST", label: "Testing",     value: "Diagnostic + monthly practice tests" },
+  { icon: "FBK", label: "Support",     value: "Personalized feedback every session" },
+  { icon: "INS", label: "Instructor",  value: "Experienced, dedicated tutor" },
 ];
 
 function HighlightCard({ icon, label, value, delay, inView }: {
@@ -352,7 +352,7 @@ export default function PSATSATPage() {
                   borderLeft: "3px solid #c8922a",
                 }}>
                   <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#c8922a", marginBottom: "0.25rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                    ✦ Early Registration Discount
+                    Early Registration Discount
                   </div>
                   <p style={{ fontSize: "0.85rem", color: "#0f2044", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                     Register by <strong>December 23, 2025</strong> to receive a discount off the regular rate.
@@ -614,7 +614,7 @@ export default function PSATSATPage() {
                   transition: "background 0.2s",
                 }}
               >
-                📞 212-941-0695
+                Call 212-941-0695
               </a>
             </div>
             <p style={{ margin: "1.5rem 0 0", fontSize: "0.8rem", color: "rgba(255,255,255,0.3)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>

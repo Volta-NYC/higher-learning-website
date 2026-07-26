@@ -9,7 +9,7 @@ const SCHEDULES = [
     titleItalic: "PSAT & SAT",
     desc: "14 Saturday sessions of expert ELA and Math instruction, starting January 24, 2026.",
     detail: "Saturdays · 1:00 – 4:00 pm",
-    icon: "🎓",
+    icon: "SAT",
   },
   {
     href: "/pages/class-schedules/spring-weekend-schedule",
@@ -18,7 +18,7 @@ const SCHEDULES = [
     titleItalic: "Weekend",
     desc: "14 Saturday sessions covering NY State Test Prep, ELA, Math, and SHSAT preparation.",
     detail: "Saturdays · Various times",
-    icon: "📚",
+    icon: "WKD",
   },
   {
     href: "/pages/class-schedules/spring-weekday-schedule",
@@ -27,7 +27,7 @@ const SCHEDULES = [
     titleItalic: "Weekday",
     desc: "15 after-school sessions on Wednesdays and Thursdays, aligned to NY State test windows.",
     detail: "Wed & Thu · 3:45 – 6:00 pm",
-    icon: "📖",
+    icon: "DAY",
   },
 ];
 
@@ -183,7 +183,7 @@ export default function ClassSchedulesPage() {
                       fontSize: "0.73rem", fontWeight: 600, color: "#0f2044",
                       fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}>
-                      🕐 {s.detail}
+                      Time · {s.detail}
                     </span>
                   </div>
 

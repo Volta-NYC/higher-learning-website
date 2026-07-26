@@ -333,7 +333,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
             border: "1px solid rgba(200,146,42,0.18)",
           }}
         >
-          <span style={{ fontSize: "1rem", flexShrink: 0, marginTop: "0.05rem" }}>✦</span>
+          <span style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.12em", flexShrink: 0, marginTop: "0.15rem" }}>HL</span>
           <p
             style={{
               margin: 0,

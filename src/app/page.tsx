@@ -25,7 +25,7 @@ import {
 const stats = [
   { value: "33", suffix: "+", label: "Years of Excellence" },
   { value: "75", suffix: "%", label: "SHSAT Acceptance Rate" },
-  { value: "4.9", suffix: "★", label: "Google Rating" },
+  { value: "4.9", suffix: "/5", label: "Google Rating" },
   { value: "1993", suffix: "", label: "Established" },
 ];
 

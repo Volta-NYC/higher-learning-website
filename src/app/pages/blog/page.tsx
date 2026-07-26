@@ -226,7 +226,7 @@ function FeaturedPost({ post }: { post: Post }) {
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                 }}
               >
-                ✦ Featured
+                Featured
               </span>
               <CategoryBadge category={post.category} />
             </div>

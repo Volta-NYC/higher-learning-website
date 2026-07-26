@@ -277,7 +277,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
           fontFamily: "'DM Sans', system-ui, sans-serif",
           whiteSpace: "nowrap" as const,
         }}>
-          🕐 {row.time}
+          Time · {row.time}
         </span>
         <span style={{
           fontSize: "0.73rem",
@@ -488,14 +488,14 @@ export default function SpringWeekendSchedulePage() {
         <div style={{ background: "#fff", borderBottom: "1px solid rgba(15,32,68,0.06)" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "1rem clamp(1.25rem, 5vw, 3rem)", display: "flex", flexWrap: "wrap", gap: "0.75rem 2.5rem", alignItems: "center" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-              <span style={{ fontSize: "1rem" }}>⭐</span>
+              <span style={{ fontSize: "0.68rem", fontWeight: 800, color: "#c8922a", letterSpacing: "0.08em" }}>EARLY</span>
               <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Early bird by <span style={{ color: "#c8922a" }}>Dec 23, 2025</span> → $60 off
               </span>
             </div>
             <div style={{ width: "1px", height: "18px", background: "rgba(15,32,68,0.12)" }} />
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-              <span style={{ fontSize: "1rem" }}>👨‍👧‍👦</span>
+              <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "#c8922a" }}>5%</span>
               <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Sibling discount: <span style={{ color: "#c8922a" }}>5% off</span>
               </span>
@@ -650,9 +650,9 @@ export default function SpringWeekendSchedulePage() {
                   <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#c8922a", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Location &amp; Contact</div>
                 </div>
                 {[
-                  { icon: "📍", label: "Address",  value: "84 Bowery, 3rd Floor\nNew York, NY 10013" },
-                  { icon: "📞", label: "Phone",    value: "(212) 941-0695" },
-                  { icon: "✉️", label: "Email",    value: "higherlearningny@yahoo.com" },
+                  { icon: "ADR", label: "Address",  value: "84 Bowery, 3rd Floor\nNew York, NY 10013" },
+                  { icon: "TEL", label: "Phone",    value: "(212) 941-0695" },
+                  { icon: "EML", label: "Email",    value: "higherlearningny@yahoo.com" },
                 ].map((item) => (
                   <div key={item.label} style={{
                     padding: "0.9rem 1.35rem",
@@ -706,7 +706,7 @@ export default function SpringWeekendSchedulePage() {
                 }}
               >
                 <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.75rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  📝 NY State Test Dates 2026
+                  NY State Test Dates 2026
                 </div>
                 {[
                   { subject: "ELA Test",  dates: "Apr 14 – Apr 24, 2026" },
@@ -868,7 +868,7 @@ export default function SpringWeekendSchedulePage() {
                   transition: "background 0.2s",
                 }}
               >
-                📞 212-941-0695
+                Call 212-941-0695
               </a>
             </div>
             <p style={{ margin: "1.75rem 0 0", fontSize: "0.78rem", color: "rgba(255,255,255,0.28)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>

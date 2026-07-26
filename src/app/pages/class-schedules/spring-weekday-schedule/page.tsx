@@ -237,7 +237,7 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
             fontFamily: "'DM Sans', system-ui, sans-serif",
             whiteSpace: "nowrap" as const,
           }}>
-            🕐 {cls.time}
+            Time · {cls.time}
           </div>
         </div>
 
@@ -298,7 +298,7 @@ function DateGroup({
         marginBottom: "0.5rem",
         fontFamily: "'DM Sans', system-ui, sans-serif",
       }}>
-        {special && <span style={{ fontSize: "0.7rem" }}>✦</span>}
+        {special && <span style={{ fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.08em" }}>MON</span>}
         {label}
         <span style={{ fontWeight: 400, color: "rgba(15,32,68,0.35)", fontSize: "0.62rem" }}>
           · {labelZh}
@@ -505,14 +505,14 @@ export default function SpringWeekdaySchedulePage() {
         <div style={{ background: "#fff", borderBottom: "1px solid rgba(15,32,68,0.06)" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "1rem clamp(1.25rem, 5vw, 3rem)", display: "flex", flexWrap: "wrap", gap: "0.75rem 2.5rem", alignItems: "center" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-              <span>⭐</span>
+              <span style={{ fontSize: "0.68rem", fontWeight: 800, color: "#c8922a", letterSpacing: "0.08em" }}>EARLY</span>
               <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Early bird by <span style={{ color: "#c8922a" }}>Dec 23, 2025</span> → $60 off
               </span>
             </div>
             <div style={{ width: "1px", height: "18px", background: "rgba(15,32,68,0.12)" }} />
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-              <span>👨‍👧‍👦</span>
+              <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "#c8922a" }}>5%</span>
               <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Sibling discount: <span style={{ color: "#c8922a" }}>5% off</span>
               </span>
@@ -625,11 +625,11 @@ export default function SpringWeekdaySchedulePage() {
                   <div style={{ width: "32px", height: "1.5px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginBottom: "1.25rem" }} />
 
                   {[
-                    { icon: "📅", label: "Days",      value: "Wednesdays & Thursdays" },
-                    { icon: "🕐", label: "Duration",  value: "2 hours per session"    },
-                    { icon: "📚", label: "Sessions",  value: "15 sessions per grade"  },
-                    { icon: "🎓", label: "Grades",    value: "4th – 7th Grade"        },
-                    { icon: "📝", label: "Focus",     value: "ELA, Math, & SHSAT"     },
+                    { icon: "DAYS", label: "Days",      value: "Wednesdays & Thursdays" },
+                    { icon: "2H",   label: "Duration",  value: "2 hours per session"    },
+                    { icon: "15",   label: "Sessions",  value: "15 sessions per grade"  },
+                    { icon: "G4",   label: "Grades",    value: "4th – 7th Grade"        },
+                    { icon: "ELA",  label: "Focus",     value: "ELA, Math, & SHSAT"     },
                   ].map((item) => (
                     <div key={item.label} style={{
                       display: "flex", alignItems: "center", gap: "0.75rem",
@@ -667,9 +667,9 @@ export default function SpringWeekdaySchedulePage() {
                   </div>
                 </div>
                 {[
-                  { icon: "📍", label: "Address",  value: "84 Bowery, 3rd Floor\nNew York, NY 10013" },
-                  { icon: "📞", label: "Phone",    value: "(212) 941-0695"                           },
-                  { icon: "✉️", label: "Email",    value: "higherlearningny@yahoo.com"              },
+                  { icon: "ADR", label: "Address",  value: "84 Bowery, 3rd Floor\nNew York, NY 10013" },
+                  { icon: "TEL", label: "Phone",    value: "(212) 941-0695"                           },
+                  { icon: "EML", label: "Email",    value: "higherlearningny@yahoo.com"              },
                 ].map((item) => (
                   <div key={item.label} style={{
                     padding: "0.9rem 1.35rem",
@@ -712,7 +712,7 @@ export default function SpringWeekdaySchedulePage() {
                 transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
               }}>
                 <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#c8922a", marginBottom: "0.75rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  📝 NY State Test Dates 2026
+                  NY State Test Dates 2026
                 </div>
                 {[
                   { subject: "ELA Test",  dates: "Apr 14 – Apr 24, 2026" },
@@ -740,7 +740,7 @@ export default function SpringWeekdaySchedulePage() {
                 transition: "opacity 0.6s ease 0.28s, transform 0.6s ease 0.28s",
               }}>
                 <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#c8922a", marginBottom: "0.5rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  ✦ Special April Monday Sessions
+                  Special April Monday Sessions
                 </div>
                 <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
                   {["Apr 13", "Apr 20", "Apr 27"].map((d) => (
@@ -913,7 +913,7 @@ export default function SpringWeekdaySchedulePage() {
                   transition: "background 0.2s",
                 }}
               >
-                📞 212-941-0695
+                Call 212-941-0695
               </a>
             </div>
             <p style={{ margin: "1.75rem 0 0", fontSize: "0.78rem", color: "rgba(255,255,255,0.28)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
