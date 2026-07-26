@@ -351,7 +351,7 @@ small {
 
 .hl-photo-hero-about {
   --hl-hero-image: url("/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif");
-  --hl-hero-position: center;
+  --hl-hero-position: center 68%;
 }
 
 .hl-photo-hero-contact {
@@ -360,18 +360,18 @@ small {
 }
 
 .hl-photo-hero-teachers {
-  --hl-hero-image: url("/images/higher-learning/b5c7ba_78ade1d59ff740ceacb752dd2f2c19c3mv2.avif");
-  --hl-hero-position: center 18%;
+  --hl-hero-image: url("/images/hero/teachers-tutoring-desk.jpg");
+  --hl-hero-position: center 52%;
 }
 
 .hl-photo-hero-gallery {
-  --hl-hero-image: url("/images/higher-learning/b5c7ba_87632bfc2e16450aa6ac303f41150bbcmv2.avif");
-  --hl-hero-position: center 18%;
+  --hl-hero-image: url("/images/hero/gallery-library-study.jpg");
+  --hl-hero-position: center 48%;
 }
 
 .hl-photo-hero-blog {
-  --hl-hero-image: url("/images/higher-learning/b5c7ba_b51646328bce4ec09ef764c4d2c6a0f5mv2.avif");
-  --hl-hero-position: center;
+  --hl-hero-image: url("/images/hero/blog-library-desk.jpg");
+  --hl-hero-position: center 52%;
 }
 
 .hl-hub.hl-photo-hero {
