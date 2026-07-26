@@ -13,12 +13,6 @@ const navLinks = [
   { label: "Contact", labelZh: "联系我们", href: "/pages/contact" },
 ];
 
-const legal = [
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms and Conditions", href: "/terms-and-conditions" },
-  { label: "Refund Policy / Class Rules", href: "/refund-policy-class-rules" },
-];
-
 const socials = [
   {
     label: "Facebook",
@@ -121,7 +115,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-5 border-t border-white/8 pt-7 text-sm text-white/36 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 border-t border-white/8 pt-7 text-sm text-white/36">
           <div className="flex flex-col gap-1">
             <span>© {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993</span>
             <span className="text-xs text-white/24">
@@ -136,13 +130,6 @@ export default function Footer() {
               </a>
             </span>
           </div>
-          <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal">
-            {legal.map((item) => (
-              <Link key={item.href} href={item.href} className="text-white/40 hover:text-[#e8b84b]">
-                {item.label}
-              </Link>
-            ))}
-          </nav>
         </div>
       </div>
     </footer>
