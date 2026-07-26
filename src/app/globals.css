@@ -302,10 +302,14 @@ small {
   --hl-hero-position: center;
 }
 
-.hl-photo-hero-schedules,
-.hl-photo-hero-psat {
+.hl-photo-hero-schedules {
   --hl-hero-image: url("/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg");
   --hl-hero-position: center 45%;
+}
+
+.hl-photo-hero-psat {
+  --hl-hero-image: url("/images/higher-learning/498557831_661835789949377_2234153109830365154_n-e1753449905619-1-e1755876994617.jpg");
+  --hl-hero-position: center 30%;
 }
 
 .hl-photo-hero-weekday {
@@ -334,17 +338,17 @@ small {
 }
 
 .hl-photo-hero-teachers {
-  --hl-hero-image: url("/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg");
-  --hl-hero-position: center;
+  --hl-hero-image: url("/images/higher-learning/b5c7ba_78ade1d59ff740ceacb752dd2f2c19c3mv2.avif");
+  --hl-hero-position: center 18%;
 }
 
 .hl-photo-hero-gallery {
-  --hl-hero-image: url("/images/higher-learning/2025-05-14.webp");
-  --hl-hero-position: center 36%;
+  --hl-hero-image: url("/images/higher-learning/b5c7ba_87632bfc2e16450aa6ac303f41150bbcmv2.avif");
+  --hl-hero-position: center 18%;
 }
 
 .hl-photo-hero-blog {
-  --hl-hero-image: url("/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif");
+  --hl-hero-image: url("/images/higher-learning/b5c7ba_b51646328bce4ec09ef764c4d2c6a0f5mv2.avif");
   --hl-hero-position: center;
 }
 
