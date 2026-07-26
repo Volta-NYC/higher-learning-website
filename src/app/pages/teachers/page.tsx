@@ -158,6 +158,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
 
         {/* Teacher photo */}
         <div
+          className="hl-teacher-image-frame"
           style={{
             position: "relative",
             width: "100%",
@@ -215,6 +216,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
         <div
           style={{
             position: "absolute",
+            zIndex: 3,
             top: "1.25rem",
             left: "1.25rem",
             padding: "0.35rem 0.9rem",
@@ -377,6 +379,22 @@ export default function TeachersPage() {
 
         .hl-teacher-card:hover {
           box-shadow: 0 8px 40px rgba(15,32,68,0.12) !important;
+        }
+
+        .hl-teacher-image-frame {
+          border: 1px solid rgba(200,146,42,0.34);
+          outline: 6px solid rgba(255,255,255,0.72);
+          outline-offset: -10px;
+        }
+
+        .hl-teacher-image-frame::after {
+          content: "";
+          position: absolute;
+          inset: 10px;
+          z-index: 2;
+          border: 1px solid rgba(15,32,68,0.16);
+          border-radius: 14px;
+          pointer-events: none;
         }
 
         @media (max-width: 760px) {
