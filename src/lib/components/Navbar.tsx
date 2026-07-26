@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { applySiteLanguage, type SiteLanguage } from "@/lib/i18n/domTranslations";
 
 const scheduleItems = [
   { label: "2026 Spring PSAT & SAT", labelZh: "春季 PSAT / SAT", href: "/pages/class-schedules/spring-psat-sat" },
@@ -24,6 +25,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileScheduleOpen, setMobileScheduleOpen] = useState(false);
+  const [language, setLanguage] = useState<SiteLanguage>("en");
   const dropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
@@ -41,6 +43,49 @@ export default function Navbar() {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem("hl-language");
+    if (storedLanguage === "zh" || storedLanguage === "en") {
+      window.setTimeout(() => setLanguage(storedLanguage), 0);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("hl-language", language);
+
+    let frame = 0;
+    const applyLanguage = () => {
+      if (frame) return;
+
+      frame = window.requestAnimationFrame(() => {
+        applySiteLanguage(language);
+        frame = 0;
+      });
+    };
+
+    applyLanguage();
+
+    const observer = new MutationObserver(applyLanguage);
+    observer.observe(document.body, {
+      attributeFilter: ["aria-label", "alt", "placeholder", "title"],
+      attributes: true,
+      characterData: true,
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+    };
+  }, [language]);
+
+  const toggleLanguage = () => {
+    setLanguage((current) => (current === "en" ? "zh" : "en"));
+  };
 
   return (
     <>
@@ -161,6 +206,14 @@ export default function Navbar() {
           line-height: 1;
           text-transform: none;
           color: rgba(232,184,75,0.72);
+        }
+
+        html[data-language="zh"] .zh,
+        html[data-language="zh"] .hl-logo-zh,
+        html[data-language="zh"] .hl-nav-label-zh,
+        html[data-language="zh"] .hl-hero-zh,
+        html[data-language="zh"] .hl-cta-zh {
+          display: none !important;
         }
 
         .hl-nav-cta-text {
@@ -284,6 +337,41 @@ export default function Navbar() {
           box-shadow: 0 6px 24px rgba(200, 146, 42, 0.5) !important;
           color: var(--navy) !important;
           background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+        }
+
+        .hl-language-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 34px;
+          padding: 0.45rem 0.85rem;
+          border: 1px solid rgba(232, 184, 75, 0.66);
+          border-radius: 50px;
+          background: rgba(255, 255, 255, 0.04);
+          color: #fff;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          line-height: 1;
+          text-transform: uppercase;
+          transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+          white-space: nowrap;
+        }
+
+        .hl-language-toggle:hover {
+          background: rgba(200, 146, 42, 0.16);
+          border-color: var(--gold-light);
+          color: var(--gold-light);
+          transform: translateY(-1px);
+        }
+
+        .hl-language-toggle.mobile {
+          width: 100%;
+          min-height: 46px;
+          margin: 0 0 0.75rem;
+          font-size: 0.82rem;
         }
 
         /* Hamburger */
@@ -481,6 +569,16 @@ export default function Navbar() {
 
             <div className="hl-gold-line" />
 
+            <button
+              type="button"
+              className="hl-language-toggle"
+              data-no-translate
+              onClick={toggleLanguage}
+              aria-label={language === "en" ? "Switch to Simplified Chinese" : "Switch to English"}
+            >
+              {language === "en" ? "中文" : "English"}
+            </button>
+
             <Link href="/pages/contact" className="hl-cta">
               <span className="hl-nav-cta-text">
                 Visit Us In Person <span className="zh">亲临咨询</span>
@@ -504,6 +602,16 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div className={`hl-mobile-drawer ${mobileOpen ? "open" : ""}`}>
+        <button
+          type="button"
+          className="hl-language-toggle mobile"
+          data-no-translate
+          onClick={toggleLanguage}
+          aria-label={language === "en" ? "Switch to Simplified Chinese" : "Switch to English"}
+        >
+          {language === "en" ? "中文" : "English"}
+        </button>
+
         {navLinks.map((link) =>
           link.dropdown ? (
             <div key={link.label}>
