@@ -195,8 +195,10 @@ export default function Navbar() {
 
         .hl-nav-cta-text {
           display: inline-flex;
+          flex-direction: column;
           align-items: center;
-          gap: 0.35rem;
+          gap: 0.16rem;
+          line-height: 1.05;
         }
 
         .hl-nav-label-row {
@@ -294,7 +296,7 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           gap: 0.6rem;
-          padding: 0.5rem 1.1rem;
+          padding: 0.48rem 1.1rem;
           background: linear-gradient(135deg, var(--gold), var(--gold-light));
           color: var(--navy) !important;
           font-weight: 600 !important;
@@ -320,16 +322,16 @@ export default function Navbar() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 32px;
-          padding: 0.35rem 0.65rem;
+          min-height: 38px;
+          padding: 0.45rem 0.9rem;
           border: 1px solid rgba(232, 184, 75, 0.34);
           border-radius: 999px;
           background: transparent;
           color: rgba(255,255,255,0.8);
           cursor: pointer;
           font-family: 'DM Sans', sans-serif;
-          font-size: 0.7rem;
-          font-weight: 600;
+          font-size: 0.78rem;
+          font-weight: 700;
           letter-spacing: 0.08em;
           line-height: 1;
           text-transform: uppercase;
