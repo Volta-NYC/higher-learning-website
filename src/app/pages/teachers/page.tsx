@@ -382,18 +382,21 @@ export default function TeachersPage() {
         }
 
         .hl-teacher-image-frame {
-          border: 1px solid rgba(200,146,42,0.34);
-          outline: 6px solid rgba(255,255,255,0.72);
-          outline-offset: -10px;
+          border: 2px solid rgba(15,32,68,0.78);
+          outline: 8px solid rgba(255,255,255,0.88);
+          outline-offset: -14px;
+          box-shadow:
+            0 0 0 1px rgba(200,146,42,0.56),
+            inset 0 0 0 1px rgba(255,255,255,0.22);
         }
 
         .hl-teacher-image-frame::after {
           content: "";
           position: absolute;
-          inset: 10px;
+          inset: 14px;
           z-index: 2;
-          border: 1px solid rgba(15,32,68,0.16);
-          border-radius: 14px;
+          border: 1px solid rgba(200,146,42,0.72);
+          border-radius: 12px;
           pointer-events: none;
         }
 

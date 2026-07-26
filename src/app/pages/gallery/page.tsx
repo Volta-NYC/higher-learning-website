@@ -50,16 +50,19 @@ export default function ClassGalleryPage() {
         .hlg-anim { animation: hlgFadeUp 0.72s cubic-bezier(0.22,1,0.36,1) both; }
 
         .hlg-image-frame {
-          border: 1px solid rgba(200,146,42,0.34);
-          outline: 6px solid rgba(255,255,255,0.78);
-          outline-offset: -10px;
+          border: 2px solid rgba(15,32,68,0.78);
+          outline: 8px solid rgba(255,255,255,0.9);
+          outline-offset: -14px;
+          box-shadow:
+            0 0 0 1px rgba(200,146,42,0.55),
+            0 16px 44px rgba(15,32,68,0.16);
         }
         .hlg-image-frame::after {
           content: "";
           position: absolute;
-          inset: 10px;
-          border: 1px solid rgba(15,32,68,0.12);
-          border-radius: 14px;
+          inset: 14px;
+          border: 1px solid rgba(200,146,42,0.72);
+          border-radius: 12px;
           pointer-events: none;
           z-index: 2;
         }
