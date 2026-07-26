@@ -318,10 +318,14 @@ small {
   --hl-hero-position: center;
 }
 
-.hl-photo-hero-about,
 .hl-photo-hero-privacy {
   --hl-hero-image: url("/images/higher-learning/2025-05-14-3-e1755885423707.webp");
   --hl-hero-position: center 28%;
+}
+
+.hl-photo-hero-about {
+  --hl-hero-image: url("/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif");
+  --hl-hero-position: center;
 }
 
 .hl-photo-hero-contact {
