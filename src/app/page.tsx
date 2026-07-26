@@ -407,7 +407,7 @@ export default function Home() {
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#081126] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#081126] hover:shadow-[0_18px_45px_rgba(200,146,42,0.48)]">
-                Enroll Now <ChevronRight className="ml-2 h-4 w-4" />
+                Visit Us In Person <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
               <Link href="/pages/courses" className="inline-flex h-13 items-center justify-center rounded-full border border-white/28 px-7 text-sm font-bold uppercase tracking-[0.14em] text-white/86 transition duration-300 hover:-translate-y-1 hover:border-white/65 hover:bg-white/8 hover:text-white">
                 View Courses

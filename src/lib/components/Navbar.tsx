@@ -451,7 +451,7 @@ export default function Navbar() {
             <div className="hl-gold-line" />
 
             <Link href="/pages/contact" className="hl-cta">
-              Enroll Now
+              Visit Us In Person
             </Link>
           </div>
 
@@ -506,7 +506,7 @@ export default function Navbar() {
           )
         )}
         <Link href="/pages/contact" className="hl-mobile-cta" onClick={() => setMobileOpen(false)}>
-          Enroll Now
+          Visit Us In Person
         </Link>
       </div>
     </>
