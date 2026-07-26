@@ -126,8 +126,13 @@ export default function Footer() {
             <span>© {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993</span>
             <span className="text-xs text-white/24">
               Built by{" "}
-              <a href="https://voltanyc.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white/50">
-                VoltaNYC
+              <a
+                href="https://voltanyc.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#39d98a] transition-colors hover:text-[#6ff0ad]"
+              >
+                Volta
               </a>
             </span>
           </div>
