@@ -163,6 +163,18 @@ function useInView(threshold = 0.15) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const isNearViewport = () => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      return rect.top <= windowHeight * 1.35 && rect.bottom >= -windowHeight * 0.05;
+    };
+
+    if (isNearViewport()) {
+      const frame = requestAnimationFrame(() => setVisible(true));
+      return () => cancelAnimationFrame(frame);
+    }
+
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -184,17 +196,23 @@ function useCountUp(target: number, decimals = 0, active: boolean) {
 
   useEffect(() => {
     if (!active) return;
-    let start = 0;
+    let frame = 0;
+    const startTime = performance.now();
     const duration = 1600;
-    const step = 16;
-    const increment = target / (duration / step);
-    const timer = setInterval(() => {
-      start = Math.min(start + increment, target);
-      setVal(start);
-      if (start >= target) clearInterval(timer);
-    }, step);
 
-    return () => clearInterval(timer);
+    const animate = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setVal(target * eased);
+
+      if (progress < 1) {
+        frame = requestAnimationFrame(animate);
+      }
+    };
+
+    frame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(frame);
   }, [target, active]);
 
   return decimals ? val.toFixed(decimals) : Math.floor(val).toString();
@@ -208,7 +226,7 @@ function StatCard({ value, suffix, label, active }: { value: string; suffix: str
   return (
     <div className="group relative overflow-hidden border-white/10 px-5 py-7 text-center sm:border-r lg:px-8">
       <div className="absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-[#e8b84b]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      <div className="font-serif text-4xl font-bold leading-none text-[#e8b84b] md:text-5xl">
+      <div className="font-serif text-4xl font-bold leading-none text-[#e8b84b] md:text-5xl" data-no-translate>
         {isYear ? value : counted}{suffix}
       </div>
       <div className="mt-3 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white/55">
