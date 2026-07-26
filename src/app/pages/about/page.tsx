@@ -297,6 +297,9 @@ export default function AboutPage() {
                 Us
               </em>
             </h1>
+            <p className="hl-hero-zh">
+              扎根华埠三十多年，陪伴学生打好基础、提升成绩、准备升学。
+            </p>
 
             <p
               className="hl-animate"

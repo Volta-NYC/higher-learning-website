@@ -392,6 +392,9 @@ export default function Home() {
             <h1 className="max-w-5xl font-serif text-[clamp(3rem,6.8vw,5.35rem)] font-bold leading-[0.98] tracking-normal text-white">
               Where Students <span className="italic text-[#e8b84b]">Rise</span> to Their Full Potential
             </h1>
+            <p className="hl-hero-zh">
+              小班教学 · 资深老师 · 专注 SHSAT、SAT、PSAT 与纽约州考试
+            </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <div className="zh text-2xl tracking-[0.42em] text-white/52 md:text-3xl">春苗补习</div>
               <div className="hidden h-px w-16 bg-[#e8b84b]/45 sm:block" />
@@ -407,10 +410,17 @@ export default function Home() {
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#081126] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#081126] hover:shadow-[0_18px_45px_rgba(200,146,42,0.48)]">
-                Visit Us In Person <ChevronRight className="ml-2 h-4 w-4" />
+                <span>
+                  Visit Us In Person
+                  <span className="hl-cta-zh">亲临咨询</span>
+                </span>
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
               <Link href="/pages/courses" className="inline-flex h-13 items-center justify-center rounded-full border border-white/28 px-7 text-sm font-bold uppercase tracking-[0.14em] text-white/86 transition duration-300 hover:-translate-y-1 hover:border-white/65 hover:bg-white/8 hover:text-white">
-                View Courses
+                <span>
+                  View Courses
+                  <span className="hl-cta-zh">查看课程</span>
+                </span>
               </Link>
             </div>
           </div>

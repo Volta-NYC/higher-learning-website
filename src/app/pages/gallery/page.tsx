@@ -158,6 +158,9 @@ export default function ClassGalleryPage() {
                 Gallery
               </em>
             </h1>
+            <p className="hl-hero-zh" style={{ marginInline: "auto", textAlign: "center" }}>
+              课堂剪影、学生成果与春苗补习的学习日常。
+            </p>
 
             <p
               className="hlg-anim"

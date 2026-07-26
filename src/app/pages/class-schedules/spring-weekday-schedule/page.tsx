@@ -440,6 +440,9 @@ export default function SpringWeekdaySchedulePage() {
               </em>{" "}
               Schedule
             </h1>
+            <p className="hl-hero-zh">
+              平日放学后课程，帮助四至七年级学生准备州考与 SHSAT。
+            </p>
 
             {/* Subtitle */}
             <p

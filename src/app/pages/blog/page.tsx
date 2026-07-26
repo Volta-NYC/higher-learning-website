@@ -709,6 +709,9 @@ export default function BlogPage() {
                 Resources
               </em>
             </h1>
+            <p className="hl-hero-zh">
+              为家长提供考试资讯、学习建议与课程时间更新。
+            </p>
 
             <p
               className="hl-animate"

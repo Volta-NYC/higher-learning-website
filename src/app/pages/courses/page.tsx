@@ -533,6 +533,9 @@ export default function CoursesPage() {
               </em>{" "}
               Stage of Learning
             </h1>
+            <p className="hl-hero-zh">
+              从二年级到十二年级，提供英语、数学与升学考试辅导课程。
+            </p>
 
             <p
               className="hl-hero-animate"

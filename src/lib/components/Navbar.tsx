@@ -4,19 +4,19 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 const scheduleItems = [
-  { label: "2026 Spring PSAT & SAT", href: "/pages/class-schedules/spring-psat-sat" },
-  { label: "2026 Spring Weekend Schedule", href: "/pages/class-schedules/spring-weekend-schedule" },
-  { label: "2026 Spring Weekday Schedule", href: "/pages/class-schedules/spring-weekday-schedule" },
+  { label: "2026 Spring PSAT & SAT", labelZh: "春季 PSAT / SAT", href: "/pages/class-schedules/spring-psat-sat" },
+  { label: "2026 Spring Weekend Schedule", labelZh: "春季周末课程", href: "/pages/class-schedules/spring-weekend-schedule" },
+  { label: "2026 Spring Weekday Schedule", labelZh: "春季平日课程", href: "/pages/class-schedules/spring-weekday-schedule" },
 ];
 
 const navLinks = [
-  { label: "Courses", href: "/pages/courses" },
-  { label: "Schedules", href: "/pages/class-schedules", dropdown: scheduleItems },
-  { label: "Teachers", href: "/pages/teachers" },
-  { label: "Gallery", href: "/pages/gallery" },
-  { label: "Blog", href: "/pages/blog" },
-  { label: "About", href: "/pages/about" },
-  { label: "Contact", href: "/pages/contact" },
+  { label: "Courses", labelZh: "课程", href: "/pages/courses" },
+  { label: "Schedules", labelZh: "时间表", href: "/pages/class-schedules", dropdown: scheduleItems },
+  { label: "Teachers", labelZh: "老师", href: "/pages/teachers" },
+  { label: "Gallery", labelZh: "相册", href: "/pages/gallery" },
+  { label: "Blog", labelZh: "资讯", href: "/pages/blog" },
+  { label: "About", labelZh: "关于我们", href: "/pages/about" },
+  { label: "Contact", labelZh: "联系我们", href: "/pages/contact" },
 ];
 
 export default function Navbar() {
@@ -136,8 +136,9 @@ export default function Navbar() {
         .hl-nav-link a,
         .hl-nav-link button {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          gap: 0.3rem;
+          gap: 0.08rem;
           padding: 0.45rem 0.75rem;
           font-size: 0.8rem;
           font-weight: 500;
@@ -151,6 +152,27 @@ export default function Navbar() {
           border-radius: 6px;
           transition: color 0.2s, background 0.2s;
           white-space: nowrap;
+        }
+
+        .hl-nav-label-zh {
+          font-size: 0.58rem;
+          font-weight: 400;
+          letter-spacing: 0.12em;
+          line-height: 1;
+          text-transform: none;
+          color: rgba(232,184,75,0.72);
+        }
+
+        .hl-nav-cta-text {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+        }
+
+        .hl-nav-label-row {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
         }
 
         .hl-nav-link a:hover,
@@ -427,22 +449,31 @@ export default function Navbar() {
                       onClick={() => setDropdownOpen((v) => !v)}
                       aria-expanded={dropdownOpen}
                     >
-                      {link.label}
-                      <svg className={`chevron ${dropdownOpen ? "open" : ""}`} viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
-                        <polyline points="2,4 6,8 10,4" />
-                      </svg>
+                      <span className="hl-nav-label-row">
+                        <span>{link.label}</span>
+                        <svg className={`chevron ${dropdownOpen ? "open" : ""}`} viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="2,4 6,8 10,4" />
+                        </svg>
+                      </span>
+                      <span className="hl-nav-label-zh zh">{link.labelZh}</span>
                     </button>
                     <div className={`hl-dropdown ${dropdownOpen ? "open" : ""}`}>
                       {link.dropdown.map((sub) => (
                         <Link key={sub.href} href={sub.href} onClick={() => setDropdownOpen(false)}>
-                          {sub.label}
+                          <span>{sub.label}</span>
+                          <span className="zh" style={{ display: "block", marginTop: "0.15rem", fontSize: "0.7rem", color: "rgba(200,146,42,0.78)", letterSpacing: "0.08em" }}>
+                            {sub.labelZh}
+                          </span>
                         </Link>
                       ))}
                     </div>
                   </li>
                 ) : (
                   <li key={link.label} className="hl-nav-link">
-                    <Link href={link.href}>{link.label}</Link>
+                    <Link href={link.href}>
+                      <span>{link.label}</span>
+                      <span className="hl-nav-label-zh zh">{link.labelZh}</span>
+                    </Link>
                   </li>
                 )
               )}
@@ -451,7 +482,9 @@ export default function Navbar() {
             <div className="hl-gold-line" />
 
             <Link href="/pages/contact" className="hl-cta">
-              Visit Us In Person
+              <span className="hl-nav-cta-text">
+                Visit Us In Person <span className="zh">亲临咨询</span>
+              </span>
             </Link>
           </div>
 
@@ -478,7 +511,8 @@ export default function Navbar() {
                 className="hl-mobile-toggle"
                 onClick={() => setMobileScheduleOpen((v) => !v)}
               >
-                {link.label}
+                <span>{link.label}</span>
+                <span className="zh" style={{ color: "#c8922a", fontSize: "0.82rem", letterSpacing: "0.08em" }}>{link.labelZh}</span>
                 <svg
                   style={{ width: 18, height: 18, transition: "transform 0.25s", transform: mobileScheduleOpen ? "rotate(180deg)" : "none", opacity: 0.6 }}
                   viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2"
@@ -489,7 +523,7 @@ export default function Navbar() {
               <div className={`hl-mobile-sub ${mobileScheduleOpen ? "open" : ""}`}>
                 {link.dropdown.map((sub) => (
                   <Link key={sub.href} href={sub.href} onClick={() => setMobileOpen(false)}>
-                    {sub.label}
+                    {sub.label} <span className="zh">· {sub.labelZh}</span>
                   </Link>
                 ))}
               </div>
@@ -501,12 +535,12 @@ export default function Navbar() {
               className="hl-mobile-link"
               onClick={() => setMobileOpen(false)}
             >
-              {link.label}
+              {link.label} <span className="zh">· {link.labelZh}</span>
             </Link>
           )
         )}
         <Link href="/pages/contact" className="hl-mobile-cta" onClick={() => setMobileOpen(false)}>
-          Visit Us In Person
+          Visit Us In Person · <span className="zh">亲临咨询</span>
         </Link>
       </div>
     </>

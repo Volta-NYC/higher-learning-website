@@ -10,6 +10,9 @@ export default function PrivacyPolicyPage() {
           <h1 className="font-serif text-4xl font-bold tracking-normal text-white md:text-6xl">
             Privacy Policy
           </h1>
+          <p className="hl-hero-zh mt-3">
+            隐私政策 · 我们重视学生与家庭的个人资料保护。
+          </p>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/62">
             Higher Learning respects the privacy of students and families who contact or enroll with our tutoring center.
           </p>

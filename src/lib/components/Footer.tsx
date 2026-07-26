@@ -4,13 +4,13 @@ import Link from "next/link";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 
 const navLinks = [
-  { label: "Courses", href: "/pages/courses" },
-  { label: "Schedules", href: "/pages/class-schedules" },
-  { label: "Teachers", href: "/pages/teachers" },
-  { label: "Gallery", href: "/pages/gallery" },
-  { label: "Blog", href: "/pages/blog" },
-  { label: "About", href: "/pages/about" },
-  { label: "Contact", href: "/pages/contact" },
+  { label: "Courses", labelZh: "课程", href: "/pages/courses" },
+  { label: "Schedules", labelZh: "时间表", href: "/pages/class-schedules" },
+  { label: "Teachers", labelZh: "老师", href: "/pages/teachers" },
+  { label: "Gallery", labelZh: "相册", href: "/pages/gallery" },
+  { label: "Blog", labelZh: "资讯", href: "/pages/blog" },
+  { label: "About", labelZh: "关于我们", href: "/pages/about" },
+  { label: "Contact", labelZh: "联系我们", href: "/pages/contact" },
 ];
 
 const legal = [
@@ -58,6 +58,9 @@ export default function Footer() {
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/52">
               33 years of academic excellence for NYC students preparing for SHSAT, SAT, PSAT, NYS exams, and core academic growth.
             </p>
+            <p className="zh mt-3 max-w-sm text-sm leading-7 tracking-[0.08em] text-white/48">
+              服务纽约学生三十多年，提供小班教学、考试准备和核心学科辅导。
+            </p>
             <div className="mt-6 grid gap-3 text-sm text-white/58">
               <a href="tel:2129410695" className="inline-flex items-center gap-3 text-white/58 hover:text-[#e8b84b]">
                 <Phone size={17} className="text-[#e8b84b]" />
@@ -79,7 +82,7 @@ export default function Footer() {
             <nav className="mt-5 grid gap-3" aria-label="Footer navigation">
               {navLinks.slice(0, 4).map((link) => (
                 <Link key={link.href} href={link.href} className="text-sm font-medium text-white/55 hover:text-[#e8b84b]">
-                  {link.label}
+                  {link.label} <span className="zh text-xs tracking-[0.08em] text-[#e8b84b]/70">· {link.labelZh}</span>
                 </Link>
               ))}
             </nav>
@@ -90,7 +93,7 @@ export default function Footer() {
             <nav className="mt-5 grid gap-3" aria-label="Footer secondary navigation">
               {navLinks.slice(4).map((link) => (
                 <Link key={link.href} href={link.href} className="text-sm font-medium text-white/55 hover:text-[#e8b84b]">
-                  {link.label}
+                  {link.label} <span className="zh text-xs tracking-[0.08em] text-[#e8b84b]/70">· {link.labelZh}</span>
                 </Link>
               ))}
             </nav>

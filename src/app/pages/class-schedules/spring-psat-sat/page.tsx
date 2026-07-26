@@ -200,6 +200,9 @@ export default function PSATSATPage() {
               </em>{" "}
               Prep
             </h1>
+            <p className="hl-hero-zh">
+              适合九至十二年级学生，重点准备 PSAT、SAT 阅读、写作与数学。
+            </p>
 
             <p
               className="hl-animate"

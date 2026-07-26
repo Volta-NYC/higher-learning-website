@@ -113,6 +113,9 @@ export default function ClassSchedulesPage() {
               </em>{" "}
               Schedules
             </h1>
+            <p className="hl-hero-zh" style={{ margin: "0.15rem auto 0.8rem", textAlign: "center" }}>
+              查看春季课程时间、年级安排与报名详情。
+            </p>
             <p style={{
               fontSize: "0.95rem",
               color: "rgba(255,255,255,0.68)",

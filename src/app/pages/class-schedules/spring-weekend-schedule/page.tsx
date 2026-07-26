@@ -424,6 +424,9 @@ export default function SpringWeekendSchedulePage() {
               </em>{" "}
               Schedule
             </h1>
+            <p className="hl-hero-zh">
+              周六小班课程，涵盖英文、数学与纽约州考试准备。
+            </p>
 
             <p
               className="hl-anim"

@@ -502,6 +502,9 @@ export default function TeachersPage() {
                 Teachers
               </em>
             </h1>
+            <p className="hl-hero-zh">
+              经验丰富的持证教师，熟悉纽约课程与各类升学考试。
+            </p>
 
             <p
               className="hl-animate"
