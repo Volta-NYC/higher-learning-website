@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { applySiteLanguage, type SiteLanguage } from "@/lib/i18n/domTranslations";
 
@@ -27,6 +28,7 @@ export default function Navbar() {
   const [mobileScheduleOpen, setMobileScheduleOpen] = useState(false);
   const [language, setLanguage] = useState<SiteLanguage>("en");
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -45,43 +47,18 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const storedLanguage = window.localStorage.getItem("hl-language");
-    if (storedLanguage === "zh" || storedLanguage === "en") {
-      window.setTimeout(() => setLanguage(storedLanguage), 0);
-    }
+    window.localStorage.removeItem("hl-language");
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("hl-language", language);
-
-    let frame = 0;
-    const applyLanguage = () => {
-      if (frame) return;
-
-      frame = window.requestAnimationFrame(() => {
-        applySiteLanguage(language);
-        frame = 0;
-      });
-    };
-
-    applyLanguage();
-
-    const observer = new MutationObserver(applyLanguage);
-    observer.observe(document.body, {
-      attributeFilter: ["aria-label", "alt", "placeholder", "title"],
-      attributes: true,
-      characterData: true,
-      childList: true,
-      subtree: true,
+    const frame = window.requestAnimationFrame(() => {
+      applySiteLanguage(language);
     });
 
     return () => {
-      observer.disconnect();
-      if (frame) {
-        window.cancelAnimationFrame(frame);
-      }
+      window.cancelAnimationFrame(frame);
     };
-  }, [language]);
+  }, [language, pathname]);
 
   const toggleLanguage = () => {
     setLanguage((current) => (current === "en" ? "zh" : "en"));
@@ -343,16 +320,16 @@ export default function Navbar() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 34px;
-          padding: 0.45rem 0.85rem;
-          border: 1px solid rgba(232, 184, 75, 0.66);
-          border-radius: 50px;
-          background: rgba(255, 255, 255, 0.04);
-          color: #fff;
+          min-height: 32px;
+          padding: 0.35rem 0.65rem;
+          border: 1px solid rgba(232, 184, 75, 0.34);
+          border-radius: 999px;
+          background: transparent;
+          color: rgba(255,255,255,0.8);
           cursor: pointer;
           font-family: 'DM Sans', sans-serif;
-          font-size: 0.72rem;
-          font-weight: 700;
+          font-size: 0.7rem;
+          font-weight: 600;
           letter-spacing: 0.08em;
           line-height: 1;
           text-transform: uppercase;
@@ -361,10 +338,9 @@ export default function Navbar() {
         }
 
         .hl-language-toggle:hover {
-          background: rgba(200, 146, 42, 0.16);
+          background: rgba(200, 146, 42, 0.1);
           border-color: var(--gold-light);
           color: var(--gold-light);
-          transform: translateY(-1px);
         }
 
         .hl-language-toggle.mobile {
@@ -569,6 +545,12 @@ export default function Navbar() {
 
             <div className="hl-gold-line" />
 
+            <Link href="/pages/contact" className="hl-cta">
+              <span className="hl-nav-cta-text">
+                Visit Us In Person <span className="zh">亲临咨询</span>
+              </span>
+            </Link>
+
             <button
               type="button"
               className="hl-language-toggle"
@@ -578,12 +560,6 @@ export default function Navbar() {
             >
               {language === "en" ? "中文" : "English"}
             </button>
-
-            <Link href="/pages/contact" className="hl-cta">
-              <span className="hl-nav-cta-text">
-                Visit Us In Person <span className="zh">亲临咨询</span>
-              </span>
-            </Link>
           </div>
 
           {/* Hamburger */}

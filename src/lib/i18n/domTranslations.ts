@@ -112,9 +112,6 @@ const translations: Record<string, string> = {
 const textOriginals = new WeakMap<Text, string>();
 const attributeOriginals = new WeakMap<Element, Map<string, string>>();
 const translatedValues = new Set(Object.values(translations));
-const translatedLookup = new Map(
-  Object.entries(translations).map(([english, chinese]) => [chinese, english]),
-);
 
 function normalize(value: string) {
   return value.replace(/\s+/g, " ").trim();
@@ -128,14 +125,6 @@ function translateValue(value: string) {
   if (!translated) return value;
 
   return value.replace(normalized, translated);
-}
-
-function restoreTranslatedValue(value: string, original: string) {
-  const normalized = normalize(value);
-  const english = translatedLookup.get(normalized);
-  if (!english) return original;
-
-  return value.replace(normalized, english);
 }
 
 function shouldTranslateNode(node: Text) {
@@ -171,8 +160,7 @@ function translateTextNodes(root: HTMLElement, language: SiteLanguage) {
     }
 
     const original = textOriginals.get(node) ?? "";
-    const nextValue =
-      language === "zh" ? translateValue(original) : restoreTranslatedValue(node.nodeValue ?? "", original);
+    const nextValue = language === "zh" ? translateValue(original) : original;
 
     if (node.nodeValue !== nextValue) {
       node.nodeValue = nextValue;
@@ -206,7 +194,7 @@ function translateAttributes(root: HTMLElement, language: SiteLanguage) {
       if (!original) return;
 
       const nextValue =
-        language === "zh" ? translateValue(original) : restoreTranslatedValue(value, original);
+        language === "zh" ? translateValue(original) : original;
 
       if (value !== nextValue) {
         element.setAttribute(attribute, nextValue);

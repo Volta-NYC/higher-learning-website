@@ -23,6 +23,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Higher Learning",
   description: "Higher Learning NYC",
+  other: {
+    google: "notranslate",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="notranslate" translate="no">
       <body
         className={`${dmSans.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
       >
