@@ -49,8 +49,24 @@ export default function ClassGalleryPage() {
         }
         .hlg-anim { animation: hlgFadeUp 0.72s cubic-bezier(0.22,1,0.36,1) both; }
 
+        .hlg-image-frame {
+          border: 1px solid rgba(200,146,42,0.34);
+          outline: 6px solid rgba(255,255,255,0.78);
+          outline-offset: -10px;
+        }
+        .hlg-image-frame::after {
+          content: "";
+          position: absolute;
+          inset: 10px;
+          border: 1px solid rgba(15,32,68,0.12);
+          border-radius: 14px;
+          pointer-events: none;
+          z-index: 2;
+        }
+
         .hlg-tile {
           position: relative;
+          border: 1px solid rgba(200,146,42,0.34);
           border-radius: 16px;
           overflow: hidden;
           aspect-ratio: 4/3;
@@ -200,7 +216,7 @@ export default function ClassGalleryPage() {
             }}
           >
             {/* Image */}
-            <div style={{
+            <div className="hlg-image-frame" style={{
               borderRadius: "20px", overflow: "hidden",
               boxShadow: "0 12px 40px rgba(15,32,68,0.12)",
               opacity: feat1.inView ? 1 : 0,
@@ -309,7 +325,7 @@ export default function ClassGalleryPage() {
 
             {/* Image */}
             <div
-              className="hlg-feature-img-order"
+              className="hlg-feature-img-order hlg-image-frame"
               style={{
                 borderRadius: "20px", overflow: "hidden",
                 boxShadow: "0 12px 40px rgba(15,32,68,0.12)",
