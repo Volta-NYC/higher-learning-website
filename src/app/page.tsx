@@ -530,7 +530,7 @@ export default function Home() {
 
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {[
-            { n: "79+", label: "Students Accepted", icon: Users },
+            { n: "500+", label: "Students Accepted", icon: Users },
             { n: "75%", label: "SHSAT Acceptance Rate", icon: TrendingUp },
             { n: "10+", label: "Schools Including Stuyvesant", icon: School },
           ].map((item) => {
