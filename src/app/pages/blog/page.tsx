@@ -710,7 +710,7 @@ export default function BlogPage() {
               </em>
             </h1>
             <p className="hl-hero-zh">
-              为家长提供考试资讯、学习建议与课程时间更新。
+              爲家長提供考試資訊、學習建議與課程時間更新。
             </p>
 
             <p

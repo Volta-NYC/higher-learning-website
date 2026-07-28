@@ -7,18 +7,18 @@ import { applySiteLanguage, type SiteLanguage } from "@/lib/i18n/domTranslations
 
 const scheduleItems = [
   { label: "2026 Spring PSAT & SAT", labelZh: "春季 PSAT / SAT", href: "/pages/class-schedules/spring-psat-sat" },
-  { label: "2026 Spring Weekend Schedule", labelZh: "春季周末课程", href: "/pages/class-schedules/spring-weekend-schedule" },
-  { label: "2026 Spring Weekday Schedule", labelZh: "春季平日课程", href: "/pages/class-schedules/spring-weekday-schedule" },
+  { label: "2026 Spring Weekend Schedule", labelZh: "春季週末課程", href: "/pages/class-schedules/spring-weekend-schedule" },
+  { label: "2026 Spring Weekday Schedule", labelZh: "春季平日課程", href: "/pages/class-schedules/spring-weekday-schedule" },
 ];
 
 const navLinks = [
-  { label: "Courses", labelZh: "课程", href: "/pages/courses" },
-  { label: "Schedules", labelZh: "时间表", href: "/pages/class-schedules", dropdown: scheduleItems },
-  { label: "Teachers", labelZh: "老师", href: "/pages/teachers" },
-  { label: "Gallery", labelZh: "相册", href: "/pages/gallery" },
-  { label: "Blog", labelZh: "资讯", href: "/pages/blog" },
-  { label: "About", labelZh: "关于我们", href: "/pages/about" },
-  { label: "Contact", labelZh: "联系我们", href: "/pages/contact" },
+  { label: "Courses", labelZh: "課程", href: "/pages/courses" },
+  { label: "Schedules", labelZh: "時間表", href: "/pages/class-schedules", dropdown: scheduleItems },
+  { label: "Teachers", labelZh: "老師", href: "/pages/teachers" },
+  { label: "Gallery", labelZh: "相冊", href: "/pages/gallery" },
+  { label: "Blog", labelZh: "資訊", href: "/pages/blog" },
+  { label: "About", labelZh: "關於我們", href: "/pages/about" },
+  { label: "Contact", labelZh: "聯繫我們", href: "/pages/contact" },
 ];
 
 export default function Navbar() {
@@ -501,7 +501,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="hl-logo">
             <span className="hl-logo-en">Higher Learning</span>
-            <span className="hl-logo-zh">春苗补习</span>
+            <span className="hl-logo-zh">春苗補習</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -549,7 +549,7 @@ export default function Navbar() {
 
             <Link href="/pages/contact" className="hl-cta">
               <span className="hl-nav-cta-text">
-                Visit Us In Person <span className="zh">亲临咨询</span>
+                Visit Us In Person <span className="zh">親臨諮詢</span>
               </span>
             </Link>
 
@@ -558,7 +558,7 @@ export default function Navbar() {
               className="hl-language-toggle"
               data-no-translate
               onClick={toggleLanguage}
-              aria-label={language === "en" ? "Switch to Simplified Chinese" : "Switch to English"}
+              aria-label={language === "en" ? "Switch to Traditional Chinese" : "Switch to English"}
             >
               {language === "en" ? "中文" : "English"}
             </button>
@@ -585,7 +585,7 @@ export default function Navbar() {
           className="hl-language-toggle mobile"
           data-no-translate
           onClick={toggleLanguage}
-          aria-label={language === "en" ? "Switch to Simplified Chinese" : "Switch to English"}
+          aria-label={language === "en" ? "Switch to Traditional Chinese" : "Switch to English"}
         >
           {language === "en" ? "中文" : "English"}
         </button>
@@ -626,7 +626,7 @@ export default function Navbar() {
           )
         )}
         <Link href="/pages/contact" className="hl-mobile-cta" onClick={() => setMobileOpen(false)}>
-          Visit Us In Person · <span className="zh">亲临咨询</span>
+          Visit Us In Person · <span className="zh">親臨諮詢</span>
         </Link>
       </div>
     </>

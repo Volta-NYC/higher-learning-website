@@ -4,13 +4,13 @@ import Link from "next/link";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 
 const navLinks = [
-  { label: "Courses", labelZh: "课程", href: "/pages/courses" },
-  { label: "Schedules", labelZh: "时间表", href: "/pages/class-schedules" },
-  { label: "Teachers", labelZh: "老师", href: "/pages/teachers" },
-  { label: "Gallery", labelZh: "相册", href: "/pages/gallery" },
-  { label: "Blog", labelZh: "资讯", href: "/pages/blog" },
-  { label: "About", labelZh: "关于我们", href: "/pages/about" },
-  { label: "Contact", labelZh: "联系我们", href: "/pages/contact" },
+  { label: "Courses", labelZh: "課程", href: "/pages/courses" },
+  { label: "Schedules", labelZh: "時間表", href: "/pages/class-schedules" },
+  { label: "Teachers", labelZh: "老師", href: "/pages/teachers" },
+  { label: "Gallery", labelZh: "相冊", href: "/pages/gallery" },
+  { label: "Blog", labelZh: "資訊", href: "/pages/blog" },
+  { label: "About", labelZh: "關於我們", href: "/pages/about" },
+  { label: "Contact", labelZh: "聯繫我們", href: "/pages/contact" },
 ];
 
 const socials = [
@@ -47,13 +47,13 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex flex-col hover:text-white">
               <span className="font-serif text-2xl font-bold tracking-normal text-white">Higher Learning</span>
-              <span className="zh mt-1 text-xs tracking-[0.28em] text-[#e8b84b]">春苗补习</span>
+              <span className="zh mt-1 text-xs tracking-[0.28em] text-[#e8b84b]">春苗補習</span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/52">
               33 years of academic excellence for NYC students preparing for SHSAT, SAT, PSAT, NYS exams, and core academic growth.
             </p>
             <p className="zh mt-3 max-w-sm text-sm leading-7 tracking-[0.08em] text-white/48">
-              服务纽约学生三十多年，提供小班教学、考试准备和核心学科辅导。
+              服務紐約學生三十多年，提供小班教學、考試準備和核心學科輔導。
             </p>
             <div className="mt-6 grid gap-3 text-sm text-white/58">
               <a href="tel:2129410695" className="inline-flex items-center gap-3 text-white/58 hover:text-[#e8b84b]">

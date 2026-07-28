@@ -66,7 +66,7 @@ function ContactForm() {
         </h3>
         <p style={{ fontSize: "0.9rem", color: "rgba(15,32,68,0.55)", lineHeight: 1.7 }}>
           Thank you for reaching out. Our team will get back to you as soon as possible.
-          <span className="zh" style={{ display: "block", marginTop: "0.35rem" }}>谢谢您的联系，我们会尽快回复。</span>
+          <span className="zh" style={{ display: "block", marginTop: "0.35rem" }}>謝謝您的聯繫，我們會盡快回覆。</span>
         </p>
       </div>
     );
@@ -79,7 +79,7 @@ function ContactForm() {
           <label style={labelStyle}>Your Name <span className="zh">姓名</span></label>
           <input
             type="text"
-            placeholder="Jane Smith / 学生或家长姓名"
+            placeholder="Jane Smith / 學生或家長姓名"
             value={fields.name}
             onChange={(e) => setFields({ ...fields, name: e.target.value })}
             onFocus={() => setFocused("name")}
@@ -88,7 +88,7 @@ function ContactForm() {
           />
         </div>
         <div>
-          <label style={labelStyle}>Your Email <span className="zh">电子邮箱</span></label>
+          <label style={labelStyle}>Your Email <span className="zh">電子郵箱</span></label>
           <input
             type="email"
             placeholder="jane@example.com"
@@ -102,10 +102,10 @@ function ContactForm() {
       </div>
 
       <div>
-        <label style={labelStyle}>Subject <span className="zh">咨询主题</span></label>
+        <label style={labelStyle}>Subject <span className="zh">諮詢主題</span></label>
         <input
           type="text"
-          placeholder="Enrollment inquiry, SHSAT prep, etc. / 报名、课程或考试辅导"
+          placeholder="Enrollment inquiry, SHSAT prep, etc. / 報名、課程或考試輔導"
           value={fields.subject}
           onChange={(e) => setFields({ ...fields, subject: e.target.value })}
           onFocus={() => setFocused("subject")}
@@ -115,10 +115,10 @@ function ContactForm() {
       </div>
 
       <div>
-        <label style={labelStyle}>Your Message (optional) <span className="zh">留言（可选）</span></label>
+        <label style={labelStyle}>Your Message (optional) <span className="zh">留言（可選）</span></label>
         <textarea
           rows={6}
-          placeholder="Tell us about your student, the grade level, and what you're looking for… / 请告诉我们学生年级和需要的课程"
+          placeholder="Tell us about your student, the grade level, and what you're looking for… / 請告訴我們學生年級和需要的課程"
           value={fields.message}
           onChange={(e) => setFields({ ...fields, message: e.target.value })}
           onFocus={() => setFocused("message")}
@@ -148,7 +148,7 @@ function ContactForm() {
         }}
         className="hl-submit-btn"
       >
-        {status === "sending" ? "Sending… 发送中" : "Send Message → 发送留言"}
+        {status === "sending" ? "Sending… 發送中" : "Send Message → 發送留言"}
       </button>
     </div>
   );
@@ -303,7 +303,7 @@ export default function ContactPage() {
               </em>
             </h1>
             <p className="hl-hero-zh">
-              欢迎来电、发邮件或亲临华埠校区咨询课程与报名。
+              歡迎來電、發郵件或親臨華埠校區諮詢課程與報名。
             </p>
 
             <p
