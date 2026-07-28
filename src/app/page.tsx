@@ -25,7 +25,7 @@ import {
 
 const stats = [
   { value: "30", suffix: "+", label: "Years of Excellence" },
-  { value: "75", suffix: "%", label: "SHSAT Acceptance Rate" },
+  { value: "70", suffix: "%", label: "Specialized HS Acceptance Rate" },
   { value: "4.9", suffix: "/5", label: "Google Rating" },
   { value: "1993", suffix: "", label: "Established" },
 ];
@@ -513,7 +513,7 @@ export default function Home() {
                   <Award className="text-[#e8b84b]" size={24} />
                 </div>
                 <div className="font-serif text-5xl font-bold leading-none text-white">70%</div>
-                <p className="mt-4 text-sm leading-7 text-white/64">SHSAT acceptance rate into NYC specialized high schools.</p>
+                <p className="mt-4 text-sm leading-7 text-white/64">Specialized high school acceptance rate for Higher Learning students.</p>
                 <div className="mt-6 grid gap-3">
                   {["Stuyvesant", "Brooklyn Tech", "Bronx Science"].map((school) => (
                     <div key={school} className="flex items-center justify-between rounded-[8px] border border-white/8 bg-white/8 px-4 py-3 text-sm text-white/78">
@@ -590,7 +590,7 @@ export default function Home() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {[
             { n: "500+", label: "Students Accepted", icon: Users },
-            { n: "70%", label: "SHSAT Acceptance Rate", icon: TrendingUp },
+            { n: "70%", label: "Specialized HS Acceptance Rate", icon: TrendingUp },
             { n: "10+", label: "Schools Including Stuyvesant", icon: School },
           ].map((item) => {
             const Icon = item.icon;

@@ -329,7 +329,7 @@ export default function AboutPage() {
             >
               {[
                 { value: "32+", label: "Years in Chinatown" },
-                { value: "~70%", label: "SHSAT Acceptance" },
+                { value: "~70%", label: "Specialized HS Acceptance" },
                 { value: "G2–G8", label: "Grade Coverage" },
                 { value: "4", label: "Licensed Teachers" },
               ].map((s) => (
@@ -486,7 +486,7 @@ export default function AboutPage() {
             {[
               { icon: "30", title: "30+ Years in the Community", body: "Since 1993, we've been an anchor institution in Chinatown — trusted by generations of families who grew up here and now return with their own children." },
               { icon: "LIC", title: "Licensed, Experienced Teachers", body: "Every instructor holds a teaching license and brings deep expertise in the NYC curriculum — from 2nd grade foundations to 8th grade Regents prep." },
-              { icon: "%", title: "~70% SHSAT Acceptance Rate", body: "Our rigorous preparation has helped nearly 70% of our students each year earn admission to NYC's specialized high schools, including Stuyvesant and Bronx Science." },
+              { icon: "%", title: "~70% Specialized HS Acceptance Rate", body: "Our rigorous preparation has helped nearly 70% of our students each year earn admission to NYC's specialized high schools, including Stuyvesant and Bronx Science." },
               { icon: "G2", title: "Grades 2–8 Coverage", body: "From building foundational skills in 2nd grade to mastering Algebra I Regents in 8th grade, our curriculum spans the entire middle school journey." },
               { icon: "1:1", title: "Personal, Caring Support", body: "Our teachers know their students by name, learning style, and goals — providing mentorship that goes far beyond what the classroom alone can offer." },
               { icon: "NYC", title: "Conveniently Located", body: "At 84 Bowery, 3rd Floor, we're accessible from across lower Manhattan, with both weekend and weekday programs available to fit your family's schedule." },
@@ -503,7 +503,7 @@ export default function AboutPage() {
             <div className="hl-stats-grid">
               <StatCard value="1993" label="Year Founded" delay={0} />
               <StatCard value="32+" label="Years of Service" delay={80} />
-              <StatCard value="~70%" label="SHSAT Acceptance" delay={160} />
+              <StatCard value="~70%" label="Specialized HS Acceptance" delay={160} />
               <StatCard value="97+" label="Combined Teaching Yrs" delay={240} />
             </div>
           </div>

@@ -565,7 +565,7 @@ export default function CoursesPage() {
             >
               {[
                 { value: "30+", label: "Years Teaching" },
-                { value: "70%", label: "SHSAT Acceptance" },
+                { value: "70%", label: "Specialized HS Acceptance" },
                 { value: "6", label: "Programs Offered" },
                 { value: "G2–G12", label: "Grade Range" },
               ].map((s) => (
