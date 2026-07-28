@@ -458,6 +458,11 @@ export default function Home() {
           margin-right: calc(50% - 50vw);
           width: 100vw;
         }
+        .hl-campus-carousel-band {
+          margin-left: calc(50% - 50vw);
+          margin-right: calc(50% - 50vw);
+          width: 100vw;
+        }
         .hl-campus-carousel-track {
           transform: translateX(calc(var(--gallery-index) * -25%));
         }
@@ -568,7 +573,7 @@ export default function Home() {
         title="A Look Inside Higher Learning"
         subtitle="Photos from classes, celebrations, and student work at our Chinatown tutoring center."
       >
-        <div className="relative overflow-hidden border-y-2 border-[#c8922a]/70 bg-[#111a35] py-5 shadow-[0_18px_54px_rgba(15,32,68,0.14)]">
+        <div className="hl-campus-carousel-band relative overflow-hidden border-y-2 border-[#c8922a]/70 bg-[#111a35] py-5 shadow-[0_18px_54px_rgba(15,32,68,0.14)]">
           <div className="mb-5 flex items-center justify-center gap-3">
             <button
               type="button"
