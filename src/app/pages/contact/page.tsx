@@ -482,8 +482,8 @@ export default function ContactPage() {
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem" }}>
                   {[
-                    { day: "Monday – Friday", hours: "3:00 PM – 7:00 PM" },
-                    { day: "Saturday", hours: "9:00 AM – 5:00 PM" },
+                    { day: "Monday – Friday", hours: "9:00 AM – 4:00 PM" },
+                    { day: "Saturday", hours: "10:00 AM – 1:00 PM" },
                     { day: "Sunday", hours: "Closed" },
                   ].map((h) => (
                     <div key={h.day} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>

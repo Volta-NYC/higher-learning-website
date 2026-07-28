@@ -289,8 +289,8 @@ const translations: Record<string, string> = {
   "Saturday": "周六",
   "Sunday": "周日",
   "Closed": "休息",
-  "3:00 PM – 7:00 PM": "下午 3:00 – 晚上 7:00",
-  "9:00 AM – 5:00 PM": "上午 9:00 – 下午 5:00",
+  "9:00 AM – 4:00 PM": "上午 9:00 – 下午 4:00",
+  "10:00 AM – 1:00 PM": "上午 10:00 – 下午 1:00",
   "* Hours may vary during school breaks and holidays.": "* 学校假期期间办公时间可能有所调整。",
   "Get Directions →": "查看路线 →",
 
