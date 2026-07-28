@@ -141,7 +141,19 @@ const reviews = [
   },
 ];
 
+const students2026 = [
+  "Alexandra Perez","Alice Grider","Angelia Chen","Claribel Lee",
+  "Conan Kuang","BeiJia Jiang (Jasper)","Brian Shen","Elena Gee",
+  "Elizabeth Lovejoy","Emma Lee","Elina Liu","Eric Li",
+  "Idris Chen","James Tran","Jeffrey Chen","Joshua Pau",
+  "Kayden Zhong","Leo Ortega","Olivia Leung","Lewis Zhao",
+  "Roger Chen","Luke Nam","Mark Goldstein","Matthew Wang",
+  "Leonardo Goozoo","Ryan Welch","Seohyun Hwang","Sean Ho",
+  "Cathleen So",
+];
+
 const students = [
+  ...students2026,
   "Aaron Lu","Aiden Wen","Alexis Jung","Allyson Yip","Andrew Chin","Andrew Xiong",
   "Ann Zhuo","Anderson Chen","Auden Gage","Ava Lam","Benjamin Klare","Bianca Beleffi",
   "Bowen Zheng","Brendan Tan","Brian Yu","Bryce Wong","Caleb Lu","Carson Mui",
@@ -558,9 +570,9 @@ export default function Home() {
       <Section
         id="success"
         className="overflow-hidden bg-[#080f24] bg-[radial-gradient(circle_at_20%_20%,rgba(232,184,75,0.16),transparent_26%),linear-gradient(145deg,#080f24,#121b34)]"
-        label="Class of 2024 & 2025"
+        label="Class of 2026"
         title="Specialized High School Admissions"
-        subtitle="Congratulations to our students accepted into NYC's elite specialized high schools. Pick up your gifts and celebrate with us - you've earned it."
+        subtitle="Congratulations to our 2026 students accepted into NYC's specialized and Hunter high schools. Pick up your gifts and celebrate with us - you've earned it."
         dark
       >
         <div className="hl-admissions-marquee relative overflow-hidden border-y border-white/10 py-6">
