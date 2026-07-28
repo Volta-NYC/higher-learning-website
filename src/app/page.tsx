@@ -188,6 +188,34 @@ const carouselPhotos = [
   },
 ];
 
+const homeGalleryPhotos = [
+  {
+    src: "/images/higher-learning/2025-05-14.webp",
+    alt: "Higher Learning student celebration board",
+    title: "Specialized High School Celebrations",
+  },
+  {
+    src: "/images/higher-learning/476274718_590582123741411_8368425015554476117_n-768x576.jpg",
+    alt: "Higher Learning students working together",
+    title: "Small Group Learning",
+  },
+  {
+    src: "/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg",
+    alt: "Higher Learning classroom lesson",
+    title: "Focused Classroom Sessions",
+  },
+  {
+    src: "/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg",
+    alt: "Students studying in a Higher Learning classroom",
+    title: "Student Study Time",
+  },
+  {
+    src: "/images/higher-learning/475799580_590582457074711_281516345249048325_n-768x576.jpg",
+    alt: "Higher Learning class activity",
+    title: "Academic Practice",
+  },
+];
+
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -537,6 +565,66 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        id="home-gallery"
+        className="bg-[#f7fbff]"
+        label="Campus Moments"
+        title="A Look Inside Higher Learning"
+        subtitle="Photos from classes, celebrations, and student work at our Chinatown tutoring center."
+      >
+        <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+          <Link
+            href="/pages/gallery"
+            className="group relative min-h-[340px] overflow-hidden rounded-[8px] border-2 border-[#0f2044]/75 bg-[#0f2044] shadow-[0_24px_70px_rgba(15,32,68,0.15)]"
+          >
+            <Image
+              src={homeGalleryPhotos[0].src}
+              alt={homeGalleryPhotos[0].alt}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-[1.04]"
+              sizes="(min-width: 1024px) 58vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/82 via-[#081126]/12 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+              <div className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Featured Gallery</div>
+              <h3 className="font-serif text-3xl font-bold leading-tight text-white sm:text-4xl">{homeGalleryPhotos[0].title}</h3>
+            </div>
+          </Link>
+
+          <div className="grid grid-cols-2 gap-4">
+            {homeGalleryPhotos.slice(1, 5).map((photo) => (
+              <Link
+                key={photo.src}
+                href="/pages/gallery"
+                className="group relative aspect-[4/3] overflow-hidden rounded-[8px] border-2 border-[#0f2044]/70 bg-[#0f2044] shadow-[0_14px_38px_rgba(15,32,68,0.12)]"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.06]"
+                  sizes="(min-width: 1024px) 21vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/72 via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-x-0 bottom-0 p-4">
+                  <div className="text-sm font-bold leading-snug text-white">{photo.title}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#0f2044]/10 pt-6">
+          <p className="max-w-2xl text-sm leading-7 text-slate-600">
+            Browse more classroom photos, student celebrations, and program highlights in the full gallery.
+          </p>
+          <Link href="/pages/gallery" className="inline-flex h-12 items-center justify-center rounded-full bg-[#0f2044] px-6 text-sm font-bold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#162a58]">
+            View Full Gallery
+            <ChevronRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </Section>
 
       <Section
         id="courses"
