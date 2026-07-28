@@ -14,7 +14,6 @@ const scheduleItems = [
 const navLinks = [
   { label: "Courses", labelZh: "課程", href: "/pages/courses" },
   { label: "Schedules", labelZh: "時間表", href: "/pages/class-schedules", dropdown: scheduleItems },
-  { label: "Teachers", labelZh: "老師", href: "/pages/teachers" },
   { label: "Gallery", labelZh: "相冊", href: "/pages/gallery" },
   { label: "Blog", labelZh: "資訊", href: "/pages/blog" },
   { label: "About", labelZh: "關於我們", href: "/pages/about" },
