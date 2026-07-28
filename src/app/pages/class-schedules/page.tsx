@@ -5,28 +5,28 @@ const SCHEDULES = [
   {
     href: "/pages/class-schedules/spring-psat-sat",
     eyebrow: "Grades 9–12",
-    title: "Spring PSAT & SAT Prep",
-    titleItalic: "PSAT & SAT",
-    desc: "14 Saturday sessions of expert ELA and Math instruction, starting January 24, 2026.",
+    title: "Fall SAT Prep",
+    titleItalic: "SAT",
+    desc: "14 Saturday sessions of expert ELA and Math instruction, starting September 12, 2026.",
     detail: "Saturdays · 1:00 – 4:00 pm",
     icon: "SAT",
   },
   {
     href: "/pages/class-schedules/spring-weekend-schedule",
     eyebrow: "Grades 2–7",
-    title: "Spring Weekend Schedule",
+    title: "Fall Weekend Schedule",
     titleItalic: "Weekend",
-    desc: "14 Saturday sessions covering NY State Test Prep, ELA, Math, and SHSAT preparation.",
+    desc: "14 Saturday sessions covering ELA, Math, grammar, SAT, and SHSAT preparation.",
     detail: "Saturdays · Various times",
     icon: "WKD",
   },
   {
     href: "/pages/class-schedules/spring-weekday-schedule",
-    eyebrow: "Grades 4–7",
-    title: "Spring Weekday Schedule",
+    eyebrow: "Grades 4–8",
+    title: "Fall Weekday Schedule",
     titleItalic: "Weekday",
-    desc: "15 after-school sessions on Wednesdays and Thursdays, aligned to NY State test windows.",
-    detail: "Wed & Thu · 3:45 – 6:00 pm",
+    desc: "Weekday ELA, Math, and SHSAT prep for Grades 4–8 beginning September 2026.",
+    detail: "Tue, Wed, Thu & Fri · After school",
     icon: "DAY",
   },
 ];
@@ -102,7 +102,7 @@ export default function ClassSchedulesPage() {
               margin: "0 0 0.75rem",
               lineHeight: 1.1,
             }}>
-              2026{" "}
+              Fall 2026{" "}
               <em style={{
                 fontStyle: "italic",
                 background: "linear-gradient(to right, #c8922a, #e8b84b)",
@@ -114,7 +114,7 @@ export default function ClassSchedulesPage() {
               Schedules
             </h1>
             <p className="hl-hero-zh" style={{ margin: "0.15rem auto 0.8rem", textAlign: "center" }}>
-              查看春季课程时间、年级安排与报名详情。
+              查看秋季課程時間、年級安排與報名詳情。
             </p>
             <p style={{
               fontSize: "0.95rem",

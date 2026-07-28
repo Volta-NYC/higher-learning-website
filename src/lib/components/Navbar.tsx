@@ -6,9 +6,9 @@ import { useState, useEffect, useRef } from "react";
 import { applySiteLanguage, type SiteLanguage } from "@/lib/i18n/domTranslations";
 
 const scheduleItems = [
-  { label: "2026 Spring PSAT & SAT", labelZh: "春季 PSAT / SAT", href: "/pages/class-schedules/spring-psat-sat" },
-  { label: "2026 Spring Weekend Schedule", labelZh: "春季週末課程", href: "/pages/class-schedules/spring-weekend-schedule" },
-  { label: "2026 Spring Weekday Schedule", labelZh: "春季平日課程", href: "/pages/class-schedules/spring-weekday-schedule" },
+  { label: "2026 Fall SAT Prep", labelZh: "秋季 SAT 課程", href: "/pages/class-schedules/spring-psat-sat" },
+  { label: "2026 Fall Weekend Schedule", labelZh: "秋季週末課程", href: "/pages/class-schedules/spring-weekend-schedule" },
+  { label: "2026 Fall Weekday Schedule", labelZh: "秋季平日課程", href: "/pages/class-schedules/spring-weekday-schedule" },
 ];
 
 const navLinks = [

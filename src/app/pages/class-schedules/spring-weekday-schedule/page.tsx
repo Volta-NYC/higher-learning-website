@@ -42,61 +42,66 @@ interface WeekdayClass {
 
 const WEEKDAY_CLASSES: WeekdayClass[] = [
   {
-    subject: "NY State Test Preparation — ELA & Math",
-    subjectZh: "四年級紐約州考試加強班（英文 & 數學）",
+    subject: "ELA, Reading, Writing & Math",
+    subjectZh: "英文閱讀寫作和數學",
     grade: "Grade 4",
     gradeZh: "四年級",
     dayLabel: "Wednesday",
     dayZh: "星期三",
     time: "3:45 – 5:45 pm",
-    regularDates: ["1/28", "2/04", "2/11", "2/25", "3/04", "3/11", "3/18", "3/25", "4/01"],
-    specialLabel: "Special Monday Classes",
-    specialDates: ["4/13", "4/20", "4/27"],
-    afterSpecialDates: ["5/06", "5/13", "5/20"],
+    regularDates: ["9/16", "9/23", "9/30", "10/07", "10/14", "10/21", "10/28", "11/04", "11/18", "12/02", "12/09", "12/16", "12/23", "1/06", "1/13"],
     sessions: 15,
     color: "#c8922a",
   },
   {
-    subject: "NY State Test Preparation — ELA & Math",
-    subjectZh: "五年級紐約州考試加強班（英文 & 數學）",
+    subject: "ELA, Reading, Writing & Math",
+    subjectZh: "英文閱讀寫作和數學",
     grade: "Grade 5",
     gradeZh: "五年級",
     dayLabel: "Thursday",
     dayZh: "星期四",
     time: "4:00 – 6:00 pm",
-    regularDates: ["1/29", "2/05", "2/12", "2/26", "3/05", "3/12", "3/19", "3/26"],
-    specialLabel: "Special Monday Classes",
-    specialDates: ["4/13", "4/20", "4/27"],
-    afterSpecialDates: ["4/30", "5/07", "5/14", "5/21"],
+    regularDates: ["9/17", "9/24", "10/01", "10/08", "10/15", "10/22", "10/29", "11/05", "11/12", "11/19", "12/03", "12/10", "12/17", "1/07", "1/14"],
     sessions: 15,
     color: "#0f2044",
   },
   {
-    subject: "NY State Test Preparation — ELA & Math",
-    subjectZh: "六年級紐約州考試加強班",
+    subject: "ELA & Math SHSAT Preparation",
+    subjectZh: "英文和數學特殊高中考試準備班",
     grade: "Grade 6",
     gradeZh: "六年級",
     dayLabel: "Wednesday",
     dayZh: "星期三",
     time: "4:00 – 6:00 pm",
-    regularDates: ["1/28", "2/04", "2/11", "2/25", "3/04", "3/11", "3/18", "3/25", "4/01", "4/15", "4/22", "4/29", "5/06", "5/13", "5/20"],
+    regularDates: ["9/16", "9/23", "9/30", "10/07", "10/14", "10/21", "10/28", "11/04", "11/18", "12/02", "12/09", "12/16", "12/23", "1/06", "1/13"],
     sessions: 15,
     color: "#162a58",
   },
   {
-    subject: "NY State Test + SHSAT Preparation",
-    subjectZh: "七年級州考試 + 特殊高中考試準備班",
+    subject: "ELA & Math SHSAT Preparation",
+    subjectZh: "英文和數學特殊高中考試準備班",
     grade: "Grade 7",
     gradeZh: "七年級",
     dayLabel: "Thursday",
     dayZh: "星期四",
     time: "4:00 – 6:00 pm",
-    regularDates: ["1/29", "2/05", "2/12", "2/26", "3/05", "3/12", "3/19", "3/26"],
-    specialLabel: "Special Monday Classes",
-    specialDates: ["4/13", "4/20", "4/27"],
-    afterSpecialDates: ["4/30", "5/07", "5/14", "5/21"],
+    regularDates: ["9/17", "9/24", "10/01", "10/08", "10/15", "10/22", "10/29", "11/05", "11/12", "11/19", "12/03", "12/10", "12/17", "1/07", "1/14"],
     sessions: 15,
     color: "#c8922a",
+  },
+  {
+    subject: "Specialized High School Admission Test Preparation",
+    subjectZh: "特殊高中考試衝刺班",
+    grade: "Grade 8",
+    gradeZh: "八年級",
+    dayLabel: "Friday",
+    dayZh: "星期五",
+    time: "4:00 – 7:00 pm",
+    regularDates: ["9/11", "9/18", "9/25", "10/02", "10/09", "10/16", "10/23", "10/30", "11/06"],
+    specialLabel: "Tuesday Classes",
+    specialDates: ["9/15", "9/22", "9/29", "10/06", "10/13", "10/20", "10/27", "11/03"],
+    sessions: 17,
+    color: "#0f2044",
   },
 ];
 
@@ -104,6 +109,8 @@ const DAY_COLORS: Record<string, { bg: string; text: string; border: string }> =
   Wednesday: { bg: "rgba(15,32,68,0.07)",    text: "#0f2044",  border: "rgba(15,32,68,0.18)"    },
   Thursday:  { bg: "rgba(200,146,42,0.1)",   text: "#c8922a",  border: "rgba(200,146,42,0.25)"  },
   Monday:    { bg: "rgba(200,146,42,0.15)",  text: "#a07020",  border: "rgba(200,146,42,0.3)"   },
+  Tuesday:   { bg: "rgba(15,32,68,0.07)",    text: "#0f2044",  border: "rgba(15,32,68,0.18)"    },
+  Friday:    { bg: "rgba(200,146,42,0.1)",   text: "#c8922a",  border: "rgba(200,146,42,0.25)"  },
 };
 
 /* ─────────────────────────────────────────────
@@ -251,13 +258,12 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
             color={DAY_COLORS[cls.dayLabel]}
           />
 
-          {/* Special Monday classes */}
           {cls.specialDates && (
             <DateGroup
-              label="Special Monday"
-              labelZh="特別星期一"
+              label={cls.specialLabel ?? "Special Classes"}
+              labelZh={cls.specialLabel === "Tuesday Classes" ? "星期二" : "特別課程"}
               dates={cls.specialDates}
-              color={DAY_COLORS["Monday"]}
+              color={DAY_COLORS[cls.specialLabel === "Tuesday Classes" ? "Tuesday" : "Monday"]}
               special
             />
           )}
@@ -429,7 +435,7 @@ export default function SpringWeekdaySchedulePage() {
                 maxWidth: "740px",
               }}
             >
-              Spring 2026{" "}
+              Fall 2026{" "}
               <em style={{
                 fontStyle: "italic",
                 background: "linear-gradient(to right, #c8922a, #e8b84b)",
@@ -458,7 +464,7 @@ export default function SpringWeekdaySchedulePage() {
                 fontFamily: "'DM Sans', system-ui, sans-serif",
               }}
             >
-              After-school weekday classes for Grades 4–7. NY State Test Preparation and SHSAT — 15 sessions per grade, beginning late January 2026.
+              After-school weekday classes for Grades 4-8. ELA, Math, and SHSAT preparation begin September 2026.
             </p>
 
             {/* Stat pills */}
@@ -473,10 +479,10 @@ export default function SpringWeekdaySchedulePage() {
               }}
             >
               {[
-                { label: "Grades",   value: "4th – 7th"    },
-                { label: "Days",     value: "Wed & Thu"     },
+                { label: "Grades",   value: "4th – 8th"    },
+                { label: "Days",     value: "Tue-Fri"       },
                 { label: "Sessions", value: "15 Classes"    },
-                { label: "Duration", value: "2 Hours"       },
+                { label: "Duration", value: "2-3 Hours"     },
                 { label: "Subjects", value: "ELA & Math"    },
               ].map((s) => (
                 <div key={s.label} style={{
@@ -537,7 +543,7 @@ export default function SpringWeekdaySchedulePage() {
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                 }}>
                   <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
-                  Weekday Classes · 平日課程
+                  Fall Weekday Classes · 秋季平日課程
                   <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                 </div>
                 <h2 style={{
@@ -548,10 +554,10 @@ export default function SpringWeekdaySchedulePage() {
                   margin: 0,
                   lineHeight: 1.2,
                 }}>
-                  Spring 2026 Weekday Schedule
+                  Fall 2026 Weekday Schedule
                 </h2>
                 <p style={{ fontSize: "0.84rem", color: "rgba(15,32,68,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  15 sessions per grade · January – May 2026
+                  15 sessions for Grades 4-7; 17 sessions for Grade 8 · September 2026 – January 2027
                 </p>
               </div>
 
@@ -560,7 +566,8 @@ export default function SpringWeekdaySchedulePage() {
                 {[
                   { color: DAY_COLORS["Wednesday"], label: "Wednesday classes" },
                   { color: DAY_COLORS["Thursday"],  label: "Thursday classes"  },
-                  { color: DAY_COLORS["Monday"],    label: "Special Monday classes" },
+                  { color: DAY_COLORS["Tuesday"],   label: "Grade 8 Tuesday classes" },
+                  { color: DAY_COLORS["Friday"],    label: "Grade 8 Friday classes" },
                 ].map((item) => (
                   <div key={item.label} style={{
                     display: "flex", alignItems: "center", gap: "0.4rem",
@@ -620,15 +627,15 @@ export default function SpringWeekdaySchedulePage() {
                     Program Overview
                   </div>
                   <div style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", fontFamily: "'Playfair Display', Georgia, serif", marginBottom: "0.5rem" }}>
-                    After-School Weekdays
+                    Fall Weekday Classes
                   </div>
                   <div style={{ width: "32px", height: "1.5px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginBottom: "1.25rem" }} />
 
                   {[
-                    { icon: "DAYS", label: "Days",      value: "Wednesdays & Thursdays" },
-                    { icon: "2H",   label: "Duration",  value: "2 hours per session"    },
-                    { icon: "15",   label: "Sessions",  value: "15 sessions per grade"  },
-                    { icon: "G4",   label: "Grades",    value: "4th – 7th Grade"        },
+                    { icon: "DAYS", label: "Days",      value: "Tuesday through Friday" },
+                    { icon: "2H",   label: "Duration",  value: "2-3 hours per session"  },
+                    { icon: "15",   label: "Sessions",  value: "15-17 sessions"         },
+                    { icon: "G4",   label: "Grades",    value: "4th – 8th Grade"        },
                     { icon: "ELA",  label: "Focus",     value: "ELA, Math, & SHSAT"     },
                   ].map((item) => (
                     <div key={item.label} style={{
@@ -712,7 +719,7 @@ export default function SpringWeekdaySchedulePage() {
                 transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
               }}>
                 <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#c8922a", marginBottom: "0.75rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  NY State Test Dates 2026
+                  Fall 2026 Dates
                 </div>
                 {[
                   { subject: "ELA Test",  dates: "Apr 14 – Apr 24, 2026" },
@@ -724,7 +731,7 @@ export default function SpringWeekdaySchedulePage() {
                   </div>
                 ))}
                 <p style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  Our weekday program includes special Monday sessions in April aligned to test windows.
+                  Grade 8 SHSAT prep meets Fridays and Tuesdays through early November.
                 </p>
               </div>
 
@@ -740,7 +747,7 @@ export default function SpringWeekdaySchedulePage() {
                 transition: "opacity 0.6s ease 0.28s, transform 0.6s ease 0.28s",
               }}>
                 <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" as const, color: "#c8922a", marginBottom: "0.5rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  Special April Monday Sessions
+                  Grade 8 Tuesday Sessions
                 </div>
                 <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
                   {["Apr 13", "Apr 20", "Apr 27"].map((d) => (
@@ -757,7 +764,7 @@ export default function SpringWeekdaySchedulePage() {
                   ))}
                 </div>
                 <p style={{ fontSize: "0.78rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  Grades 4, 5, and 7 hold special Monday sessions in place of their regular weekday during the April test-prep window.
+                  Grade 8 students add Tuesday SHSAT sessions from September 15 through November 3.
                 </p>
               </div>
             </div>
@@ -868,7 +875,7 @@ export default function SpringWeekdaySchedulePage() {
           <div style={{ position: "relative", zIndex: 1, maxWidth: "600px", margin: "0 auto" }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: "0.55rem", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#e8b84b", marginBottom: "1rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
-              Enroll for Spring 2026
+              Enroll for Fall 2026
               <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
             </div>
 

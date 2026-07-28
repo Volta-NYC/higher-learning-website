@@ -27,28 +27,28 @@ function useInView(threshold = 0.08) {
    Data
 ───────────────────────────────────────────── */
 const SESSION_DATES = [
-  { label: "Jan 24", month: "Jan" },
-  { label: "Jan 31", month: "Jan" },
-  { label: "Feb 7",  month: "Feb" },
-  { label: "Feb 28", month: "Feb" },
-  { label: "Mar 7",  month: "Mar" },
-  { label: "Mar 14", month: "Mar" },
-  { label: "Mar 21", month: "Mar" },
-  { label: "Mar 28", month: "Mar" },
-  { label: "Apr 11", month: "Apr" },
-  { label: "Apr 18", month: "Apr" },
-  { label: "Apr 25", month: "Apr" },
-  { label: "May 2",  month: "May" },
-  { label: "May 9",  month: "May" },
-  { label: "May 16", month: "May" },
+  { label: "Sep 12", month: "Sep" },
+  { label: "Sep 19", month: "Sep" },
+  { label: "Sep 26", month: "Sep" },
+  { label: "Oct 3", month: "Oct" },
+  { label: "Oct 17", month: "Oct" },
+  { label: "Oct 24", month: "Oct" },
+  { label: "Oct 31", month: "Oct" },
+  { label: "Nov 7", month: "Nov" },
+  { label: "Nov 14", month: "Nov" },
+  { label: "Nov 21", month: "Nov" },
+  { label: "Dec 5", month: "Dec" },
+  { label: "Dec 12", month: "Dec" },
+  { label: "Dec 19", month: "Dec" },
+  { label: "Jan 9", month: "Jan" },
 ];
 
 const MONTH_COLORS: Record<string, { bg: string; border: string; text: string }> = {
-  Jan: { bg: "rgba(200,146,42,0.12)",  border: "rgba(200,146,42,0.3)",  text: "#c8922a" },
-  Feb: { bg: "rgba(15,32,68,0.08)",    border: "rgba(15,32,68,0.2)",    text: "#0f2044" },
-  Mar: { bg: "rgba(200,146,42,0.08)",  border: "rgba(200,146,42,0.2)",  text: "#a87828" },
-  Apr: { bg: "rgba(15,32,68,0.06)",    border: "rgba(15,32,68,0.15)",   text: "#162a58" },
-  May: { bg: "rgba(200,146,42,0.15)",  border: "rgba(200,146,42,0.35)", text: "#c8922a" },
+  Sep: { bg: "rgba(200,146,42,0.12)",  border: "rgba(200,146,42,0.3)",  text: "#c8922a" },
+  Oct: { bg: "rgba(15,32,68,0.08)",    border: "rgba(15,32,68,0.2)",    text: "#0f2044" },
+  Nov: { bg: "rgba(200,146,42,0.08)",  border: "rgba(200,146,42,0.2)",  text: "#a87828" },
+  Dec: { bg: "rgba(15,32,68,0.06)",    border: "rgba(15,32,68,0.15)",   text: "#162a58" },
+  Jan: { bg: "rgba(200,146,42,0.15)",  border: "rgba(200,146,42,0.35)", text: "#c8922a" },
 };
 
 interface ClassRow {
@@ -68,7 +68,7 @@ const SATURDAY_CLASSES: ClassRow[] = [
     grade: "Grade 2",
     gradeZh: "二年級",
     time: "10:00 – 12:30 pm",
-    sessions: "14 sessions · Jan 24 – May 16",
+    sessions: "14 sessions · Sep 12 – Jan 9",
     highlight: true,
   },
   {
@@ -143,7 +143,7 @@ const SATURDAY_CLASSES: ClassRow[] = [
     grade: "Grade 7",
     gradeZh: "七年級",
     time: "1:30 – 4:00 pm",
-    sessions: "14 sessions · Jan 24 – May 16",
+    sessions: "14 sessions · Sep 12 – Jan 9",
     highlight: true,
   },
 ];
@@ -413,7 +413,7 @@ export default function SpringWeekendSchedulePage() {
                 maxWidth: "720px",
               }}
             >
-              Spring 2026{" "}
+              Fall 2026{" "}
               <em style={{
                 fontStyle: "italic",
                 background: "linear-gradient(to right, #c8922a, #e8b84b)",
@@ -441,7 +441,7 @@ export default function SpringWeekendSchedulePage() {
                 fontFamily: "'DM Sans', system-ui, sans-serif",
               }}
             >
-              Saturday classes for Grades 2–7. ELA, Math, and NY State Test Preparation — 14 sessions across the spring semester, starting January 24, 2026.
+              Saturday classes for Grades 2–7. ELA, Math, and NY State Test Preparation — 14 sessions across the fall semester, starting September 12, 2026.
             </p>
 
             {/* Stat pills */}
@@ -459,7 +459,7 @@ export default function SpringWeekendSchedulePage() {
                 { label: "Grades",   value: "2nd – 7th" },
                 { label: "Day",      value: "Saturday" },
                 { label: "Sessions", value: "14 Classes" },
-                { label: "Start",    value: "Jan 24, 2026" },
+                { label: "Start",    value: "Sep 12, 2026" },
                 { label: "Subjects", value: "ELA & Math" },
               ].map((s) => (
                 <div key={s.label} style={{
@@ -490,7 +490,7 @@ export default function SpringWeekendSchedulePage() {
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <span style={{ fontSize: "0.68rem", fontWeight: 800, color: "#c8922a", letterSpacing: "0.08em" }}>EARLY</span>
               <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                Early bird by <span style={{ color: "#c8922a" }}>Dec 23, 2025</span> → $60 off
+                Early bird by <span style={{ color: "#c8922a" }}>Aug 20, 2026</span> → $60 off
               </span>
             </div>
             <div style={{ width: "1px", height: "18px", background: "rgba(15,32,68,0.12)" }} />
@@ -514,9 +514,9 @@ export default function SpringWeekendSchedulePage() {
             <div>
               <div style={{ marginBottom: "1.75rem" }}>
                 <div className="hl-eyebrow-dark">Saturday Classes · 星期六課程</div>
-                <SectionHeading>Spring 2026 Saturday Schedule</SectionHeading>
+                <SectionHeading>Fall 2026 Saturday Schedule</SectionHeading>
                 <p style={{ fontSize: "0.84rem", color: "rgba(15,32,68,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  All sessions are 14 weeks · January 24 – May 16, 2026
+                  All sessions are 14 weeks · September 12, 2026 – January 9, 2027
                 </p>
               </div>
 
@@ -578,7 +578,7 @@ export default function SpringWeekendSchedulePage() {
                       Session Calendar
                     </div>
                     <div style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", fontFamily: "'Playfair Display', Georgia, serif" }}>
-                      14 Saturdays · Jan – May 2026
+                      14 Saturdays · Sep 2026 – Jan 2027
                     </div>
                     <div style={{ width: "32px", height: "1.5px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginTop: "0.5rem" }} />
                   </div>
@@ -627,7 +627,7 @@ export default function SpringWeekendSchedulePage() {
                     lineHeight: 1.6,
                   }}>
                     <span style={{ color: "rgba(200,146,42,0.7)", marginRight: "0.3rem" }}>*</span>
-                    No class Feb 14 & 21 (winter recess) or Apr 4 (spring recess).
+                    No class Oct 10, Nov 28, Dec 26, or Jan 2.
                   </div>
                 </div>
               </div>
@@ -706,7 +706,7 @@ export default function SpringWeekendSchedulePage() {
                 }}
               >
                 <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.75rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  NY State Test Dates 2026
+                  Fall 2026 Program Notes
                 </div>
                 {[
                   { subject: "ELA Test",  dates: "Apr 14 – Apr 24, 2026" },
@@ -718,7 +718,7 @@ export default function SpringWeekendSchedulePage() {
                   </div>
                 ))}
                 <p style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                  Our Spring program is carefully aligned to conclude right before ELA and Math testing windows.
+                  Fall Saturday classes meet for 14 sessions from September 12, 2026 through January 9, 2027.
                 </p>
               </div>
             </div>
@@ -730,9 +730,9 @@ export default function SpringWeekendSchedulePage() {
           <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
             <div style={{ marginBottom: "1.5rem" }}>
               <div className="hl-eyebrow-dark" style={{ color: "#c8922a" }}>中文資訊</div>
-              <SectionHeading>春季班 · 星期六課程表</SectionHeading>
+              <SectionHeading>秋季班 · 星期六課程表</SectionHeading>
               <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.45)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                2026年1月24日 開始 · 共14堂課
+                2026年9月12日開始 · 共14堂課
               </p>
             </div>
 
@@ -780,7 +780,7 @@ export default function SpringWeekendSchedulePage() {
 
             <div style={{ marginTop: "1.25rem", display: "flex", flexDirection: "column", gap: "0.35rem" }}>
               {[
-                "* 提早在2025年12月23日前報名可享$60折扣。",
+                "* 提早在2026年8月20日前報名可享早鳥優惠。",
                 "* 同一家庭兄弟姐妹可享九五折 (5% off)。",
                 "* 紐約州英文考試：2026年4月14日–4月24日 ｜ 數學考試：4月28日–5月8日",
               ].map((note, i) => (
@@ -812,7 +812,7 @@ export default function SpringWeekendSchedulePage() {
           <div style={{ position: "relative", zIndex: 1, maxWidth: "600px", margin: "0 auto" }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: "0.55rem", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8b84b", marginBottom: "1rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
-              Enroll for Spring 2026
+              Enroll for Fall 2026
               <span style={{ display: "block", width: "22px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
             </div>
 
@@ -827,7 +827,7 @@ export default function SpringWeekendSchedulePage() {
               Secure Your Child&apos;s Spot Today
             </h2>
             <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.78, margin: "0 0 2rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-              Classes fill quickly. Register early to lock in the $60 discount — available until December 23, 2025.
+              Classes fill quickly. Register early to receive the Fall program early bird discount.
             </p>
 
             <div style={{ display: "flex", gap: "0.875rem", justifyContent: "center", flexWrap: "wrap" }}>

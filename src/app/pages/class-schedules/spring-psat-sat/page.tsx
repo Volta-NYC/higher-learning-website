@@ -19,28 +19,28 @@ function useInView(threshold = 0.08) {
 }
 
 const SESSION_DATES = [
-  { date: "Jan 24", day: "Sat", month: "Jan" },
-  { date: "Jan 31", day: "Sat", month: "Jan" },
-  { date: "Feb 7",  day: "Sat", month: "Feb" },
-  { date: "Feb 28", day: "Sat", month: "Feb" },
-  { date: "Mar 7",  day: "Sat", month: "Mar" },
-  { date: "Mar 14", day: "Sat", month: "Mar" },
-  { date: "Mar 21", day: "Sat", month: "Mar" },
-  { date: "Mar 28", day: "Sat", month: "Mar" },
-  { date: "Apr 11", day: "Sat", month: "Apr" },
-  { date: "Apr 18", day: "Sat", month: "Apr" },
-  { date: "Apr 25", day: "Sat", month: "Apr" },
-  { date: "May 2",  day: "Sat", month: "May" },
-  { date: "May 9",  day: "Sat", month: "May" },
-  { date: "May 16", day: "Sat", month: "May" },
+  { date: "Sep 12", day: "Sat", month: "Sep" },
+  { date: "Sep 19", day: "Sat", month: "Sep" },
+  { date: "Sep 26", day: "Sat", month: "Sep" },
+  { date: "Oct 3", day: "Sat", month: "Oct" },
+  { date: "Oct 17", day: "Sat", month: "Oct" },
+  { date: "Oct 24", day: "Sat", month: "Oct" },
+  { date: "Oct 31", day: "Sat", month: "Oct" },
+  { date: "Nov 7", day: "Sat", month: "Nov" },
+  { date: "Nov 14", day: "Sat", month: "Nov" },
+  { date: "Nov 21", day: "Sat", month: "Nov" },
+  { date: "Dec 5", day: "Sat", month: "Dec" },
+  { date: "Dec 12", day: "Sat", month: "Dec" },
+  { date: "Dec 19", day: "Sat", month: "Dec" },
+  { date: "Jan 9", day: "Sat", month: "Jan" },
 ];
 
 const MONTH_COLORS: Record<string, { bg: string; border: string; text: string }> = {
-  Jan: { bg: "rgba(200,146,42,0.12)", border: "rgba(200,146,42,0.3)", text: "#c8922a" },
-  Feb: { bg: "rgba(15,32,68,0.08)",   border: "rgba(15,32,68,0.2)",   text: "#0f2044" },
-  Mar: { bg: "rgba(200,146,42,0.08)", border: "rgba(200,146,42,0.2)", text: "#a87828" },
-  Apr: { bg: "rgba(15,32,68,0.06)",   border: "rgba(15,32,68,0.15)",  text: "#162a58" },
-  May: { bg: "rgba(200,146,42,0.15)", border: "rgba(200,146,42,0.35)", text: "#c8922a" },
+  Sep: { bg: "rgba(200,146,42,0.12)", border: "rgba(200,146,42,0.3)", text: "#c8922a" },
+  Oct: { bg: "rgba(15,32,68,0.08)",   border: "rgba(15,32,68,0.2)",   text: "#0f2044" },
+  Nov: { bg: "rgba(200,146,42,0.08)", border: "rgba(200,146,42,0.2)", text: "#a87828" },
+  Dec: { bg: "rgba(15,32,68,0.06)",   border: "rgba(15,32,68,0.15)",  text: "#162a58" },
+  Jan: { bg: "rgba(200,146,42,0.15)", border: "rgba(200,146,42,0.35)", text: "#c8922a" },
 };
 
 const HIGHLIGHTS = [
@@ -194,14 +194,14 @@ export default function PSATSATPage() {
                 maxWidth: "680px",
               }}
             >
-              2026 Spring{" "}
+              Fall 2026{" "}
               <em style={{ fontStyle: "italic", background: "linear-gradient(to right, #c8922a, #e8b84b)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                PSAT &amp; SAT
+                SAT
               </em>{" "}
               Prep
             </h1>
             <p className="hl-hero-zh">
-              适合九至十二年级学生，重点准备 PSAT、SAT 阅读、写作与数学。
+              適合九至十二年級學生，重點準備 SAT 閱讀、寫作與數學。
             </p>
 
             <p
@@ -216,7 +216,7 @@ export default function PSATSATPage() {
                 opacity: mounted ? undefined : 0,
               }}
             >
-              Prepare for the SAT with expert instruction in Reading, Writing, and Math. Small class sizes, diagnostic testing, and personalized feedback — 14 sessions starting January 24, 2026.
+              Prepare for the SAT with expert instruction in Reading, Writing, and Math. Small class sizes, diagnostic testing, and personalized feedback — 14 sessions starting Sepuary 24, 2026.
             </p>
 
             {/* Quick stats bar */}
@@ -289,10 +289,10 @@ export default function PSATSATPage() {
                     <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                   </div>
                   <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.3rem, 2vw, 1.65rem)", fontWeight: 700, color: "#0f2044", margin: 0, lineHeight: 1.2 }}>
-                    SAT Prep Test Program — Spring 2026
+                    SAT Prep Test Program — Fall 2026
                   </h2>
                   <p style={{ fontSize: "0.82rem", color: "rgba(15,32,68,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                    Class begins: <strong style={{ color: "#c8922a" }}>January 24, 2026 (Saturday)</strong>
+                    Class begins: <strong style={{ color: "#c8922a" }}>Sepuary 24, 2026 (Saturday)</strong>
                   </p>
                 </div>
 
@@ -315,11 +315,11 @@ export default function PSATSATPage() {
                           <div style={{ fontWeight: 700, color: "#c8922a", fontSize: "0.95rem", marginBottom: "0.35rem" }}>1:00 PM – 4:00 PM</div>
                           <div style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.5)", marginBottom: "0.5rem" }}>3 hours · Every Saturday</div>
                           <div style={{ fontSize: "0.8rem", color: "#0f2044", lineHeight: 1.7 }}>
-                            1/24, 31<br />
-                            2/07, 28<br />
-                            3/07, 14, 21, 28<br />
-                            4/11, 18, 25<br />
-                            5/02, 09, 16
+                            9/12, 19, 26<br />
+                            10/03, 17, 24, 31<br />
+                            11/07, 14, 21<br />
+                            12/05, 12, 19<br />
+                            1/09/2027
                           </div>
                           <div style={{ marginTop: "0.6rem", display: "inline-block", padding: "0.3rem 0.7rem", background: "rgba(200,146,42,0.1)", border: "1px solid rgba(200,146,42,0.25)", borderRadius: "6px", fontSize: "0.75rem", fontWeight: 700, color: "#c8922a" }}>
                             14 Sessions Total
@@ -336,7 +336,7 @@ export default function PSATSATPage() {
                         <td className="label-cell">
                           Duration <span className="zh">時長</span>
                         </td>
-                        <td>Jan 24 – May 16, 2026</td>
+                        <td>Sep 12 – Sep 9, 2026</td>
                       </tr>
                     </tbody>
                   </table>
@@ -355,10 +355,10 @@ export default function PSATSATPage() {
                     Early Registration Discount
                   </div>
                   <p style={{ fontSize: "0.85rem", color: "#0f2044", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                    Register by <strong>December 23, 2025</strong> to receive a discount off the regular rate.
+                    Register by <strong>August 20, 2026</strong> to receive a discount off the regular rate.
                   </p>
                   <p style={{ fontSize: "0.8rem", color: "rgba(15,32,68,0.5)", margin: "0.25rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                    提早在12月23號之前報名可以享有優惠。
+                    提早在8月20日之前報名可以享有優惠。
                   </p>
                 </div>
               </div>
@@ -406,7 +406,7 @@ export default function PSATSATPage() {
                       Session Calendar
                     </div>
                     <div style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", fontFamily: "'Playfair Display', Georgia, serif" }}>
-                      14 Saturdays · Jan – May 2026
+                      14 Saturdays · Sep – Dec 12026
                     </div>
                     <div style={{ width: "32px", height: "1.5px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginTop: "0.5rem" }} />
                   </div>
@@ -471,7 +471,7 @@ export default function PSATSATPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg"
-                  alt="Higher Learning PSAT & SAT class"
+                  alt="Higher Learning SAT class"
                   style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "16/9" }}
                 />
                 <div style={{
@@ -481,7 +481,7 @@ export default function PSATSATPage() {
                   padding: "1.5rem 1rem 0.85rem",
                 }}>
                   <p style={{ margin: 0, fontSize: "0.8rem", fontWeight: 700, color: "#fff", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                    Higher Learning · PSAT &amp; SAT Class
+                    Higher Learning · SAT Class
                   </p>
                   <p style={{ margin: "0.1rem 0 0", fontSize: "0.7rem", color: "rgba(255,255,255,0.55)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                     For 9th Grade – 12th Grade
@@ -501,10 +501,10 @@ export default function PSATSATPage() {
                 中文資訊
               </div>
               <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
-                SAT大學考試準備班 — 春季班
+                SAT 大學考試準備班 — 秋季班
               </h2>
               <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.5)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-                星期六上課 · 2026年1月24日 開始
+                星期六上課 · 2026年9月12日 開始
               </p>
             </div>
 
@@ -525,7 +525,7 @@ export default function PSATSATPage() {
                     <td rowSpan={3}>
                       1:00pm – 4:00pm（3小時）<br />
                       <span style={{ fontSize: "0.8rem", color: "rgba(15,32,68,0.6)" }}>
-                        1/24, 31 · 2/07, 28 · 3/07, 14, 21, 28 · 4/11, 18, 25 · 5/02, 09, 16
+                        9/12, 19, 26 · 10/03, 17, 24, 31 · 11/07, 14, 21 · 12/05, 12, 19 · 1/09/2027
                       </span>
                     </td>
                     <td rowSpan={3} style={{ fontWeight: 700, color: "#c8922a", textAlign: "center", whiteSpace: "nowrap" }}>14堂課</td>
@@ -543,7 +543,7 @@ export default function PSATSATPage() {
             </div>
 
             <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.55)", margin: "1rem 0 0", lineHeight: 1.7, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-              提早在12月23號之前報名可以享有優惠。如有問題，請聯絡辦公室。
+              提早在8月20日之前報名可以享有優惠。如有問題，請聯絡辦公室。
             </p>
           </div>
         </section>
