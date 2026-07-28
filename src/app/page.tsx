@@ -445,7 +445,6 @@ export default function Home() {
       <section className="hl-photo-hero hl-photo-hero-home relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-[#080f24] pb-24 pt-20 md:pb-28 md:pt-24">
         <div className="absolute inset-0 opacity-[0.55] bg-[radial-gradient(circle_at_78%_18%,rgba(232,184,75,0.18),transparent_30%),radial-gradient(circle_at_20%_78%,rgba(80,124,190,0.22),transparent_32%),linear-gradient(145deg,#080f24_0%,#0f2044_46%,#172f65_100%)]" />
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.7)_1px,transparent_1px)] [background-size:72px_72px]" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_26rem] lg:px-12">
           <div className="max-w-4xl">

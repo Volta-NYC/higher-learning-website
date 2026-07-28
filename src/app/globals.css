@@ -322,7 +322,14 @@ small {
 
 .hl-photo-hero-home {
   --hl-hero-image: url("/images/higher-learning/476274718_590582123741411_8368425015554476117_n-768x576.jpg");
-  --hl-hero-position: center 48%;
+  --hl-hero-position: center 64%;
+}
+
+.hl-photo-hero-home::before {
+  background-image:
+    linear-gradient(90deg, rgba(8, 15, 36, 0.96) 0%, rgba(8, 15, 36, 0.84) 48%, rgba(8, 15, 36, 0.68) 100%),
+    linear-gradient(180deg, rgba(8, 15, 36, 0.82) 0%, rgba(8, 15, 36, 0.76) 46%, rgba(8, 15, 36, 0.86) 100%),
+    var(--hl-hero-image);
 }
 
 .hl-photo-hero-courses {
