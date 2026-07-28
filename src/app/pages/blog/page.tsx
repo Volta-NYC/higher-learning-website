@@ -52,7 +52,7 @@ const posts: Post[] = [
     category: "SHSAT Prep",
     title: "SHSAT NYC — Everything You Need to Know for 2025",
     excerpt:
-      "The SHSAT is now fully digital with 114 items across ELA and Math. Learn exactly what's tested, how scoring works, and how Higher Learning's 75% acceptance rate speaks for itself.",
+      "The SHSAT is now fully digital with 114 items across ELA and Math. Learn exactly what's tested, how scoring works, and how Higher Learning's 70% acceptance rate speaks for itself.",
     href: "/pages/blog/shsat-nyc",
     imageSrc:
       "/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif",

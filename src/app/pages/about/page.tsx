@@ -374,7 +374,7 @@ export default function AboutPage() {
               </p>
 
               <p style={{ fontSize: "1rem", color: "rgba(15,32,68,0.7)", lineHeight: 1.85, margin: "0 0 1.75rem" }}>
-                With over 32 years of expertise, we equip students in Grades 2 through 8 with the strategies, skills, and confidence that last a lifetime. Nearly 70% of our SHSAT students earn admission to NYC&apos;s specialized high schools each year — a testament to our licensed, experienced teachers who provide both academic instruction and genuine personal support.
+                With over 30 years of expertise, we equip students in Grades 2 through 8 with the strategies, skills, and confidence that last a lifetime. Nearly 70% of our SHSAT students earn admission to NYC&apos;s specialized high schools each year — a testament to our licensed, experienced teachers who provide both academic instruction and genuine personal support.
               </p>
 
               {/* Highlight callout */}

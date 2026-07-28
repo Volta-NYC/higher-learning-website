@@ -35,7 +35,7 @@ export default function Footer() {
               <span className="zh mt-1 text-xs tracking-[0.28em] text-[#e8b84b]">春苗補習</span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/52">
-              33 years of academic excellence for NYC students preparing for SHSAT, SAT, PSAT, NYS exams, and core academic growth.
+              30+ years of academic excellence for NYC students preparing for SHSAT, SAT, PSAT, NYS exams, and core academic growth.
             </p>
             <p className="zh mt-3 max-w-sm text-sm leading-7 tracking-[0.08em] text-white/48">
               服務紐約學生三十多年，提供小班教學、考試準備和核心學科輔導。

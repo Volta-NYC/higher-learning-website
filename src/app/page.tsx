@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 
 const stats = [
-  { value: "33", suffix: "+", label: "Years of Excellence" },
+  { value: "30", suffix: "+", label: "Years of Excellence" },
   { value: "75", suffix: "%", label: "SHSAT Acceptance Rate" },
   { value: "4.9", suffix: "/5", label: "Google Rating" },
   { value: "1993", suffix: "", label: "Established" },
@@ -42,7 +42,7 @@ const courses = [
   {
     tag: "Grades 7-8",
     title: "SHSAT Prep",
-    desc: "Our flagship program with a proven 75% admission rate to NYC's elite specialized high schools.",
+    desc: "Our flagship program with a proven 70% admission rate to NYC's elite specialized high schools.",
     items: ["Full-length practice exams", "Critical reasoning & logic", "Time management strategies"],
     accent: "#0f2044",
     icon: Trophy,
@@ -84,14 +84,14 @@ const courses = [
 const pillars = [
   {
     icon: GraduationCap,
-    title: "33 Years of Quality Teaching",
+    title: "30+ Years of Quality Teaching",
     desc: "Since 1993, we've refined our curriculum and teaching methods to deliver consistent, measurable results for every student.",
     tone: "from-amber-50 to-white",
   },
   {
     icon: TrendingUp,
     title: "Guaranteed Results",
-    desc: "75% of our SHSAT prep students gain admission to specialized high schools. Our track record speaks for itself.",
+    desc: "70% of our SHSAT prep students gain admission to specialized high schools. Our track record speaks for itself.",
     tone: "from-blue-50 to-white",
   },
   {
@@ -469,7 +469,7 @@ export default function Home() {
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/42">Higher Learning</div>
             </div>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
-              33 years of academic excellence preparing NYC students for SHSAT, SAT, PSAT, and state exams.
+              30+ years of academic excellence preparing NYC students for SHSAT, SAT, PSAT, and state exams.
               Small classes. Certified teachers. Proven results.
             </p>
             <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3 text-sm font-medium text-white/58">
@@ -512,7 +512,7 @@ export default function Home() {
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Admissions Focus</span>
                   <Award className="text-[#e8b84b]" size={24} />
                 </div>
-                <div className="font-serif text-5xl font-bold leading-none text-white">75%</div>
+                <div className="font-serif text-5xl font-bold leading-none text-white">70%</div>
                 <p className="mt-4 text-sm leading-7 text-white/64">SHSAT acceptance rate into NYC specialized high schools.</p>
                 <div className="mt-6 grid gap-3">
                   {["Stuyvesant", "Brooklyn Tech", "Bronx Science"].map((school) => (
@@ -590,7 +590,7 @@ export default function Home() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {[
             { n: "500+", label: "Students Accepted", icon: Users },
-            { n: "75%", label: "SHSAT Acceptance Rate", icon: TrendingUp },
+            { n: "70%", label: "SHSAT Acceptance Rate", icon: TrendingUp },
             { n: "10+", label: "Schools Including Stuyvesant", icon: School },
           ].map((item) => {
             const Icon = item.icon;

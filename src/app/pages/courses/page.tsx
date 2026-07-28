@@ -30,7 +30,7 @@ const courses: Course[] = [
     bullets: [
       "Full ELA & Mathematics coverage",
       "Weekly timed practice exams",
-      "75% acceptance rate to specialized schools",
+      "70% acceptance rate to specialized schools",
       "Personalized performance tracking",
     ],
     accent: "#c8922a",
@@ -564,8 +564,8 @@ export default function CoursesPage() {
               }}
             >
               {[
-                { value: "33+", label: "Years Teaching" },
-                { value: "75%", label: "SHSAT Acceptance" },
+                { value: "30+", label: "Years Teaching" },
+                { value: "70%", label: "SHSAT Acceptance" },
                 { value: "6", label: "Programs Offered" },
                 { value: "G2–G12", label: "Grade Range" },
               ].map((s) => (
