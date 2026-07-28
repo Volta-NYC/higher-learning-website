@@ -8,6 +8,7 @@ import {
   BookOpenCheck,
   CalendarDays,
   Check,
+  ChevronLeft,
   ChevronRight,
   GraduationCap,
   MapPin,
@@ -417,9 +418,27 @@ function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: numbe
 export default function Home() {
   const { ref: statsRef, visible: statsVisible } = useInView(0.2);
   const [reviewPage, setReviewPage] = useState(0);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const reviewsPerPage = 3;
   const totalPages = Math.ceil(reviews.length / reviewsPerPage);
   const visibleReviews = reviews.slice(reviewPage * reviewsPerPage, (reviewPage + 1) * reviewsPerPage);
+  const activeGalleryPhoto = homeGalleryPhotos[galleryIndex];
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setGalleryIndex((current) => (current + 1) % homeGalleryPhotos.length);
+    }, 5200);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const showPreviousGalleryPhoto = () => {
+    setGalleryIndex((current) => (current - 1 + homeGalleryPhotos.length) % homeGalleryPhotos.length);
+  };
+
+  const showNextGalleryPhoto = () => {
+    setGalleryIndex((current) => (current + 1) % homeGalleryPhotos.length);
+  };
 
   return (
     <>
@@ -532,67 +551,67 @@ export default function Home() {
 
       <Section
         id="home-gallery"
-        className="bg-[#f7fbff]"
+        className="bg-[#eef8ff]"
         label="Campus Moments"
         title="A Look Inside Higher Learning"
         subtitle="Photos from classes, celebrations, and student work at our Chinatown tutoring center."
       >
-        <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
-          <Link
-            href="/pages/gallery"
-            className="group relative min-h-[340px] overflow-hidden rounded-[8px] border-2 border-[#0f2044]/75 bg-[#0f2044] shadow-[0_24px_70px_rgba(15,32,68,0.15)]"
-          >
+        <div className="relative overflow-hidden rounded-[8px] border-2 border-[#0f2044]/70 bg-[#0f2044] shadow-[0_24px_70px_rgba(15,32,68,0.16)]">
+          <div className="relative aspect-[16/9] min-h-[330px]">
             <Image
-              src={homeGalleryPhotos[0].src}
-              alt={homeGalleryPhotos[0].alt}
+              key={activeGalleryPhoto.src}
+              src={activeGalleryPhoto.src}
+              alt={activeGalleryPhoto.alt}
               fill
-              className="object-cover transition duration-500 group-hover:scale-[1.04]"
-              sizes="(min-width: 1024px) 58vw, 100vw"
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 1280px"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/82 via-[#081126]/12 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-              <div className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Featured Gallery</div>
-              <h3 className="font-serif text-3xl font-bold leading-tight text-white sm:text-4xl">{homeGalleryPhotos[0].title}</h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/82 via-[#081126]/10 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
+              <div className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Photo Carousel</div>
+              <h3 className="font-serif text-3xl font-bold leading-tight text-white sm:text-5xl">{activeGalleryPhoto.title}</h3>
             </div>
-          </Link>
-
-          <div className="grid grid-cols-2 gap-4">
-            {homeGalleryPhotos.slice(1, 5).map((photo) => (
-              <Link
-                key={photo.src}
-                href="/pages/gallery"
-                className="group relative aspect-[4/3] overflow-hidden rounded-[8px] border-2 border-[#0f2044]/70 bg-[#0f2044] shadow-[0_14px_38px_rgba(15,32,68,0.12)]"
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover transition duration-500 group-hover:scale-[1.06]"
-                  sizes="(min-width: 1024px) 21vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/72 via-transparent to-transparent opacity-90" />
-                <div className="absolute inset-x-0 bottom-0 p-4">
-                  <div className="text-sm font-bold leading-snug text-white">{photo.title}</div>
-                </div>
-              </Link>
-            ))}
+            <button
+              type="button"
+              onClick={showPreviousGalleryPhoto}
+              className="absolute left-4 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/22 bg-[#081126]/68 text-white shadow-lg backdrop-blur transition hover:bg-[#e8b84b] hover:text-[#081126]"
+              aria-label="Previous campus photo"
+            >
+              <ChevronLeft size={22} />
+            </button>
+            <button
+              type="button"
+              onClick={showNextGalleryPhoto}
+              className="absolute right-4 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/22 bg-[#081126]/68 text-white shadow-lg backdrop-blur transition hover:bg-[#e8b84b] hover:text-[#081126]"
+              aria-label="Next campus photo"
+            >
+              <ChevronRight size={22} />
+            </button>
           </div>
-        </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#0f2044]/10 pt-6">
-          <p className="max-w-2xl text-sm leading-7 text-slate-600">
-            Browse more classroom photos, student celebrations, and program highlights in the full gallery.
-          </p>
-          <Link href="/pages/gallery" className="inline-flex h-12 items-center justify-center rounded-full bg-[#0f2044] px-6 text-sm font-bold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#162a58]">
-            View Full Gallery
-            <ChevronRight className="ml-2 h-4 w-4" />
-          </Link>
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 bg-white px-5 py-4 sm:px-6">
+            <div className="flex gap-2">
+              {homeGalleryPhotos.map((photo, index) => (
+                <button
+                  key={photo.src}
+                  type="button"
+                  onClick={() => setGalleryIndex(index)}
+                  className={`h-2.5 rounded-full transition ${index === galleryIndex ? "w-8 bg-[#c8922a]" : "w-2.5 bg-[#0f2044]/22 hover:bg-[#0f2044]/45"}`}
+                  aria-label={`Show campus photo ${index + 1}`}
+                />
+              ))}
+            </div>
+            <Link href="/pages/gallery" className="inline-flex h-11 items-center justify-center rounded-full bg-[#0f2044] px-5 text-xs font-bold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#162a58]">
+              View Full Gallery
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </Section>
 
       <Section
         id="courses"
-        className="bg-white"
+        className="bg-[#fffdf3]"
         label="Academic Programs"
         title="Every Student. Every Goal."
         subtitle="Curriculum built around New York State Common Core standards and NYC's most competitive exams."
