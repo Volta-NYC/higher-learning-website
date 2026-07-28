@@ -20,12 +20,12 @@ function useInView(threshold = 0.06) {
 }
 
 const CATEGORY_TILES = [
-  { label: "Group Study",         sub: "Collaborative Learning"  },
-  { label: "Presentation Skills", sub: "Public Speaking"         },
-  { label: "Focused Learning",    sub: "Intensive Class"         },
-  { label: "Independent Reading", sub: "Quiet Study"             },
-  { label: "Peer Tutoring",       sub: "Interactive Learning"    },
-  { label: "Class Discussion",    sub: "Sharing Ideas"           },
+  { label: "Group Study",         sub: "Collaborative Learning", imageSrc: "/images/higher-learning/2025-05-14.webp" },
+  { label: "Presentation Skills", sub: "Public Speaking", imageSrc: "/images/higher-learning/2025-05-14-1-768x432.webp" },
+  { label: "Focused Learning",    sub: "Intensive Class", imageSrc: "/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg" },
+  { label: "Independent Reading", sub: "Quiet Study", imageSrc: "/images/higher-learning/475799580_590582457074711_281516345249048325_n-768x576.jpg" },
+  { label: "Peer Tutoring",       sub: "Interactive Learning", imageSrc: "/images/higher-learning/476274718_590582123741411_8368425015554476117_n-768x576.jpg" },
+  { label: "Class Discussion",    sub: "Sharing Ideas", imageSrc: "/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg" },
 ];
 
 export default function ClassGalleryPage() {
@@ -78,9 +78,16 @@ export default function ClassGalleryPage() {
           transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
         .hlg-tile:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(15,32,68,0.18); }
+        .hlg-tile-photo {
+          transition: transform 0.45s ease, filter 0.45s ease;
+        }
+        .hlg-tile:hover .hlg-tile-photo {
+          transform: scale(1.06);
+          filter: saturate(1.08);
+        }
         .hlg-tile-overlay {
           position: absolute; inset: 0;
-          background: linear-gradient(160deg, rgba(8,15,36,0.55) 0%, rgba(15,32,68,0.82) 100%);
+          background: linear-gradient(160deg, rgba(8,15,36,0.34) 0%, rgba(15,32,68,0.82) 100%);
           display: flex; flex-direction: column;
           align-items: center; justify-content: center;
           text-align: center; padding: 1.5rem;
@@ -394,6 +401,14 @@ export default function ClassGalleryPage() {
                     transition: `opacity 0.55s ease ${i * 70}ms, transform 0.55s ease ${i * 70}ms`,
                   }}
                 >
+                  <Image
+                    src={tile.imageSrc}
+                    alt={`${tile.label} at Higher Learning`}
+                    fill
+                    className="hlg-tile-photo"
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 720px) 50vw, 33vw"
+                  />
                   <div className="hlg-tile-grid" />
                   {/* subtle radial glow */}
                   <div aria-hidden style={{
