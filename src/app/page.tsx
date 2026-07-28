@@ -169,25 +169,6 @@ const students = [
   "Wen Hui Huang","Yuan Yuan Cheng","Yu Sen Dong","Yu Ying Yang","Yuze Chen",
 ];
 
-const carouselPhotos = [
-  {
-    src: "/images/higher-learning/2025-05-14.webp",
-    alt: "Higher Learning students celebrating academic success",
-  },
-  {
-    src: "/images/higher-learning/2025-05-14-1-768x432.webp",
-    alt: "Higher Learning classroom moment",
-  },
-  {
-    src: "/images/higher-learning/476125740_590579863741637_4187456394183132726_n-1024x768.jpg",
-    alt: "Students studying in a Higher Learning classroom",
-  },
-  {
-    src: "/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg",
-    alt: "Higher Learning tutoring session",
-  },
-];
-
 const homeGalleryPhotos = [
   {
     src: "/images/higher-learning/2025-05-14.webp",
@@ -459,19 +440,6 @@ export default function Home() {
           margin-right: calc(50% - 50vw);
           width: 100vw;
         }
-        @keyframes heroPhotoCarousel {
-          0%, 20% { opacity: 1; transform: scale(1); }
-          25%, 95% { opacity: 0; transform: scale(1.045); }
-          100% { opacity: 1; transform: scale(1); }
-        }
-        .hl-hero-carousel-photo {
-          animation: heroPhotoCarousel 20s ease-in-out infinite;
-          opacity: 0;
-        }
-        .hl-hero-carousel-photo:nth-child(1) { animation-delay: 0s; }
-        .hl-hero-carousel-photo:nth-child(2) { animation-delay: 5s; }
-        .hl-hero-carousel-photo:nth-child(3) { animation-delay: 10s; }
-        .hl-hero-carousel-photo:nth-child(4) { animation-delay: 15s; }
       `}</style>
 
       <section className="hl-photo-hero hl-photo-hero-home relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-[#080f24] pb-24 pt-20 md:pb-28 md:pt-24">
@@ -523,17 +491,14 @@ export default function Home() {
 
           <aside className="relative hidden overflow-hidden rounded-[8px] border border-white/16 bg-white/8 shadow-[0_30px_90px_rgba(0,0,0,0.25)] backdrop-blur-xl lg:block">
             <div className="relative aspect-[4/5] min-h-[460px] overflow-hidden">
-              {carouselPhotos.map((photo) => (
-                <Image
-                  key={photo.src}
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="hl-hero-carousel-photo absolute inset-0 object-cover"
-                  sizes="416px"
-                  priority={photo.src === carouselPhotos[0].src}
-                />
-              ))}
+              <Image
+                src="/images/higher-learning/520972070_709008841898738_1276621005249571654_n-1024x576.jpg"
+                alt="Higher Learning student success display"
+                fill
+                className="object-cover"
+                sizes="416px"
+                priority
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/96 via-[#081126]/36 to-transparent" />
               <div className="absolute inset-x-5 bottom-5 rounded-[8px] border border-[#e8b84b]/25 bg-[#081126]/78 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.24)] backdrop-blur">
                 <div className="mb-5 flex items-center justify-between">
