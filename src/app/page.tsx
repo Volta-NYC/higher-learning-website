@@ -422,12 +422,11 @@ export default function Home() {
   const reviewsPerPage = 3;
   const totalPages = Math.ceil(reviews.length / reviewsPerPage);
   const visibleReviews = reviews.slice(reviewPage * reviewsPerPage, (reviewPage + 1) * reviewsPerPage);
-  const activeGalleryPhoto = homeGalleryPhotos[galleryIndex];
 
   useEffect(() => {
     const timer = window.setInterval(() => {
       setGalleryIndex((current) => (current + 1) % homeGalleryPhotos.length);
-    }, 5200);
+    }, 4200);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -458,6 +457,19 @@ export default function Home() {
           margin-left: calc(50% - 50vw);
           margin-right: calc(50% - 50vw);
           width: 100vw;
+        }
+        .hl-campus-carousel-track {
+          transform: translateX(calc(var(--gallery-index) * -25%));
+        }
+        @media (max-width: 900px) {
+          .hl-campus-carousel-track {
+            transform: translateX(calc(var(--gallery-index) * -50%));
+          }
+        }
+        @media (max-width: 560px) {
+          .hl-campus-carousel-track {
+            transform: translateX(calc(var(--gallery-index) * -100%));
+          }
         }
       `}</style>
 
@@ -556,25 +568,12 @@ export default function Home() {
         title="A Look Inside Higher Learning"
         subtitle="Photos from classes, celebrations, and student work at our Chinatown tutoring center."
       >
-        <div className="relative overflow-hidden rounded-[8px] border-2 border-[#0f2044]/70 bg-[#0f2044] shadow-[0_24px_70px_rgba(15,32,68,0.16)]">
-          <div className="relative aspect-[16/9] min-h-[330px]">
-            <Image
-              key={activeGalleryPhoto.src}
-              src={activeGalleryPhoto.src}
-              alt={activeGalleryPhoto.alt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/82 via-[#081126]/10 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
-              <div className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Photo Carousel</div>
-              <h3 className="font-serif text-3xl font-bold leading-tight text-white sm:text-5xl">{activeGalleryPhoto.title}</h3>
-            </div>
+        <div className="relative overflow-hidden border-y-2 border-[#c8922a]/70 bg-[#111a35] py-5 shadow-[0_18px_54px_rgba(15,32,68,0.14)]">
+          <div className="mb-5 flex items-center justify-center gap-3">
             <button
               type="button"
               onClick={showPreviousGalleryPhoto}
-              className="absolute left-4 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/22 bg-[#081126]/68 text-white shadow-lg backdrop-blur transition hover:bg-[#e8b84b] hover:text-[#081126]"
+              className="inline-flex h-11 w-11 items-center justify-center border border-[#e8b84b]/70 bg-transparent text-[#e8b84b] transition hover:bg-[#e8b84b] hover:text-[#081126]"
               aria-label="Previous campus photo"
             >
               <ChevronLeft size={22} />
@@ -582,26 +581,52 @@ export default function Home() {
             <button
               type="button"
               onClick={showNextGalleryPhoto}
-              className="absolute right-4 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/22 bg-[#081126]/68 text-white shadow-lg backdrop-blur transition hover:bg-[#e8b84b] hover:text-[#081126]"
+              className="inline-flex h-11 w-11 items-center justify-center border border-[#e8b84b]/70 bg-transparent text-[#e8b84b] transition hover:bg-[#e8b84b] hover:text-[#081126]"
               aria-label="Next campus photo"
             >
               <ChevronRight size={22} />
             </button>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 bg-white px-5 py-4 sm:px-6">
+          <div className="overflow-hidden">
+            <div
+              className="hl-campus-carousel-track flex transition-transform duration-700 ease-out"
+              style={{ "--gallery-index": galleryIndex } as React.CSSProperties}
+            >
+              {[...homeGalleryPhotos, ...homeGalleryPhotos].map((photo, index) => (
+                <Link
+                  key={`${photo.src}-${index}`}
+                  href="/pages/gallery"
+                  className="relative mx-2 h-[230px] min-w-[calc(25%-1rem)] overflow-hidden border-2 border-[#e8b84b]/70 bg-white shadow-[0_14px_34px_rgba(0,0,0,0.18)] md:h-[270px] max-md:min-w-[calc(50%-1rem)] max-sm:min-w-[calc(100%-1rem)]"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover transition duration-500 hover:scale-[1.04]"
+                    sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#081126]/82 to-transparent p-4">
+                    <div className="text-sm font-bold text-white">{photo.title}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-4 px-5">
             <div className="flex gap-2">
               {homeGalleryPhotos.map((photo, index) => (
                 <button
                   key={photo.src}
                   type="button"
                   onClick={() => setGalleryIndex(index)}
-                  className={`h-2.5 rounded-full transition ${index === galleryIndex ? "w-8 bg-[#c8922a]" : "w-2.5 bg-[#0f2044]/22 hover:bg-[#0f2044]/45"}`}
+                  className={`h-2 rounded-full transition ${index === galleryIndex ? "w-8 bg-[#e8b84b]" : "w-2 bg-white/28 hover:bg-white/55"}`}
                   aria-label={`Show campus photo ${index + 1}`}
                 />
               ))}
             </div>
-            <Link href="/pages/gallery" className="inline-flex h-11 items-center justify-center rounded-full bg-[#0f2044] px-5 text-xs font-bold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#162a58]">
+            <Link href="/pages/gallery" className="inline-flex h-10 items-center justify-center border border-[#e8b84b]/70 px-4 text-xs font-bold uppercase tracking-[0.14em] text-[#e8b84b] transition duration-300 hover:bg-[#e8b84b] hover:text-[#081126]">
               View Full Gallery
               <ChevronRight className="ml-2 h-4 w-4" />
             </Link>
