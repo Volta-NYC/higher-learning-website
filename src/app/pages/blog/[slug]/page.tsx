@@ -8,6 +8,10 @@ type BlogArticle = {
   title: string;
   excerpt: string;
   imageSrc?: string;
+  sections: {
+    heading: string;
+    paragraphs: string[];
+  }[];
 };
 
 const articles: BlogArticle[] = [
@@ -15,55 +19,183 @@ const articles: BlogArticle[] = [
     slug: "nyc-state-test-strategies",
     category: "Study Tips",
     title: "NYC State Test Strategies",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "A practical guide to building stronger reading, writing, math, and test-day habits before New York State exams.",
+    sections: [
+      {
+        heading: "Start with the format, then build stamina",
+        paragraphs: [
+          "New York State exams reward more than memorization. Students need to read carefully, show mathematical thinking, manage time, and stay calm when a question looks unfamiliar. The strongest preparation starts by helping a student understand the shape of the test: how passages are paired with questions, how multi-step math problems are written, and where careless errors usually happen.",
+          "At home, families can make a big difference with short, consistent practice. Ten focused minutes of reading response, vocabulary review, or mixed math problems is better than a long session that ends in frustration. The goal is not to rush through worksheets. The goal is to help students explain why an answer is correct and why the tempting wrong answers are wrong.",
+        ],
+      },
+      {
+        heading: "Teach students how to recover",
+        paragraphs: [
+          "A useful test strategy is question triage. Students should learn to mark difficult questions, move forward, and return with fresh eyes instead of spending five minutes stuck on one item. In reading, that means going back to the line evidence. In math, it means rewriting the problem, checking units, and estimating before calculating.",
+          "The final stage of preparation should include timed practice, but timing should come after accuracy. When students first learn a skill slowly and correctly, speed follows. A good tutor watches the pattern behind the mistake: Is the student misreading? Skipping steps? Guessing too early? Once that pattern is clear, practice becomes much more efficient.",
+        ],
+      },
+    ],
   },
   {
     slug: "preparing-for-standardized-tests",
     category: "Test Prep",
     title: "Preparing for Standardized Tests",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "Standardized test prep works best when content review, strategy, pacing, and confidence are built together.",
+    sections: [
+      {
+        heading: "Good preparation is specific",
+        paragraphs: [
+          "Standardized tests can feel vague from the outside: study more, practice more, score higher. In reality, good preparation is much more specific. A student may know the math but lose points because they rush. Another may read fluently but struggle to identify the answer that is best supported by the passage. A third may understand every lesson in class but freeze when the clock starts.",
+          "That is why the first step should be diagnosis. Before assigning pages of practice, teachers should look at the kinds of mistakes a student makes. Are errors concentrated in fractions, grammar, inference questions, or multi-step word problems? Does performance drop near the end of a section? Those details tell us what to teach next.",
+        ],
+      },
+      {
+        heading: "Practice should feel active",
+        paragraphs: [
+          "The best test prep asks students to do more than circle answers. They should annotate, eliminate, estimate, check, and explain. In ELA, students learn to connect answers to evidence rather than choosing what sounds reasonable. In math, they learn to slow down at the setup stage, because most errors happen before the calculation even begins.",
+          "Families can support this process by keeping routines steady. A predictable weekly schedule, a quiet work space, and brief review after each practice test all help. Scores matter, but they are not the only signal. Watch for cleaner scratch work, better pacing, and less panic around hard questions. Those are signs that preparation is becoming durable.",
+        ],
+      },
+    ],
   },
   {
     slug: "tutoring-near-me-a-parents-guide-to-choosing-excellence",
     category: "Higher Learning",
     title: "Tutoring Near Me - A Parent's Guide to Choosing Excellence",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "Choosing a tutoring center is about fit, consistency, teacher quality, and whether the program can explain your child's progress clearly.",
     imageSrc: "/images/higher-learning/2025-05-14-1-768x432.webp",
+    sections: [
+      {
+        heading: "Look beyond convenience",
+        paragraphs: [
+          "When parents search for “tutoring near me,” location matters. A center that is easy to reach is easier to attend consistently, and consistency is where progress begins. But convenience should not be the only factor. The better question is whether the tutoring center can explain what your child needs, how they will teach it, and how progress will be measured.",
+          "A strong program should be able to talk about more than grades. Ask how teachers identify gaps, how homework is assigned, and how students are grouped. Ask whether the same teacher sees your child regularly. Ask what happens when a student is ahead in one area and behind in another. The answers should feel specific, not rehearsed.",
+        ],
+      },
+      {
+        heading: "The right center feels steady",
+        paragraphs: [
+          "Good tutoring is not a magic trick. It is steady academic attention: careful explanations, repeated practice, honest feedback, and encouragement that does not lower expectations. Students should feel supported, but they should also be asked to think, write, calculate, and revise with care.",
+          "For families in Lower Manhattan, Chinatown, Brooklyn, and Queens, Higher Learning offers the kind of structure many students need: small classes, experienced teachers, and programs that connect school skills with exam preparation. The right tutoring center should make your child more independent over time. If a student starts to read directions more carefully, organize work more clearly, and ask better questions, the tutoring is doing its job.",
+        ],
+      },
+    ],
   },
   {
     slug: "shsat-nyc",
     category: "SHSAT Prep",
     title: "SHSAT NYC - Everything You Need to Know",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "A clear overview of what the SHSAT asks students to do and how families can plan preparation without panic.",
     imageSrc: "/images/higher-learning/0b4d3da40646462f99177b0d7db4697f-768x504.avif",
+    sections: [
+      {
+        heading: "What makes the SHSAT different",
+        paragraphs: [
+          "The Specialized High Schools Admissions Test is one of the most important exams many NYC middle school students will take. It is used for admission to most of the city's specialized high schools, and it asks students to bring together reading, grammar, problem solving, algebraic thinking, geometry, and careful pacing under one timed setting.",
+          "What makes the SHSAT challenging is not only the content. Many students have seen the math topics before, but the questions are written to test flexibility. In ELA, students must read closely and avoid answer choices that sound good but are not supported. In revising and editing, small grammar and structure choices matter. The test rewards students who can stay precise for a long stretch.",
+        ],
+      },
+      {
+        heading: "How to prepare well",
+        paragraphs: [
+          "Preparation should start with fundamentals. Students need strong arithmetic, fraction sense, sentence structure, vocabulary, and reading stamina before advanced strategies can help. Once the foundation is stable, practice exams become useful because they reveal pacing, endurance, and recurring mistake patterns.",
+          "Families should avoid measuring progress by one practice score alone. A student may need several weeks before new habits show up in the score. Better signs include cleaner work, fewer careless errors, stronger explanations, and the ability to return to skipped questions calmly. SHSAT preparation is demanding, but with structure and honest feedback, it becomes manageable.",
+        ],
+      },
+    ],
   },
   {
     slug: "best-higher-learning-in-chinatown-nyc",
     category: "Higher Learning",
     title: "Best Higher Learning in Chinatown NYC",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "Why families have trusted Higher Learning in Chinatown for academic support, exam prep, and steady student growth.",
     imageSrc: "/images/higher-learning/2025-05-14-1-768x432.webp",
+    sections: [
+      {
+        heading: "A neighborhood center with academic focus",
+        paragraphs: [
+          "Higher Learning has been part of Chinatown's academic life for more than 30 years. Families come to us for many reasons: a child needs stronger reading habits, math homework has become stressful, state exams are approaching, or the SHSAT suddenly feels very real. Whatever the starting point, our goal is the same: help students become more confident, more careful, and more prepared.",
+          "A good tutoring center should feel personal without becoming casual about standards. Students need teachers who notice how they think. Some students need help slowing down. Some need more challenge. Some need a clearer system for writing, organizing scratch work, or reviewing mistakes. Small-group instruction allows teachers to make those adjustments while still giving students the energy of learning with peers.",
+        ],
+      },
+      {
+        heading: "What families should expect",
+        paragraphs: [
+          "Parents should expect clear communication and practical next steps. If a student is behind, the plan should identify the missing skills. If a student is preparing for an exam, the plan should include content review, timed practice, and error analysis. If a student is advanced, the work should keep stretching them.",
+          "Our location at 84 Bowery makes Higher Learning accessible for families across Lower Manhattan and beyond. But the real reason families stay is consistency. Progress comes from showing up, doing the work, and having teachers who know when to explain, when to push, and when to rebuild confidence.",
+        ],
+      },
+    ],
   },
   {
     slug: "shsat-2025-admission",
     category: "SHSAT Prep",
     title: "SHSAT Admission - Expert Preparation for NYC Specialized High Schools",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "A focused look at how students can prepare for specialized high school admission with discipline and a realistic study plan.",
     imageSrc: "/images/higher-learning/498557831_661835789949377_2234153109830365154_n-e1753449905619-1-e1755876994617.jpg",
+    sections: [
+      {
+        heading: "Admission takes more than last-minute review",
+        paragraphs: [
+          "Students aiming for specialized high schools need more than a stack of practice tests. Practice tests are useful, but only when students know what to do with the results. The real work is in the review: finding the missed skill, understanding the trap answer, and practicing until the corrected method becomes natural.",
+          "Strong SHSAT preparation usually includes three layers. First, students build core skills in reading, grammar, arithmetic, algebra, and geometry. Second, they learn test strategies such as elimination, estimation, line evidence, and time management. Third, they practice under realistic conditions so stamina improves before test day.",
+        ],
+      },
+      {
+        heading: "The review is where scores move",
+        paragraphs: [
+          "After a practice exam, students should not simply write down the score and move on. They should sort mistakes into categories: content gap, careless error, time pressure, misread question, or weak strategy. This makes the next week of studying much clearer. A student who misses geometry questions needs a different plan than a student who knows the content but loses points from rushing.",
+          "Parents can help by keeping the process steady. Specialized high school admission is competitive, but panic does not improve performance. A calm routine, honest feedback, and regular practice create the conditions students need. The goal is not just to work harder. It is to work with enough precision that every practice session teaches something.",
+        ],
+      },
+    ],
   },
   {
     slug: "2025-fall-weekend-tutoring-schedule-in-nyc-higher-learning",
     category: "Schedules",
     title: "Fall Weekend Tutoring Schedule in NYC",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "How weekend tutoring helps busy NYC students stay consistent during the school year without overloading the week.",
     imageSrc: "/images/higher-learning/475799580_590582457074711_281516345249048325_n-768x576.jpg",
+    sections: [
+      {
+        heading: "Why weekends work for many families",
+        paragraphs: [
+          "For many NYC families, weekday afternoons are already crowded with homework, commuting, activities, and family responsibilities. Weekend tutoring gives students a more focused block of time to review school material, strengthen weak areas, and prepare for upcoming exams without squeezing everything into a tired weeknight.",
+          "The best weekend schedule is structured but not overwhelming. Students should leave class with a clearer understanding of what they practiced and what they need to complete before the next session. A weekend program also gives teachers room to combine instruction, guided practice, and independent work in one sitting.",
+        ],
+      },
+      {
+        heading: "What students should get from a weekend class",
+        paragraphs: [
+          "A strong weekend class should connect directly to the student's grade level and goals. Younger students may focus on reading fluency, grammar, paragraph writing, and core math skills. Older students may need more targeted exam preparation, including state tests, Algebra readiness, SHSAT-style problem solving, or SAT and PSAT foundations.",
+          "Families should treat weekend tutoring as part of a weekly rhythm. Students make the most progress when they attend consistently, complete assigned practice, and review mistakes before the next class. At Higher Learning, weekend programs are designed to give students that rhythm: clear instruction, careful practice, and enough repetition for skills to stick.",
+        ],
+      },
+    ],
   },
   {
     slug: "higher-learning-2025-fall-weekend-schedule",
     category: "Schedules",
     title: "Higher Learning Fall Weekend Schedule",
-    excerpt: "Article placeholder. Full content will be added soon.",
+    excerpt: "A guide to using Higher Learning's weekend programs for stronger ELA, math, writing, and exam preparation.",
     imageSrc: "/images/higher-learning/476274718_590582123741411_8368425015554476117_n-768x576.jpg",
+    sections: [
+      {
+        heading: "Build a schedule students can sustain",
+        paragraphs: [
+          "The right tutoring schedule should be challenging enough to create growth and realistic enough for a student to sustain. Weekend classes can be especially helpful because they give students time to slow down, ask questions, and practice skills that may be rushed during the school week.",
+          "Higher Learning's weekend programs are built around the needs families ask about most often: ELA, mathematics, reading comprehension, writing, grammar, and exam preparation. For younger students, the priority is a strong foundation. For middle school students, the priority often becomes accuracy, organization, and readiness for more demanding tests.",
+        ],
+      },
+      {
+        heading: "Use the schedule as a system",
+        paragraphs: [
+          "A class schedule is only useful if it becomes a system. Students should know when they attend, what they are expected to complete, and how their mistakes will be reviewed. Parents should know whether the goal is school support, enrichment, state test prep, SHSAT prep, or a combination.",
+          "The strongest results come when families and teachers stay aligned. If a student is struggling with fractions, reading inference, grammar, or essay structure, that should shape the work immediately. If a student is ready for more advanced material, the pace should rise. Weekend tutoring gives everyone a consistent checkpoint, and that consistency is often what turns effort into visible progress.",
+        ],
+      },
+    ],
   },
 ];
 
@@ -106,12 +238,27 @@ export default async function BlogArticlePage({
           </div>
         )}
 
-        <div className="rounded-[8px] border border-[#0f2044]/10 bg-white p-8 shadow-[0_12px_36px_rgba(15,32,68,0.08)]">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8922a]">Placeholder</div>
-          <h2 className="mt-3 font-serif text-3xl font-bold tracking-normal text-[#0f2044]">Article Coming Soon</h2>
-          <p className="mt-4 text-base leading-8 text-slate-600">
-            This article page is a placeholder so the blog link works without showing a 404. The final article content has not been added yet.
-          </p>
+        <div className="rounded-[8px] border border-[#0f2044]/10 bg-white p-7 shadow-[0_12px_36px_rgba(15,32,68,0.08)] sm:p-10">
+          <div className="mb-8 border-l-4 border-[#e8b84b] bg-[#fbf7ed] px-5 py-4 text-sm font-semibold leading-7 text-[#0f2044]">
+            Practical guidance from Higher Learning teachers for students and families planning their next step.
+          </div>
+
+          <div className="space-y-10">
+            {article.sections.map((section) => (
+              <section key={section.heading}>
+                <h2 className="font-serif text-3xl font-bold tracking-normal text-[#0f2044]">
+                  {section.heading}
+                </h2>
+                <div className="mt-5 space-y-5">
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-base leading-8 text-slate-600">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 rounded-[8px] border border-[#e8b84b]/30 bg-white p-6 shadow-[0_12px_36px_rgba(15,32,68,0.08)]">
