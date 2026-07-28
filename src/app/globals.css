@@ -10,7 +10,7 @@
   --gold-pale:   #f5e9cc;
 
   /* Neutrals */
-  --cream:       #faf8f4;
+  --cream:       #fffaf0;
   --white:       #ffffff;
   --gray-50:     #f8f8f8;
   --gray-100:    #f0eff0;
@@ -46,7 +46,7 @@
   --duration:    0.25s;
 
   /* Backgrounds */
-  --background: var(--white);
+  --background: #fffdf8;
   --foreground: var(--text);
 }
 
@@ -69,7 +69,8 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    linear-gradient(180deg, #fffdf8 0%, #fff9ed 44%, #ffffff 100%);
   color: var(--foreground);
   font-family: var(--font-body);
   font-size: 1rem;
