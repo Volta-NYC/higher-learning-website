@@ -430,9 +430,7 @@ export default function ContactPage() {
                     </div>
                     <div style={{ display: "flex", gap: "0.6rem" }}>
                       {[
-                        { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100083688844598", icon: "f" },
                         { label: "Instagram", href: "https://www.instagram.com/higherlearning84/", icon: "ig" },
-                        { label: "Yelp", href: "https://www.yelp.com/biz/higher-learning-tutoring-center-new-york-3", icon: "y" },
                       ].map((s) => (
                         <a
                           key={s.label}

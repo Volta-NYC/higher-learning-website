@@ -15,24 +15,9 @@ const navLinks = [
 
 const socials = [
   {
-    label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=100083688844598",
-    icon: ExternalLink,
-  },
-  {
     label: "Instagram",
     href: "https://www.instagram.com/higherlearning84/",
     icon: ExternalLink,
-  },
-  {
-    label: "Yelp",
-    href: "https://www.yelp.com/biz/higher-learning-tutoring-center-new-york-3",
-    icon: ExternalLink,
-  },
-  {
-    label: "Email",
-    href: "mailto:higherlearningny@yahoo.com",
-    icon: Mail,
   },
 ];
 
