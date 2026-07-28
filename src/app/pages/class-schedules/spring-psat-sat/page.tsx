@@ -37,9 +37,9 @@ const SESSION_DATES = [
 
 const MONTH_COLORS: Record<string, { bg: string; border: string; text: string }> = {
   Sep: { bg: "rgba(200,146,42,0.12)", border: "rgba(200,146,42,0.3)", text: "#c8922a" },
-  Oct: { bg: "rgba(15,32,68,0.08)",   border: "rgba(15,32,68,0.2)",   text: "#0f2044" },
+  Oct: { bg: "rgba(28,55,156,0.08)",   border: "rgba(28,55,156,0.2)",   text: "#1c379c" },
   Nov: { bg: "rgba(200,146,42,0.08)", border: "rgba(200,146,42,0.2)", text: "#a87828" },
-  Dec: { bg: "rgba(15,32,68,0.06)",   border: "rgba(15,32,68,0.15)",  text: "#162a58" },
+  Dec: { bg: "rgba(28,55,156,0.06)",   border: "rgba(28,55,156,0.15)",  text: "#1c379c" },
   Jan: { bg: "rgba(200,146,42,0.15)", border: "rgba(200,146,42,0.35)", text: "#c8922a" },
 };
 
@@ -58,8 +58,8 @@ function HighlightCard({ icon, label, value, delay, inView }: {
     <div style={{
       background: "#fff",
       borderRadius: "14px",
-      border: "1px solid rgba(15,32,68,0.07)",
-      boxShadow: "0 2px 12px rgba(15,32,68,0.05)",
+      border: "1px solid rgba(28,55,156,0.07)",
+      boxShadow: "0 2px 12px rgba(28,55,156,0.05)",
       padding: "1.25rem 1.4rem",
       display: "flex",
       alignItems: "flex-start",
@@ -81,8 +81,8 @@ function HighlightCard({ icon, label, value, delay, inView }: {
         flexShrink: 0,
       }}>{icon}</div>
       <div>
-        <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(15,32,68,0.4)", marginBottom: "0.2rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{label}</div>
-        <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "#0f2044", lineHeight: 1.4, fontFamily: "'DM Sans', system-ui, sans-serif" }}>{value}</div>
+        <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(28,55,156,0.4)", marginBottom: "0.2rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{label}</div>
+        <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1c379c", lineHeight: 1.4, fontFamily: "'DM Sans', system-ui, sans-serif" }}>{value}</div>
       </div>
     </div>
   );
@@ -119,12 +119,12 @@ export default function PSATSATPage() {
           background: #c8922a; opacity: 0.6;
         }
 
-        .hl-session-dot:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 6px 20px rgba(15,32,68,0.12) !important; }
+        .hl-session-dot:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 6px 20px rgba(28,55,156,0.12) !important; }
 
         .hl-register-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
 
         .hl-info-table th {
-          background: linear-gradient(135deg, #080f24, #0f2044);
+          background: linear-gradient(135deg, #1c379c, #1c379c);
           color: rgba(255,255,255,0.85);
           font-size: 0.7rem;
           font-weight: 700;
@@ -137,21 +137,21 @@ export default function PSATSATPage() {
         .hl-info-table td {
           padding: 0.9rem 1.25rem;
           font-size: 0.875rem;
-          color: #0f2044;
-          border-bottom: 1px solid rgba(15,32,68,0.06);
+          color: #1c379c;
+          border-bottom: 1px solid rgba(28,55,156,0.06);
           vertical-align: top;
           font-family: 'DM Sans', system-ui, sans-serif;
           line-height: 1.6;
         }
         .hl-info-table tr:last-child td { border-bottom: none; }
-        .hl-info-table tr:nth-child(even) td { background: rgba(15,32,68,0.015); }
+        .hl-info-table tr:nth-child(even) td { background: rgba(28,55,156,0.015); }
         .hl-info-table .label-cell {
           font-weight: 700;
-          color: #0f2044;
+          color: #1c379c;
           white-space: nowrap;
           width: 160px;
         }
-        .hl-info-table .zh { display: block; font-size: 0.75rem; color: rgba(15,32,68,0.4); font-weight: 400; margin-top: 2px; }
+        .hl-info-table .zh { display: block; font-size: 0.75rem; color: rgba(28,55,156,0.4); font-weight: 400; margin-top: 2px; }
 
         @media (max-width: 860px) {
           .hl-sat-split { grid-template-columns: 1fr !important; }
@@ -166,7 +166,7 @@ export default function PSATSATPage() {
 
         {/* ── Hero ──────────────────────────────────────────────────────────── */}
         <section className="hl-photo-hero hl-photo-hero-psat" style={{
-          background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+          background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
           padding: "5rem 0 4.5rem",
           position: "relative",
           overflow: "hidden",
@@ -252,7 +252,7 @@ export default function PSATSATPage() {
         </section>
 
         {/* Wave */}
-        <div style={{ background: "linear-gradient(160deg, #080f24 0%, #162a58 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#faf8f4" />
           </svg>
@@ -274,24 +274,24 @@ export default function PSATSATPage() {
                 style={{
                   background: "#fff",
                   borderRadius: "20px",
-                  border: "1px solid rgba(15,32,68,0.07)",
-                  boxShadow: "0 4px 24px rgba(15,32,68,0.07)",
+                  border: "1px solid rgba(28,55,156,0.07)",
+                  boxShadow: "0 4px 24px rgba(28,55,156,0.07)",
                   overflow: "hidden",
                   opacity: highlightRef.inView ? 1 : 0,
                   transform: highlightRef.inView ? "translateY(0)" : "translateY(20px)",
                   transition: "opacity 0.65s ease, transform 0.65s ease",
                 }}
               >
-                <div style={{ padding: "1.5rem 1.5rem 1rem", borderBottom: "1px solid rgba(15,32,68,0.06)" }}>
+                <div style={{ padding: "1.5rem 1.5rem 1rem", borderBottom: "1px solid rgba(28,55,156,0.06)" }}>
                   <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.4rem" }}>
                     <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                     Program Details
                     <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                   </div>
-                  <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.3rem, 2vw, 1.65rem)", fontWeight: 700, color: "#0f2044", margin: 0, lineHeight: 1.2 }}>
+                  <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.3rem, 2vw, 1.65rem)", fontWeight: 700, color: "#1c379c", margin: 0, lineHeight: 1.2 }}>
                     SAT Prep Test Program — Fall 2026
                   </h2>
-                  <p style={{ fontSize: "0.82rem", color: "rgba(15,32,68,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  <p style={{ fontSize: "0.82rem", color: "rgba(28,55,156,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                     Class begins: <strong style={{ color: "#c8922a" }}>Sepuary 24, 2026 (Saturday)</strong>
                   </p>
                 </div>
@@ -313,8 +313,8 @@ export default function PSATSATPage() {
                         <td>9th, 10th, 11th, 12th Grade</td>
                         <td rowSpan={3} style={{ verticalAlign: "middle" }}>
                           <div style={{ fontWeight: 700, color: "#c8922a", fontSize: "0.95rem", marginBottom: "0.35rem" }}>1:00 PM – 4:00 PM</div>
-                          <div style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.5)", marginBottom: "0.5rem" }}>3 hours · Every Saturday</div>
-                          <div style={{ fontSize: "0.8rem", color: "#0f2044", lineHeight: 1.7 }}>
+                          <div style={{ fontSize: "0.75rem", color: "rgba(28,55,156,0.5)", marginBottom: "0.5rem" }}>3 hours · Every Saturday</div>
+                          <div style={{ fontSize: "0.8rem", color: "#1c379c", lineHeight: 1.7 }}>
                             9/12, 19, 26<br />
                             10/03, 17, 24, 31<br />
                             11/07, 14, 21<br />
@@ -354,10 +354,10 @@ export default function PSATSATPage() {
                   <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#c8922a", marginBottom: "0.25rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                     Early Registration Discount
                   </div>
-                  <p style={{ fontSize: "0.85rem", color: "#0f2044", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  <p style={{ fontSize: "0.85rem", color: "#1c379c", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                     Register by <strong>August 20, 2026</strong> to receive a discount off the regular rate.
                   </p>
-                  <p style={{ fontSize: "0.8rem", color: "rgba(15,32,68,0.5)", margin: "0.25rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                  <p style={{ fontSize: "0.8rem", color: "rgba(28,55,156,0.5)", margin: "0.25rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                     提早在8月20日之前報名可以享有優惠。
                   </p>
                 </div>
@@ -370,7 +370,7 @@ export default function PSATSATPage() {
                     <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                     What&apos;s Included
                   </div>
-                  <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
+                  <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#1c379c", margin: 0 }}>
                     Program Highlights
                   </h2>
                 </div>
@@ -392,7 +392,7 @@ export default function PSATSATPage() {
 
               {/* Session dates card */}
               <div style={{
-                background: "linear-gradient(160deg, #080f24 0%, #0f2044 70%, #162a58 100%)",
+                background: "linear-gradient(160deg, #1c379c 0%, #1c379c 70%, #1c379c 100%)",
                 borderRadius: "20px",
                 border: "1px solid rgba(200,146,42,0.15)",
                 padding: "1.75rem",
@@ -464,8 +464,8 @@ export default function PSATSATPage() {
               <div style={{
                 borderRadius: "16px",
                 overflow: "hidden",
-                border: "1px solid rgba(15,32,68,0.07)",
-                boxShadow: "0 4px 20px rgba(15,32,68,0.08)",
+                border: "1px solid rgba(28,55,156,0.07)",
+                boxShadow: "0 4px 20px rgba(28,55,156,0.08)",
                 position: "relative",
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -477,7 +477,7 @@ export default function PSATSATPage() {
                 <div style={{
                   position: "absolute",
                   bottom: 0, left: 0, right: 0,
-                  background: "linear-gradient(to top, rgba(8,15,36,0.85), transparent)",
+                  background: "linear-gradient(to top, rgba(28,55,156,0.85), transparent)",
                   padding: "1.5rem 1rem 0.85rem",
                 }}>
                   <p style={{ margin: 0, fontSize: "0.8rem", fontWeight: 700, color: "#fff", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
@@ -493,22 +493,22 @@ export default function PSATSATPage() {
         </section>
 
         {/* ── Chinese Section ───────────────────────────────────────────────── */}
-        <section style={{ background: "#fff", borderTop: "1px solid rgba(15,32,68,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
+        <section style={{ background: "#fff", borderTop: "1px solid rgba(28,55,156,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ marginBottom: "1.5rem" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#c8922a", marginBottom: "0.4rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                 中文資訊
               </div>
-              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
+              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#1c379c", margin: 0 }}>
                 SAT 大學考試準備班 — 秋季班
               </h2>
-              <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.5)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <p style={{ fontSize: "0.85rem", color: "rgba(28,55,156,0.5)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 星期六上課 · 2026年9月12日 開始
               </p>
             </div>
 
-            <div style={{ overflowX: "auto", borderRadius: "14px", border: "1px solid rgba(15,32,68,0.07)", overflow: "hidden" }}>
+            <div style={{ overflowX: "auto", borderRadius: "14px", border: "1px solid rgba(28,55,156,0.07)", overflow: "hidden" }}>
               <table className="hl-info-table" style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
@@ -524,7 +524,7 @@ export default function PSATSATPage() {
                     <td>九、十、十一、十二年班</td>
                     <td rowSpan={3}>
                       1:00pm – 4:00pm（3小時）<br />
-                      <span style={{ fontSize: "0.8rem", color: "rgba(15,32,68,0.6)" }}>
+                      <span style={{ fontSize: "0.8rem", color: "rgba(28,55,156,0.6)" }}>
                         9/12, 19, 26 · 10/03, 17, 24, 31 · 11/07, 14, 21 · 12/05, 12, 19 · 1/09/2027
                       </span>
                     </td>
@@ -542,7 +542,7 @@ export default function PSATSATPage() {
               </table>
             </div>
 
-            <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.55)", margin: "1rem 0 0", lineHeight: 1.7, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <p style={{ fontSize: "0.85rem", color: "rgba(28,55,156,0.55)", margin: "1rem 0 0", lineHeight: 1.7, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               提早在8月20日之前報名可以享有優惠。如有問題，請聯絡辦公室。
             </p>
           </div>
@@ -552,7 +552,7 @@ export default function PSATSATPage() {
         <section
           ref={ctaRef.ref}
           style={{
-            background: "linear-gradient(135deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
             padding: "4rem clamp(1.25rem, 5vw, 3rem)",
             textAlign: "center",
             position: "relative",
@@ -585,7 +585,7 @@ export default function PSATSATPage() {
                   gap: "0.5rem",
                   padding: "0.875rem 2rem",
                   background: "linear-gradient(135deg, #c8922a, #e8b84b)",
-                  color: "#0f2044",
+                  color: "#1c379c",
                   fontWeight: 700,
                   fontSize: "0.9rem",
                   borderRadius: "12px",

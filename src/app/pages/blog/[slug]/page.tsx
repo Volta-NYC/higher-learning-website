@@ -385,8 +385,8 @@ export default async function BlogArticlePage({
 
   return (
     <main className="bg-[#fffdf8]">
-      <section className="relative isolate overflow-hidden bg-[#080f24] px-5 py-20 text-white sm:px-8 lg:px-12">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(232,184,75,0.16),transparent_28%),linear-gradient(145deg,#080f24,#162a58)]" />
+      <section className="relative isolate overflow-hidden bg-[#1c379c] px-5 py-20 text-white sm:px-8 lg:px-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(232,184,75,0.16),transparent_28%),linear-gradient(145deg,#1c379c,#1c379c)]" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <Link href="/pages/blog" className="text-sm font-bold uppercase tracking-[0.14em] text-[#e8b84b]">
             Back to Blog
@@ -401,20 +401,20 @@ export default async function BlogArticlePage({
 
       <article className="mx-auto max-w-4xl px-5 py-14 sm:px-8 lg:px-12">
         {article.imageSrc && (
-          <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-[8px] border border-[#0f2044]/15 shadow-[0_18px_48px_rgba(15,32,68,0.14)]">
+          <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-[8px] border border-[#1c379c]/15 shadow-[0_18px_48px_rgba(28,55,156,0.14)]">
             <Image src={article.imageSrc} alt={article.title} fill className="object-cover" sizes="(max-width: 900px) 100vw, 900px" />
           </div>
         )}
 
-        <div className="rounded-[8px] border border-[#0f2044]/10 bg-white p-7 shadow-[0_12px_36px_rgba(15,32,68,0.08)] sm:p-10">
-          <div className="mb-8 border-l-4 border-[#e8b84b] bg-[#fbf7ed] px-5 py-4 text-sm font-semibold leading-7 text-[#0f2044]">
+        <div className="rounded-[8px] border border-[#1c379c]/10 bg-white p-7 shadow-[0_12px_36px_rgba(28,55,156,0.08)] sm:p-10">
+          <div className="mb-8 border-l-4 border-[#e8b84b] bg-[#fbf7ed] px-5 py-4 text-sm font-semibold leading-7 text-[#1c379c]">
             Practical guidance from Higher Learning teachers for students and families planning their next step.
           </div>
 
           <div className="space-y-10">
             {article.sections.map((section) => (
               <section key={section.heading}>
-                <h2 className="font-serif text-3xl font-bold tracking-normal text-[#0f2044]">
+                <h2 className="font-serif text-3xl font-bold tracking-normal text-[#1c379c]">
                   {section.heading}
                 </h2>
                 <div className="mt-5 space-y-5">
@@ -429,14 +429,14 @@ export default async function BlogArticlePage({
           </div>
         </div>
 
-        <div className="mt-12 rounded-[8px] border border-[#e8b84b]/30 bg-white p-6 shadow-[0_12px_36px_rgba(15,32,68,0.08)]">
-          <h2 className="font-serif text-2xl font-bold tracking-normal text-[#0f2044]">Ready to talk?</h2>
+        <div className="mt-12 rounded-[8px] border border-[#e8b84b]/30 bg-white p-6 shadow-[0_12px_36px_rgba(28,55,156,0.08)]">
+          <h2 className="font-serif text-2xl font-bold tracking-normal text-[#1c379c]">Ready to talk?</h2>
           <p className="mt-3 text-sm leading-7 text-slate-600">
             Contact Higher Learning to review schedules, placement, and enrollment options.
           </p>
           <Link
             href="/pages/contact"
-            className="mt-5 inline-flex rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-5 py-3 text-sm font-bold uppercase tracking-[0.12em] text-[#081126]"
+            className="mt-5 inline-flex rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-5 py-3 text-sm font-bold uppercase tracking-[0.12em] text-[#1c379c]"
           >
             Visit Us In Person
           </Link>

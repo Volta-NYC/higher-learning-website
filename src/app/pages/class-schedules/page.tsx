@@ -48,11 +48,11 @@ export default function ClassSchedulesPage() {
         .hl-hub-card {
           display: block;
           background: #fff;
-          border: 1px solid rgba(15,32,68,0.07);
+          border: 1px solid rgba(28,55,156,0.07);
           border-radius: 20px;
           padding: 1.75rem 1.85rem;
           text-decoration: none;
-          box-shadow: 0 2px 16px rgba(15,32,68,0.05);
+          box-shadow: 0 2px 16px rgba(28,55,156,0.05);
           transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
           position: relative;
           overflow: hidden;
@@ -67,7 +67,7 @@ export default function ClassSchedulesPage() {
           transition: opacity 0.22s ease;
         }
         .hl-hub-card:hover {
-          box-shadow: 0 10px 32px rgba(15,32,68,0.11);
+          box-shadow: 0 10px 32px rgba(28,55,156,0.11);
           transform: translateY(-3px);
           border-color: rgba(200,146,42,0.2);
         }
@@ -162,13 +162,13 @@ export default function ClassSchedulesPage() {
                     <div style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                       fontSize: "clamp(1rem, 2vw, 1.2rem)",
-                      fontWeight: 700, color: "#0f2044",
+                      fontWeight: 700, color: "#1c379c",
                       lineHeight: 1.2, marginBottom: "0.3rem",
                     }}>
                       {s.title}
                     </div>
                     <p style={{
-                      fontSize: "0.82rem", color: "rgba(15,32,68,0.5)",
+                      fontSize: "0.82rem", color: "rgba(28,55,156,0.5)",
                       margin: "0 0 0.4rem", lineHeight: 1.55,
                       fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}>
@@ -177,10 +177,10 @@ export default function ClassSchedulesPage() {
                     <span style={{
                       display: "inline-flex", alignItems: "center", gap: "0.3rem",
                       padding: "0.2rem 0.65rem",
-                      background: "rgba(15,32,68,0.04)",
-                      border: "1px solid rgba(15,32,68,0.08)",
+                      background: "rgba(28,55,156,0.04)",
+                      border: "1px solid rgba(28,55,156,0.08)",
                       borderRadius: "8px",
-                      fontSize: "0.73rem", fontWeight: 600, color: "#0f2044",
+                      fontSize: "0.73rem", fontWeight: 600, color: "#1c379c",
                       fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}>
                       Time · {s.detail}
@@ -215,7 +215,7 @@ export default function ClassSchedulesPage() {
             }}
           >
             <p style={{
-              fontSize: "0.78rem", color: "rgba(15,32,68,0.35)",
+              fontSize: "0.78rem", color: "rgba(28,55,156,0.35)",
               margin: 0, fontFamily: "'DM Sans', system-ui, sans-serif",
             }}>
               84 Bowery, 3rd Floor · New York, NY 10013 ·{" "}

@@ -50,12 +50,12 @@ export default function ClassGalleryPage() {
         .hlg-anim { animation: hlgFadeUp 0.72s cubic-bezier(0.22,1,0.36,1) both; }
 
         .hlg-image-frame {
-          border: 2px solid rgba(15,32,68,0.78);
+          border: 2px solid rgba(28,55,156,0.78);
           outline: 8px solid rgba(255,255,255,0.9);
           outline-offset: -14px;
           box-shadow:
             0 0 0 1px rgba(200,146,42,0.55),
-            0 16px 44px rgba(15,32,68,0.16);
+            0 16px 44px rgba(28,55,156,0.16);
         }
         .hlg-image-frame::after {
           content: "";
@@ -73,11 +73,11 @@ export default function ClassGalleryPage() {
           border-radius: 16px;
           overflow: hidden;
           aspect-ratio: 4/3;
-          background: linear-gradient(135deg, #0f2044 0%, #162a58 100%);
+          background: linear-gradient(135deg, #1c379c 0%, #1c379c 100%);
           cursor: pointer;
           transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
-        .hlg-tile:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(15,32,68,0.18); }
+        .hlg-tile:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(28,55,156,0.18); }
         .hlg-tile-photo {
           transition: transform 0.45s ease, filter 0.45s ease;
         }
@@ -87,14 +87,14 @@ export default function ClassGalleryPage() {
         }
         .hlg-tile-overlay {
           position: absolute; inset: 0;
-          background: linear-gradient(160deg, rgba(8,15,36,0.34) 0%, rgba(15,32,68,0.82) 100%);
+          background: linear-gradient(160deg, rgba(28,55,156,0.34) 0%, rgba(28,55,156,0.82) 100%);
           display: flex; flex-direction: column;
           align-items: center; justify-content: center;
           text-align: center; padding: 1.5rem;
           transition: background 0.22s ease;
         }
         .hlg-tile:hover .hlg-tile-overlay {
-          background: linear-gradient(160deg, rgba(8,15,36,0.45) 0%, rgba(200,146,42,0.35) 100%);
+          background: linear-gradient(160deg, rgba(28,55,156,0.45) 0%, rgba(200,146,42,0.35) 100%);
         }
         .hlg-tile-grid {
           position: absolute; inset: 0;
@@ -126,7 +126,7 @@ export default function ClassGalleryPage() {
 
         {/* ── HERO ── */}
         <section className="hl-photo-hero hl-photo-hero-gallery" style={{
-          background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+          background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
           padding: "5rem 0 4.5rem",
           position: "relative",
           overflow: "hidden",
@@ -228,13 +228,13 @@ export default function ClassGalleryPage() {
             {/* Image */}
             <div className="hlg-image-frame" style={{
               borderRadius: "20px", overflow: "hidden",
-              boxShadow: "0 12px 40px rgba(15,32,68,0.12)",
+              boxShadow: "0 12px 40px rgba(28,55,156,0.12)",
               opacity: feat1.inView ? 1 : 0,
               transform: feat1.inView ? "translateX(0)" : "translateX(-20px)",
               transition: "opacity 0.7s ease, transform 0.7s ease",
               aspectRatio: "6/5",
               position: "relative",
-              background: "rgba(15,32,68,0.04)",
+              background: "rgba(28,55,156,0.04)",
             }}>
               <Image
                 src="/images/higher-learning/2025-05-14.webp"
@@ -265,7 +265,7 @@ export default function ClassGalleryPage() {
               <h2 style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: "clamp(1.5rem, 2.8vw, 2.1rem)",
-                fontWeight: 700, color: "#0f2044",
+                fontWeight: 700, color: "#1c379c",
                 margin: "0 0 1.1rem", lineHeight: 1.2,
               }}>
                 Celebrating Academic Excellence
@@ -274,7 +274,7 @@ export default function ClassGalleryPage() {
               <div style={{ width: "36px", height: "2px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginBottom: "1.25rem" }} />
 
               <p style={{
-                fontSize: "0.95rem", color: "rgba(15,32,68,0.6)",
+                fontSize: "0.95rem", color: "rgba(28,55,156,0.6)",
                 lineHeight: 1.8, margin: 0,
                 fontFamily: "'DM Sans', system-ui, sans-serif",
               }}>
@@ -316,7 +316,7 @@ export default function ClassGalleryPage() {
               <h2 style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: "clamp(1.5rem, 2.8vw, 2.1rem)",
-                fontWeight: 700, color: "#0f2044",
+                fontWeight: 700, color: "#1c379c",
                 margin: "0 0 1.1rem", lineHeight: 1.2,
               }}>
                 Focused Learning Environment
@@ -325,7 +325,7 @@ export default function ClassGalleryPage() {
               <div style={{ width: "36px", height: "2px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginBottom: "1.25rem" }} />
 
               <p style={{
-                fontSize: "0.95rem", color: "rgba(15,32,68,0.6)",
+                fontSize: "0.95rem", color: "rgba(28,55,156,0.6)",
                 lineHeight: 1.8, margin: 0,
                 fontFamily: "'DM Sans', system-ui, sans-serif",
               }}>
@@ -338,13 +338,13 @@ export default function ClassGalleryPage() {
               className="hlg-feature-img-order hlg-image-frame"
               style={{
                 borderRadius: "20px", overflow: "hidden",
-                boxShadow: "0 12px 40px rgba(15,32,68,0.12)",
+                boxShadow: "0 12px 40px rgba(28,55,156,0.12)",
                 opacity: feat2.inView ? 1 : 0,
                 transform: feat2.inView ? "translateX(0)" : "translateX(20px)",
                 transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
                 aspectRatio: "4/3",
                 position: "relative",
-                background: "rgba(15,32,68,0.04)",
+                background: "rgba(28,55,156,0.04)",
               }}
             >
               <Image
@@ -376,7 +376,7 @@ export default function ClassGalleryPage() {
               <h2 style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)",
-                fontWeight: 700, color: "#0f2044", margin: 0,
+                fontWeight: 700, color: "#1c379c", margin: 0,
               }}>
                 Learning in Action
               </h2>

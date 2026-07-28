@@ -23,7 +23,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#080f24] text-white">
+    <footer className="relative overflow-hidden bg-[#1c379c] text-white">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#e8b84b]/60 to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_0%,rgba(232,184,75,0.12),transparent_26%)]" />
 

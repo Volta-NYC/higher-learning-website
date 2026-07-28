@@ -69,7 +69,7 @@ export default function Navbar() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         :root {
-          --navy: #0f2044;
+          --navy: #1c379c;
           --gold: #c8922a;
           --gold-light: #e8b84b;
           --cream: #faf8f4;
@@ -87,14 +87,14 @@ export default function Navbar() {
         }
 
         .hl-nav.scrolled {
-          background: rgba(15, 32, 68, 0.97);
+          background: rgba(28,55,156,0.97);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           box-shadow: 0 4px 40px rgba(0,0,0,0.2);
         }
 
         .hl-nav.top {
-          background: rgba(15, 32, 68, 0.85);
+          background: rgba(28,55,156,0.85);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
         }
@@ -391,7 +391,7 @@ export default function Navbar() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(10, 20, 50, 0.98);
+          background: rgba(28,55,156,0.98);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           padding: 1.5rem 1.5rem 2rem;

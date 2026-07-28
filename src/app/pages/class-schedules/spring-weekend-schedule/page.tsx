@@ -45,9 +45,9 @@ const SESSION_DATES = [
 
 const MONTH_COLORS: Record<string, { bg: string; border: string; text: string }> = {
   Sep: { bg: "rgba(200,146,42,0.12)",  border: "rgba(200,146,42,0.3)",  text: "#c8922a" },
-  Oct: { bg: "rgba(15,32,68,0.08)",    border: "rgba(15,32,68,0.2)",    text: "#0f2044" },
+  Oct: { bg: "rgba(28,55,156,0.08)",    border: "rgba(28,55,156,0.2)",    text: "#1c379c" },
   Nov: { bg: "rgba(200,146,42,0.08)",  border: "rgba(200,146,42,0.2)",  text: "#a87828" },
-  Dec: { bg: "rgba(15,32,68,0.06)",    border: "rgba(15,32,68,0.15)",   text: "#162a58" },
+  Dec: { bg: "rgba(28,55,156,0.06)",    border: "rgba(28,55,156,0.15)",   text: "#1c379c" },
   Jan: { bg: "rgba(200,146,42,0.15)",  border: "rgba(200,146,42,0.35)", text: "#c8922a" },
 };
 
@@ -150,8 +150,8 @@ const SATURDAY_CLASSES: ClassRow[] = [
 
 const GRADE_GROUPS = [
   { grades: "Grades 2–4", label: "Elementary", color: "#c8922a" },
-  { grades: "Grades 5–6", label: "Upper Elem.", color: "#0f2044" },
-  { grades: "Grade 7",    label: "Middle / SHSAT", color: "#162a58" },
+  { grades: "Grades 5–6", label: "Upper Elem.", color: "#1c379c" },
+  { grades: "Grade 7",    label: "Middle / SHSAT", color: "#1c379c" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -163,7 +163,7 @@ function SectionHeading({ children, light }: { children: React.ReactNode; light?
       fontFamily: "'Playfair Display', Georgia, serif",
       fontSize: "clamp(1.25rem, 2.5vw, 1.65rem)",
       fontWeight: 700,
-      color: light ? "#fff" : "#0f2044",
+      color: light ? "#fff" : "#1c379c",
       margin: 0,
       lineHeight: 1.2,
     }}>
@@ -181,7 +181,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
           : "#fff",
         border: row.highlight
           ? "1px solid rgba(200,146,42,0.22)"
-          : "1px solid rgba(15,32,68,0.07)",
+          : "1px solid rgba(28,55,156,0.07)",
         borderRadius: "16px",
         padding: "1.25rem 1.4rem",
         display: "grid",
@@ -190,7 +190,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
         alignItems: "start",
         boxShadow: row.highlight
           ? "0 4px 20px rgba(200,146,42,0.08)"
-          : "0 2px 12px rgba(15,32,68,0.04)",
+          : "0 2px 12px rgba(28,55,156,0.04)",
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0)" : "translateY(18px)",
         transition: `opacity 0.55s ease ${index * 55}ms, transform 0.55s ease ${index * 55}ms`,
@@ -212,7 +212,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
         <div style={{
           fontSize: "0.92rem",
           fontWeight: 700,
-          color: "#0f2044",
+          color: "#1c379c",
           lineHeight: 1.3,
           marginBottom: "0.25rem",
           fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -221,7 +221,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
         </div>
         <div style={{
           fontSize: "0.75rem",
-          color: "rgba(15,32,68,0.4)",
+          color: "rgba(28,55,156,0.4)",
           fontFamily: "'DM Sans', system-ui, sans-serif",
         }}>
           {row.subjectZh}
@@ -232,11 +232,11 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
         <div style={{
           display: "inline-block",
           padding: "0.2rem 0.65rem",
-          background: "rgba(15,32,68,0.06)",
+          background: "rgba(28,55,156,0.06)",
           borderRadius: "8px",
           fontSize: "0.75rem",
           fontWeight: 700,
-          color: "#0f2044",
+          color: "#1c379c",
           fontFamily: "'DM Sans', system-ui, sans-serif",
           whiteSpace: "nowrap" as const,
           marginBottom: "0.3rem",
@@ -245,7 +245,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
         </div>
         <div style={{
           fontSize: "0.65rem",
-          color: "rgba(15,32,68,0.35)",
+          color: "rgba(28,55,156,0.35)",
           fontFamily: "'DM Sans', system-ui, sans-serif",
           display: "block",
         }}>
@@ -268,12 +268,12 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
           padding: "0.3rem 0.7rem",
           background: row.highlight
             ? "rgba(200,146,42,0.12)"
-            : "rgba(15,32,68,0.04)",
-          border: `1px solid ${row.highlight ? "rgba(200,146,42,0.25)" : "rgba(15,32,68,0.08)"}`,
+            : "rgba(28,55,156,0.04)",
+          border: `1px solid ${row.highlight ? "rgba(200,146,42,0.25)" : "rgba(28,55,156,0.08)"}`,
           borderRadius: "8px",
           fontSize: "0.78rem",
           fontWeight: 700,
-          color: row.highlight ? "#c8922a" : "#0f2044",
+          color: row.highlight ? "#c8922a" : "#1c379c",
           fontFamily: "'DM Sans', system-ui, sans-serif",
           whiteSpace: "nowrap" as const,
         }}>
@@ -281,7 +281,7 @@ function ClassCard({ row, index, inView }: { row: ClassRow; index: number; inVie
         </span>
         <span style={{
           fontSize: "0.73rem",
-          color: "rgba(15,32,68,0.45)",
+          color: "rgba(28,55,156,0.45)",
           fontFamily: "'DM Sans', system-ui, sans-serif",
         }}>
           {row.sessions}
@@ -330,7 +330,7 @@ export default function SpringWeekendSchedulePage() {
         }
 
         .hl-class-card:hover {
-          box-shadow: 0 8px 28px rgba(15,32,68,0.1) !important;
+          box-shadow: 0 8px 28px rgba(28,55,156,0.1) !important;
           transform: translateY(-2px) !important;
           transition: box-shadow 0.22s ease, transform 0.22s ease !important;
         }
@@ -358,7 +358,7 @@ export default function SpringWeekendSchedulePage() {
 
         {/* ────────────────── HERO ────────────────── */}
         <section className="hl-photo-hero hl-photo-hero-weekend" style={{
-          background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+          background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
           padding: "5.5rem 0 5rem",
           position: "relative",
           overflow: "hidden",
@@ -478,25 +478,25 @@ export default function SpringWeekendSchedulePage() {
         </section>
 
         {/* Wave divider */}
-        <div style={{ background: "linear-gradient(160deg, #080f24 0%, #162a58 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 52" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,52 C360,0 1080,0 1440,52 L1440,52 L0,52 Z" fill="#faf8f4" />
           </svg>
         </div>
 
         {/* ────────────────── DISCOUNTS BANNER ────────────────── */}
-        <div style={{ background: "#fff", borderBottom: "1px solid rgba(15,32,68,0.06)" }}>
+        <div style={{ background: "#fff", borderBottom: "1px solid rgba(28,55,156,0.06)" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "1rem clamp(1.25rem, 5vw, 3rem)", display: "flex", flexWrap: "wrap", gap: "0.75rem 2.5rem", alignItems: "center" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <span style={{ fontSize: "0.68rem", fontWeight: 800, color: "#c8922a", letterSpacing: "0.08em" }}>EARLY</span>
-              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Early bird by <span style={{ color: "#c8922a" }}>Aug 20, 2026</span> → $60 off
               </span>
             </div>
-            <div style={{ width: "1px", height: "18px", background: "rgba(15,32,68,0.12)" }} />
+            <div style={{ width: "1px", height: "18px", background: "rgba(28,55,156,0.12)" }} />
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "#c8922a" }}>5%</span>
-              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Sibling discount: <span style={{ color: "#c8922a" }}>5% off</span>
               </span>
             </div>
@@ -515,7 +515,7 @@ export default function SpringWeekendSchedulePage() {
               <div style={{ marginBottom: "1.75rem" }}>
                 <div className="hl-eyebrow-dark">Saturday Classes · 星期六課程</div>
                 <SectionHeading>Fall 2026 Saturday Schedule</SectionHeading>
-                <p style={{ fontSize: "0.84rem", color: "rgba(15,32,68,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p style={{ fontSize: "0.84rem", color: "rgba(28,55,156,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   All sessions are 14 weeks · September 12, 2026 – January 9, 2027
                 </p>
               </div>
@@ -525,12 +525,12 @@ export default function SpringWeekendSchedulePage() {
                 {GRADE_GROUPS.map((g) => (
                   <div key={g.label} style={{
                     padding: "0.3rem 0.85rem",
-                    background: "rgba(15,32,68,0.04)",
-                    border: "1px solid rgba(15,32,68,0.08)",
+                    background: "rgba(28,55,156,0.04)",
+                    border: "1px solid rgba(28,55,156,0.08)",
                     borderRadius: "20px",
                     fontSize: "0.72rem",
                     fontWeight: 700,
-                    color: "#0f2044",
+                    color: "#1c379c",
                     fontFamily: "'DM Sans', system-ui, sans-serif",
                   }}>
                     <span style={{ color: g.color, marginRight: "0.3rem" }}>●</span>
@@ -559,7 +559,7 @@ export default function SpringWeekendSchedulePage() {
               <div
                 ref={calRef.ref}
                 style={{
-                  background: "linear-gradient(160deg, #080f24 0%, #0f2044 70%, #162a58 100%)",
+                  background: "linear-gradient(160deg, #1c379c 0%, #1c379c 70%, #1c379c 100%)",
                   borderRadius: "20px",
                   border: "1px solid rgba(200,146,42,0.15)",
                   padding: "1.75rem",
@@ -638,8 +638,8 @@ export default function SpringWeekendSchedulePage() {
                 style={{
                   background: "#fff",
                   borderRadius: "20px",
-                  border: "1px solid rgba(15,32,68,0.07)",
-                  boxShadow: "0 4px 24px rgba(15,32,68,0.07)",
+                  border: "1px solid rgba(28,55,156,0.07)",
+                  boxShadow: "0 4px 24px rgba(28,55,156,0.07)",
                   overflow: "hidden",
                   opacity: infoRef.inView ? 1 : 0,
                   transform: infoRef.inView ? "translateY(0)" : "translateY(20px)",
@@ -656,15 +656,15 @@ export default function SpringWeekendSchedulePage() {
                 ].map((item) => (
                   <div key={item.label} style={{
                     padding: "0.9rem 1.35rem",
-                    borderBottom: "1px solid rgba(15,32,68,0.05)",
+                    borderBottom: "1px solid rgba(28,55,156,0.05)",
                     display: "flex",
                     alignItems: "flex-start",
                     gap: "0.75rem",
                   }}>
                     <span style={{ fontSize: "0.95rem", flexShrink: 0, marginTop: "1px" }}>{item.icon}</span>
                     <div>
-                      <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,32,68,0.35)", marginBottom: "0.15rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{item.label}</div>
-                      <div style={{ fontSize: "0.83rem", fontWeight: 600, color: "#0f2044", lineHeight: 1.5, fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "pre-line" as const }}>{item.value}</div>
+                      <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(28,55,156,0.35)", marginBottom: "0.15rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{item.label}</div>
+                      <div style={{ fontSize: "0.83rem", fontWeight: 600, color: "#1c379c", lineHeight: 1.5, fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "pre-line" as const }}>{item.value}</div>
                     </div>
                   </div>
                 ))}
@@ -678,7 +678,7 @@ export default function SpringWeekendSchedulePage() {
                       alignItems: "center",
                       gap: "0.4rem",
                       padding: "0.75rem 1.25rem",
-                      background: "linear-gradient(135deg, #0f2044, #162a58)",
+                      background: "linear-gradient(135deg, #1c379c, #1c379c)",
                       color: "#fff",
                       fontWeight: 700,
                       fontSize: "0.84rem",
@@ -713,11 +713,11 @@ export default function SpringWeekendSchedulePage() {
                   { subject: "Math Test", dates: "Apr 28 – May 8, 2026"  },
                 ].map((t) => (
                   <div key={t.subject} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.5rem 0", borderBottom: "1px solid rgba(200,146,42,0.1)" }}>
-                    <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.subject}</span>
+                    <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.subject}</span>
                     <span style={{ fontSize: "0.76rem", color: "#c8922a", fontWeight: 600, fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.dates}</span>
                   </div>
                 ))}
-                <p style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p style={{ fontSize: "0.75rem", color: "rgba(28,55,156,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   Fall Saturday classes meet for 14 sessions from September 12, 2026 through January 9, 2027.
                 </p>
               </div>
@@ -726,23 +726,23 @@ export default function SpringWeekendSchedulePage() {
         </section>
 
         {/* ────────────────── CHINESE SECTION ────────────────── */}
-        <section style={{ background: "#fff", borderTop: "1px solid rgba(15,32,68,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
+        <section style={{ background: "#fff", borderTop: "1px solid rgba(28,55,156,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
             <div style={{ marginBottom: "1.5rem" }}>
               <div className="hl-eyebrow-dark" style={{ color: "#c8922a" }}>中文資訊</div>
               <SectionHeading>秋季班 · 星期六課程表</SectionHeading>
-              <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.45)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <p style={{ fontSize: "0.85rem", color: "rgba(28,55,156,0.45)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 2026年9月12日開始 · 共14堂課
               </p>
             </div>
 
-            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(15,32,68,0.07)", overflow: "hidden", boxShadow: "0 2px 16px rgba(15,32,68,0.05)" }}>
+            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(28,55,156,0.07)", overflow: "hidden", boxShadow: "0 2px 16px rgba(28,55,156,0.05)" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" as const }}>
                 <thead>
                   <tr>
                     {["科目", "年級", "時間", "堂數"].map((h) => (
                       <th key={h} style={{
-                        background: "linear-gradient(135deg, #080f24, #0f2044)",
+                        background: "linear-gradient(135deg, #1c379c, #1c379c)",
                         color: "rgba(255,255,255,0.82)",
                         fontSize: "0.68rem",
                         fontWeight: 700,
@@ -757,19 +757,19 @@ export default function SpringWeekendSchedulePage() {
                 </thead>
                 <tbody>
                   {SATURDAY_CLASSES.map((row, i) => (
-                    <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "rgba(15,32,68,0.015)" }}>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
+                    <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "rgba(28,55,156,0.015)" }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
                         {row.subject}
-                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", fontWeight: 400, marginTop: "2px" }}>{row.subjectZh}</span>
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(28,55,156,0.38)", fontWeight: 400, marginTop: "2px" }}>{row.subjectZh}</span>
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
                         {row.grade}
-                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", marginTop: "2px" }}>{row.gradeZh}</span>
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(28,55,156,0.38)", marginTop: "2px" }}>{row.gradeZh}</span>
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#c8922a", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#c8922a", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
                         {row.time}
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.82rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.82rem", color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                         14堂
                       </td>
                     </tr>
@@ -784,7 +784,7 @@ export default function SpringWeekendSchedulePage() {
                 "* 同一家庭兄弟姐妹可享九五折 (5% off)。",
                 "* 紐約州英文考試：2026年4月14日–4月24日 ｜ 數學考試：4月28日–5月8日",
               ].map((note, i) => (
-                <p key={i} style={{ fontSize: "0.82rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.65, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p key={i} style={{ fontSize: "0.82rem", color: "rgba(28,55,156,0.5)", margin: 0, lineHeight: 1.65, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   {note}
                 </p>
               ))}
@@ -796,7 +796,7 @@ export default function SpringWeekendSchedulePage() {
         <section
           ref={ctaRef.ref}
           style={{
-            background: "linear-gradient(135deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
             padding: "4.5rem clamp(1.25rem, 5vw, 3rem)",
             textAlign: "center",
             position: "relative",
@@ -840,7 +840,7 @@ export default function SpringWeekendSchedulePage() {
                   gap: "0.5rem",
                   padding: "0.9rem 2rem",
                   background: "linear-gradient(135deg, #c8922a, #e8b84b)",
-                  color: "#0f2044",
+                  color: "#1c379c",
                   fontWeight: 700,
                   fontSize: "0.9rem",
                   borderRadius: "12px",

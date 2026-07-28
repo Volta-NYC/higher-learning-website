@@ -45,7 +45,7 @@ const courses = [
     title: "SHSAT Prep",
     desc: "Our flagship program with a proven 70% admission rate to NYC's elite specialized high schools.",
     items: ["Full-length practice exams", "Critical reasoning & logic", "Time management strategies"],
-    accent: "#0f2044",
+    accent: "#1c379c",
     icon: Trophy,
   },
   {
@@ -310,7 +310,7 @@ function Section({
             <span className="h-px w-8 bg-current opacity-60" />
             {label}
           </div>
-          <h2 className={`font-serif text-4xl font-bold leading-tight tracking-normal md:text-5xl ${dark ? "text-white" : "text-[#0f2044]"}`}>
+          <h2 className={`font-serif text-4xl font-bold leading-tight tracking-normal md:text-5xl ${dark ? "text-white" : "text-[#1c379c]"}`}>
             {title}
           </h2>
           {subtitle && (
@@ -332,7 +332,7 @@ function CourseCard({ course, delay }: { course: typeof courses[0]; delay: numbe
   return (
     <article
       ref={ref}
-      className={`group relative flex min-h-[360px] flex-col overflow-hidden rounded-[8px] border border-slate-200 bg-white p-7 shadow-[0_16px_45px_rgba(15,32,68,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(15,32,68,0.16)] ${
+      className={`group relative flex min-h-[360px] flex-col overflow-hidden rounded-[8px] border border-slate-200 bg-white p-7 shadow-[0_16px_45px_rgba(28,55,156,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(28,55,156,0.16)] ${
         visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
@@ -346,7 +346,7 @@ function CourseCard({ course, delay }: { course: typeof courses[0]; delay: numbe
           {course.tag}
         </span>
       </div>
-      <h3 className="font-serif text-2xl font-bold tracking-normal text-[#0f2044]">{course.title}</h3>
+      <h3 className="font-serif text-2xl font-bold tracking-normal text-[#1c379c]">{course.title}</h3>
       <p className="mt-4 text-sm leading-7 text-slate-600">{course.desc}</p>
       <ul className="mt-6 flex flex-col gap-3">
         {course.items.map((item) => (
@@ -375,11 +375,11 @@ function PillarCard({ pillar, delay }: { pillar: typeof pillars[0]; delay: numbe
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="flex h-16 w-16 items-center justify-center rounded-[8px] bg-[#0f2044] text-[#e8b84b] shadow-lg shadow-[#0f2044]/20">
+      <div className="flex h-16 w-16 items-center justify-center rounded-[8px] bg-[#1c379c] text-[#e8b84b] shadow-lg shadow-[#1c379c]/20">
         <Icon size={30} strokeWidth={1.7} />
       </div>
       <div>
-        <h3 className="font-serif text-2xl font-bold tracking-normal text-[#0f2044]">{pillar.title}</h3>
+        <h3 className="font-serif text-2xl font-bold tracking-normal text-[#1c379c]">{pillar.title}</h3>
         <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">{pillar.desc}</p>
       </div>
     </article>
@@ -392,7 +392,7 @@ function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: numbe
   return (
     <article
       ref={ref}
-      className={`relative flex min-h-[300px] flex-col rounded-[8px] border border-[#d9c28e]/35 bg-white p-7 shadow-[0_18px_50px_rgba(15,32,68,0.09)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_65px_rgba(15,32,68,0.14)] ${
+      className={`relative flex min-h-[300px] flex-col rounded-[8px] border border-[#d9c28e]/35 bg-white p-7 shadow-[0_18px_50px_rgba(28,55,156,0.09)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_65px_rgba(28,55,156,0.14)] ${
         visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
@@ -406,7 +406,7 @@ function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: numbe
       <p className="relative z-10 text-sm leading-7 text-slate-700 md:text-base">&ldquo;{review.text}&rdquo;</p>
       <div className="mt-auto flex items-end justify-between gap-4 pt-8">
         <div>
-          <div className="font-bold text-[#0f2044]">{review.name}</div>
+          <div className="font-bold text-[#1c379c]">{review.name}</div>
           <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Google Review</div>
         </div>
         <div className="text-sm font-semibold text-slate-400">{review.date}</div>
@@ -478,8 +478,8 @@ export default function Home() {
         }
       `}</style>
 
-      <section className="hl-photo-hero hl-photo-hero-home relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-[#080f24] pb-24 pt-20 md:pb-28 md:pt-24">
-        <div className="absolute inset-0 opacity-[0.55] bg-[radial-gradient(circle_at_78%_18%,rgba(232,184,75,0.18),transparent_30%),radial-gradient(circle_at_20%_78%,rgba(80,124,190,0.22),transparent_32%),linear-gradient(145deg,#080f24_0%,#0f2044_46%,#172f65_100%)]" />
+      <section className="hl-photo-hero hl-photo-hero-home relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-[#1c379c] pb-24 pt-20 md:pb-28 md:pt-24">
+        <div className="absolute inset-0 opacity-[0.55] bg-[radial-gradient(circle_at_78%_18%,rgba(232,184,75,0.18),transparent_30%),radial-gradient(circle_at_20%_78%,rgba(80,124,190,0.22),transparent_32%),linear-gradient(145deg,#1c379c_0%,#1c379c_46%,#1c379c_100%)]" />
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.7)_1px,transparent_1px)] [background-size:72px_72px]" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_26rem] lg:px-12">
@@ -508,7 +508,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2"><Phone size={17} className="text-[#e8b84b]" />212-941-0695</span>
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#081126] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#081126] hover:shadow-[0_18px_45px_rgba(200,146,42,0.48)]">
+              <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#1c379c] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#1c379c] hover:shadow-[0_18px_45px_rgba(200,146,42,0.48)]">
                 <span>
                   Visit Us In Person
                   <span className="hl-cta-zh">親臨諮詢</span>
@@ -534,8 +534,8 @@ export default function Home() {
                 sizes="416px"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#081126]/96 via-[#081126]/36 to-transparent" />
-              <div className="absolute inset-x-5 bottom-5 rounded-[8px] border border-[#e8b84b]/25 bg-[#081126]/78 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.24)] backdrop-blur">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1c379c]/96 via-[#1c379c]/36 to-transparent" />
+              <div className="absolute inset-x-5 bottom-5 rounded-[8px] border border-[#e8b84b]/25 bg-[#1c379c]/78 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.24)] backdrop-blur">
                 <div className="mb-5 flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e8b84b]">Admissions Focus</span>
                   <Award className="text-[#e8b84b]" size={24} />
@@ -557,7 +557,7 @@ export default function Home() {
       </section>
 
       <section ref={statsRef} className="relative z-20 bg-white px-5 sm:px-8 lg:px-12">
-        <div className="mx-auto -mt-14 max-w-7xl overflow-hidden rounded-[8px] border border-white/10 bg-[#0f2044] shadow-[0_28px_90px_rgba(15,32,68,0.24)]">
+        <div className="mx-auto -mt-14 max-w-7xl overflow-hidden rounded-[8px] border border-white/10 bg-[#1c379c] shadow-[0_28px_90px_rgba(28,55,156,0.24)]">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {stats.map((s) => (
               <StatCard key={s.label} {...s} active={statsVisible} />
@@ -573,12 +573,12 @@ export default function Home() {
         title="A Look Inside Higher Learning"
         subtitle="Photos from classes, celebrations, and student work at our Chinatown tutoring center."
       >
-        <div className="hl-campus-carousel-band relative overflow-hidden border-y-2 border-[#c8922a]/70 bg-[#111a35] py-5 shadow-[0_18px_54px_rgba(15,32,68,0.14)]">
+        <div className="hl-campus-carousel-band relative overflow-hidden border-y-2 border-[#c8922a]/70 bg-[#1c379c] py-5 shadow-[0_18px_54px_rgba(28,55,156,0.14)]">
           <div className="mb-5 flex items-center justify-center gap-3">
             <button
               type="button"
               onClick={showPreviousGalleryPhoto}
-              className="inline-flex h-11 w-11 items-center justify-center border border-[#e8b84b]/70 bg-transparent text-[#e8b84b] transition hover:bg-[#e8b84b] hover:text-[#081126]"
+              className="inline-flex h-11 w-11 items-center justify-center border border-[#e8b84b]/70 bg-transparent text-[#e8b84b] transition hover:bg-[#e8b84b] hover:text-[#1c379c]"
               aria-label="Previous campus photo"
             >
               <ChevronLeft size={22} />
@@ -586,7 +586,7 @@ export default function Home() {
             <button
               type="button"
               onClick={showNextGalleryPhoto}
-              className="inline-flex h-11 w-11 items-center justify-center border border-[#e8b84b]/70 bg-transparent text-[#e8b84b] transition hover:bg-[#e8b84b] hover:text-[#081126]"
+              className="inline-flex h-11 w-11 items-center justify-center border border-[#e8b84b]/70 bg-transparent text-[#e8b84b] transition hover:bg-[#e8b84b] hover:text-[#1c379c]"
               aria-label="Next campus photo"
             >
               <ChevronRight size={22} />
@@ -611,7 +611,7 @@ export default function Home() {
                     className="object-cover transition duration-500 hover:scale-[1.04]"
                     sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#081126]/82 to-transparent p-4">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#1c379c]/82 to-transparent p-4">
                     <div className="text-sm font-bold text-white">{photo.title}</div>
                   </div>
                 </Link>
@@ -631,7 +631,7 @@ export default function Home() {
                 />
               ))}
             </div>
-            <Link href="/pages/gallery" className="inline-flex h-10 items-center justify-center border border-[#e8b84b]/70 px-4 text-xs font-bold uppercase tracking-[0.14em] text-[#e8b84b] transition duration-300 hover:bg-[#e8b84b] hover:text-[#081126]">
+            <Link href="/pages/gallery" className="inline-flex h-10 items-center justify-center border border-[#e8b84b]/70 px-4 text-xs font-bold uppercase tracking-[0.14em] text-[#e8b84b] transition duration-300 hover:bg-[#e8b84b] hover:text-[#1c379c]">
               View Full Gallery
               <ChevronRight className="ml-2 h-4 w-4" />
             </Link>
@@ -655,7 +655,7 @@ export default function Home() {
 
       <Section
         id="why"
-        className="bg-[#0f2044] bg-[radial-gradient(circle_at_top_right,rgba(232,184,75,0.13),transparent_34%),linear-gradient(135deg,#0f2044,#081126)]"
+        className="bg-[#1c379c] bg-[radial-gradient(circle_at_top_right,rgba(232,184,75,0.13),transparent_34%),linear-gradient(135deg,#1c379c,#1c379c)]"
         label="Why Higher Learning"
         title="The Difference Is Results."
         subtitle="We don't just prepare students for tests - we build the academic confidence and habits that last a lifetime."
@@ -670,18 +670,18 @@ export default function Home() {
 
       <Section
         id="success"
-        className="overflow-hidden bg-[#080f24] bg-[radial-gradient(circle_at_20%_20%,rgba(232,184,75,0.16),transparent_26%),linear-gradient(145deg,#080f24,#121b34)]"
+        className="overflow-hidden bg-[#1c379c] bg-[radial-gradient(circle_at_20%_20%,rgba(232,184,75,0.16),transparent_26%),linear-gradient(145deg,#1c379c,#1c379c)]"
         label="Class of 2026"
         title="Specialized High School Admissions"
         subtitle="Congratulations to our 2026 students accepted into NYC's specialized and Hunter high schools. Pick up your gifts and celebrate with us - you've earned it."
         dark
       >
         <div className="hl-admissions-marquee relative overflow-hidden border-y border-white/10 py-6">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#080f24] to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#080f24] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#1c379c] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#1c379c] to-transparent" />
           <div className="marquee-track flex gap-3">
             {[...students, ...students].map((name, i) => (
-              <span key={`${name}-${i}`} className="whitespace-nowrap rounded-full border border-[#e8b84b]/20 bg-white/8 px-4 py-2 text-sm font-semibold text-white/75 shadow-sm backdrop-blur transition duration-300 hover:border-[#e8b84b]/60 hover:bg-[#e8b84b] hover:text-[#081126]">
+              <span key={`${name}-${i}`} className="whitespace-nowrap rounded-full border border-[#e8b84b]/20 bg-white/8 px-4 py-2 text-sm font-semibold text-white/75 shadow-sm backdrop-blur transition duration-300 hover:border-[#e8b84b]/60 hover:bg-[#e8b84b] hover:text-[#1c379c]">
                 {name}
               </span>
             ))}
@@ -723,7 +723,7 @@ export default function Home() {
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
-              className={`h-2.5 w-2.5 rounded-full transition duration-300 ${i === reviewPage ? "scale-125 bg-[#c8922a]" : "bg-[#0f2044]/20 hover:bg-[#0f2044]/40"}`}
+              className={`h-2.5 w-2.5 rounded-full transition duration-300 ${i === reviewPage ? "scale-125 bg-[#c8922a]" : "bg-[#1c379c]/20 hover:bg-[#1c379c]/40"}`}
               onClick={() => setReviewPage(i)}
               aria-label={`Page ${i + 1}`}
             />
@@ -735,15 +735,15 @@ export default function Home() {
             href="https://search.google.com/local/reviews?placeid=ChIJI3T2lZVbwokR11FLjw6rAsw"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#b27a16] transition hover:text-[#0f2044]"
+            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#b27a16] transition hover:text-[#1c379c]"
           >
             Read all reviews on Google <ChevronRight size={16} />
           </a>
         </div>
       </Section>
 
-      <section className="relative isolate overflow-hidden bg-[#0f2044] px-5 py-20 text-center sm:px-8 md:py-28 lg:px-12">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(232,184,75,0.18),transparent_32%),linear-gradient(135deg,#0f2044,#081126)]" />
+      <section className="relative isolate overflow-hidden bg-[#1c379c] px-5 py-20 text-center sm:px-8 md:py-28 lg:px-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(232,184,75,0.18),transparent_32%),linear-gradient(135deg,#1c379c,#1c379c)]" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <div className="mb-4 inline-flex items-center gap-3 text-[0.7rem] font-bold uppercase tracking-[0.22em] text-[#e8b84b]">
             <span className="h-px w-8 bg-current opacity-60" />
@@ -755,7 +755,7 @@ export default function Home() {
             Schedule a free consultation and find the right program for your student. Limited spots available each semester.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#081126] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#081126]">
+            <Link href="/pages/contact" className="inline-flex h-13 items-center justify-center rounded-full bg-gradient-to-r from-[#c8922a] to-[#e8b84b] px-7 text-sm font-bold uppercase tracking-[0.14em] text-[#1c379c] shadow-[0_14px_35px_rgba(200,146,42,0.32)] transition duration-300 hover:-translate-y-1 hover:text-[#1c379c]">
               Schedule a Consultation
             </Link>
             <Link href="/pages/class-schedules" className="inline-flex h-13 items-center justify-center rounded-full border border-white/28 px-7 text-sm font-bold uppercase tracking-[0.14em] text-white/86 transition duration-300 hover:-translate-y-1 hover:border-white/65 hover:bg-white/8 hover:text-white">

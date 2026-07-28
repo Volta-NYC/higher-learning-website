@@ -63,7 +63,7 @@ const WEEKDAY_CLASSES: WeekdayClass[] = [
     time: "4:00 – 6:00 pm",
     regularDates: ["9/17", "9/24", "10/01", "10/08", "10/15", "10/22", "10/29", "11/05", "11/12", "11/19", "12/03", "12/10", "12/17", "1/07", "1/14"],
     sessions: 15,
-    color: "#0f2044",
+    color: "#1c379c",
   },
   {
     subject: "ELA & Math SHSAT Preparation",
@@ -75,7 +75,7 @@ const WEEKDAY_CLASSES: WeekdayClass[] = [
     time: "4:00 – 6:00 pm",
     regularDates: ["9/16", "9/23", "9/30", "10/07", "10/14", "10/21", "10/28", "11/04", "11/18", "12/02", "12/09", "12/16", "12/23", "1/06", "1/13"],
     sessions: 15,
-    color: "#162a58",
+    color: "#1c379c",
   },
   {
     subject: "ELA & Math SHSAT Preparation",
@@ -101,15 +101,15 @@ const WEEKDAY_CLASSES: WeekdayClass[] = [
     specialLabel: "Tuesday Classes",
     specialDates: ["9/15", "9/22", "9/29", "10/06", "10/13", "10/20", "10/27", "11/03"],
     sessions: 17,
-    color: "#0f2044",
+    color: "#1c379c",
   },
 ];
 
 const DAY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Wednesday: { bg: "rgba(15,32,68,0.07)",    text: "#0f2044",  border: "rgba(15,32,68,0.18)"    },
+  Wednesday: { bg: "rgba(28,55,156,0.07)",    text: "#1c379c",  border: "rgba(28,55,156,0.18)"    },
   Thursday:  { bg: "rgba(200,146,42,0.1)",   text: "#c8922a",  border: "rgba(200,146,42,0.25)"  },
   Monday:    { bg: "rgba(200,146,42,0.15)",  text: "#a07020",  border: "rgba(200,146,42,0.3)"   },
-  Tuesday:   { bg: "rgba(15,32,68,0.07)",    text: "#0f2044",  border: "rgba(15,32,68,0.18)"    },
+  Tuesday:   { bg: "rgba(28,55,156,0.07)",    text: "#1c379c",  border: "rgba(28,55,156,0.18)"    },
   Friday:    { bg: "rgba(200,146,42,0.1)",   text: "#c8922a",  border: "rgba(200,146,42,0.25)"  },
 };
 
@@ -123,10 +123,10 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
     <div
       style={{
         background: "#fff",
-        border: "1px solid rgba(15,32,68,0.07)",
+        border: "1px solid rgba(28,55,156,0.07)",
         borderRadius: "20px",
         overflow: "hidden",
-        boxShadow: "0 4px 20px rgba(15,32,68,0.06)",
+        boxShadow: "0 4px 20px rgba(28,55,156,0.06)",
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0)" : "translateY(22px)",
         transition: `opacity 0.6s ease ${index * 100}ms, transform 0.6s ease ${index * 100}ms`,
@@ -142,7 +142,7 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
       {/* Header */}
       <div style={{
         padding: "1.4rem 1.6rem 1.1rem",
-        borderBottom: "1px solid rgba(15,32,68,0.05)",
+        borderBottom: "1px solid rgba(28,55,156,0.05)",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-start",
@@ -153,7 +153,7 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
           <div style={{
             fontSize: "1rem",
             fontWeight: 700,
-            color: "#0f2044",
+            color: "#1c379c",
             lineHeight: 1.3,
             marginBottom: "0.25rem",
             fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -162,7 +162,7 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
           </div>
           <div style={{
             fontSize: "0.76rem",
-            color: "rgba(15,32,68,0.4)",
+            color: "rgba(28,55,156,0.4)",
             fontFamily: "'DM Sans', system-ui, sans-serif",
           }}>
             {cls.subjectZh}
@@ -173,16 +173,16 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
           {/* Grade badge */}
           <div style={{
             padding: "0.3rem 0.85rem",
-            background: "rgba(15,32,68,0.05)",
-            border: "1px solid rgba(15,32,68,0.09)",
+            background: "rgba(28,55,156,0.05)",
+            border: "1px solid rgba(28,55,156,0.09)",
             borderRadius: "20px",
             fontSize: "0.78rem",
             fontWeight: 700,
-            color: "#0f2044",
+            color: "#1c379c",
             fontFamily: "'DM Sans', system-ui, sans-serif",
           }}>
             {cls.grade}
-            <span style={{ color: "rgba(15,32,68,0.38)", fontWeight: 400, marginLeft: "0.3rem" }}>
+            <span style={{ color: "rgba(28,55,156,0.38)", fontWeight: 400, marginLeft: "0.3rem" }}>
               {cls.gradeZh}
             </span>
           </div>
@@ -226,7 +226,7 @@ function WeekdayCard({ cls, index, inView }: { cls: WeekdayClass; index: number;
             <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: dayCol.text, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               {cls.dayLabel}
             </div>
-            <div style={{ fontSize: "0.65rem", color: "rgba(15,32,68,0.35)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <div style={{ fontSize: "0.65rem", color: "rgba(28,55,156,0.35)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               {cls.dayZh}
             </div>
           </div>
@@ -306,7 +306,7 @@ function DateGroup({
       }}>
         {special && <span style={{ fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.08em" }}>MON</span>}
         {label}
-        <span style={{ fontWeight: 400, color: "rgba(15,32,68,0.35)", fontSize: "0.62rem" }}>
+        <span style={{ fontWeight: 400, color: "rgba(28,55,156,0.35)", fontSize: "0.62rem" }}>
           · {labelZh}
         </span>
       </div>
@@ -362,7 +362,7 @@ export default function SpringWeekdaySchedulePage() {
         .hlw-register-btn:hover { filter: brightness(1.09); transform: translateY(-2px); }
 
         .hlw-card-hover { transition: box-shadow 0.22s ease, transform 0.22s ease; }
-        .hlw-card-hover:hover { box-shadow: 0 10px 32px rgba(15,32,68,0.11) !important; transform: translateY(-2px) !important; }
+        .hlw-card-hover:hover { box-shadow: 0 10px 32px rgba(28,55,156,0.11) !important; transform: translateY(-2px) !important; }
 
         @media (max-width: 920px) {
           .hlw-split { grid-template-columns: 1fr !important; }
@@ -376,7 +376,7 @@ export default function SpringWeekdaySchedulePage() {
 
         {/* ────────────────── HERO ────────────────── */}
         <section className="hl-photo-hero hl-photo-hero-weekday" style={{
-          background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+          background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
           padding: "5.5rem 0 5rem",
           position: "relative",
           overflow: "hidden",
@@ -399,7 +399,7 @@ export default function SpringWeekdaySchedulePage() {
           <div aria-hidden style={{
             position: "absolute", bottom: "-8%", left: "-4%",
             width: "380px", height: "380px",
-            background: "radial-gradient(ellipse at center, rgba(8,15,36,0.7) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, rgba(28,55,156,0.7) 0%, transparent 70%)",
             pointerEvents: "none",
           }} />
 
@@ -501,25 +501,25 @@ export default function SpringWeekdaySchedulePage() {
         </section>
 
         {/* Wave divider */}
-        <div style={{ background: "linear-gradient(160deg, #080f24 0%, #162a58 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 52" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,52 C360,0 1080,0 1440,52 L1440,52 L0,52 Z" fill="#faf8f4" />
           </svg>
         </div>
 
         {/* Discounts strip */}
-        <div style={{ background: "#fff", borderBottom: "1px solid rgba(15,32,68,0.06)" }}>
+        <div style={{ background: "#fff", borderBottom: "1px solid rgba(28,55,156,0.06)" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "1rem clamp(1.25rem, 5vw, 3rem)", display: "flex", flexWrap: "wrap", gap: "0.75rem 2.5rem", alignItems: "center" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <span style={{ fontSize: "0.68rem", fontWeight: 800, color: "#c8922a", letterSpacing: "0.08em" }}>EARLY</span>
-              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Early bird by <span style={{ color: "#c8922a" }}>Dec 23, 2025</span> → $60 off
               </span>
             </div>
-            <div style={{ width: "1px", height: "18px", background: "rgba(15,32,68,0.12)" }} />
+            <div style={{ width: "1px", height: "18px", background: "rgba(28,55,156,0.12)" }} />
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "#c8922a" }}>5%</span>
-              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <span style={{ fontSize: "0.84rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Sibling discount: <span style={{ color: "#c8922a" }}>5% off</span>
               </span>
             </div>
@@ -550,13 +550,13 @@ export default function SpringWeekdaySchedulePage() {
                   fontFamily: "'Playfair Display', Georgia, serif",
                   fontSize: "clamp(1.25rem, 2.5vw, 1.65rem)",
                   fontWeight: 700,
-                  color: "#0f2044",
+                  color: "#1c379c",
                   margin: 0,
                   lineHeight: 1.2,
                 }}>
                   Fall 2026 Weekday Schedule
                 </h2>
-                <p style={{ fontSize: "0.84rem", color: "rgba(15,32,68,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p style={{ fontSize: "0.84rem", color: "rgba(28,55,156,0.45)", margin: "0.4rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   15 sessions for Grades 4-7; 17 sessions for Grade 8 · September 2026 – January 2027
                 </p>
               </div>
@@ -572,11 +572,11 @@ export default function SpringWeekdaySchedulePage() {
                   <div key={item.label} style={{
                     display: "flex", alignItems: "center", gap: "0.4rem",
                     padding: "0.28rem 0.75rem",
-                    background: "rgba(15,32,68,0.03)",
-                    border: "1px solid rgba(15,32,68,0.07)",
+                    background: "rgba(28,55,156,0.03)",
+                    border: "1px solid rgba(28,55,156,0.07)",
                     borderRadius: "20px",
                     fontSize: "0.71rem", fontWeight: 600,
-                    color: "#0f2044",
+                    color: "#1c379c",
                     fontFamily: "'DM Sans', system-ui, sans-serif",
                   }}>
                     <span style={{
@@ -611,7 +611,7 @@ export default function SpringWeekdaySchedulePage() {
 
               {/* Quick info */}
               <div style={{
-                background: "linear-gradient(160deg, #080f24 0%, #0f2044 70%, #162a58 100%)",
+                background: "linear-gradient(160deg, #1c379c 0%, #1c379c 70%, #1c379c 100%)",
                 borderRadius: "20px",
                 border: "1px solid rgba(200,146,42,0.15)",
                 padding: "1.75rem",
@@ -661,8 +661,8 @@ export default function SpringWeekdaySchedulePage() {
               <div style={{
                 background: "#fff",
                 borderRadius: "20px",
-                border: "1px solid rgba(15,32,68,0.07)",
-                boxShadow: "0 4px 24px rgba(15,32,68,0.06)",
+                border: "1px solid rgba(28,55,156,0.07)",
+                boxShadow: "0 4px 24px rgba(28,55,156,0.06)",
                 overflow: "hidden",
                 opacity: sideRef.inView ? 1 : 0,
                 transform: sideRef.inView ? "translateY(0)" : "translateY(20px)",
@@ -680,13 +680,13 @@ export default function SpringWeekdaySchedulePage() {
                 ].map((item) => (
                   <div key={item.label} style={{
                     padding: "0.9rem 1.35rem",
-                    borderBottom: "1px solid rgba(15,32,68,0.05)",
+                    borderBottom: "1px solid rgba(28,55,156,0.05)",
                     display: "flex", alignItems: "flex-start", gap: "0.75rem",
                   }}>
                     <span style={{ fontSize: "0.95rem", flexShrink: 0, marginTop: "1px" }}>{item.icon}</span>
                     <div>
-                      <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "rgba(15,32,68,0.35)", marginBottom: "0.15rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{item.label}</div>
-                      <div style={{ fontSize: "0.83rem", fontWeight: 600, color: "#0f2044", lineHeight: 1.5, fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "pre-line" as const }}>{item.value}</div>
+                      <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "rgba(28,55,156,0.35)", marginBottom: "0.15rem", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{item.label}</div>
+                      <div style={{ fontSize: "0.83rem", fontWeight: 600, color: "#1c379c", lineHeight: 1.5, fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "pre-line" as const }}>{item.value}</div>
                     </div>
                   </div>
                 ))}
@@ -697,7 +697,7 @@ export default function SpringWeekdaySchedulePage() {
                     style={{
                       display: "flex", justifyContent: "center", alignItems: "center", gap: "0.4rem",
                       padding: "0.75rem 1.25rem",
-                      background: "linear-gradient(135deg, #0f2044, #162a58)",
+                      background: "linear-gradient(135deg, #1c379c, #1c379c)",
                       color: "#fff", fontWeight: 700, fontSize: "0.84rem",
                       borderRadius: "10px", textDecoration: "none",
                       fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -726,11 +726,11 @@ export default function SpringWeekdaySchedulePage() {
                   { subject: "Math Test", dates: "Apr 28 – May 8, 2026"  },
                 ].map((t) => (
                   <div key={t.subject} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.5rem 0", borderBottom: "1px solid rgba(200,146,42,0.1)" }}>
-                    <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.subject}</span>
+                    <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.subject}</span>
                     <span style={{ fontSize: "0.76rem", color: "#c8922a", fontWeight: 600, fontFamily: "'DM Sans', system-ui, sans-serif" }}>{t.dates}</span>
                   </div>
                 ))}
-                <p style={{ fontSize: "0.75rem", color: "rgba(15,32,68,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p style={{ fontSize: "0.75rem", color: "rgba(28,55,156,0.4)", margin: "0.65rem 0 0", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   Grade 8 SHSAT prep meets Fridays and Tuesdays through early November.
                 </p>
               </div>
@@ -738,7 +738,7 @@ export default function SpringWeekdaySchedulePage() {
               {/* Special Mondays callout */}
               <div style={{
                 background: "#fff",
-                border: "1px solid rgba(15,32,68,0.07)",
+                border: "1px solid rgba(28,55,156,0.07)",
                 borderRadius: "16px",
                 padding: "1.25rem 1.4rem",
                 borderLeft: "3px solid #c8922a",
@@ -763,7 +763,7 @@ export default function SpringWeekdaySchedulePage() {
                     }}>{d}</span>
                   ))}
                 </div>
-                <p style={{ fontSize: "0.78rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p style={{ fontSize: "0.78rem", color: "rgba(28,55,156,0.5)", margin: 0, lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   Grade 8 students add Tuesday SHSAT sessions from September 15 through November 3.
                 </p>
               </div>
@@ -772,7 +772,7 @@ export default function SpringWeekdaySchedulePage() {
         </section>
 
         {/* ────────────────── CHINESE SECTION ────────────────── */}
-        <section style={{ background: "#fff", borderTop: "1px solid rgba(15,32,68,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
+        <section style={{ background: "#fff", borderTop: "1px solid rgba(28,55,156,0.06)", padding: "3rem clamp(1.25rem, 5vw, 3rem)" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
             <div style={{ marginBottom: "1.5rem" }}>
               <div style={{
@@ -785,21 +785,21 @@ export default function SpringWeekdaySchedulePage() {
                 中文資訊
                 <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
               </div>
-              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#0f2044", margin: 0 }}>
+              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.2rem, 2vw, 1.5rem)", fontWeight: 700, color: "#1c379c", margin: 0 }}>
                 春季班 · 平日課程時間表
               </h2>
-              <p style={{ fontSize: "0.85rem", color: "rgba(15,32,68,0.45)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <p style={{ fontSize: "0.85rem", color: "rgba(28,55,156,0.45)", margin: "0.3rem 0 0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 星期一至星期五課程 · 共15堂課
               </p>
             </div>
 
-            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(15,32,68,0.07)", overflow: "hidden", boxShadow: "0 2px 16px rgba(15,32,68,0.05)" }}>
+            <div style={{ overflowX: "auto", borderRadius: "16px", border: "1px solid rgba(28,55,156,0.07)", overflow: "hidden", boxShadow: "0 2px 16px rgba(28,55,156,0.05)" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" as const }}>
                 <thead>
                   <tr>
                     {["科目", "年級", "上課日", "時間", "堂數"].map((h) => (
                       <th key={h} style={{
-                        background: "linear-gradient(135deg, #080f24, #0f2044)",
+                        background: "linear-gradient(135deg, #1c379c, #1c379c)",
                         color: "rgba(255,255,255,0.82)",
                         fontSize: "0.68rem",
                         fontWeight: 700,
@@ -815,23 +815,23 @@ export default function SpringWeekdaySchedulePage() {
                 </thead>
                 <tbody>
                   {WEEKDAY_CLASSES.map((cls, i) => (
-                    <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "rgba(15,32,68,0.015)" }}>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
+                    <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "rgba(28,55,156,0.015)" }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 600 }}>
                         {cls.subject}
-                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", fontWeight: 400, marginTop: "2px" }}>{cls.subjectZh}</span>
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(28,55,156,0.38)", fontWeight: 400, marginTop: "2px" }}>{cls.subjectZh}</span>
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
                         {cls.grade}
-                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", marginTop: "2px" }}>{cls.gradeZh}</span>
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(28,55,156,0.38)", marginTop: "2px" }}>{cls.gradeZh}</span>
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
                         {cls.dayLabel}
-                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(15,32,68,0.38)", fontWeight: 400, marginTop: "2px" }}>{cls.dayZh}</span>
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "rgba(28,55,156,0.38)", fontWeight: 400, marginTop: "2px" }}>{cls.dayZh}</span>
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#c8922a", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.84rem", fontWeight: 700, color: "#c8922a", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif", whiteSpace: "nowrap" as const }}>
                         {cls.time}
                       </td>
-                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.82rem", color: "#0f2044", borderBottom: "1px solid rgba(15,32,68,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                      <td style={{ padding: "0.875rem 1.2rem", fontSize: "0.82rem", color: "#1c379c", borderBottom: "1px solid rgba(28,55,156,0.05)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                         {cls.sessions}堂
                       </td>
                     </tr>
@@ -847,7 +847,7 @@ export default function SpringWeekdaySchedulePage() {
                 "* 紐約州英文考試：2026年4月14日–4月24日 ｜ 數學考試：4月28日–5月8日",
                 "* 四年級、五年級及七年級同學：4月份有三堂特別星期一課（4/13, 4/20, 4/27）。",
               ].map((note, i) => (
-                <p key={i} style={{ fontSize: "0.82rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.65, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p key={i} style={{ fontSize: "0.82rem", color: "rgba(28,55,156,0.5)", margin: 0, lineHeight: 1.65, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   {note}
                 </p>
               ))}
@@ -859,7 +859,7 @@ export default function SpringWeekdaySchedulePage() {
         <section
           ref={ctaRef.ref}
           style={{
-            background: "linear-gradient(135deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
             padding: "4.5rem clamp(1.25rem, 5vw, 3rem)",
             textAlign: "center",
             position: "relative",
@@ -899,7 +899,7 @@ export default function SpringWeekdaySchedulePage() {
                   display: "inline-flex", alignItems: "center", gap: "0.5rem",
                   padding: "0.9rem 2rem",
                   background: "linear-gradient(135deg, #c8922a, #e8b84b)",
-                  color: "#0f2044", fontWeight: 700, fontSize: "0.9rem",
+                  color: "#1c379c", fontWeight: 700, fontSize: "0.9rem",
                   borderRadius: "12px", textDecoration: "none",
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                 }}

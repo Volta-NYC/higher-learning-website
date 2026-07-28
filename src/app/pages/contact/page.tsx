@@ -37,9 +37,9 @@ function ContactForm() {
     padding: "0.75rem 1rem",
     fontSize: "0.9rem",
     fontFamily: "'DM Sans', system-ui, sans-serif",
-    color: "#0f2044",
+    color: "#1c379c",
     background: focused === name ? "#fff" : "#faf8f4",
-    border: `1.5px solid ${focused === name ? "#c8922a" : "rgba(15,32,68,0.12)"}`,
+    border: `1.5px solid ${focused === name ? "#c8922a" : "rgba(28,55,156,0.12)"}`,
     borderRadius: "10px",
     outline: "none",
     transition: "border-color 0.2s, background 0.2s",
@@ -50,7 +50,7 @@ function ContactForm() {
     display: "block",
     fontSize: "0.75rem",
     fontWeight: 600,
-    color: "rgba(15,32,68,0.55)",
+    color: "rgba(28,55,156,0.55)",
     letterSpacing: "0.06em",
     textTransform: "uppercase",
     marginBottom: "0.4rem",
@@ -61,10 +61,10 @@ function ContactForm() {
     return (
       <div style={{ textAlign: "center", padding: "3rem 1rem" }}>
         <div style={{ fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.14em", color: "#c8922a", marginBottom: "1rem" }}>SENT</div>
-        <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.4rem", color: "#0f2044", margin: "0 0 0.75rem" }}>
+        <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.4rem", color: "#1c379c", margin: "0 0 0.75rem" }}>
           Message Sent! <span className="zh">已收到留言</span>
         </h3>
-        <p style={{ fontSize: "0.9rem", color: "rgba(15,32,68,0.55)", lineHeight: 1.7 }}>
+        <p style={{ fontSize: "0.9rem", color: "rgba(28,55,156,0.55)", lineHeight: 1.7 }}>
           Thank you for reaching out. Our team will get back to you as soon as possible.
           <span className="zh" style={{ display: "block", marginTop: "0.35rem" }}>謝謝您的聯繫，我們會盡快回覆。</span>
         </p>
@@ -135,7 +135,7 @@ function ContactForm() {
           background: status === "sending"
             ? "rgba(200,146,42,0.6)"
             : "linear-gradient(135deg, #c8922a, #e8b84b)",
-          color: "#0f2044",
+          color: "#1c379c",
           fontWeight: 700,
           fontSize: "0.9rem",
           borderRadius: "10px",
@@ -269,7 +269,7 @@ export default function ContactPage() {
 
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
         <section className="hl-photo-hero hl-photo-hero-contact" style={{
-          background: "linear-gradient(160deg, #080f24 0%, #0f2044 60%, #162a58 100%)",
+          background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
           padding: "5rem 0 4.5rem",
           position: "relative",
           overflow: "hidden",
@@ -324,7 +324,7 @@ export default function ContactPage() {
         </section>
 
         {/* Wave divider */}
-        <div style={{ background: "linear-gradient(160deg, #080f24 0%, #162a58 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#faf8f4" />
           </svg>
@@ -342,8 +342,8 @@ export default function ContactPage() {
               style={{
                 background: "#fff",
                 borderRadius: "20px",
-                border: "1px solid rgba(15,32,68,0.07)",
-                boxShadow: "0 4px 24px rgba(15,32,68,0.07)",
+                border: "1px solid rgba(28,55,156,0.07)",
+                boxShadow: "0 4px 24px rgba(28,55,156,0.07)",
                 padding: "2.5rem",
                 opacity: formRef.inView ? 1 : 0,
                 transform: formRef.inView ? "translateY(0)" : "translateY(20px)",
@@ -356,10 +356,10 @@ export default function ContactPage() {
                   Get In Touch
                   <span style={{ display: "block", width: "18px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
                 </div>
-                <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 700, color: "#0f2044", margin: "0 0 0.5rem", lineHeight: 1.2 }}>
+                <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 700, color: "#1c379c", margin: "0 0 0.5rem", lineHeight: 1.2 }}>
                   Send Us a Message
                 </h2>
-                <p style={{ fontSize: "0.875rem", color: "rgba(15,32,68,0.5)", margin: 0, lineHeight: 1.6 }}>
+                <p style={{ fontSize: "0.875rem", color: "rgba(28,55,156,0.5)", margin: 0, lineHeight: 1.6 }}>
                   Ask about enrollment, class schedules, or anything else — we&apos;ll respond promptly.
                 </p>
               </div>
@@ -371,7 +371,7 @@ export default function ContactPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {/* Dark info card */}
               <div style={{
-                background: "linear-gradient(160deg, #080f24 0%, #0f2044 70%, #162a58 100%)",
+                background: "linear-gradient(160deg, #1c379c 0%, #1c379c 70%, #1c379c 100%)",
                 borderRadius: "20px",
                 border: "1px solid rgba(200,146,42,0.15)",
                 padding: "2rem",
@@ -466,8 +466,8 @@ export default function ContactPage() {
               <div style={{
                 background: "#fff",
                 borderRadius: "16px",
-                border: "1px solid rgba(15,32,68,0.07)",
-                boxShadow: "0 2px 12px rgba(15,32,68,0.05)",
+                border: "1px solid rgba(28,55,156,0.07)",
+                boxShadow: "0 2px 12px rgba(28,55,156,0.05)",
                 padding: "1.5rem",
               }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1.1rem" }}>
@@ -476,7 +476,7 @@ export default function ContactPage() {
                       <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                     </svg>
                   </div>
-                  <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Office Hours</span>
+                  <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>Office Hours</span>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem" }}>
                   {[
@@ -485,12 +485,12 @@ export default function ContactPage() {
                     { day: "Sunday", hours: "Closed" },
                   ].map((h) => (
                     <div key={h.day} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <span style={{ fontSize: "0.8rem", color: "rgba(15,32,68,0.6)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{h.day}</span>
-                      <span style={{ fontSize: "0.8rem", fontWeight: 600, color: h.hours === "Closed" ? "rgba(15,32,68,0.3)" : "#0f2044", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{h.hours}</span>
+                      <span style={{ fontSize: "0.8rem", color: "rgba(28,55,156,0.6)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{h.day}</span>
+                      <span style={{ fontSize: "0.8rem", fontWeight: 600, color: h.hours === "Closed" ? "rgba(28,55,156,0.3)" : "#1c379c", fontFamily: "'DM Sans', system-ui, sans-serif" }}>{h.hours}</span>
                     </div>
                   ))}
                 </div>
-                <p style={{ margin: "1rem 0 0", fontSize: "0.75rem", color: "rgba(15,32,68,0.4)", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                <p style={{ margin: "1rem 0 0", fontSize: "0.75rem", color: "rgba(28,55,156,0.4)", lineHeight: 1.6, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                   * Hours may vary during school breaks and holidays.
                 </p>
               </div>
@@ -509,7 +509,7 @@ export default function ContactPage() {
         >
           {/* Map header bar */}
           <div style={{
-            background: "linear-gradient(135deg, #080f24 0%, #0f2044 100%)",
+            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 100%)",
             padding: "2.5rem clamp(1.25rem, 5vw, 3rem)",
             display: "flex",
             alignItems: "center",
@@ -533,7 +533,7 @@ export default function ContactPage() {
                 gap: "0.5rem",
                 padding: "0.7rem 1.4rem",
                 background: "linear-gradient(135deg, #c8922a, #e8b84b)",
-                color: "#0f2044",
+                color: "#1c379c",
                 fontWeight: 700,
                 fontSize: "0.825rem",
                 borderRadius: "10px",
