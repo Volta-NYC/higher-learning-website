@@ -315,6 +315,11 @@ small {
   mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.78) 52%, transparent 100%);
 }
 
+.hl-photo-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
 .hl-photo-hero-home {
   --hl-hero-image: url("/images/higher-learning/2025-05-14.webp");
   --hl-hero-position: center 42%;
@@ -388,17 +393,28 @@ small {
 
 @media (max-width: 720px) {
   .hl-photo-hero {
-    min-height: 420px;
+    min-height: auto;
+    padding-top: clamp(3.5rem, 12vw, 5rem) !important;
+    padding-bottom: clamp(3.5rem, 12vw, 5rem) !important;
   }
 
   .hl-photo-hero::before {
     background-image:
-      linear-gradient(180deg, rgba(8, 15, 36, 0.88) 0%, rgba(8, 15, 36, 0.74) 48%, rgba(8, 15, 36, 0.86) 100%),
+      linear-gradient(180deg, rgba(8, 15, 36, 0.94) 0%, rgba(8, 15, 36, 0.84) 48%, rgba(8, 15, 36, 0.94) 100%),
       var(--hl-hero-image);
+    transform: none;
   }
 
   .hl-photo-hero::after {
     mask-image: none;
+  }
+
+  .hl-photo-hero h1 {
+    overflow-wrap: anywhere;
+  }
+
+  .hl-hero-zh {
+    max-width: 100%;
   }
 }
 
