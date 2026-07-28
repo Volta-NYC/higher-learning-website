@@ -35,6 +35,13 @@ const articles: BlogArticle[] = [
           "The final stage of preparation should include timed practice, but timing should come after accuracy. When students first learn a skill slowly and correctly, speed follows. A good tutor watches the pattern behind the mistake: Is the student misreading? Skipping steps? Guessing too early? Once that pattern is clear, practice becomes much more efficient.",
         ],
       },
+      {
+        heading: "Use released questions the right way",
+        paragraphs: [
+          "NYSED publishes released questions and scoring materials for Grades 3-8 ELA and math, and families should treat those materials as a window into the exam's language. Do not burn through them all at once. Choose a small set, have the student answer independently, then spend twice as much time reviewing the reasoning. The review is where the learning happens.",
+          "For ELA, ask students to underline the sentence that proves the answer. For math, ask them to label the operation before calculating. If a student cannot explain the method in words, the skill is not secure yet. A simple mistake log with three columns - question type, error, corrected strategy - can turn random practice into a clear plan for the next lesson.",
+        ],
+      },
     ],
   },
   {
@@ -55,6 +62,13 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "The best test prep asks students to do more than circle answers. They should annotate, eliminate, estimate, check, and explain. In ELA, students learn to connect answers to evidence rather than choosing what sounds reasonable. In math, they learn to slow down at the setup stage, because most errors happen before the calculation even begins.",
           "Families can support this process by keeping routines steady. A predictable weekly schedule, a quiet work space, and brief review after each practice test all help. Scores matter, but they are not the only signal. Watch for cleaner scratch work, better pacing, and less panic around hard questions. Those are signs that preparation is becoming durable.",
+        ],
+      },
+      {
+        heading: "Match the prep to the test",
+        paragraphs: [
+          "Different standardized tests reward different habits. State exams often ask students to show grade-level reading and math mastery. The SHSAT adds unusual pacing pressure and a wider mix of problem types. The SAT and PSAT are digital, so students also need comfort with the testing platform, embedded tools, and shorter question sets.",
+          "That is why families should avoid one-size-fits-all prep. A student preparing for the SAT should use official digital practice through Bluebook when possible. A student preparing for state tests should review released New York questions. A student preparing for the SHSAT should learn to move between ELA and math without losing stamina. The right materials matter because they teach students the rhythm of the real exam.",
         ],
       },
     ],
@@ -80,6 +94,13 @@ const articles: BlogArticle[] = [
           "For families in Lower Manhattan, Chinatown, Brooklyn, and Queens, Higher Learning offers the kind of structure many students need: small classes, experienced teachers, and programs that connect school skills with exam preparation. The right tutoring center should make your child more independent over time. If a student starts to read directions more carefully, organize work more clearly, and ask better questions, the tutoring is doing its job.",
         ],
       },
+      {
+        heading: "Ask questions before enrolling",
+        paragraphs: [
+          "Before choosing a tutoring center, parents should ask what the first month will look like. Will the teacher diagnose skills first? Will the class include homework review, new instruction, and independent practice? How will parents know whether the student is improving? A good center can answer these questions plainly.",
+          "Also pay attention to class culture. Students should not be embarrassed for making mistakes, but they should be expected to correct them. The room should feel focused. The work should feel purposeful. Families often think they are buying extra time with a teacher, but what they really need is a system: clear goals, steady attendance, careful review, and teachers who know how to turn confusion into progress.",
+        ],
+      },
     ],
   },
   {
@@ -101,6 +122,13 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "Preparation should start with fundamentals. Students need strong arithmetic, fraction sense, sentence structure, vocabulary, and reading stamina before advanced strategies can help. Once the foundation is stable, practice exams become useful because they reveal pacing, endurance, and recurring mistake patterns.",
           "Families should avoid measuring progress by one practice score alone. A student may need several weeks before new habits show up in the score. Better signs include cleaner work, fewer careless errors, stronger explanations, and the ability to return to skipped questions calmly. SHSAT preparation is demanding, but with structure and honest feedback, it becomes manageable.",
+        ],
+      },
+      {
+        heading: "Know the admissions process",
+        paragraphs: [
+          "Families should read the official NYC Public Schools SHSAT guide each year because test-day policies, registration details, and digital testing instructions can change. Students should understand which specialized high schools use the SHSAT, how school preference order works, and what they are allowed to bring on test day. Preparation is easier when the process feels familiar.",
+          "The strongest students do not simply memorize tricks. They learn how to work through unfamiliar questions without panicking. In math, that may mean drawing a diagram, testing answer choices, or estimating before solving. In ELA, it may mean rereading the exact sentence that controls the answer. The SHSAT is competitive, but disciplined practice can make it feel less mysterious.",
         ],
       },
     ],
@@ -126,6 +154,13 @@ const articles: BlogArticle[] = [
           "Our location at 84 Bowery makes Higher Learning accessible for families across Lower Manhattan and beyond. But the real reason families stay is consistency. Progress comes from showing up, doing the work, and having teachers who know when to explain, when to push, and when to rebuild confidence.",
         ],
       },
+      {
+        heading: "Why local experience matters",
+        paragraphs: [
+          "NYC students face a particular mix of demands: state exams, selective school pressure, crowded school schedules, long commutes, and families trying to balance academics with everything else. A local tutoring center understands that rhythm. The work has to be serious, but the plan also has to fit real family life.",
+          "At Higher Learning, that means building programs around the subjects parents ask for again and again: reading comprehension, writing, grammar, mathematics, SHSAT preparation, and SAT or PSAT support. The value is not only in teaching a lesson. It is in seeing the student week after week and knowing when the issue is content, confidence, focus, or practice habits.",
+        ],
+      },
     ],
   },
   {
@@ -147,6 +182,13 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "After a practice exam, students should not simply write down the score and move on. They should sort mistakes into categories: content gap, careless error, time pressure, misread question, or weak strategy. This makes the next week of studying much clearer. A student who misses geometry questions needs a different plan than a student who knows the content but loses points from rushing.",
           "Parents can help by keeping the process steady. Specialized high school admission is competitive, but panic does not improve performance. A calm routine, honest feedback, and regular practice create the conditions students need. The goal is not just to work harder. It is to work with enough precision that every practice session teaches something.",
+        ],
+      },
+      {
+        heading: "Make practice exams count",
+        paragraphs: [
+          "Practice exams should be scheduled carefully. Too many full tests too early can exhaust students and hide the real issue. Early in the process, shorter targeted sets are often better: one passage with full review, one math topic, one revising and editing set, one timed mixed section. Full exams become more useful once the student has enough content knowledge to learn from the result.",
+          "When students do take full practice exams, the environment matters. Use a quiet room, follow timing rules, and avoid checking answers halfway through. Then review the test in layers. First identify the easiest points to recover. Then review repeated weaknesses. Finally, choose a small number of skills for the next week. That routine makes preparation feel concrete instead of overwhelming.",
         ],
       },
     ],
@@ -172,6 +214,13 @@ const articles: BlogArticle[] = [
           "Families should treat weekend tutoring as part of a weekly rhythm. Students make the most progress when they attend consistently, complete assigned practice, and review mistakes before the next class. At Higher Learning, weekend programs are designed to give students that rhythm: clear instruction, careful practice, and enough repetition for skills to stick.",
         ],
       },
+      {
+        heading: "Plan around school deadlines",
+        paragraphs: [
+          "A weekend program should support the school year, not compete with it. In the fall, many students need help rebuilding routines after summer. By winter, teachers can usually see which skills are still fragile. In spring, state tests, report cards, and admissions timelines create more pressure. The earlier families establish a routine, the less rushed the year feels.",
+          "Parents should bring school concerns into the conversation: recent test scores, writing comments from teachers, math topics that caused trouble, or upcoming exams. The more context a tutoring center has, the better it can target classwork and homework. Weekend tutoring works best when it becomes the place where students organize the week, repair weak skills, and prepare for the next challenge.",
+        ],
+      },
     ],
   },
   {
@@ -193,6 +242,13 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "A class schedule is only useful if it becomes a system. Students should know when they attend, what they are expected to complete, and how their mistakes will be reviewed. Parents should know whether the goal is school support, enrichment, state test prep, SHSAT prep, or a combination.",
           "The strongest results come when families and teachers stay aligned. If a student is struggling with fractions, reading inference, grammar, or essay structure, that should shape the work immediately. If a student is ready for more advanced material, the pace should rise. Weekend tutoring gives everyone a consistent checkpoint, and that consistency is often what turns effort into visible progress.",
+        ],
+      },
+      {
+        heading: "Choose the class by goal",
+        paragraphs: [
+          "Families should choose a weekend class based on the student's most important academic need. A student who reads slowly may need comprehension and vocabulary work before test strategy. A student who makes careless math errors may need organization and problem setup. A student preparing for selective admissions may need harder mixed practice and more frequent timed review.",
+          "It is also worth thinking about the student's week. A child already overloaded after school may do better with a weekend block when they are rested. A student who needs accountability may benefit from having assignments due at the same time every week. The schedule should create momentum, not just fill a time slot.",
         ],
       },
     ],
