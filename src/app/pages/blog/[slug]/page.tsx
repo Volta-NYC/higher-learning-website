@@ -42,6 +42,20 @@ const articles: BlogArticle[] = [
           "For ELA, ask students to underline the sentence that proves the answer. For math, ask them to label the operation before calculating. If a student cannot explain the method in words, the skill is not secure yet. A simple mistake log with three columns - question type, error, corrected strategy - can turn random practice into a clear plan for the next lesson.",
         ],
       },
+      {
+        heading: "Build a week-by-week routine",
+        paragraphs: [
+          "A strong state test plan does not need to be dramatic. Monday can be vocabulary and reading fluency, Tuesday can be math fluency, Wednesday can be one passage, Thursday can be word problems, and the weekend can be review. The point is to create enough repetition that students stop treating each question like a brand-new emergency.",
+          "Parents should watch for effort quality, not just minutes spent. Is the student correcting mistakes fully? Are they writing out math steps? Can they explain an answer without looking at the key? If the answer is no, the assignment may be complete on paper but unfinished academically. Shorter, better-reviewed practice is usually more valuable than a thick packet done quickly.",
+        ],
+      },
+      {
+        heading: "Keep confidence connected to evidence",
+        paragraphs: [
+          "Students often lose confidence because they only notice the final score. Teachers and parents can help by pointing to concrete growth: fewer skipped questions, stronger written explanations, neater scratch work, or better use of passage evidence. These small improvements matter because they show that the student is learning how to take control of the test.",
+          "The weeks before the exam should feel calm and organized. Students should know what they are reviewing, why it matters, and how to handle hard questions. When preparation is built around habits instead of panic, test day becomes another chance to use familiar routines.",
+        ],
+      },
     ],
   },
   {
@@ -69,6 +83,20 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "Different standardized tests reward different habits. State exams often ask students to show grade-level reading and math mastery. The SHSAT adds unusual pacing pressure and a wider mix of problem types. The SAT and PSAT are digital, so students also need comfort with the testing platform, embedded tools, and shorter question sets.",
           "That is why families should avoid one-size-fits-all prep. A student preparing for the SAT should use official digital practice through Bluebook when possible. A student preparing for state tests should review released New York questions. A student preparing for the SHSAT should learn to move between ELA and math without losing stamina. The right materials matter because they teach students the rhythm of the real exam.",
+        ],
+      },
+      {
+        heading: "Separate content problems from testing problems",
+        paragraphs: [
+          "One of the biggest mistakes in test prep is treating every wrong answer the same way. Some errors mean the student never learned the skill. Some mean the student knew the skill but rushed. Some mean the student misunderstood the question. Each problem requires a different response, so review should always ask what kind of error happened before assigning more practice.",
+          "For example, a student who misses percent questions may need a mini-lesson on ratios. A student who misses the last five questions of every section may need pacing work. A student who changes correct answers to wrong ones may need confidence and evidence-checking routines. Good preparation becomes sharper when the teacher can name the real issue.",
+        ],
+      },
+      {
+        heading: "Make the final month intentional",
+        paragraphs: [
+          "The last month before a standardized test should not be a frantic sprint through every topic. It should be a narrowing process. Students should review high-frequency skills, revisit their own mistake logs, and practice the exact timing habits they will use on test day. New material can still be taught, but the main goal is reliability.",
+          "A helpful final-month routine includes one timed set, one untimed correction session, one targeted lesson, and one short confidence-building review each week. Students need enough challenge to stay sharp, but they also need to see that their work is paying off. That balance is what turns preparation into performance.",
         ],
       },
     ],
@@ -101,6 +129,20 @@ const articles: BlogArticle[] = [
           "Also pay attention to class culture. Students should not be embarrassed for making mistakes, but they should be expected to correct them. The room should feel focused. The work should feel purposeful. Families often think they are buying extra time with a teacher, but what they really need is a system: clear goals, steady attendance, careful review, and teachers who know how to turn confusion into progress.",
         ],
       },
+      {
+        heading: "Look for progress you can actually see",
+        paragraphs: [
+          "The best tutoring centers can describe progress in ordinary language. A parent should hear more than “doing well” or “needs practice.” Useful feedback sounds like this: your child is improving on inference questions, still needs to slow down on multi-step math, or is beginning to use evidence more consistently in writing. Specific feedback helps families trust the process.",
+          "Students should also be able to tell you what they are working on. If a child leaves every session saying only that they did homework, the instruction may not be clear enough. If they can say they practiced fractions, revised a paragraph, reviewed grammar, or learned how to eliminate answer choices, the tutoring is becoming visible to them too.",
+        ],
+      },
+      {
+        heading: "Fit matters as much as reputation",
+        paragraphs: [
+          "A tutoring center can have strong results and still not be the right fit for every child. Some students need a quieter room. Some need a faster pace. Some need more structure around homework. Parents should look for a place that can adjust without losing standards. Flexibility and seriousness should work together.",
+          "The goal is not to keep a student dependent on tutoring forever. The goal is to build habits they carry back to school: reading directions carefully, showing work, revising writing, asking better questions, and reviewing mistakes honestly. When those habits travel, the tutoring is doing more than raising a score.",
+        ],
+      },
     ],
   },
   {
@@ -129,6 +171,20 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "Families should read the official NYC Public Schools SHSAT guide each year because test-day policies, registration details, and digital testing instructions can change. Students should understand which specialized high schools use the SHSAT, how school preference order works, and what they are allowed to bring on test day. Preparation is easier when the process feels familiar.",
           "The strongest students do not simply memorize tricks. They learn how to work through unfamiliar questions without panicking. In math, that may mean drawing a diagram, testing answer choices, or estimating before solving. In ELA, it may mean rereading the exact sentence that controls the answer. The SHSAT is competitive, but disciplined practice can make it feel less mysterious.",
+        ],
+      },
+      {
+        heading: "Balance ELA and math from the beginning",
+        paragraphs: [
+          "Many students naturally prefer one side of the SHSAT. A strong reader may avoid math practice; a confident math student may underestimate revising, editing, and passage questions. That imbalance can become expensive. Since the exam requires both accuracy and stamina, preparation should include ELA and math every week, even when one area feels stronger.",
+          "For ELA, students should practice reading for proof rather than opinion. For math, they should practice setting up problems before solving. The shared habit is precision. The student who learns to slow down at the right moment often gains more than the student who simply tries to move faster.",
+        ],
+      },
+      {
+        heading: "Start early enough to change habits",
+        paragraphs: [
+          "A few weeks of cramming can review formulas, but it rarely changes the habits that cost students points. Students need time to build reading stamina, repair weak math foundations, and become comfortable with timed sections. Earlier preparation also gives teachers time to identify whether a score problem comes from content, pacing, or confidence.",
+          "That does not mean every student needs years of intense prep. It means the plan should be honest about the student's current level. A student already scoring strongly may need refinement and harder mixed sets. A student with gaps may need a slower foundation-first plan. The earlier the diagnosis happens, the more realistic the path becomes.",
         ],
       },
     ],
@@ -161,6 +217,20 @@ const articles: BlogArticle[] = [
           "At Higher Learning, that means building programs around the subjects parents ask for again and again: reading comprehension, writing, grammar, mathematics, SHSAT preparation, and SAT or PSAT support. The value is not only in teaching a lesson. It is in seeing the student week after week and knowing when the issue is content, confidence, focus, or practice habits.",
         ],
       },
+      {
+        heading: "A strong foundation helps every path",
+        paragraphs: [
+          "Not every student who comes to Higher Learning is preparing for the same goal. Some are trying to catch up in school. Some are preparing for state exams. Some are looking ahead to specialized high schools. Others need writing support, stronger math habits, or more confidence speaking up in class. The common thread is foundation.",
+          "Students who read carefully, write clearly, and show organized math work are better prepared for almost every academic challenge. That is why a neighborhood tutoring center should not only chase the next test date. It should help students build skills that continue to matter after the exam is over.",
+        ],
+      },
+      {
+        heading: "What makes a center worth returning to",
+        paragraphs: [
+          "Families return when they feel the center knows their child. That knowledge comes from repeated teaching, careful observation, and honest communication. A student is not just a score report. They may be bright but careless, hardworking but anxious, advanced but disorganized, or capable but inconsistent. Good teaching starts by noticing the difference.",
+          "For more than 30 years, Higher Learning has worked with families who want both care and academic seriousness. The center's job is to make progress feel possible, but also to make the work real. That combination is why local trust matters.",
+        ],
+      },
     ],
   },
   {
@@ -189,6 +259,20 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "Practice exams should be scheduled carefully. Too many full tests too early can exhaust students and hide the real issue. Early in the process, shorter targeted sets are often better: one passage with full review, one math topic, one revising and editing set, one timed mixed section. Full exams become more useful once the student has enough content knowledge to learn from the result.",
           "When students do take full practice exams, the environment matters. Use a quiet room, follow timing rules, and avoid checking answers halfway through. Then review the test in layers. First identify the easiest points to recover. Then review repeated weaknesses. Finally, choose a small number of skills for the next week. That routine makes preparation feel concrete instead of overwhelming.",
+        ],
+      },
+      {
+        heading: "Treat school choice as part of prep",
+        paragraphs: [
+          "Students often focus only on the test, but specialized high school admissions also require families to think carefully about school preference. Students should learn about each school, commute time, academic programs, culture, and daily expectations. A high score matters, but the preference list should reflect where the student can actually thrive.",
+          "This conversation can also motivate preparation in a healthy way. Instead of studying for an abstract number, students begin to understand what kind of high school experience they are working toward. That sense of purpose can make long practice sessions feel less random.",
+        ],
+      },
+      {
+        heading: "Protect stamina and confidence",
+        paragraphs: [
+          "SHSAT preparation can become emotionally heavy if every practice result feels like a verdict. Teachers and parents should frame practice as information. A missed question is not proof that the student cannot succeed; it is a clue about what to review next. That mindset keeps students engaged long enough to improve.",
+          "Stamina also needs deliberate training. Students should gradually move from short sets to longer timed sections, then to full exams. Along the way, they need strategies for what to do when they feel stuck: skip, mark, breathe, estimate, reread, and return. Confidence grows when students have a plan for difficult moments.",
         ],
       },
     ],
@@ -221,6 +305,20 @@ const articles: BlogArticle[] = [
           "Parents should bring school concerns into the conversation: recent test scores, writing comments from teachers, math topics that caused trouble, or upcoming exams. The more context a tutoring center has, the better it can target classwork and homework. Weekend tutoring works best when it becomes the place where students organize the week, repair weak skills, and prepare for the next challenge.",
         ],
       },
+      {
+        heading: "Make homework manageable",
+        paragraphs: [
+          "Weekend tutoring should not bury students under work they cannot realistically complete. Homework should be purposeful: enough practice to reinforce the lesson, not so much that students rush or avoid it. A well-designed assignment lets teachers see whether the student can apply the skill independently after class.",
+          "Parents can help by setting a consistent homework window during the week. Even twenty to thirty minutes at a predictable time can keep the lesson fresh. If the student struggles, they should mark the problem and bring it back instead of guessing through the whole assignment. That habit teaches responsibility without turning homework into a nightly fight.",
+        ],
+      },
+      {
+        heading: "Use weekends for deeper thinking",
+        paragraphs: [
+          "The advantage of a weekend block is that students can slow down. Teachers have time to unpack a reading passage, model a math setup, revise a paragraph, or review several related mistakes. That deeper work is hard to do when everyone is exhausted after a long school day.",
+          "A good weekend program should leave students with something clearer than when they arrived. They should know the strategy they practiced, the mistake they corrected, and the next step. That clarity is what keeps weekend tutoring from becoming just another activity on the calendar.",
+        ],
+      },
     ],
   },
   {
@@ -249,6 +347,20 @@ const articles: BlogArticle[] = [
         paragraphs: [
           "Families should choose a weekend class based on the student's most important academic need. A student who reads slowly may need comprehension and vocabulary work before test strategy. A student who makes careless math errors may need organization and problem setup. A student preparing for selective admissions may need harder mixed practice and more frequent timed review.",
           "It is also worth thinking about the student's week. A child already overloaded after school may do better with a weekend block when they are rested. A student who needs accountability may benefit from having assignments due at the same time every week. The schedule should create momentum, not just fill a time slot.",
+        ],
+      },
+      {
+        heading: "Review progress every few weeks",
+        paragraphs: [
+          "A schedule should not stay fixed if the student's needs change. Every few weeks, families should ask what is improving and what still needs attention. A student may begin in general math support and later need more word-problem practice. Another may start with reading comprehension and then shift toward writing organization.",
+          "That review does not need to be complicated. Teachers can look at classwork, homework patterns, quiz results, and the student's confidence during lessons. The point is to keep the program responsive. When the schedule and instruction evolve together, students are less likely to plateau.",
+        ],
+      },
+      {
+        heading: "Consistency beats intensity",
+        paragraphs: [
+          "Many families wait until a grade drops or an exam feels close, then try to solve everything at once. Weekend tutoring works better when it begins before the crisis. A steady class gives students time to absorb skills, make mistakes, correct them, and try again the next week.",
+          "Consistency also helps families see progress more clearly. Instead of asking whether one session changed everything, the better question is whether the student is building better habits month by month. Strong academic growth usually looks like that: quieter, steadier, and more durable than a last-minute push.",
         ],
       },
     ],
