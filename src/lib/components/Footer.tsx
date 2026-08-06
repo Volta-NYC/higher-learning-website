@@ -104,14 +104,14 @@ export default function Footer() {
           <div className="flex flex-col gap-1">
             <span>© {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993</span>
             <span className="text-xs text-white/24">
-              Built by{" "}
+              Made by{" "}
               <a
-                href="https://voltanyc.org/"
+                href="https://www.novusnyc.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#39d98a] transition-colors hover:text-[#6ff0ad]"
+                className="font-semibold text-[#F6B78D] hover:text-[#F6B78D]"
               >
-                Volta
+                Made by Novus
               </a>
             </span>
           </div>
