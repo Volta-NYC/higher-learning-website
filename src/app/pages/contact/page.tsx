@@ -23,9 +23,17 @@ function useInView(threshold = 0.08) {
 function ContactForm() {
   const [fields, setFields] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [focused, setFocused] = useState<string | null>(null);
 
   const handleSubmit = async () => {
+    if (!fields.name.trim() || !/^\S+@\S+\.\S+$/.test(fields.email.trim())) {
+      setErrorMessage("Please enter your name and a valid email address.");
+      setStatus("error");
+      return;
+    }
+
+    setErrorMessage("");
     setStatus("sending");
 
     try {
@@ -35,11 +43,20 @@ function ContactForm() {
         body: JSON.stringify(fields),
       });
 
-      if (!response.ok) throw new Error("Contact submission failed");
+      const result = await response.json() as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error || "We couldn't send your message. Please try again.");
+      }
 
       setFields({ name: "", email: "", subject: "", message: "" });
       setStatus("sent");
-    } catch {
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "We couldn't send your message. Please try again or contact us directly."
+      );
       setStatus("error");
     }
   };
@@ -165,7 +182,7 @@ function ContactForm() {
 
       {status === "error" && (
         <p role="alert" style={{ color: "#b42318", fontSize: "0.9rem", margin: 0 }}>
-          We couldn&apos;t send your message. Please try again or contact us directly.
+          {errorMessage}
         </p>
       )}
     </div>
