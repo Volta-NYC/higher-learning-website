@@ -106,8 +106,8 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
         background: isEven ? "#fff" : "#faf8f4",
         borderRadius: "20px",
         overflow: "hidden",
-        border: "1px solid rgba(28,55,156,0.07)",
-        boxShadow: "0 2px 12px rgba(28,55,156,0.06)",
+        border: "1px solid rgba(2,1,74,0.07)",
+        boxShadow: "0 2px 12px rgba(2,1,74,0.06)",
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0)" : "translateY(32px)",
         transition: "opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1)",
@@ -119,7 +119,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
       <div
         style={{
           position: "relative",
-          background: "linear-gradient(145deg, #1c379c 0%, #1c379c 100%)",
+          background: "linear-gradient(145deg, #02014a 0%, #02014a 100%)",
           minHeight: "380px",
           display: "flex",
           flexDirection: "column",
@@ -220,7 +220,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
             top: "1.25rem",
             left: "1.25rem",
             padding: "0.35rem 0.9rem",
-            background: "rgba(28,55,156,0.7)",
+            background: "rgba(2,1,74,0.7)",
             backdropFilter: "blur(8px)",
             borderRadius: "50px",
             border: "1px solid rgba(200,146,42,0.35)",
@@ -264,7 +264,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
               fontFamily: "'Playfair Display', Georgia, serif",
               fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)",
               fontWeight: 700,
-              color: "#1c379c",
+              color: "#02014a",
               margin: "0 0 0.4rem",
               lineHeight: 1.1,
             }}
@@ -278,11 +278,11 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
               style={{
                 padding: "0.2rem 0.7rem",
                 borderRadius: "50px",
-                background: "rgba(28,55,156,0.06)",
-                border: "1px solid rgba(28,55,156,0.1)",
+                background: "rgba(2,1,74,0.06)",
+                border: "1px solid rgba(2,1,74,0.1)",
                 fontSize: "0.7rem",
                 fontWeight: 600,
-                color: "#1c379c",
+                color: "#02014a",
                 letterSpacing: "0.04em",
               }}
             >
@@ -315,7 +315,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
         <p
           style={{
             fontSize: "0.875rem",
-            color: "rgba(28,55,156,0.65)",
+            color: "rgba(2,1,74,0.65)",
             lineHeight: 1.8,
             margin: "0 0 1.5rem",
           }}
@@ -378,11 +378,11 @@ export default function TeachersPage() {
         }
 
         .hl-teacher-card:hover {
-          box-shadow: 0 8px 40px rgba(28,55,156,0.12) !important;
+          box-shadow: 0 8px 40px rgba(2,1,74,0.12) !important;
         }
 
         .hl-teacher-image-frame {
-          border: 2px solid rgba(28,55,156,0.78);
+          border: 2px solid rgba(2,1,74,0.78);
           outline: 8px solid rgba(255,255,255,0.88);
           outline-offset: -14px;
           box-shadow:
@@ -445,7 +445,7 @@ export default function TeachersPage() {
           gap: 0.5rem;
           padding: 0.9rem 2rem;
           background: linear-gradient(135deg, #c8922a, #e8b84b);
-          color: #1c379c;
+          color: #02014a;
           font-weight: 700;
           font-size: 0.9rem;
           border-radius: 10px;
@@ -481,7 +481,7 @@ export default function TeachersPage() {
         <section
           className="hl-photo-hero hl-photo-hero-teachers"
           style={{
-            background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
+            background: "linear-gradient(160deg, #02014a 0%, #02014a 60%, #02014a 100%)",
             padding: "5rem 0 4.5rem",
             position: "relative",
             overflow: "hidden",
@@ -573,7 +573,7 @@ export default function TeachersPage() {
         </section>
 
         {/* Wave divider */}
-        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #02014a 0%, #02014a 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#faf8f4" />
           </svg>
@@ -614,14 +614,14 @@ export default function TeachersPage() {
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: "clamp(1.75rem, 3vw, 2.4rem)",
                 fontWeight: 700,
-                color: "#1c379c",
+                color: "#02014a",
                 margin: "0 0 0.6rem",
                 lineHeight: 1.2,
               }}
             >
               Decades of Experience, Proven Results
             </h2>
-            <p style={{ fontSize: "0.95rem", color: "rgba(28,55,156,0.55)", maxWidth: "520px", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontSize: "0.95rem", color: "rgba(2,1,74,0.55)", maxWidth: "520px", lineHeight: 1.7, margin: 0 }}>
               Every teacher at Higher Learning is licensed and has spent years refining their craft specifically for our students and the exams they face.
             </p>
           </div>
@@ -635,7 +635,7 @@ export default function TeachersPage() {
         <section
           ref={ctaRef.ref}
           style={{
-            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 100%)",
+            background: "linear-gradient(135deg, #02014a 0%, #02014a 100%)",
             padding: "4.5rem 0",
             position: "relative",
             overflow: "hidden",

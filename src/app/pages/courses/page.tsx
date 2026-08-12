@@ -156,7 +156,7 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
       style={{
         background: "#fff",
         borderRadius: "16px",
-        border: "1px solid rgba(28,55,156,0.08)",
+        border: "1px solid rgba(2,1,74,0.08)",
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
@@ -206,7 +206,7 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
             style={{
               fontSize: "0.7rem",
               fontWeight: 600,
-              color: "rgba(28,55,156,0.4)",
+              color: "rgba(2,1,74,0.4)",
               letterSpacing: "0.05em",
               whiteSpace: "nowrap",
               marginTop: "0.15rem",
@@ -222,7 +222,7 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
             fontFamily: "'Playfair Display', Georgia, serif",
             fontSize: "1.3rem",
             fontWeight: 700,
-            color: "#1c379c",
+            color: "#02014a",
             lineHeight: 1.2,
             margin: "0 0 0.85rem",
           }}
@@ -234,7 +234,7 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
         <p
           style={{
             fontSize: "0.85rem",
-            color: "rgba(28,55,156,0.6)",
+            color: "rgba(2,1,74,0.6)",
             lineHeight: 1.75,
             margin: "0 0 1.25rem",
           }}
@@ -261,7 +261,7 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
                 alignItems: "flex-start",
                 gap: "0.6rem",
                 fontSize: "0.82rem",
-                color: "rgba(28,55,156,0.65)",
+                color: "rgba(2,1,74,0.65)",
                 lineHeight: 1.5,
               }}
             >
@@ -354,12 +354,12 @@ export default function CoursesPage() {
         }
 
         .hl-course-card {
-          box-shadow: 0 1px 3px rgba(28,55,156,0.06), 0 4px 12px rgba(28,55,156,0.04);
+          box-shadow: 0 1px 3px rgba(2,1,74,0.06), 0 4px 12px rgba(2,1,74,0.04);
         }
 
         .hl-course-card:hover {
           transform: translateY(-4px) !important;
-          box-shadow: 0 8px 32px rgba(28,55,156,0.12) !important;
+          box-shadow: 0 8px 32px rgba(2,1,74,0.12) !important;
         }
 
         .hl-card-btn:hover {
@@ -418,7 +418,7 @@ export default function CoursesPage() {
           gap: 0.5rem;
           padding: 0.9rem 2rem;
           background: linear-gradient(135deg, #c8922a, #e8b84b);
-          color: #1c379c;
+          color: #02014a;
           font-weight: 700;
           font-size: 0.9rem;
           border-radius: 10px;
@@ -452,7 +452,7 @@ export default function CoursesPage() {
         <section
           className="hl-photo-hero hl-photo-hero-courses"
           style={{
-            background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
+            background: "linear-gradient(160deg, #02014a 0%, #02014a 60%, #02014a 100%)",
             padding: "5rem 0 4.5rem",
             position: "relative",
             overflow: "hidden",
@@ -591,7 +591,7 @@ export default function CoursesPage() {
         </section>
 
         {/* ── Wave divider ── */}
-        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #02014a 0%, #02014a 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#faf8f4" />
           </svg>
@@ -621,14 +621,14 @@ export default function CoursesPage() {
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: "clamp(1.75rem, 3vw, 2.4rem)",
                 fontWeight: 700,
-                color: "#1c379c",
+                color: "#02014a",
                 margin: "0 0 0.75rem",
                 lineHeight: 1.2,
               }}
             >
               Expert Instruction, Proven Results
             </h2>
-            <p style={{ fontSize: "0.95rem", color: "rgba(28,55,156,0.55)", maxWidth: "500px", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontSize: "0.95rem", color: "rgba(2,1,74,0.55)", maxWidth: "500px", lineHeight: 1.7, margin: 0 }}>
               Each program is designed around specific grade levels and exam goals, taught by licensed, experienced teachers who know how NYC&apos;s academic landscape works.
             </p>
           </div>
@@ -653,7 +653,7 @@ export default function CoursesPage() {
               display: "flex",
               alignItems: "flex-start",
               gap: "1.15rem",
-              boxShadow: "0 18px 50px rgba(28,55,156,0.08)",
+              boxShadow: "0 18px 50px rgba(2,1,74,0.08)",
             }}
           >
             <div
@@ -661,7 +661,7 @@ export default function CoursesPage() {
                 width: "54px",
                 height: "54px",
                 borderRadius: "14px",
-                background: "#1c379c",
+                background: "#02014a",
                 color: "#e8b84b",
                 display: "flex",
                 alignItems: "center",
@@ -675,10 +675,10 @@ export default function CoursesPage() {
               5%
             </div>
             <div>
-              <h3 style={{ margin: "0 0 0.35rem", fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.45rem", color: "#1c379c", lineHeight: 1.2 }}>
+              <h3 style={{ margin: "0 0 0.35rem", fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.45rem", color: "#02014a", lineHeight: 1.2 }}>
                 Sibling Discount
               </h3>
-              <p style={{ margin: 0, fontSize: "0.98rem", color: "rgba(28,55,156,0.68)", lineHeight: 1.7 }}>
+              <p style={{ margin: 0, fontSize: "0.98rem", color: "rgba(2,1,74,0.68)", lineHeight: 1.7 }}>
                 Families with more than one enrolled student receive a 5% discount on SHSAT and SAT/PSAT programs.
               </p>
             </div>
@@ -689,7 +689,7 @@ export default function CoursesPage() {
         <section
           ref={ctaRef.ref}
           style={{
-            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 100%)",
+            background: "linear-gradient(135deg, #02014a 0%, #02014a 100%)",
             padding: "4.5rem 0",
             position: "relative",
             overflow: "hidden",

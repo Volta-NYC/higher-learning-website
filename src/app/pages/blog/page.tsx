@@ -175,13 +175,13 @@ function FeaturedPost({ post }: { post: Post }) {
       <Link href={post.href} className="hl-featured-post" style={{ textDecoration: "none", display: "block" }}>
         <div
           style={{
-            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 100%)",
+            background: "linear-gradient(135deg, #02014a 0%, #02014a 100%)",
             borderRadius: "20px",
             overflow: "hidden",
             padding: "clamp(2rem, 5vw, 3.5rem)",
             position: "relative",
             border: "1px solid rgba(200,146,42,0.15)",
-            boxShadow: "0 4px 32px rgba(28,55,156,0.12)",
+            boxShadow: "0 4px 32px rgba(2,1,74,0.12)",
           }}
         >
           {/* Grid accent */}
@@ -264,7 +264,7 @@ function FeaturedPost({ post }: { post: Post }) {
                 gap: "0.5rem",
                 padding: "0.75rem 1.5rem",
                 background: "linear-gradient(135deg, #c8922a, #e8b84b)",
-                color: "#1c379c",
+                color: "#02014a",
                 fontWeight: 700,
                 fontSize: "0.85rem",
                 borderRadius: "10px",
@@ -303,8 +303,8 @@ function PostCard({ post, index }: { post: Post; index: number }) {
             background: "#fff",
             borderRadius: "16px",
             overflow: "hidden",
-            border: "1px solid rgba(28,55,156,0.07)",
-            boxShadow: "0 2px 12px rgba(28,55,156,0.05)",
+            border: "1px solid rgba(2,1,74,0.07)",
+            boxShadow: "0 2px 12px rgba(2,1,74,0.05)",
             display: "flex",
             flexDirection: "column",
             transition: "box-shadow 0.3s ease, transform 0.3s ease",
@@ -318,7 +318,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
                 position: "relative",
                 paddingBottom: "56.25%",
                 overflow: "hidden",
-                background: "linear-gradient(145deg, #1c379c, #1c379c)",
+                background: "linear-gradient(145deg, #02014a, #02014a)",
                 flexShrink: 0,
               }}
             >
@@ -341,7 +341,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
           {!imageSrc && (
             <div
               style={{
-                background: "linear-gradient(145deg, #1c379c 0%, #1c379c 100%)",
+                background: "linear-gradient(145deg, #02014a 0%, #02014a 100%)",
                 padding: "2rem",
                 flexShrink: 0,
                 position: "relative",
@@ -400,7 +400,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: "1.05rem",
                 fontWeight: 700,
-                color: "#1c379c",
+                color: "#02014a",
                 margin: "0 0 0.65rem",
                 lineHeight: 1.35,
               }}
@@ -411,7 +411,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
             <p
               style={{
                 fontSize: "0.8rem",
-                color: "rgba(28,55,156,0.55)",
+                color: "rgba(2,1,74,0.55)",
                 lineHeight: 1.75,
                 margin: "0",
                 flex: 1,
@@ -428,7 +428,7 @@ function PostCard({ post, index }: { post: Post; index: number }) {
               style={{
                 marginTop: "1.25rem",
                 paddingTop: "1rem",
-                borderTop: "1px solid rgba(28,55,156,0.06)",
+                borderTop: "1px solid rgba(2,1,74,0.06)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -497,7 +497,7 @@ export default function BlogPage() {
         }
 
         .hl-card-inner:hover {
-          box-shadow: 0 12px 40px rgba(28,55,156,0.13) !important;
+          box-shadow: 0 12px 40px rgba(2,1,74,0.13) !important;
           transform: translateY(-3px) !important;
         }
 
@@ -506,15 +506,15 @@ export default function BlogPage() {
         }
 
         .hl-featured-post > div:hover {
-          box-shadow: 0 12px 48px rgba(28,55,156,0.18) !important;
+          box-shadow: 0 12px 48px rgba(2,1,74,0.18) !important;
         }
 
         .hl-filter-btn {
           padding: 0.4rem 1rem;
           border-radius: 50px;
-          border: 1px solid rgba(28,55,156,0.12);
+          border: 1px solid rgba(2,1,74,0.12);
           background: transparent;
-          color: rgba(28,55,156,0.55);
+          color: rgba(2,1,74,0.55);
           font-size: 0.72rem;
           font-weight: 600;
           letter-spacing: 0.05em;
@@ -532,7 +532,7 @@ export default function BlogPage() {
         .hl-filter-btn.active {
           background: linear-gradient(135deg, #c8922a, #e8b84b);
           border-color: transparent;
-          color: #1c379c;
+          color: #02014a;
           font-weight: 700;
         }
 
@@ -589,7 +589,7 @@ export default function BlogPage() {
           gap: 0.5rem;
           padding: 0.85rem 1.75rem;
           background: linear-gradient(135deg, #c8922a, #e8b84b);
-          color: #1c379c;
+          color: #02014a;
           font-weight: 700;
           font-size: 0.875rem;
           border-radius: 10px;
@@ -631,7 +631,7 @@ export default function BlogPage() {
         <section
           className="hl-photo-hero hl-photo-hero-blog"
           style={{
-            background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
+            background: "linear-gradient(160deg, #02014a 0%, #02014a 60%, #02014a 100%)",
             padding: "5rem 0 4.5rem",
             position: "relative",
             overflow: "hidden",
@@ -731,7 +731,7 @@ export default function BlogPage() {
         </section>
 
         {/* Wave divider */}
-        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #02014a 0%, #02014a 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#faf8f4" />
           </svg>
@@ -787,7 +787,7 @@ export default function BlogPage() {
                   fontFamily: "'Playfair Display', Georgia, serif",
                   fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
                   fontWeight: 700,
-                  color: "#1c379c",
+                  color: "#02014a",
                   margin: 0,
                   lineHeight: 1.2,
                 }}
@@ -822,7 +822,7 @@ export default function BlogPage() {
                   style={{
                     fontFamily: "'Playfair Display', Georgia, serif",
                     fontSize: "1.25rem",
-                    color: "#1c379c",
+                    color: "#02014a",
                     opacity: 0.4,
                     margin: 0,
                   }}
@@ -838,7 +838,7 @@ export default function BlogPage() {
         <section
           ref={ctaInView.ref}
           style={{
-            background: "linear-gradient(135deg, #1c379c 0%, #1c379c 100%)",
+            background: "linear-gradient(135deg, #02014a 0%, #02014a 100%)",
             padding: "4.5rem 0",
             position: "relative",
             overflow: "hidden",
