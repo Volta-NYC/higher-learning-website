@@ -27,9 +27,21 @@ function ContactForm() {
 
   const handleSubmit = async () => {
     setStatus("sending");
-    // Simulate submission — wire up to real endpoint
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus("sent");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(fields),
+      });
+
+      if (!response.ok) throw new Error("Contact submission failed");
+
+      setFields({ name: "", email: "", subject: "", message: "" });
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputStyle = (name: string): React.CSSProperties => ({
@@ -150,6 +162,12 @@ function ContactForm() {
       >
         {status === "sending" ? "Sending… 發送中" : "Send Message → 發送留言"}
       </button>
+
+      {status === "error" && (
+        <p role="alert" style={{ color: "#b42318", fontSize: "0.9rem", margin: 0 }}>
+          We couldn&apos;t send your message. Please try again or contact us directly.
+        </p>
+      )}
     </div>
   );
 }
