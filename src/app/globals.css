@@ -2,9 +2,9 @@
 
 :root {
 /* color pallete can easily be changed */
-  --navy:        #1c379c;
-  --navy-dark:   #1c379c;
-  --navy-mid:    #1c379c;
+  --navy:        #02014a;
+  --navy-dark:   #02014a;
+  --navy-mid:    #02014a;
   --gold:        #c8922a;
   --gold-light:  #e8b84b;
   --gold-pale:   #f5e9cc;
@@ -17,8 +17,8 @@
   --gray-200:    #e2e1e3;
   --gray-400:    #9e9ca4;
   --gray-600:    #5a5860;
-  --gray-800:    #2a2830;
-  --text:        #1a1828;
+  --gray-800:    #02014a;
+  --text:        #02014a;
 
   /* Typography */
   --font-display: var(--font-playfair), Georgia, serif;
@@ -35,9 +35,9 @@
   --radius-xl:   32px;
 
   /* Shadows */
-  --shadow-sm:   0 1px 4px rgba(28,55,156,0.06);
-  --shadow-md:   0 4px 20px rgba(28,55,156,0.10);
-  --shadow-lg:   0 12px 48px rgba(28,55,156,0.14);
+  --shadow-sm:   0 1px 4px rgba(2,1,74,0.06);
+  --shadow-md:   0 4px 20px rgba(2,1,74,0.10);
+  --shadow-lg:   0 12px 48px rgba(2,1,74,0.14);
   --shadow-gold: 0 4px 24px rgba(200, 146, 42, 0.25);
 
   /* Transitions */
@@ -109,6 +109,15 @@ a:not([class]) {
 a:not([class]):hover { color: var(--gold); }
 
 strong { font-weight: 600; color: var(--text); }
+
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-gray-600,
+.text-gray-700,
+.text-gray-800 {
+  color: rgba(2,1,74,0.74) !important;
+}
 
 small {
   font-size: 0.82rem;
@@ -228,12 +237,12 @@ small {
 }
 
 .btn-ghost {
-  background: rgba(28,55,156,0.06);
+  background: rgba(2,1,74,0.06);
   color: var(--navy);
 }
 
 .btn-ghost:hover {
-  background: rgba(28,55,156,0.12);
+  background: rgba(2,1,74,0.12);
   color: var(--navy);
 }
 
@@ -294,8 +303,8 @@ small {
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(90deg, rgba(28,55,156,0.92) 0%, rgba(28,55,156,0.72) 42%, rgba(28,55,156,0.38) 100%),
-    linear-gradient(180deg, rgba(28,55,156,0.36) 0%, rgba(28,55,156,0.54) 100%),
+    linear-gradient(90deg, rgba(2,1,74,0.92) 0%, rgba(2,1,74,0.72) 42%, rgba(2,1,74,0.38) 100%),
+    linear-gradient(180deg, rgba(2,1,74,0.36) 0%, rgba(2,1,74,0.54) 100%),
     var(--hl-hero-image);
   background-size: cover;
   background-position: var(--hl-hero-position, center);
@@ -327,8 +336,8 @@ small {
 
 .hl-photo-hero-home::before {
   background-image:
-    linear-gradient(90deg, rgba(28,55,156,0.88) 0%, rgba(28,55,156,0.66) 48%, rgba(28,55,156,0.38) 100%),
-    linear-gradient(180deg, rgba(28,55,156,0.48) 0%, rgba(28,55,156,0.36) 45%, rgba(28,55,156,0.68) 100%),
+    linear-gradient(90deg, rgba(2,1,74,0.88) 0%, rgba(2,1,74,0.66) 48%, rgba(2,1,74,0.38) 100%),
+    linear-gradient(180deg, rgba(2,1,74,0.48) 0%, rgba(2,1,74,0.36) 45%, rgba(2,1,74,0.68) 100%),
     var(--hl-hero-image);
 }
 
@@ -390,7 +399,7 @@ small {
 .hl-hub.hl-photo-hero {
   position: relative;
   overflow: hidden;
-  background: #1c379c;
+  background: #02014a;
 }
 
 .hl-hub.hl-photo-hero > div {
@@ -407,7 +416,7 @@ small {
 
   .hl-photo-hero::before {
     background-image:
-      linear-gradient(180deg, rgba(28,55,156,0.94) 0%, rgba(28,55,156,0.84) 48%, rgba(28,55,156,0.94) 100%),
+      linear-gradient(180deg, rgba(2,1,74,0.94) 0%, rgba(2,1,74,0.84) 48%, rgba(2,1,74,0.94) 100%),
       var(--hl-hero-image);
     transform: none;
   }
@@ -426,7 +435,7 @@ small {
 }
 
 .badge-navy {
-  background: rgba(28,55,156,0.08);
+  background: rgba(2,1,74,0.08);
   color: var(--navy);
 }
 

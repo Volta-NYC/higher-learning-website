@@ -86,8 +86,8 @@ function ValueCard({ icon, title, body, index }: { icon: string; title: string; 
         transition: `opacity 0.65s cubic-bezier(0.22,1,0.36,1) ${index * 100}ms, transform 0.65s cubic-bezier(0.22,1,0.36,1) ${index * 100}ms`,
         background: "#fff",
         borderRadius: "16px",
-        border: "1px solid rgba(28,55,156,0.07)",
-        boxShadow: "0 2px 12px rgba(28,55,156,0.05)",
+        border: "1px solid rgba(2,1,74,0.07)",
+        boxShadow: "0 2px 12px rgba(2,1,74,0.05)",
         padding: "2rem",
       }}
       className="hl-value-card"
@@ -113,7 +113,7 @@ function ValueCard({ icon, title, body, index }: { icon: string; title: string; 
           fontFamily: "'Playfair Display', Georgia, serif",
           fontSize: "1.05rem",
           fontWeight: 700,
-          color: "#1c379c",
+          color: "#02014a",
           margin: "0 0 0.65rem",
           lineHeight: 1.3,
         }}
@@ -123,7 +123,7 @@ function ValueCard({ icon, title, body, index }: { icon: string; title: string; 
       <p
         style={{
           fontSize: "0.85rem",
-          color: "rgba(28,55,156,0.6)",
+          color: "rgba(2,1,74,0.6)",
           lineHeight: 1.75,
           margin: 0,
         }}
@@ -193,7 +193,7 @@ export default function AboutPage() {
         }
 
         .hl-value-card:hover {
-          box-shadow: 0 8px 36px rgba(28,55,156,0.11) !important;
+          box-shadow: 0 8px 36px rgba(2,1,74,0.11) !important;
         }
 
         .hl-stats-grid {
@@ -218,7 +218,7 @@ export default function AboutPage() {
           transition: box-shadow 0.3s ease !important;
         }
         .hl-mv-card:hover {
-          box-shadow: 0 8px 36px rgba(28,55,156,0.11) !important;
+          box-shadow: 0 8px 36px rgba(2,1,74,0.11) !important;
         }
 
         .hl-cta-btn-primary {
@@ -227,7 +227,7 @@ export default function AboutPage() {
           gap: 0.5rem;
           padding: 0.85rem 1.75rem;
           background: linear-gradient(135deg, #c8922a, #e8b84b);
-          color: #1c379c;
+          color: #02014a;
           font-weight: 700;
           font-size: 0.875rem;
           border-radius: 10px;
@@ -263,7 +263,7 @@ export default function AboutPage() {
         <section
           className="hl-photo-hero hl-photo-hero-about"
           style={{
-            background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)",
+            background: "linear-gradient(160deg, #02014a 0%, #02014a 60%, #02014a 100%)",
             padding: "5rem 0 4.5rem",
             position: "relative",
             overflow: "hidden",
@@ -343,7 +343,7 @@ export default function AboutPage() {
         </section>
 
         {/* Wave divider */}
-        <div style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 100%)", marginBottom: "-1px" }}>
+        <div style={{ background: "linear-gradient(160deg, #02014a 0%, #02014a 100%)", marginBottom: "-1px" }}>
           <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#faf8f4" />
           </svg>
@@ -363,17 +363,17 @@ export default function AboutPage() {
                 <span style={{ display: "block", width: "20px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
               </div>
 
-              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 800, color: "#1c379c", margin: "0 0 1.25rem", lineHeight: 1.15 }}>
+              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 800, color: "#02014a", margin: "0 0 1.25rem", lineHeight: 1.15 }}>
                 Higher Learning: Where Students Succeed
               </h2>
 
               <div style={{ width: "40px", height: "2px", background: "linear-gradient(to right, #c8922a, #e8b84b)", borderRadius: "2px", marginBottom: "1.5rem" }} />
 
-              <p style={{ fontSize: "1rem", color: "rgba(28,55,156,0.7)", lineHeight: 1.85, margin: "0 0 1.25rem" }}>
+              <p style={{ fontSize: "1rem", color: "rgba(2,1,74,0.7)", lineHeight: 1.85, margin: "0 0 1.25rem" }}>
                 Founded in 1993 and rooted in the heart of Chinatown at 84 Bowery, Higher Learning Tutoring Center has spent over three decades earning the trust of NYC families. What began as a single classroom has grown into one of the neighborhood&apos;s most respected academic institutions — without ever losing the personal touch that makes us different.
               </p>
 
-              <p style={{ fontSize: "1rem", color: "rgba(28,55,156,0.7)", lineHeight: 1.85, margin: "0 0 1.75rem" }}>
+              <p style={{ fontSize: "1rem", color: "rgba(2,1,74,0.7)", lineHeight: 1.85, margin: "0 0 1.75rem" }}>
                 With over 30 years of expertise, we equip students in Grades 2 through 8 with the strategies, skills, and confidence that last a lifetime. Nearly 70% of our SHSAT students earn admission to NYC&apos;s specialized high schools each year — a testament to our licensed, experienced teachers who provide both academic instruction and genuine personal support.
               </p>
 
@@ -392,8 +392,8 @@ export default function AboutPage() {
                 style={{
                   background: "#fff",
                   borderRadius: "14px",
-                  border: "1px solid rgba(28,55,156,0.07)",
-                  boxShadow: "0 2px 12px rgba(28,55,156,0.05)",
+                  border: "1px solid rgba(2,1,74,0.07)",
+                  boxShadow: "0 2px 12px rgba(2,1,74,0.05)",
                   padding: "1.5rem",
                   marginBottom: "1rem",
                   opacity: missionRef.inView ? 1 : 0,
@@ -402,14 +402,14 @@ export default function AboutPage() {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
-                  <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "linear-gradient(135deg, #1c379c, #1c379c)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "linear-gradient(135deg, #02014a, #02014a)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8b84b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
                     </svg>
                   </div>
-                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1c379c", margin: 0 }}>Our Mission</h3>
+                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#02014a", margin: 0 }}>Our Mission</h3>
                 </div>
-                <p style={{ fontSize: "0.875rem", color: "rgba(28,55,156,0.6)", lineHeight: 1.75, margin: 0 }}>
+                <p style={{ fontSize: "0.875rem", color: "rgba(2,1,74,0.6)", lineHeight: 1.75, margin: 0 }}>
                   To empower students with effective study skills and learning strategies that foster academic excellence and personal growth — ensuring every student is prepared for lifelong success.
                 </p>
               </div>
@@ -421,8 +421,8 @@ export default function AboutPage() {
                 style={{
                   background: "#fff",
                   borderRadius: "14px",
-                  border: "1px solid rgba(28,55,156,0.07)",
-                  boxShadow: "0 2px 12px rgba(28,55,156,0.05)",
+                  border: "1px solid rgba(2,1,74,0.07)",
+                  boxShadow: "0 2px 12px rgba(2,1,74,0.05)",
                   padding: "1.5rem",
                   opacity: visionRef.inView ? 1 : 0,
                   transform: visionRef.inView ? "translateY(0)" : "translateY(16px)",
@@ -431,15 +431,15 @@ export default function AboutPage() {
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
                   <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "linear-gradient(135deg, #c8922a, #e8b84b)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c379c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#02014a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" />
                       <line x1="12" y1="2" x2="12" y2="4" /><line x1="12" y1="20" x2="12" y2="22" />
                       <line x1="2" y1="12" x2="4" y2="12" /><line x1="20" y1="12" x2="22" y2="12" />
                     </svg>
                   </div>
-                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1c379c", margin: 0 }}>Our Vision</h3>
+                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#02014a", margin: 0 }}>Our Vision</h3>
                 </div>
-                <p style={{ fontSize: "0.875rem", color: "rgba(28,55,156,0.6)", lineHeight: 1.75, margin: 0 }}>
+                <p style={{ fontSize: "0.875rem", color: "rgba(2,1,74,0.6)", lineHeight: 1.75, margin: 0 }}>
                   To be a trusted leader in education, inspiring confidence, perseverance, and achievement in every learner we serve. We aim to nurture future leaders — supporting their academic and personal development to help them reach their fullest potential.
                 </p>
               </div>
@@ -448,10 +448,10 @@ export default function AboutPage() {
             {/* Right — photo */}
             <div
               className="hl-about-img-col"
-              style={{ position: "sticky", top: "2rem", borderRadius: "20px", overflow: "hidden", boxShadow: "0 8px 48px rgba(28,55,156,0.14)" }}
+              style={{ position: "sticky", top: "2rem", borderRadius: "20px", overflow: "hidden", boxShadow: "0 8px 48px rgba(2,1,74,0.14)" }}
             >
               <div aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 1, borderRadius: "20px", border: "1px solid rgba(200,146,42,0.2)", pointerEvents: "none" }} />
-              <div style={{ position: "absolute", top: "1.25rem", left: "1.25rem", zIndex: 2, padding: "0.4rem 1rem", background: "rgba(28,55,156,0.75)", backdropFilter: "blur(8px)", borderRadius: "50px", border: "1px solid rgba(200,146,42,0.35)", fontSize: "0.68rem", fontWeight: 700, color: "#e8b84b", letterSpacing: "0.1em", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <div style={{ position: "absolute", top: "1.25rem", left: "1.25rem", zIndex: 2, padding: "0.4rem 1rem", background: "rgba(2,1,74,0.75)", backdropFilter: "blur(8px)", borderRadius: "50px", border: "1px solid rgba(200,146,42,0.35)", fontSize: "0.68rem", fontWeight: 700, color: "#e8b84b", letterSpacing: "0.1em", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 Est. 1993 · Chinatown, NYC
               </div>
               <Image
@@ -474,10 +474,10 @@ export default function AboutPage() {
               The Higher Learning Difference
               <span style={{ display: "block", width: "20px", height: "1px", background: "#c8922a", opacity: 0.6 }} />
             </div>
-            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.6rem, 3vw, 2.25rem)", fontWeight: 700, color: "#1c379c", margin: "0 0 0.5rem", lineHeight: 1.2 }}>
+            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.6rem, 3vw, 2.25rem)", fontWeight: 700, color: "#02014a", margin: "0 0 0.5rem", lineHeight: 1.2 }}>
               Why Families Choose Us
             </h2>
-            <p style={{ fontSize: "0.95rem", color: "rgba(28,55,156,0.5)", maxWidth: "480px", margin: 0, lineHeight: 1.7 }}>
+            <p style={{ fontSize: "0.95rem", color: "rgba(2,1,74,0.5)", maxWidth: "480px", margin: 0, lineHeight: 1.7 }}>
               Three decades of refinement have shaped an approach that consistently produces results — for students of every level.
             </p>
           </div>
@@ -497,7 +497,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── Stats Banner ─────────────────────────────────────────────────── */}
-        <section style={{ background: "linear-gradient(160deg, #1c379c 0%, #1c379c 60%, #1c379c 100%)", padding: "4rem 0", position: "relative", overflow: "hidden" }}>
+        <section style={{ background: "linear-gradient(160deg, #02014a 0%, #02014a 60%, #02014a 100%)", padding: "4rem 0", position: "relative", overflow: "hidden" }}>
           <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)", backgroundSize: "48px 48px" }} />
           <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 clamp(1.25rem, 5vw, 3rem)", position: "relative", zIndex: 1 }}>
             <div className="hl-stats-grid">
@@ -512,7 +512,7 @@ export default function AboutPage() {
         {/* ── CTA Banner ────────────────────────────────────────────────────── */}
         <section
           ref={ctaRef.ref}
-          style={{ background: "linear-gradient(135deg, #1c379c 0%, #1c379c 100%)", padding: "4.5rem 0", position: "relative", overflow: "hidden" }}
+          style={{ background: "linear-gradient(135deg, #02014a 0%, #02014a 100%)", padding: "4.5rem 0", position: "relative", overflow: "hidden" }}
         >
           <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)", backgroundSize: "48px 48px" }} />
           <div
