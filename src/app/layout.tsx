@@ -39,10 +39,13 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="pt-[72px]">
+        <div id="main-content" className="pt-[72px]">
           {children}
-        </main>
+        </div>
         <Footer />
         <Analytics />
       </body>

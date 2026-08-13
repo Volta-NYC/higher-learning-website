@@ -512,7 +512,9 @@ export default function Navbar() {
                     <button
                       className={dropdownOpen ? "active" : ""}
                       onClick={() => setDropdownOpen((v) => !v)}
+                      aria-haspopup="true"
                       aria-expanded={dropdownOpen}
+                      aria-controls="desktop-schedule-menu"
                     >
                       <span className="hl-nav-label-row">
                         <span>{link.label}</span>
@@ -522,7 +524,7 @@ export default function Navbar() {
                       </span>
                       <span className="hl-nav-label-zh zh">{link.labelZh}</span>
                     </button>
-                    <div className={`hl-dropdown ${dropdownOpen ? "open" : ""}`}>
+                    <div id="desktop-schedule-menu" className={`hl-dropdown ${dropdownOpen ? "open" : ""}`}>
                       {link.dropdown.map((sub) => (
                         <Link key={sub.href} href={sub.href} onClick={() => setDropdownOpen(false)}>
                           <span>{sub.label}</span>
@@ -569,16 +571,17 @@ export default function Navbar() {
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
-            <span />
-            <span />
-            <span />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
           </button>
         </div>
       </nav>
 
       {/* Mobile Drawer */}
-      <div className={`hl-mobile-drawer ${mobileOpen ? "open" : ""}`}>
+      <div id="mobile-navigation" className={`hl-mobile-drawer ${mobileOpen ? "open" : ""}`} aria-label="Mobile navigation">
         <button
           type="button"
           className="hl-language-toggle mobile"
@@ -595,6 +598,8 @@ export default function Navbar() {
               <button
                 className="hl-mobile-toggle"
                 onClick={() => setMobileScheduleOpen((v) => !v)}
+                aria-expanded={mobileScheduleOpen}
+                aria-controls="mobile-schedule-menu"
               >
                 <span>{link.label}</span>
                 <span className="zh" style={{ color: "#c8922a", fontSize: "0.82rem", letterSpacing: "0.08em" }}>{link.labelZh}</span>
@@ -605,7 +610,7 @@ export default function Navbar() {
                   <polyline points="2,4 6,8 10,4" />
                 </svg>
               </button>
-              <div className={`hl-mobile-sub ${mobileScheduleOpen ? "open" : ""}`}>
+              <div id="mobile-schedule-menu" className={`hl-mobile-sub ${mobileScheduleOpen ? "open" : ""}`}>
                 {link.dropdown.map((sub) => (
                   <Link key={sub.href} href={sub.href} onClick={() => setMobileOpen(false)}>
                     {sub.label} <span className="zh">· {sub.labelZh}</span>

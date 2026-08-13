@@ -25,6 +25,7 @@ function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [focused, setFocused] = useState<string | null>(null);
+  const hasError = status === "error";
 
   const handleSubmit = async () => {
     if (!fields.name.trim() || !/^\S+@\S+\.\S+$/.test(fields.email.trim())) {
@@ -102,11 +103,21 @@ function ContactForm() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+    <form
+      noValidate
+      aria-describedby={hasError ? "contact-form-error" : undefined}
+      onSubmit={(e) => {
+        e.preventDefault();
+        void handleSubmit();
+      }}
+      style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}
+    >
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }} className="hl-form-row">
         <div>
-          <label style={labelStyle}>Your Name <span className="zh">姓名</span></label>
+          <label htmlFor="contact-name" style={labelStyle}>Your Name <span aria-hidden="true">*</span> <span className="zh">姓名</span></label>
           <input
+            id="contact-name"
+            name="name"
             type="text"
             placeholder="Jane Smith / 學生或家長姓名"
             value={fields.name}
@@ -114,11 +125,17 @@ function ContactForm() {
             onFocus={() => setFocused("name")}
             onBlur={() => setFocused(null)}
             style={inputStyle("name")}
+            required
+            autoComplete="name"
+            aria-invalid={hasError && !fields.name.trim()}
+            aria-describedby={hasError && !fields.name.trim() ? "contact-form-error" : undefined}
           />
         </div>
         <div>
-          <label style={labelStyle}>Your Email <span className="zh">電子郵箱</span></label>
+          <label htmlFor="contact-email" style={labelStyle}>Your Email <span aria-hidden="true">*</span> <span className="zh">電子郵箱</span></label>
           <input
+            id="contact-email"
+            name="email"
             type="email"
             placeholder="jane@example.com"
             value={fields.email}
@@ -126,13 +143,19 @@ function ContactForm() {
             onFocus={() => setFocused("email")}
             onBlur={() => setFocused(null)}
             style={inputStyle("email")}
+            required
+            autoComplete="email"
+            aria-invalid={hasError && !/^\S+@\S+\.\S+$/.test(fields.email.trim())}
+            aria-describedby={hasError && !/^\S+@\S+\.\S+$/.test(fields.email.trim()) ? "contact-form-error" : undefined}
           />
         </div>
       </div>
 
       <div>
-        <label style={labelStyle}>Subject <span className="zh">諮詢主題</span></label>
+        <label htmlFor="contact-subject" style={labelStyle}>Subject <span className="zh">諮詢主題</span></label>
         <input
+          id="contact-subject"
+          name="subject"
           type="text"
           placeholder="Enrollment inquiry, SHSAT prep, etc. / 報名、課程或考試輔導"
           value={fields.subject}
@@ -140,12 +163,15 @@ function ContactForm() {
           onFocus={() => setFocused("subject")}
           onBlur={() => setFocused(null)}
           style={inputStyle("subject")}
+          autoComplete="off"
         />
       </div>
 
       <div>
-        <label style={labelStyle}>Your Message (optional) <span className="zh">留言（可選）</span></label>
+        <label htmlFor="contact-message" style={labelStyle}>Your Message (optional) <span className="zh">留言（可選）</span></label>
         <textarea
+          id="contact-message"
+          name="message"
           rows={6}
           placeholder="Tell us about your student, the grade level, and what you're looking for… / 請告訴我們學生年級和需要的課程"
           value={fields.message}
@@ -157,7 +183,7 @@ function ContactForm() {
       </div>
 
       <button
-        onClick={handleSubmit}
+        type="submit"
         disabled={status === "sending"}
         style={{
           padding: "0.875rem 2rem",
@@ -181,11 +207,11 @@ function ContactForm() {
       </button>
 
       {status === "error" && (
-        <p role="alert" style={{ color: "#b42318", fontSize: "0.9rem", margin: 0 }}>
+        <p id="contact-form-error" role="alert" style={{ color: "#b42318", fontSize: "0.9rem", margin: 0 }}>
           {errorMessage}
         </p>
       )}
-    </div>
+    </form>
   );
 }
 
