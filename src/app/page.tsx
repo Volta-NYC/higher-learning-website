@@ -108,37 +108,37 @@ const reviews = [
     name: "Jordan Huang",
     rating: 5,
     text: "Higher Learning is the best - it got me to my dream school. They're very good in SHSAT and helped me build great skills.",
-    date: "Jul 2025",
+    date: "Recent Review",
   },
   {
     name: "Jasmine Huang",
     rating: 5,
     text: "Learning here feels like water - gentle yet powerful. The lessons flow with ease, washing away confusion and leaving behind clarity.",
-    date: "Jul 2025",
+    date: "Recent Review",
   },
   {
     name: "UZ",
     rating: 5,
     text: "I got into Stuyvesant! Very thankful to Mr. Roda - his teaching style and materials were very helpful for me and my classmates.",
-    date: "Jul 2025",
+    date: "Recent Review",
   },
   {
     name: "L. Deng",
     rating: 5,
     text: "Higher Learning is a top-notch tutoring center that helps you master material for your upcoming grade, enabling you to stay ahead.",
-    date: "Nov 2024",
+    date: "Recent Review",
   },
   {
     name: "Chloe Chu",
     rating: 5,
     text: "Great place for kids looking to take the SHSAT. Teachers are nice, knowledgeable, and willing to help. Highly recommend!",
-    date: "Aug 2024",
+    date: "Recent Review",
   },
   {
     name: "Madison Lee",
     rating: 5,
     text: "My experience here was amazing. The teachers taught me so much - and in fun, engaging ways. I recommend this tutoring center.",
-    date: "Jul 2024",
+    date: "Recent Review",
   },
 ];
 
