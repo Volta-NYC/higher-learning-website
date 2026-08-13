@@ -73,7 +73,7 @@ export default function Navbar() {
           --gold: #c8922a;
           --gold-light: #e8b84b;
           --cream: #faf8f4;
-          --text: #1a1a2e;
+          --text: #02014a;
         }
 
         .hl-nav {
@@ -144,7 +144,7 @@ export default function Navbar() {
         .hl-nav-links {
           display: flex;
           align-items: center;
-          gap: 0.25rem;
+          gap: 0.34rem;
           list-style: none;
           margin: 0;
           padding: 0;
@@ -160,9 +160,9 @@ export default function Navbar() {
           flex-direction: column;
           align-items: center;
           gap: 0.08rem;
-          padding: 0.45rem 0.75rem;
-          font-size: 0.8rem;
-          font-weight: 500;
+          padding: 0.45rem 0.82rem;
+          font-size: 0.9rem;
+          font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: rgba(255,255,255,0.8);
@@ -176,7 +176,7 @@ export default function Navbar() {
         }
 
         .hl-nav-label-zh {
-          font-size: 0.58rem;
+          font-size: 0.64rem;
           font-weight: 400;
           letter-spacing: 0.12em;
           line-height: 1;
@@ -299,7 +299,7 @@ export default function Navbar() {
           background: linear-gradient(135deg, var(--gold), var(--gold-light));
           color: var(--navy) !important;
           font-weight: 600 !important;
-          font-size: 0.78rem !important;
+          font-size: 0.88rem !important;
           letter-spacing: 0.06em !important;
           text-transform: uppercase !important;
           border-radius: 50px !important;
@@ -329,7 +329,7 @@ export default function Navbar() {
           color: rgba(255,255,255,0.8);
           cursor: pointer;
           font-family: 'DM Sans', sans-serif;
-          font-size: 0.78rem;
+          font-size: 0.88rem;
           font-weight: 700;
           letter-spacing: 0.08em;
           line-height: 1;

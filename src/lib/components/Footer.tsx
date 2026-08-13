@@ -33,13 +33,13 @@ export default function Footer() {
               <span className="font-serif text-2xl font-bold tracking-normal text-white">Higher Learning</span>
               <span className="zh mt-1 text-xs tracking-[0.28em] text-[#e8b84b]">春苗補習</span>
             </Link>
-            <p className="mt-5 max-w-sm text-sm leading-7 text-white/52">
+            <p className="mt-5 max-w-sm text-base leading-7 text-white/58">
               30+ years of academic excellence for NYC students preparing for SHSAT, SAT, PSAT, NYS exams, and core academic growth.
             </p>
-            <p className="zh mt-3 max-w-sm text-sm leading-7 tracking-[0.08em] text-white/48">
+            <p className="zh mt-3 max-w-sm text-base leading-7 tracking-[0.08em] text-white/52">
               服務紐約學生三十多年，提供小班教學、考試準備和核心學科輔導。
             </p>
-            <div className="mt-6 grid gap-3 text-sm text-white/58">
+            <div className="mt-6 grid gap-3 text-base text-white/62">
               <a href="tel:2129410695" className="inline-flex items-center gap-3 text-white/58 hover:text-[#e8b84b]">
                 <Phone size={17} className="text-[#e8b84b]" />
                 212-941-0695
@@ -56,29 +56,29 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Explore</h2>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Explore</h2>
             <nav className="mt-5 grid gap-3" aria-label="Footer navigation">
               {navLinks.slice(0, 4).map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm font-medium text-white/55 hover:text-[#e8b84b]">
-                  {link.label} <span className="zh text-xs tracking-[0.08em] text-[#e8b84b]/70">· {link.labelZh}</span>
+                <Link key={link.href} href={link.href} className="text-base font-medium text-white/62 hover:text-[#e8b84b]">
+                  {link.label} <span className="zh text-sm tracking-[0.08em] text-[#e8b84b]/70">· {link.labelZh}</span>
                 </Link>
               ))}
             </nav>
           </div>
 
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Center</h2>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Center</h2>
             <nav className="mt-5 grid gap-3" aria-label="Footer secondary navigation">
               {navLinks.slice(4).map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm font-medium text-white/55 hover:text-[#e8b84b]">
-                  {link.label} <span className="zh text-xs tracking-[0.08em] text-[#e8b84b]/70">· {link.labelZh}</span>
+                <Link key={link.href} href={link.href} className="text-base font-medium text-white/62 hover:text-[#e8b84b]">
+                  {link.label} <span className="zh text-sm tracking-[0.08em] text-[#e8b84b]/70">· {link.labelZh}</span>
                 </Link>
               ))}
             </nav>
           </div>
 
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Connect</h2>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-[#e8b84b]">Connect</h2>
             <div className="mt-5 flex flex-wrap gap-3">
               {socials.map((social) => {
                 const Icon = social.icon;
@@ -99,10 +99,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/8 pt-7 text-sm text-white/36">
+        <div className="mt-12 border-t border-white/8 pt-7 text-base text-white/42">
           <div className="flex flex-col gap-1">
             <span>© {new Date().getFullYear()} Higher Learning Tutoring Center · Est. 1993</span>
-            <span className="text-xs text-white/24">
+            <span className="text-sm text-white/30">
               Made by{" "}
               <a
                 href="https://www.novusnyc.org/"
