@@ -537,7 +537,7 @@ export default function AboutPage() {
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/pages/contact" className="hl-cta-btn-primary">Contact Us to Enroll →</Link>
-              <Link href="/pages/teachers" className="hl-cta-btn-secondary">Meet Our Teachers</Link>
+              <Link href="/pages/courses" className="hl-cta-btn-secondary">View Our Courses</Link>
             </div>
             <p style={{ marginTop: "2rem", fontSize: "0.75rem", color: "rgba(255,255,255,0.2)", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               84 Bowery, 3FL · New York, NY 10013 · 212-941-0695
