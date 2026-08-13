@@ -298,7 +298,7 @@ function Section({
   const { ref, visible } = useInView();
 
   return (
-    <section id={id} className={`py-20 md:py-28 ${className}`}>
+    <section id={id} className={`py-14 md:py-20 ${className}`}>
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
         <div
           ref={ref}
@@ -332,7 +332,7 @@ function CourseCard({ course, delay }: { course: typeof courses[0]; delay: numbe
   return (
     <article
       ref={ref}
-      className={`group relative flex min-h-[360px] flex-col overflow-hidden rounded-[8px] border border-slate-200 bg-white p-7 shadow-[0_16px_45px_rgba(2,1,74,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(2,1,74,0.16)] ${
+      className={`group relative flex min-h-[310px] flex-col overflow-hidden rounded-[8px] border border-slate-200 bg-white p-6 shadow-[0_16px_45px_rgba(2,1,74,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(2,1,74,0.16)] ${
         visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
@@ -392,7 +392,7 @@ function ReviewCard({ review, delay }: { review: typeof reviews[0]; delay: numbe
   return (
     <article
       ref={ref}
-      className={`relative flex min-h-[300px] flex-col rounded-[8px] border border-[#d9c28e]/35 bg-white p-7 shadow-[0_18px_50px_rgba(2,1,74,0.09)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_65px_rgba(2,1,74,0.14)] ${
+      className={`relative flex min-h-[260px] flex-col rounded-[8px] border border-[#d9c28e]/35 bg-white p-6 shadow-[0_18px_50px_rgba(2,1,74,0.09)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_65px_rgba(2,1,74,0.14)] ${
         visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
@@ -478,11 +478,11 @@ export default function Home() {
         }
       `}</style>
 
-      <section className="hl-photo-hero hl-photo-hero-home relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-[#02014a] pb-24 pt-20 md:pb-28 md:pt-24">
+      <section className="hl-photo-hero hl-photo-hero-home relative isolate min-h-[calc(88vh-72px)] overflow-hidden bg-[#02014a] pb-16 pt-16 md:pb-20 md:pt-20">
         <div className="absolute inset-0 opacity-[0.55] bg-[radial-gradient(circle_at_78%_18%,rgba(232,184,75,0.18),transparent_30%),radial-gradient(circle_at_20%_78%,rgba(80,124,190,0.22),transparent_32%),linear-gradient(145deg,#02014a_0%,#02014a_46%,#02014a_100%)]" />
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.7)_1px,transparent_1px)] [background-size:72px_72px]" />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_26rem] lg:px-12">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_26rem] lg:gap-12 lg:px-12">
           <div className="max-w-4xl">
             <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#e8b84b]/25 bg-white/7 px-4 py-2 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#e8b84b] backdrop-blur">
               <Sparkles size={14} />
@@ -742,7 +742,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <section className="relative isolate overflow-hidden bg-[#02014a] px-5 py-20 text-center sm:px-8 md:py-28 lg:px-12">
+      <section className="relative isolate overflow-hidden bg-[#02014a] px-5 py-14 text-center sm:px-8 md:py-20 lg:px-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(232,184,75,0.18),transparent_32%),linear-gradient(135deg,#02014a,#02014a)]" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <div className="mb-4 inline-flex items-center gap-3 text-[0.7rem] font-bold uppercase tracking-[0.22em] text-[#e8b84b]">
